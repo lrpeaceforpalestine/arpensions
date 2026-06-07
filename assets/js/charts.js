@@ -51,7 +51,7 @@
           'APERS (Public Employees)'
         ],
         datasets: [{
-          data: [55, 50, 50],
+          data: [60, 50, 50],
           backgroundColor: [c.red, c.blue, c.amber],
           borderWidth: 0,
           borderRadius: 2,
@@ -91,7 +91,7 @@
                 var details = [
                   '$60M current holdings as of Feb 2026 (~0.5% of $11B portfolio)',
                   'Up to $50M authorized (~0.2% of $23.7B portfolio)',
-                  '$25\u201350M authorized (~0.2\u20130.4% of $11.8B portfolio)'
+                  '$25\u201350M authorized (~0.2\u20130.4% of $11.58B portfolio)'
                 ];
                 return details[context.dataIndex] || '';
               }
