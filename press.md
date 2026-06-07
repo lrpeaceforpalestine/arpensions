@@ -12,7 +12,7 @@ hero_band: charcoal
 
 Arkansans for Pension Integrity (API) is a grassroots Arkansas campaign investigating investments in non-tradable foreign sovereign debt by state pension funds. Through FOIA requests to Arkansas state agencies, the campaign has obtained and analyzed more than 1,200 public records revealing up to $100 million in authorized pension fund exposure to these bonds — without independent credit analysis, and through a process that bypassed normal investment channels. The State Treasury, a separately governed state office, holds an additional $55 million in the same instruments under different statutory authority; the campaign's legislative ask is scoped to pension boards.
 
-The campaign's ask is legislative: passage of the **Pension Investment Transparency Act** in the 2027 Arkansas legislative session, requiring independent credit analysis, consultant independence, liquidity risk disclosure, and documented financial rationale before pension boards commit members' retirement funds to non-tradable sovereign debt. The campaign does not ask pension boards to buy or sell any specific investment.
+The campaign's ask is legislative: passage of the **Pension Investment Integrity Act** in the 2027 Arkansas legislative session, requiring independent credit analysis, consultant independence, liquidity risk disclosure, and documented financial rationale before pension boards commit members' retirement funds to non-tradable sovereign debt. The campaign does not ask pension boards to buy or sell any specific investment.
 
 ## Key statistics
 
@@ -338,7 +338,7 @@ Throughout this site we describe the investment by its financial characteristics
 
 ## Resources for download
 
-- [Policy brief — Pension Investment Transparency Act](/legislators/)
+- [Policy brief — Pension Investment Integrity Act](/legislators/)
 - [Full evidence summary with source documents](/evidence/)
 - [FOIA document archive](/documents/)
 - [Media contact: info@arpensions.org](mailto:info@arpensions.org?subject=Media%20Inquiry)

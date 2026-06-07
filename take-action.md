@@ -48,17 +48,17 @@ We're building a list of Arkansans — educators, public employees, retirees, an
 
 ## Contact your legislators {#contact-legislators}
 
-The 2027 Arkansas legislative session is an opportunity to establish stronger pension transparency requirements through the **[Pension Investment Transparency Act](/legislators/)**. Three concrete actions map cleanly to legislator action.
+The 2027 Arkansas legislative session is an opportunity to establish stronger pension transparency requirements through the **[Pension Investment Integrity Act](/legislators/)**. Three concrete actions map cleanly to legislator action.
 
 **Text RESIST to 50409** to reach your Arkansas state legislators through Resistbot, or find your legislators at [arkleg.state.ar.us](https://www.arkleg.state.ar.us/). Ask them to:
 
-1. **Enact the Pension Investment Transparency Act in the 2027 Regular Session** — issuer-neutral legislation requiring, for any acquisition of non-tradable sovereign debt by an Arkansas pension benefit plan: an independent credit analysis before the purchase; a written comparison of risk, return, and liquidity against comparable fixed-income alternatives; disclosure of liquidity characteristics in board materials before a vote; a written fiduciary determination that the investment satisfies Act 498's pecuniary-factors standard; and public posting of the analysis within 30 days of the investment.
+1. **Enact the Pension Investment Integrity Act in the 2027 Regular Session** — issuer-neutral legislation requiring, for any acquisition of non-tradable sovereign debt by an Arkansas pension benefit plan: an independent credit analysis before the purchase; a written comparison of risk, return, and liquidity against comparable fixed-income alternatives; disclosure of liquidity characteristics in board materials before a vote; a written fiduciary determination that the investment satisfies Act 498's pecuniary-factors standard; and public posting of the analysis within 30 days of the investment.
 
 2. **Direct the Joint Interim Committee on Public Retirement and Social Security Programs** to exercise its A.C.A. § 10-3-703(c) authority and study whether current pension investment practices comply with Act 498 of 2023 — including whether documented, independent credit analyses were prepared before recent acquisitions of non-tradable sovereign debt by Arkansas pension benefit plans.
 
 3. **Encourage pension benefit plan fiduciaries**, as a matter of board policy pending legislative action, to obtain and publicly disclose independent credit analyses before authorizing any new acquisition of non-tradable sovereign debt — consistent with the fiduciary obligations established by Act 498 of 2023 and the prudent investor rule (A.C.A. §§ 24-2-610–619).
 
-Six Arkansas pension benefit plans fall within Act 498's scope (§ 24-2-802(3)): ATRS, APERS, ASHERS, ASPRS, AJRS, and LOPFI. PITA applies issuer-neutral procedural standards to non-tradable sovereign debt acquisitions by any of these plans.
+Six Arkansas pension benefit plans fall within Act 498's scope (§ 24-2-802(3)): ATRS, APERS, ASHERS, ASPRS, AJRS, and LOPFI. The Integrity Act applies issuer-neutral procedural standards to non-tradable sovereign debt acquisitions by any of these plans.
 
 <div class="callout" markdown="1">
 
@@ -73,9 +73,9 @@ Six Arkansas pension benefit plans fall within Act 498's scope (§ 24-2-802(3)):
 
 Dear [Representative/Senator],
 
-As an Arkansan whose retirement is managed by a state pension fund, I'm writing to ask you to support the Pension Investment Transparency Act in the 2027 legislative session. This legislation would require independent credit analysis before pension funds commit to non-tradable sovereign debt, ensuring investment decisions are based on financial merit.
+As an Arkansan whose retirement is managed by a state pension fund, I'm writing to ask you to support the Pension Investment Integrity Act in the 2027 legislative session. This legislation would require independent credit analysis before pension funds commit to non-tradable sovereign debt, ensuring investment decisions are based on financial merit.
 
-Our pension funds authorized up to $100 million in non-tradable foreign sovereign bonds without producing a single independent credit analysis. The Pension Investment Transparency Act would close this gap by requiring the same documented due diligence for sovereign debt that already applies to other investment classes.
+Our pension funds authorized up to $100 million in non-tradable foreign sovereign bonds without producing a single independent credit analysis. The Pension Investment Integrity Act would close this gap by requiring the same documented due diligence for sovereign debt that already applies to other investment classes.
 
 This is not a partisan issue. Sound fiduciary standards protect every Arkansan whose retirement depends on these funds.
 
@@ -119,7 +119,7 @@ Pension board meetings are open to the public under Arkansas law. Attending is o
 
 <div class="callout" markdown="1">
 
-**If you attend.** Listen for how investment decisions are documented and analyzed on the record. Take notes on the process. The Pension Investment Transparency Act is about strengthening that record-making — your observations help make the case to legislators.
+**If you attend.** Listen for how investment decisions are documented and analyzed on the record. Take notes on the process. The Pension Investment Integrity Act is about strengthening that record-making — your observations help make the case to legislators.
 
 </div>
 

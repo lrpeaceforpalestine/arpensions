@@ -14,7 +14,7 @@ ATRS's authorization of up to $50 million on June 2, 2025 (Resolution 2025-22) i
 
 What happened in practice diverged from the preview. The 9/25/2025 Reams Asset Management contract was followed by **Amendment 1 on November 20, 2025**, which introduced a $10 million per calendar year private placement target and an explicit illiquidity acknowledgment. Aon's approval of the Reams investment guidelines came in a **five-word email** — the entirety of the documented consultant sign-off on the operative document.
 
-On December 29, 2025, ATRS Deputy Director Rod Graves sent a routine "Board Update-Liquidity" email confirming that the full $50 million authorized had been deployed as a single capital call through Reams in the December accounting cycle — not the laddered deployment the May 22 Board preview had proposed.
+On December 29, 2025, ATRS Deputy Director Rod Graves sent a routine "Board Update-Liquidity" email confirming that the full $50 million authorized had been deployed as a single cathe Integrity Actl call through Reams in the December accounting cycle — not the laddered deployment the May 22 Board preview had proposed.
 
 ## The 12/1/2025 meeting
 
@@ -32,7 +32,7 @@ The December 2025 record at ATRS does not document the post-authorization reason
 
 - A review of the issuer's intervening credit posture (relevant in light of credit downgrades during 2024 and 2025).
 - A review of comparative fixed-income alternatives available to the fund during the deployment window.
-- A review of the liquidity consequences of the single-capital-call deployment versus the laddered alternative proposed in the May 22 preview.
+- A review of the liquidity consequences of the single-cathe Integrity Actl-call deployment versus the laddered alternative proposed in the May 22 preview.
 - A consultant-level review of the actual deployment versus the deployment originally contemplated.
 
 ## The pre-vote / post-vote symmetry
@@ -41,7 +41,7 @@ The pre-vote analytical record on this investment (June 2, 2025): an Attachment 
 
 The post-vote record at the routine six-month checkpoint (December 1, 2025): zero substantive references across approximately 2,966 audio segments.
 
-The pattern is consistent. The Pension Investment Transparency Act would establish a contemporaneous record at the pre-vote stage; it would also produce the documented analysis on the record that subsequent fiduciary review under § 24-2-611(d) requires.
+The pattern is consistent. The Pension Investment Integrity Act would establish a contemporaneous record at the pre-vote stage; it would also produce the documented analysis on the record that subsequent fiduciary review under § 24-2-611(d) requires.
 
 The procedural asymmetry between this investment and other ATRS investments is itself documented in [the Westrock procedural asymmetry finding](/findings/procedural-asymmetry/).
 
@@ -49,4 +49,4 @@ The procedural asymmetry between this investment and other ATRS investments is i
 
 - [Back to Key Findings](/findings/)
 - [The procedural asymmetry](/findings/procedural-asymmetry/) — same Executive Director, same month, two different procedural standards
-- [Read the policy brief](/legislators/) — A.C.A. §§ 24-2-611(a), (d) and the Pension Investment Transparency Act
+- [Read the policy brief](/legislators/) — A.C.A. §§ 24-2-611(a), (d) and the Pension Investment Integrity Act
