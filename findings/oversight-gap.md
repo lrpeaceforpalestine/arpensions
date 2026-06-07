@@ -41,7 +41,7 @@ The pre-vote analytical record on this investment (June 2, 2025): an Attachment 
 
 The post-vote record at the routine six-month checkpoint (December 1, 2025): zero substantive references across approximately 2,966 audio segments.
 
-The pattern is consistent. The Pension Investment Transparency Act would establish a contemporaneous record at the pre-vote stage; it would also produce the documented analysis on the record that subsequent fiduciary review under § 24-2-611(d) requires.
+The pattern is consistent. The Pension Investment Integrity Act would establish a contemporaneous record at the pre-vote stage; it would also produce the documented analysis on the record that subsequent fiduciary review under § 24-2-611(d) requires.
 
 The procedural asymmetry between this investment and other ATRS investments is itself documented in [the Westrock procedural asymmetry finding](/findings/procedural-asymmetry/).
 
@@ -49,4 +49,4 @@ The procedural asymmetry between this investment and other ATRS investments is i
 
 - [Back to Key Findings](/findings/)
 - [The procedural asymmetry](/findings/procedural-asymmetry/) — same Executive Director, same month, two different procedural standards
-- [Read the policy brief](/legislators/) — A.C.A. §§ 24-2-611(a), (d) and the Pension Investment Transparency Act
+- [Read the policy brief](/legislators/) — A.C.A. §§ 24-2-611(a), (d) and the Pension Investment Integrity Act

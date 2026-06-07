@@ -588,8 +588,8 @@ The central question is whether these investments were driven by pecuniary benef
 
 This evidence belongs to every Arkansan. Here's how to use it:
 
-- **Are you an educator?** [See what this means for your ATRS pension](/educators/) and use our letter template to contact your legislators about the Pension Investment Transparency Act.
-- **Are you a state employee?** [See what this means for your APERS pension](/public-employees/) and use our letter template to contact your legislators about the Pension Investment Transparency Act.
+- **Are you an educator?** [See what this means for your ATRS pension](/educators/) and use our letter template to contact your legislators about the Pension Investment Integrity Act.
+- **Are you a state employee?** [See what this means for your APERS pension](/public-employees/) and use our letter template to contact your legislators about the Pension Investment Integrity Act.
 - **Want to get involved?** [See all the ways you can take action](/take-action/) — from writing your legislators to attending board meetings.
 - **Are you a legislator or legislative staff?** [Read our policy brief](/legislators/) with specific legislative recommendations for the 2027 session.
 - **Are you a journalist?** [Visit our press page](/press/) for pull-ready statistics, timeline, and media contact.

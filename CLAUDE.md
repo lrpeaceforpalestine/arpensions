@@ -24,7 +24,7 @@ This is the public-facing campaign website for Arkansans for Pension Integrity, 
 /documents/          # FOIA document archive
 /educators/          # ATRS-specific content
 /public-employees/   # APERS-specific content
-/legislators/        # Transparency Act + 2027 session
+/legislators/        # Integrity Act + 2027 session
 /press/              # Press kit + media resources
 /take-action/        # CTAs by time commitment
 /about/              # FAQ + campaign info
@@ -91,7 +91,7 @@ bundle exec jekyll serve
 
 ## About the Campaign
 
-Arkansans for Pension Integrity (API) is a grassroots Arkansas campaign for pension transparency and fiduciary accountability. The campaign focuses on passing the Pension Investment Transparency Act (PITA) in the 2027 Arkansas legislative session.
+Arkansans for Pension Integrity (API) is a grassroots Arkansas campaign for pension transparency and fiduciary accountability. The campaign focuses on passing the Pension Investment Integrity Act in the 2027 Arkansas legislative session.
 
 ---
 

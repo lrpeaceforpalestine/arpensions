@@ -25,7 +25,7 @@ Records from the second FOIA round reveal that ATRS formalized its approach to t
 
 ## Why it matters
 
-Arkansas law says pension trustees must invest and manage assets solely in the interest of members and benefit recipients (Ark. Code Ann. § 24-2-614). The State Government Employee Retirement Protection Act (Act 498 of 2023) requires pension board investment evaluations to be based only on pecuniary factors (Ark. Code § 24-2-802(4)(A)) — those with a material financial effect on risk or return — under the standard of care at § 24-2-803 and the pecuniary-factors-only requirement at § 24-2-804(a). The [Pension Investment Transparency Act](/legislators/#the-pension-investment-transparency-act) would add specific procedural safeguards for sovereign debt acquisitions: independent credit analysis, consultant independence, and documented financial rationale.
+Arkansas law says pension trustees must invest and manage assets solely in the interest of members and benefit recipients (Ark. Code Ann. § 24-2-614). The State Government Employee Retirement Protection Act (Act 498 of 2023) requires pension board investment evaluations to be based only on pecuniary factors (Ark. Code § 24-2-802(4)(A)) — those with a material financial effect on risk or return — under the standard of care at § 24-2-803 and the pecuniary-factors-only requirement at § 24-2-804(a). The [Pension Investment Integrity Act](/legislators/#the-pension-investment-integrity-act) would add specific procedural safeguards for sovereign debt acquisitions: independent credit analysis, consultant independence, and documented financial rationale.
 
 ATRS also follows a prudent-investor approach, which calls for care, skill, diversification, and documented due diligence before committing to a new, relatively illiquid position like foreign government bonds.
 
@@ -79,9 +79,9 @@ For the full timeline, source quotes, and legal analysis, see our [evidence page
 
 ## What you can do
 
-### 1. Contact your legislators about the Pension Investment Transparency Act
+### 1. Contact your legislators about the Pension Investment Integrity Act
 
-The 2027 Arkansas legislative session is the place to fix the procedural gap that ATRS's deployment exposed. The **[Pension Investment Transparency Act](/legislators/#the-pension-investment-transparency-act)** would require independent credit analysis, consultant independence, and documented financial rationale before pension boards commit members' retirement funds to non-tradable sovereign debt — closing the gap our FOIA documents revealed.
+The 2027 Arkansas legislative session is the place to fix the procedural gap that ATRS's deployment exposed. The **[Pension Investment Integrity Act](/legislators/#the-pension-investment-integrity-act)** would require independent credit analysis, consultant independence, and documented financial rationale before pension boards commit members' retirement funds to non-tradable sovereign debt — closing the gap our FOIA documents revealed.
 
 **Find your legislators** at [arkleg.state.ar.us](https://www.arkleg.state.ar.us/) or **text RESIST to 50409** to reach them through Resistbot.
 
@@ -91,15 +91,15 @@ The 2027 Arkansas legislative session is the place to fix the procedural gap tha
 #### Letter template — your state legislators
 {: .letter-heading }
 
-**Subject line:** Educators support the Pension Investment Transparency Act for the 2027 session
+**Subject line:** Educators support the Pension Investment Integrity Act for the 2027 session
 
 Dear [Representative/Senator],
 
-As an Arkansas educator and ATRS member, I'm writing to ask you to support the Pension Investment Transparency Act in the 2027 legislative session. ATRS members earn our retirement through decades of classroom work, and we need the investment process behind that retirement to meet a documented fiduciary standard.
+As an Arkansas educator and ATRS member, I'm writing to ask you to support the Pension Investment Integrity Act in the 2027 legislative session. ATRS members earn our retirement through decades of classroom work, and we need the investment process behind that retirement to meet a documented fiduciary standard.
 
 In June 2025, the ATRS Board authorized up to $50 million in non-tradable sovereign bonds. By December 2025, the full $50 million had been deployed. More than 1,200 public records obtained through FOIA show no independent credit analysis was produced at any stage of that authorization. Arkansas's pecuniary-only standard under Act 498 of 2023 already governs these decisions — but the procedural specificity behind that standard (independent credit analysis, consultant independence, documented rationale) is what was missing.
 
-The Pension Investment Transparency Act closes that procedural gap. It does not pressure pension boards to buy or sell any specific investment. It establishes the same documented due diligence standard for non-tradable sovereign debt that already applies to other investment classes.
+The Pension Investment Integrity Act closes that procedural gap. It does not pressure pension boards to buy or sell any specific investment. It establishes the same documented due diligence standard for non-tradable sovereign debt that already applies to other investment classes.
 
 Sound fiduciary process is non-partisan. It protects every Arkansas educator whose retirement depends on these funds.
 
@@ -110,13 +110,13 @@ Sincerely,
 
 <div class="callout email-callout" markdown="1">
 
-**Shorter version for email:** "As an Arkansas educator and ATRS member, I'm asking you to support the Pension Investment Transparency Act in the 2027 session. ATRS deployed the full $50 million sovereign bond authorization in December 2025 without independent credit analysis at any stage. PITA would require independent credit analysis and documented financial rationale before pension boards commit to non-tradable sovereign debt — the same standard that already applies to other investment classes. For the financial profile of the bonds under investigation, see arpensions.org/glossary."
+**Shorter version for email:** "As an Arkansas educator and ATRS member, I'm asking you to support the Pension Investment Integrity Act in the 2027 session. ATRS deployed the full $50 million sovereign bond authorization in December 2025 without independent credit analysis at any stage. The Integrity Act would require independent credit analysis and documented financial rationale before pension boards commit to non-tradable sovereign debt — the same standard that already applies to other investment classes. For the financial profile of the bonds under investigation, see arpensions.org/glossary."
 
 </div>
 
 ### 2. Attend the next ATRS Board meeting
 
-Sitting in on board meetings is one of the most useful things an ATRS member can do. You see the documented process firsthand — the analyses presented, the questions asked, the way the record gets made — and that observation is exactly the kind of detail that strengthens the legislative case for PITA.
+Sitting in on board meetings is one of the most useful things an ATRS member can do. You see the documented process firsthand — the analyses presented, the questions asked, the way the record gets made — and that observation is exactly the kind of detail that strengthens the legislative case for the Integrity Act.
 
 <div class="meeting-info" markdown="1">
 
@@ -129,7 +129,7 @@ Sitting in on board meetings is one of the most useful things an ATRS member can
 
 <div class="callout script-card" markdown="1">
 
-**60-second public comment script:** "Good morning, my name is [Name], and I'm an Arkansas educator and ATRS member. I'm here to share that I support the Pension Investment Transparency Act being prepared for the 2027 legislative session. PITA would require independent credit analysis, consultant independence, and documented financial rationale before pension boards commit members' funds to non-tradable sovereign debt — the same documented standard that already applies to other investment classes. As an ATRS member, I'm grateful for the rigorous analysis this Board commissions for so many of its decisions. Codifying that same level of process for sovereign debt acquisitions through PITA would simply make our existing practice the floor, not the ceiling. Thank you for your service to Arkansas educators."
+**60-second public comment script:** "Good morning, my name is [Name], and I'm an Arkansas educator and ATRS member. I'm here to share that I support the Pension Investment Integrity Act being prepared for the 2027 legislative session. The Integrity Act would require independent credit analysis, consultant independence, and documented financial rationale before pension boards commit members' funds to non-tradable sovereign debt — the same documented standard that already applies to other investment classes. As an ATRS member, I'm grateful for the rigorous analysis this Board commissions for so many of its decisions. Codifying that same level of process for sovereign debt acquisitions through the Integrity Act would simply make our existing practice the floor, not the ceiling. Thank you for your service to Arkansas educators."
 
 </div>
 

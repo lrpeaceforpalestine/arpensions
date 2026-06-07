@@ -12,7 +12,7 @@ hero_band: navy
 
 Arkansas pension funds have authorized up to **$100 million** in non-tradable foreign sovereign debt — direct loans to a foreign government — despite credit downgrades from major rating agencies, an internal Treasury memo recommending against new purchases, and the ATRS Board Chair's dissent over process concerns. No independent credit analysis has been produced to justify these investments. This raises serious questions about fiduciary compliance under existing Arkansas law.
 
-Six Arkansas pension benefit plans fall within the scope of Act 498 of 2023 (A.C.A. § 24-2-802(3)): **the Arkansas Teacher Retirement System (ATRS), the Arkansas Public Employees' Retirement System (APERS), the Arkansas State Highway Employees' Retirement System (ASHERS), the Arkansas State Police Retirement System (ASPRS), the Arkansas Judicial Retirement System (AJRS), and the Arkansas Local Police and Fire Retirement System (LOPFI).** The Pension Investment Transparency Act would apply to acquisitions of non-tradable sovereign debt by any of these plans.
+Six Arkansas pension benefit plans fall within the scope of Act 498 of 2023 (A.C.A. § 24-2-802(3)): **the Arkansas Teacher Retirement System (ATRS), the Arkansas Public Employees' Retirement System (APERS), the Arkansas State Highway Employees' Retirement System (ASHERS), the Arkansas State Police Retirement System (ASPRS), the Arkansas Judicial Retirement System (AJRS), and the Arkansas Local Police and Fire Retirement System (LOPFI).** The Pension Investment Integrity Act would apply to acquisitions of non-tradable sovereign debt by any of these plans.
 
 We are asking the General Assembly to strengthen pension transparency requirements so that Arkansans can be confident their retirement savings are managed based on financial merit — as the law already requires.
 
@@ -93,19 +93,19 @@ A.C.A. § 24-2-618(e): *"Single agent or exclusive agency delegations by the tru
 
 The bonds under investigation are sold exclusively through a single for-profit broker-dealer (FINRA CRD# 11148). That broker-dealer's Arkansas Securities Department registration is limited by its terms to bonds of a single issuer — a scope shared in only two other states (North Dakota and Arizona). There is no competitive market channel for these instruments and no alternative broker-dealer through which an Arkansas pension system could acquire them. When a pension trustee selects this instrument, the trustee is also selecting that broker-dealer as the exclusive agent for the transaction.
 
-The "extraordinary care and caution" the statute requires has independent content beyond the pecuniary-factors and prudent-investor standards. It establishes a heightened bar for the trustees' due diligence on the broker-dealer itself — not only on the instrument. The Pension Investment Transparency Act would specify what that diligence must produce on the record before a vote.
+The "extraordinary care and caution" the statute requires has independent content beyond the pecuniary-factors and prudent-investor standards. It establishes a heightened bar for the trustees' due diligence on the broker-dealer itself — not only on the instrument. The Pension Investment Integrity Act would specify what that diligence must produce on the record before a vote.
 
 </div>
 
 <div class="issue-demands" markdown="1">
 
-## The Pension Investment Transparency Act
+## The Pension Investment Integrity Act
 
-We urge the Arkansas General Assembly to enact the **Pension Investment Transparency Act** during the **2027 Regular Session**. This legislation is issuer-neutral — it does not single out any country, issuer, or political position. It establishes procedural standards for acquisitions of non-tradable sovereign debt by any Arkansas pension benefit plan within the scope of Act 498 of 2023: ATRS, APERS, ASHERS, ASPRS, AJRS, and LOPFI.
+We urge the Arkansas General Assembly to enact the **Pension Investment Integrity Act** during the **2027 Regular Session**. This legislation is issuer-neutral — it does not single out any country, issuer, or political position. It establishes procedural standards for acquisitions of non-tradable sovereign debt by any Arkansas pension benefit plan within the scope of Act 498 of 2023: ATRS, APERS, ASHERS, ASPRS, AJRS, and LOPFI.
 
 ### The five provisions
 
-For any acquisition of non-tradable sovereign debt by an Arkansas pension benefit plan, PITA would require:
+For any acquisition of non-tradable sovereign debt by an Arkansas pension benefit plan, the Integrity Act would require:
 
 1. **Independent credit analysis** by the fund's own investment consultant or staff, documented in writing **before the purchase**. Our FOIA investigation found zero such analyses across 1,227 documents from Arkansas state agencies.
 
@@ -117,7 +117,7 @@ For any acquisition of non-tradable sovereign debt by an Arkansas pension benefi
 
 5. **Public posting** of the analysis and determination on the pension system's website **within thirty days** of the investment. Obtaining what record exists has required two rounds of FOIA requests over nearly a year.
 
-Existing Arkansas law establishes a rigorous standard for *what factors* pension fiduciaries may consider. PITA establishes specific procedural requirements for *how fiduciaries must document* their compliance with that standard before committing pension funds to an asset class that lacks secondary-market price discovery.
+Existing Arkansas law establishes a rigorous standard for *what factors* pension fiduciaries may consider. The Integrity Act establishes specific procedural requirements for *how fiduciaries must document* their compliance with that standard before committing pension funds to an asset class that lacks secondary-market price discovery.
 
 ### The committee pathway
 
@@ -136,13 +136,13 @@ Three committee members will depart before the 2027 session: Sen. Fredrick Love 
 
 ### Why pension boards need this standard
 
-Act 498 of 2023, the State Government Employee Retirement Protection Act (Ark. Code § 24-2-804(a)), requires that a fiduciary's evaluation of an investment "shall take into account only pecuniary factors" (§ 24-2-804(a)), where "pecuniary factor" is defined at § 24-2-802(4)(A) as a factor with material effect on financial risk or return, under the standard of care at § 24-2-803. Act 498 establishes the standard but does not prescribe the specific procedural safeguards — independent credit analysis, documented rationale, consultant independence — necessary for non-tradable sovereign debt that has no secondary market. The Pension Investment Transparency Act adds those safeguards for sovereign debt acquisitions. The case for the extension is the asset class itself: non-tradable sovereign debt cannot be sold before maturity and lacks the continuous market repricing that gives most fixed-income instruments their built-in credit check. For that class, independent credit analysis is the substitute for the market scrutiny the absence of a secondary market eliminates.
+Act 498 of 2023, the State Government Employee Retirement Protection Act (Ark. Code § 24-2-804(a)), requires that a fiduciary's evaluation of an investment "shall take into account only pecuniary factors" (§ 24-2-804(a)), where "pecuniary factor" is defined at § 24-2-802(4)(A) as a factor with material effect on financial risk or return, under the standard of care at § 24-2-803. Act 498 establishes the standard but does not prescribe the specific procedural safeguards — independent credit analysis, documented rationale, consultant independence — necessary for non-tradable sovereign debt that has no secondary market. The Pension Investment Integrity Act adds those safeguards for sovereign debt acquisitions. The case for the extension is the asset class itself: non-tradable sovereign debt cannot be sold before maturity and lacks the continuous market repricing that gives most fixed-income instruments their built-in credit check. For that class, independent credit analysis is the substitute for the market scrutiny the absence of a secondary market eliminates.
 
 ### Three actions we are calling for
 
 Arkansans for Pension Integrity is calling for three concrete actions to apply Arkansas's existing fiduciary standards to non-tradable sovereign debt acquisitions:
 
-1. **The General Assembly** — enact the Pension Investment Transparency Act during the 2027 Regular Session, establishing issuer-neutral procedural requirements to ensure that pension benefit plan fiduciaries document their compliance with the pecuniary-factors standard of A.C.A. § 24-2-804(a) and the prudent investor rule of A.C.A. §§ 24-2-610 through 24-2-619 before committing beneficiary funds to non-tradable sovereign debt. The committee pathway is the Joint Interim Committee on Public Retirement and Social Security Programs (A.C.A. § 10-3-703).
+1. **The General Assembly** — enact the Pension Investment Integrity Act during the 2027 Regular Session, establishing issuer-neutral procedural requirements to ensure that pension benefit plan fiduciaries document their compliance with the pecuniary-factors standard of A.C.A. § 24-2-804(a) and the prudent investor rule of A.C.A. §§ 24-2-610 through 24-2-619 before committing beneficiary funds to non-tradable sovereign debt. The committee pathway is the Joint Interim Committee on Public Retirement and Social Security Programs (A.C.A. § 10-3-703).
 
 2. **The Joint Interim Committee on Public Retirement and Social Security Programs** — exercise its statutory authority under A.C.A. § 10-3-703(c) to study whether current pension investment practices comply with the standards established by Act 498 of 2023, including whether documented, independent credit analyses were prepared before recent acquisitions of non-tradable sovereign debt.
 
@@ -154,7 +154,7 @@ Arkansans for Pension Integrity is calling for three concrete actions to apply A
 
 ## The standard already exists
 
-Arkansas's pecuniary-factors standard (Act 498 of 2023, the State Government Employee Retirement Protection Act, Ark. Code §§ 24-2-802(4)(A), 24-2-804(a)) and the prudent-investor rule (Ark. Code §§ 24-2-610–619) already require investment decisions to be evaluated on financial merit, with the diligence an experienced fiduciary would apply. The Pension Investment Transparency Act does not invent a new test — it adds the specific procedural requirements those standards demand for a class of instruments that bypass the market signals on which most investment evaluations rely.
+Arkansas's pecuniary-factors standard (Act 498 of 2023, the State Government Employee Retirement Protection Act, Ark. Code §§ 24-2-802(4)(A), 24-2-804(a)) and the prudent-investor rule (Ark. Code §§ 24-2-610–619) already require investment decisions to be evaluated on financial merit, with the diligence an experienced fiduciary would apply. The Pension Investment Integrity Act does not invent a new test — it adds the specific procedural requirements those standards demand for a class of instruments that bypass the market signals on which most investment evaluations rely.
 
 For the full timeline and detailed source documentation, see our [evidence page](/evidence/). You can also [browse the FOIA document archive](/documents/) directly.
 

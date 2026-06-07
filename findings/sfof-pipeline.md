@@ -39,11 +39,11 @@ A.C.A. § 24-2-611(d) requires Arkansas pension trustees to "make a reasonable e
 
 The Pennsylvania Treasurer's $20 million purchase of the same instrument was the subject of an independent journalist investigation by Spotlight PA published March 17, 2026, which raised ethics concerns parallel to those the Arkansas FOIA productions have documented. That report is the kind of public-record information a trustee exercising the "reasonable effort to verify facts" standard might be expected to be aware of — particularly when the same network is the source of the precedent and the trustee's own staff has access to the network's internal materials.
 
-The **Pension Investment Transparency Act** produces the on-the-record analysis that would let an Arkansas pension board demonstrate it had verified, on pecuniary-factors grounds, the precedent it was relying upon. Without that documentation, a precedent-based decision is indistinguishable from a network-replication decision.
+The **Pension Investment Integrity Act** produces the on-the-record analysis that would let an Arkansas pension board demonstrate it had verified, on pecuniary-factors grounds, the precedent it was relying upon. Without that documentation, a precedent-based decision is indistinguishable from a network-replication decision.
 
 ---
 
 - [Back to Key Findings](/findings/)
 - [The Auditor's office as channel](/findings/auditor-channel/) — the in-state coordination point
-- [Read the policy brief](/legislators/) — A.C.A. § 24-2-611(d) and the Pension Investment Transparency Act
+- [Read the policy brief](/legislators/) — A.C.A. § 24-2-611(d) and the Pension Investment Integrity Act
 - Spotlight PA: [Pennsylvania Treasurer sovereign-bond investigation](https://www.spotlightpa.org/news/2026/03/stacy-garrity-treasurer-governor-election-israel-bonds-ethics-elections/)

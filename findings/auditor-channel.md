@@ -45,10 +45,10 @@ The Auditor's office is not within the Act 498 fiduciary chain. Pension benefit 
 
 When the primary information channel reaching a pension board on a particular instrument is an office with no investment authority — staffed by a single individual (Brady) who is simultaneously a member of the board receiving the introduction — § 24-2-611(d)'s "reasonable effort to verify facts" requires a fiduciary record reflecting independent verification through other channels. The FOIA productions do not document such a record at the adopting agencies.
 
-The **Pension Investment Transparency Act** is designed to produce exactly the verification record § 24-2-611(d) implicitly demands: independent credit analysis from the fund's own consultant or staff before purchase, written comparison against alternatives, board-material disclosure of liquidity characteristics, a written fiduciary determination of pecuniary-factors compliance, and public posting within thirty days.
+The **Pension Investment Integrity Act** is designed to produce exactly the verification record § 24-2-611(d) implicitly demands: independent credit analysis from the fund's own consultant or staff before purchase, written comparison against alternatives, board-material disclosure of liquidity characteristics, a written fiduciary determination of pecuniary-factors compliance, and public posting within thirty days.
 
 ---
 
 - [Back to Key Findings](/findings/)
 - [The SFOF pipeline](/findings/sfof-pipeline/) — the national-network context for the Auditor's coordination role
-- [Read the policy brief](/legislators/) — A.C.A. § 24-2-611(d) and the Pension Investment Transparency Act
+- [Read the policy brief](/legislators/) — A.C.A. § 24-2-611(d) and the Pension Investment Integrity Act

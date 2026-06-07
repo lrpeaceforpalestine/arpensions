@@ -6,7 +6,7 @@ permalink: /findings/
 breadcrumb: "Key Findings"
 ---
 
-Our [evidence page](/evidence/) reports the numbered findings of the FOIA investigation. The pages below take six of the most analytically consequential findings and treat each one in depth — explaining what the public record establishes, what Arkansas law requires, and where each finding fits in the fiduciary architecture the Pension Investment Transparency Act would clarify.
+Our [evidence page](/evidence/) reports the numbered findings of the FOIA investigation. The pages below take six of the most analytically consequential findings and treat each one in depth — explaining what the public record establishes, what Arkansas law requires, and where each finding fits in the fiduciary architecture the Pension Investment Integrity Act would clarify.
 
 Each finding is sourced from one or more concept pages on the [investigation wiki](https://israelbonds.wiki), the comprehensive evidentiary base maintained by Arkansans for Pension Integrity. The wiki documents the underlying FOIA productions; these pages translate that record into the public-facing fiduciary argument.
 
@@ -62,18 +62,18 @@ In May 2025, ATRS Executive Director Mark White articulated to retiree John Roll
 
 </div>
 
-## How these findings connect to PITA
+## How these findings connect to the Integrity Act
 
-The Pension Investment Transparency Act addresses each structural feature these findings document:
+The Pension Investment Integrity Act addresses each structural feature these findings document:
 
 - **Provision 1 (independent credit analysis before purchase)** closes the gap visible in the procedural-asymmetry finding — and would have prevented the empty Kelly + Comstock memo at Attachment 17 from being the entirety of the consultant record at authorization.
 - **Provision 2 (written risk/return/liquidity comparison)** addresses the verification obligation under § 24-2-611(d) that the auditor-channel and SFOF-pipeline findings demonstrate is implicated when the principal information channel is not the board's own consultant.
 - **Provision 3 (board-material liquidity disclosure before a vote)** establishes the contemporaneous record relevant to the broker-dealer-regulatory-record finding and the § 24-2-618(e) exclusive-agency analysis.
 - **Provision 4 (written fiduciary pecuniary-factors determination)** makes the procedural-asymmetry analytical contrast impossible — the same fiduciary applying two different standards within the same month would have to produce two different written determinations explaining why.
-- **Provision 5 (public posting within thirty days)** removes the FOIA dependency that all six findings have in common. The post-vote oversight gap and the cross-agency control case are visible only because three rounds of FOIA productions across nearly a year made them visible. PITA's posting requirement makes the analysis available before the vote, on the public record, for every adopting board.
+- **Provision 5 (public posting within thirty days)** removes the FOIA dependency that all six findings have in common. The post-vote oversight gap and the cross-agency control case are visible only because three rounds of FOIA productions across nearly a year made them visible. The Integrity Act's posting requirement makes the analysis available before the vote, on the public record, for every adopting board.
 
 ---
 
-- [Read the policy brief](/legislators/) — the Pension Investment Transparency Act and the statutory anchors
+- [Read the policy brief](/legislators/) — the Pension Investment Integrity Act and the statutory anchors
 - [See the evidence](/evidence/) — primary source documents from 1,227 FOIA records
 - [Investigation wiki](https://israelbonds.wiki) — the comprehensive evidentiary base, including all FOIA productions and the wiki concept pages that source these findings

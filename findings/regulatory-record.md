@@ -53,10 +53,10 @@ That provision has three operative elements:
 
 A pension fiduciary acquiring instruments offered through this single broker-dealer is entering an exclusive-agency arrangement within the meaning of § 24-2-618(e). The regulatory record summarized above is, at minimum, the record a fiduciary would need to demonstrate having reviewed in order to satisfy the statute's "extraordinary care and caution" element. The FOIA productions to date establish that no such review is documented at any of the adopting Arkansas state-government entities.
 
-The **Pension Investment Transparency Act** addresses exactly this gap. PITA's five procedural provisions — independent credit analysis before purchase, written risk/return/liquidity comparison, secondary-market disclosure before a vote, written fiduciary pecuniary-factors determination, and public posting within thirty days — produce the contemporaneous record § 24-2-618(e) implicitly demands when an exclusive-agency arrangement is entered into.
+The **Pension Investment Integrity Act** addresses exactly this gap. The Integrity Act's five procedural provisions — independent credit analysis before purchase, written risk/return/liquidity comparison, secondary-market disclosure before a vote, written fiduciary pecuniary-factors determination, and public posting within thirty days — produce the contemporaneous record § 24-2-618(e) implicitly demands when an exclusive-agency arrangement is entered into.
 
 ---
 
 - [Back to Key Findings](/findings/)
-- [Read the policy brief](/legislators/) — including the Pension Investment Transparency Act and the statutory framework
+- [Read the policy brief](/legislators/) — including the Pension Investment Integrity Act and the statutory framework
 - [See the evidence](/evidence/) — primary source documents from 1,200+ FOIA records

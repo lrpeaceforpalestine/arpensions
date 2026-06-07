@@ -36,7 +36,7 @@ Two Arkansas pension boards have authorized substantial new exposure to non-trad
 
 </div>
 
-(Note: The pension authorizations total up to $100 million combined. APERS authorized up to $50M but had not yet purchased as of July 2025 per FOIA records. The Treasury's $55M position is governed by separate Treasury investment authority and is shown here for context — it is not within the scope of the Pension Investment Transparency Act, which by its terms applies only to pension benefit plans.)
+(Note: The pension authorizations total up to $100 million combined. APERS authorized up to $50M but had not yet purchased as of July 2025 per FOIA records. The Treasury's $55M position is governed by separate Treasury investment authority and is shown here for context — it is not within the scope of the Pension Investment Integrity Act, which by its terms applies only to pension benefit plans.)
 
 While the portfolio percentages are small, the question is whether standard fiduciary process was followed — not whether the amounts are material.
 
@@ -192,7 +192,7 @@ Our requests are straightforward:
 2. **Transparency** — Publish the financial analysis comparing these bonds' risk, return, and liquidity against comparable fixed-income alternatives.
 3. **Process review** — Document how the recent authorizations complied with Arkansas's pecuniary-only standard and the normal manager-driven investment process.
 4. **Member input** — Invite public comment from the educators, public employees, and retirees whose retirement savings are at stake.
-5. **[Pension Investment Transparency Act](/legislators/)** — Issuer-neutral legislation requiring independent analysis, consultant independence, liquidity disclosure, documented rationale, and consistent application of the pecuniary-factors standard before pension boards commit to non-tradable sovereign debt.
+5. **[Pension Investment Integrity Act](/legislators/)** — Issuer-neutral legislation requiring independent analysis, consultant independence, liquidity disclosure, documented rationale, and consistent application of the pecuniary-factors standard before pension boards commit to non-tradable sovereign debt.
 
 </div>
 

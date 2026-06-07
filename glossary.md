@@ -38,7 +38,7 @@ When officials named the issuer in their own public statements — and framed th
 | The bond issuer | The foreign government that issues the debt |
 | The broker-dealer (FINRA CRD# 11148) | The for-profit corporation that sells the bonds exclusively |
 | The issuer's sales representatives | Employees of the broker-dealer who marketed the bonds to Arkansas agencies |
-| Pension Investment Transparency Act | Proposed issuer-neutral Arkansas legislation requiring independent analysis before pension boards commit to non-tradable sovereign debt |
+| Pension Investment Integrity Act | Proposed issuer-neutral Arkansas legislation requiring independent analysis before pension boards commit to non-tradable sovereign debt |
 
 ## Verify for yourself
 
