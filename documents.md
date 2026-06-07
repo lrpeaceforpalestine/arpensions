@@ -24,7 +24,7 @@ All documents were provided by the agencies in response to lawful FOIA requests.
 
 <div class="key-finding" markdown="1">
 
-**1,227 documents** obtained across three FOIA rounds from Arkansas state agencies. 12 requests filed across four rounds (AJRS Round 4 response pending). Every claim on this site traces back to these records.
+**1,227 documents** obtained across three FOIA rounds from Arkansas state agencies. 12 requests filed across four rounds (AJRS Round 4 outstanding — no records produced as of June 2026). Every claim on this site traces back to these records.
 
 </div>
 
@@ -214,7 +214,7 @@ A fourth round of FOIA requests was filed in May 2026 after AJRS was identified 
   <div class="meeting-info">
     <p><strong>AJRS</strong> (Arkansas Judicial Retirement System)</p>
     <ul>
-      <li><strong>Status:</strong> Response pending. FOIA filed May 8, 2026; acknowledged same-day by Richmond Giles, APERS Staff Attorney; production deadline extended to May 15, 2026 by mutual agreement.</li>
+      <li><strong>Status:</strong> As of June 2026, AJRS has not produced records following the May 15, 2026 deadline. FOIA filed May 8, 2026; acknowledged same-day by Richmond Giles, APERS Staff Attorney; production deadline extended to May 15, 2026 by mutual agreement. AJRS commingles its investments with APERS under Act 1242 — the same administrative structure under which ASPRS confirmed no responsive records.</li>
       <li><strong>Contents:</strong> AJRS is administered by APERS staff and shares investment infrastructure, but operates as a separate benefit plan with its own Board of Trustees and trust fund (~$309 million AUM, ~89% funded). FOIA request filed to determine whether AJRS trust assets were included in sovereign bond purchases made through the APERS investment pool. The same-day acknowledgment by APERS legal counsel — the single attorney handling correspondence for both pension systems — operationally confirms the shared-staff structure.</li>
     </ul>
   </div>

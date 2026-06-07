@@ -26,7 +26,7 @@ The campaign's ask is legislative: passage of the **Pension Investment Integrity
 | **1,227** | Public records obtained and analyzed across three FOIA rounds to Arkansas state agencies |
 | **3** | Major credit agencies (S&P, Moody's, Fitch) that have downgraded the issuing country's credit rating since 2024 |
 | **0** | Independent credit analyses of these non-tradable sovereign bonds found in the entire document record |
-| **5** | Arkansas state agencies that produced documents — three pension systems (ATRS, APERS, ASHERS) and two non-pension state offices (the State Treasury and the Auditor of State). Two additional pension systems (ASPRS, LOPFI) confirmed null results; one (AJRS) response pending. Six pension systems total are covered by Act 498. |
+| **5** | Arkansas state agencies that produced documents — three pension systems (ATRS, APERS, ASHERS) and two non-pension state offices (the State Treasury and the Auditor of State). Two additional pension systems (ASPRS, LOPFI) confirmed null results; one (AJRS), commingled with APERS under Act 1242, had not produced records as of June 2026. Six pension systems total are covered by Act 498. |
 | **1** | Dissenting vote on the ATRS Board — Chair Danny Knight, who warned the process departed from standard practice |
 | **4** | Rounds of FOIA requests filed (August 2025, February 2026, March 2026, May 2026) |
 | **265** | New documents received in FOIA Round 2 (118 Treasury, 16 APERS, 7 ATRS, 124 Auditor) |
