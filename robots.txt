@@ -1,7 +1,11 @@
 # https://arpensions.org/robots.txt
 
+Sitemap: https://arpensions.org/sitemap.xml
+
 User-agent: *
 Allow: /
+Disallow: /assets/data/
+Disallow: /*.json
 
 # Allow AI search inclusion (ChatGPT search citations)
 User-agent: OAI-SearchBot
@@ -20,10 +24,3 @@ Disallow: /
 
 User-agent: Google-Extended
 Disallow: /
-
-Sitemap: https://arpensions.org/sitemap.xml
-
-# Disallow crawling of data files
-User-agent: *
-Disallow: /assets/data/
-Disallow: /*.json$
