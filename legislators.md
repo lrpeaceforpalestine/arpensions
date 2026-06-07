@@ -10,7 +10,7 @@ hero_band: navy
 
 ## Executive summary
 
-Arkansas pension funds have authorized up to **$100 million** in non-tradable foreign sovereign debt — direct loans to a foreign government — despite credit downgrades from major rating agencies, an internal Treasury memo recommending against new purchases, and the ATRS Board Chair's dissent over process concerns. No independent credit analysis has been produced to justify these investments. This raises serious questions about fiduciary compliance under existing Arkansas law.
+Arkansas pension funds have authorized up to **$100 million** in non-tradable foreign sovereign debt — direct loans to a foreign government — despite credit downgrades from major rating agencies, an internal Treasury memo recommending against new purchases, and the ATRS Board Chair's dissent over process concerns. No independent credit analysis has been produced to justify these investments. The bond issuer's own broker-dealer representatives served as both the sellers and the only source of analysis, and no independent evaluation was documented before the board votes. This raises serious questions about fiduciary compliance under existing Arkansas law.
 
 Six Arkansas pension benefit plans fall within the scope of Act 498 of 2023 (A.C.A. § 24-2-802(3)): **the Arkansas Teacher Retirement System (ATRS), the Arkansas Public Employees' Retirement System (APERS), the Arkansas State Highway Employees' Retirement System (ASHERS), the Arkansas State Police Retirement System (ASPRS), the Arkansas Judicial Retirement System (AJRS), and the Arkansas Local Police and Fire Retirement System (LOPFI).** The Pension Investment Integrity Act would apply to acquisitions of non-tradable sovereign debt by any of these plans.
 

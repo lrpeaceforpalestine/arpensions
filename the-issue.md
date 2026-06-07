@@ -186,13 +186,13 @@ These are not political questions. They are fiduciary questions. And Arkansas pe
 
 ## What we're asking for
 
-Our requests are straightforward:
+Our requests are about process, not any particular investment:
 
-1. **Pause** — Halt new purchases of these bonds until an independent credit analysis is completed and shared with pension fund members.
-2. **Transparency** — Publish the financial analysis comparing these bonds' risk, return, and liquidity against comparable fixed-income alternatives.
-3. **Process review** — Document how the recent authorizations complied with Arkansas's pecuniary-only standard and the normal manager-driven investment process.
-4. **Member input** — Invite public comment from the educators, public employees, and retirees whose retirement savings are at stake.
-5. **[Pension Investment Integrity Act](/legislators/)** — Issuer-neutral legislation requiring independent analysis, consultant independence, liquidity disclosure, documented rationale, and consistent application of the pecuniary-factors standard before pension boards commit to non-tradable sovereign debt.
+1. **[Pension Investment Integrity Act](/legislators/)** — Enact issuer-neutral legislation in the 2027 session requiring independent credit analysis, a written comparison against alternatives, liquidity disclosure, a documented fiduciary determination, and public posting before any Arkansas pension plan acquires non-tradable sovereign debt.
+2. **A Joint Committee review** — Have the Joint Interim Committee on Public Retirement and Social Security Programs use its A.C.A. § 10-3-703(c) authority to study whether current practices comply with Act 498 of 2023.
+3. **Disclosure pending legislation** — Pension boards can adopt, as a matter of policy, the practice of obtaining and publicly posting independent credit analyses before authorizing any new acquisition of non-tradable sovereign debt.
+
+We are not asking any board to buy, sell, or pause a specific investment. The fix is a documented fiduciary process — and it belongs at the legislature, not the trustees' table.
 
 </div>
 
