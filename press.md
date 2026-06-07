@@ -10,7 +10,7 @@ hero_band: charcoal
 
 ## Campaign summary
 
-Arkansans for Pension Integrity (API) is a grassroots Arkansas campaign investigating investments in non-tradable foreign sovereign debt by state pension funds. Through FOIA requests to Arkansas state agencies, the campaign has obtained and analyzed more than 1,200 public records revealing up to $100 million in authorized pension fund exposure to these bonds — without independent credit analysis, and through a process that bypassed normal investment channels. The State Treasury, a separately governed state office, holds an additional $55 million in the same instruments under different statutory authority; the campaign's legislative ask is scoped to pension boards.
+Arkansans for Pension Integrity (API) is a grassroots Arkansas campaign investigating investments in non-tradable foreign sovereign debt by state pension funds. Through FOIA requests to Arkansas state agencies, the campaign has obtained and analyzed more than 1,200 public records revealing up to $100 million in authorized pension fund exposure to these bonds — without independent credit analysis, and through a process that bypassed normal investment channels. The State Treasury, a separately governed state office, holds an additional $60 million in the same instruments (as of February 2026) under different statutory authority; the campaign's legislative ask is scoped to pension boards.
 
 The campaign's ask is legislative: passage of the **Pension Investment Integrity Act** in the 2027 Arkansas legislative session, requiring independent credit analysis, consultant independence, liquidity risk disclosure, and documented financial rationale before pension boards commit members' retirement funds to non-tradable sovereign debt. The campaign does not ask pension boards to buy or sell any specific investment.
 
@@ -22,7 +22,7 @@ The campaign's ask is legislative: passage of the **Pension Investment Integrity
 |--------|--------|
 | **$50M** | ATRS (teacher retirement) authorization for these bonds (June 2, 2025; Board Chair cast lone "no" vote); full $50M deployed December 2025 |
 | **$25–50M** | APERS (public employee retirement) authorization for non-tradable sovereign bonds (May 15, 2025) |
-| **$55M** | Arkansas State Treasury holdings in the same instruments — separately governed under Treasury investment authority, not Act 498; including $20M purchased since May 2025 |
+| **$60M** | Arkansas State Treasury holdings in the same instruments as of February 2026 — separately governed under Treasury investment authority, not Act 498; including $20M purchased in May 2025 and $10M in February 2026, net of intervening bond maturities |
 | **1,227** | Public records obtained and analyzed across three FOIA rounds to Arkansas state agencies |
 | **3** | Major credit agencies (S&P, Moody's, Fitch) that have downgraded the issuing country's credit rating since 2024 |
 | **0** | Independent credit analyses of these non-tradable sovereign bonds found in the entire document record |
@@ -110,7 +110,7 @@ The campaign's ask is legislative: passage of the **Pension Investment Integrity
   <li class="timeline-event timeline-event--highlight">
     <time datetime="2025-05">May 2025</time>
     <strong>$20M Treasury purchase; APERS authorizes $25&ndash;50M</strong>
-    <p>Treasury purchases two new $10M sovereign bonds, bringing holdings to $55M. APERS Investment Subcommittee unanimously authorizes $25&ndash;50M.</p>
+    <p>Treasury purchases two new $10M sovereign bonds, bringing holdings to $55M (net of intervening bond maturities). APERS Investment Subcommittee unanimously authorizes $25&ndash;50M.</p>
   </li>
   <li class="timeline-event timeline-event--highlight">
     <time datetime="2025-06-02">June 2, 2025</time>
@@ -120,7 +120,7 @@ The campaign's ask is legislative: passage of the **Pension Investment Integrity
   <li class="timeline-event">
     <time datetime="2025-06-11">June 11, 2025</time>
     <strong>APERS full board approves $25&ndash;50M</strong>
-    <p>Jason Brady introduces the investment citing Treasury&rsquo;s $55 million in these bonds. Board approves without independent financial analysis.</p>
+    <p>Jason Brady introduces the investment citing Treasury&rsquo;s then-$55 million in these bonds. Board approves without independent financial analysis.</p>
   </li>
   <li class="timeline-event">
     <time datetime="2025-07">July 2025</time>
@@ -277,7 +277,7 @@ Key evidence points:
 
 **The Auditor arranged a two-day pitch tour from his own office.** On April 11, 2025, State Auditor Dennis Milligan, through his office, scheduled four meetings in 18 minutes — arranging the bond issuer's sales executives to meet with the heads of APERS, ATRS, and the Treasury in Room 230 of his Capitol office. The Auditor has no investment authority over any of these funds.
 
-**The Auditor's office played at least five documented operational roles.** Deputy Auditor Jason Brady served as meeting broker, information relay (forwarding board communications to Milligan's personal AOL email), media response coordinator (receiving APERS's forwarded press inquiries), State Financial Officers Foundation (SFOF) speechwriter, and physical designee at the ATRS board vote. A handwritten note from Brady's files tracked allocations across all three investing entities on a single page.
+**The Auditor's office played at least seven documented operational roles.** Deputy Auditor Jason Brady served as meeting broker, information relay (forwarding board communications to Milligan's personal AOL email), media response coordinator (receiving APERS's forwarded press inquiries), State Financial Officers Foundation (SFOF) speechwriter, correspondence drafter (drafting Milligan's April 7, 2025 letter to State Senator Jim Dotson), and physical designee at the ATRS board vote — and the office's in-house video operation produced public-facing video content as a seventh role. A handwritten note from Brady's files tracked allocations across all three investing entities on a single page. The full seven-role breakdown appears at [/findings/auditor-channel/](/findings/auditor-channel/).
 
 **Public statements by the Governor, Treasurer, and other officials framed the purchases in political — not financial — terms.** The Governor celebrated them as proof Arkansas "puts its money where its mouth is."
 

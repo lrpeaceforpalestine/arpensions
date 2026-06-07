@@ -15,7 +15,7 @@
   var vizData = [
     { stat: '$100M',    subtitle: 'pension funds committed to sovereign bonds',    colorClass: 'viz-stat--accent' },
     { stat: '0 pages',  subtitle: 'of independent credit analysis',               colorClass: 'viz-stat--danger' },
-    { stat: '49 days',  subtitle: 'from sales pitch to $155 million authorized',   colorClass: 'viz-stat--accent' },
+    { stat: '49 days',  subtitle: 'from sales pitch to $120 million in new commitments',   colorClass: 'viz-stat--accent' },
     { stat: '37 vs 0',  subtitle: 'pages of analysis \u2014 other investments vs. these bonds', colorClass: 'viz-stat--danger' },
     { stat: '1 dissent', subtitle: 'lone \u201cno\u201d vote on the ATRS board',            colorClass: 'viz-stat--accent' }
   ];

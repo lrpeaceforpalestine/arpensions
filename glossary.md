@@ -19,7 +19,7 @@ This instrument has characteristics that distinguish it from standard fixed-inco
 
 **Declining credit quality.** All three major rating agencies — Moody's, S&P, and Fitch — have downgraded the issuing country's sovereign credit rating since 2024, citing economic instability and heightened security risks. As of early 2026, the Moody's rating stands at Baa1 — one notch above the threshold where many institutional investment policies would prohibit new purchases.
 
-**Sold by a broker-dealer with regulatory accommodations.** The bonds are sold exclusively by a for-profit New York corporation (FINRA CRD# 11148). In 2000, FINRA's predecessor granted this broker-dealer special accommodations regarding customer suitability requirements, acknowledging that its customer base is defined by affinity rather than financial criteria. The broker-dealer has three enforcement events on its FINRA record.
+**Sold by a broker-dealer with regulatory accommodations.** The bonds are sold exclusively by a for-profit New York corporation (FINRA CRD# 11148). In 2000, FINRA's predecessor granted this broker-dealer special accommodations regarding customer suitability requirements, acknowledging that its customer base is defined by affinity rather than financial criteria. The broker-dealer has four FINRA disclosure events on its record — three public enforcement actions plus a non-public 2014 control-affiliate disclosure.
 
 **Not available on any exchange.** Unlike U.S. Treasury securities, corporate bonds, or sovereign debt from most other countries, these bonds are not listed on any exchange and cannot be purchased through standard institutional trading platforms.
 

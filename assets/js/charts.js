@@ -89,7 +89,7 @@
             callbacks: {
               label: function (context) {
                 var details = [
-                  '$55M current holdings (~0.5% of $11B portfolio)',
+                  '$60M current holdings as of Feb 2026 (~0.5% of $11B portfolio)',
                   'Up to $50M authorized (~0.2% of $23.7B portfolio)',
                   '$25\u201350M authorized (~0.2\u20130.4% of $11.8B portfolio)'
                 ];

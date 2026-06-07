@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Our Methods — How We Conducted This Investigation"
-description: "1,227 documents. Six pension systems covered by Act 498. Four FOIA rounds. Here's exactly how we did it."
+description: "1,227 documents. Six pension systems covered by Act 498. Four FOIA rounds (the fourth, to AJRS, returned a null result). Here's exactly how we did it."
 permalink: /methodology/
 ---
 
@@ -19,7 +19,7 @@ Our requests targeted investment decision records, board meeting materials, corr
 
 ## Document Processing
 
-We received <span class="font-mono">1,227</span> documents totaling over <span class="font-mono">4.5</span> gigabytes across three rounds of FOIA requests. Round 1 (August–October 2025) produced 957 documents from four agencies. Round 2 (February–March 2026) added 265 documents from four agencies (Treasury: 118; APERS: 16; ATRS: 7; Auditor: 124). Round 3 (March 2026) added 5 documents from ASHERS; ASPRS confirmed no responsive records; LOPFI confirmed no responsive records and no current holdings of the bonds under investigation (April 9, 2026). Round 4 (May 2026) added a FOIA request to AJRS — acknowledged May 8, 2026 by Richmond Giles, APERS Staff Attorney, with production deadline extended to May 15, 2026. AJRS — identified May 8, 2026 as the sixth pension system covered by Act 498, and commingled with APERS under Act 1242 — confirmed no responsive records (May 15 and May 18, 2026). All six pension systems have now responded. Every document was:
+We received <span class="font-mono">1,227</span> documents totaling over <span class="font-mono">4.5</span> gigabytes across four rounds of FOIA requests — three of which produced documents; the fourth, to AJRS, returned a null result. Round 1 (August–October 2025) produced 957 documents from four agencies. Round 2 (February–March 2026) added 265 documents from four agencies (Treasury: 118; APERS: 16; ATRS: 7; Auditor: 124). Round 3 (March 2026) added 5 documents from ASHERS; ASPRS confirmed no responsive records; LOPFI confirmed no responsive records and no current holdings of the bonds under investigation (April 9, 2026). Round 4 (May 2026) added a FOIA request to AJRS — acknowledged May 8, 2026 by Richmond Giles, APERS Staff Attorney, with production deadline extended to May 15, 2026. AJRS — identified May 8, 2026 as the sixth pension system covered by Act 498, and commingled with APERS under Act 1242 — confirmed no responsive records (May 15 and May 18, 2026). All six pension systems have now responded. Every document was:
 
 1. **Cataloged** with metadata including source agency, date, document type, and FOIA request number
 2. **Processed** using optical character recognition (OCR) where necessary to make scanned documents searchable

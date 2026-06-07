@@ -40,7 +40,7 @@
       { id: 'brady',          label: 'Jason Brady',                  category: 'conduit' },
       { id: 'sfof',           label: 'SFOF',                         category: 'conduit' },
       { id: 'sales-tour',     label: 'April 2025 Tour',             category: 'conduit' },
-      { id: 'treasury',       label: 'Treasury $55M',                category: 'agency' },
+      { id: 'treasury',       label: 'Treasury $60M',                category: 'agency' },
       { id: 'apers',          label: 'APERS $25\u201350M',          category: 'agency' },
       { id: 'atrs',           label: 'ATRS $50M',                    category: 'agency' },
       { id: 'other-states',   label: 'Other States',                 category: 'external' }
@@ -104,7 +104,7 @@
       .attr('width', '100%')
       .attr('height', height)
       .attr('role', 'img')
-      .attr('aria-label', 'Sankey diagram showing the influence flow: Dennis Milligan and the bond issuer\'s sales representatives channel influence through the Auditor\u2019s office, Jason Brady, SFOF, and the April 2025 sales tour to reach Treasury ($55M), APERS ($25\u201350M), ATRS ($50M), and interstate replication.')
+      .attr('aria-label', 'Sankey diagram showing the influence flow: Dennis Milligan and the bond issuer\'s sales representatives channel influence through the Auditor\u2019s office, Jason Brady, SFOF, and the April 2025 sales tour to reach Treasury ($60M), APERS ($25\u201350M), ATRS ($50M), and interstate replication.')
       .append('g')
       .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 

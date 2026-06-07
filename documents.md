@@ -143,7 +143,7 @@ A second round of FOIA requests produced 265 additional documents:
     <p><strong>APERS</strong></p>
     <ul>
       <li><strong>Documents:</strong> 16</li>
-      <li><strong>Pages:</strong> 9,241 total</li>
+      <li><strong>Pages:</strong> 9,241 total across all 16 documents (including the 8,648-page production)</li>
       <li><strong>Contents:</strong> Four quarterly board packets (March–December 2025), four Investment Finance Committee subcommittee packets, 8,648-page comprehensive FOIA production, six sets of meeting minutes</li>
     </ul>
   </div>

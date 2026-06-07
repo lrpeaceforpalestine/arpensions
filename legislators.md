@@ -22,7 +22,7 @@ We are asking the General Assembly to strengthen pension transparency requiremen
 
 | Fact | Detail |
 |------|--------|
-| **State Treasury holdings** | $55 million in non-tradable sovereign bonds as of mid-2025, including $20M purchased since May 2025 |
+| **State Treasury holdings** | $60 million in non-tradable sovereign bonds as of February 2026, including $20M purchased in May 2025 and $10M in February 2026 (net of intervening bond maturities) |
 | **ATRS authorization** | Up to $50 million (Resolution 2025-22, June 2, 2025) |
 | **APERS authorization** | $25–50 million (Investment Subcommittee, May 15, 2025; full board, June 11, 2025) |
 | **Credit downgrades** | All three major agencies (Moody's, S&P, and Fitch) have downgraded the issuing country's credit rating since 2024, citing economic instability and security risks |
@@ -30,12 +30,12 @@ We are asking the General Assembly to strengthen pension transparency requiremen
 | **Board Chair dissent** | ATRS Board Chair Danny Knight cast the sole "no" vote, warning the process departed from ATRS's normal manager-driven practice |
 | **Sales representative involvement** | The bond issuer's sales representatives met with two pension boards (ATRS, APERS) and the State Treasurer in April 2025; within weeks, new purchases and authorizations followed |
 | **Independent credit analysis** | None found in more than 1,200 FOIA documents from Arkansas state agencies |
-| **Brady conduit confirmed** | Auditor's appointee Jason Brady introduced the investment to the APERS board citing Treasury's $55M holdings; board approved $25–50M without independent analysis |
+| **Brady conduit confirmed** | Auditor's appointee Jason Brady introduced the investment to the APERS board citing Treasury's then-$55M holdings (now $60M as of February 2026); board approved $25–50M without independent analysis |
 | **APERS two-month purchase delay** | Board authorized in May–June 2025; "Still zero for APERS" confirmed July 30, 2025; staff still establishing contact July 31 |
 | **Divergent management approaches** | APERS: direct purchase, no manager, no fees. ATRS: hired Reams Asset Management, formal guidelines established September 25, 2025 |
 | **Dual fiduciary standard** | Same APERS meetings: 37 pages of Callan analysis for other investments, 0 pages for the sovereign bond authorization |
 | **Cross-system coordination** | ATRS Executive Director attended the APERS subcommittee meeting where the sovereign bond purchase was authorized |
-| **Subcommittee chair conflict** | Larry Walther, former Treasurer who maintained $55M in Treasury sovereign bond holdings, chaired the APERS subcommittee that authorized $25–50M more |
+| **Subcommittee chair conflict** | Larry Walther, former Treasurer who maintained the Treasury's sovereign bond holdings (~$55M during his 2023–2025 tenure; now $60M as of February 2026), chaired the APERS subcommittee that authorized $25–50M more |
 | **Total documents reviewed** | 1,227 across three FOIA rounds to Arkansas state agencies |
 
 </div>
@@ -55,7 +55,7 @@ The pattern in the public record raises questions about whether these standards 
 
 **The idea originated through political channels.** State Auditor Dennis Milligan, an ex officio trustee with voting rights on both boards (Ark. Code § 24-7-301), arranged meetings between the bond issuer's sales representatives and state officials. In [correspondence with the Auditor's office](/assets/documents/milligan-oct7-anniversary-berman-reply-2024.pdf), the bond issuer's national managing director called Milligan "truly one of a kind" and expressed he was "forever grateful" for his support.
 
-**The conduit chain is now documented.** New records confirm the specific mechanism. Jason Brady, appointed to the APERS board by Auditor Dennis Milligan, introduced the investment by telling the board "it had come to his attention" that it was available, and cited Treasury's $55 million in holdings. The board approved $25–50 million following Brady's presentation. The chain — Milligan as former Treasurer initiating Treasury purchases, then as Auditor placing his appointee on the APERS board to introduce the same investment — is documented across multiple independent FOIA responses.
+**The conduit chain is now documented.** New records confirm the specific mechanism. Jason Brady, appointed to the APERS board by Auditor Dennis Milligan, introduced the investment by telling the board "it had come to his attention" that it was available, and cited Treasury's then-$55 million in holdings (now $60 million as of February 2026). The board approved $25–50 million following Brady's presentation. The chain — Milligan as former Treasurer initiating Treasury purchases, then as Auditor placing his appointee on the APERS board to introduce the same investment — is documented across multiple independent FOIA responses.
 
 **State investment staff had already flagged the risk.** In late 2024, Steve Pulley — Senior Investment Officer in the State Treasurer's office — recommended holding existing positions and letting them roll off, citing credit downgrades. The Treasury purchased $20 million more anyway. The pension boards then authorized up to $100 million more in 2025 without producing any independent credit analysis of their own.
 
@@ -77,7 +77,7 @@ Unlike U.S. Treasury bonds and most fixed-income instruments available to pensio
 - **Declining credit quality** — all three major agencies (Moody's, S&P, and Fitch) have downgraded the issuing country's rating since 2024, with negative outlooks citing ongoing military operations and economic uncertainty
 - **Lower yields relative to risk** — press analysis has noted that the bond market "brims with other offerings that have higher credit ratings and that are liquid," questioning why the fund chose this specific instrument over higher-rated liquid alternatives
 - **Concentrated sovereign exposure** — these bonds represent a direct, single-country government debt position
-- **Sold by a broker-dealer with three enforcement events** — the broker-dealer (FINRA CRD# 11148) has been censured by the SEC for currency reporting violations (1983), ordered to make rescission offers for selling securities while unregistered in North Carolina (1984), and fined $9,500 by NASD for operating with an unregistered principal (1997–98). In 2000, NASD granted this broker-dealer special accommodations on suitability requirements. [Full regulatory record (PDF)](https://files.brokercheck.finra.org/firm/firm_11148.pdf)
+- **Sold by a broker-dealer with four FINRA disclosure events** — the broker-dealer (FINRA CRD# 11148) record shows three public enforcement actions — censured by the SEC for currency reporting violations (1983), ordered to make rescission offers for selling securities while unregistered in North Carolina (1984), and fined $9,500 by NASD for operating with an unregistered principal (1997–98) — plus a non-public 2014 control-affiliate disclosure. In 2000, NASD granted this broker-dealer special accommodations on suitability requirements. [Full regulatory record (PDF)](https://files.brokercheck.finra.org/firm/firm_11148.pdf)
 
 These are not inherently disqualifying characteristics, but they demand exactly the kind of independent, documented financial analysis that appears to be missing from the record.
 
@@ -121,7 +121,7 @@ Existing Arkansas law establishes a rigorous standard for *what factors* pension
 
 ### The committee pathway
 
-This legislation would go through the **Joint Committee on Public Retirement & Social Security Programs**, which has legislative oversight of all public retirement systems in the state. The committee consists of 20 members (10 senators, 10 representatives) with an approximately 14–6 Republican supermajority.
+This legislation would go through the **Joint Committee on Public Retirement and Social Security Programs**, which has legislative oversight of all public retirement systems in the state. The committee consists of 20 members (10 senators, 10 representatives) with an approximately 14–6 Republican supermajority.
 
 **Committee leadership:**
 
