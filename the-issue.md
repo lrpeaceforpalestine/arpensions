@@ -31,12 +31,12 @@ Two Arkansas pension boards have authorized substantial new exposure to non-trad
 | Agency | Amount | Portfolio Share | Date |
 |--------|--------|----------------|------|
 | **ATRS** (Arkansas Teacher Retirement System) | Up to **$50 million** authorized; full amount deployed Dec 2025 | ~0.2% of $23.7B | June 2, 2025 |
-| **APERS** (Arkansas Public Employees' Retirement System) | **$25–50 million** authorized; purchase confirmed by Nov 2025 | ~0.2–0.4% of $11.58B | May 15, 2025 (subcommittee); June 11, 2025 (full board) |
+| **APERS** (Arkansas Public Employees' Retirement System) | **$25–50 million** authorized; first **$15 million** deployed Oct 15, 2025 | ~0.2–0.4% of $11.58B | May 15, 2025 (subcommittee); June 11, 2025 (full board) |
 | State Treasury (separately governed) | $55 million in holdings (including $20M purchased since May 2025) | ~0.5% of $11B | Ongoing since 2017 |
 
 </div>
 
-(Note: The pension authorizations total up to $100 million combined. APERS authorized up to $50M but had not yet purchased as of July 2025 per FOIA records. The Treasury's $55M position is governed by separate Treasury investment authority and is shown here for context — it is not within the scope of the Pension Investment Integrity Act, which by its terms applies only to pension benefit plans.)
+(Note: The pension authorizations total up to $100 million combined. APERS authorized up to $50M and deployed a first $15M on October 15, 2025 per FOIA records. The Treasury's $55M position is governed by separate Treasury investment authority and is shown here for context — it is not within the scope of the Pension Investment Integrity Act, which by its terms applies only to pension benefit plans.)
 
 While the portfolio percentages are small, the question is whether standard fiduciary process was followed — not whether the amounts are material.
 
@@ -62,7 +62,7 @@ These authorizations came in rapid succession — and under circumstances that r
 
 **April 9, 2026:** LOPFI (Local Police and Fire Retirement System) confirms no responsive records and no current holdings of the bonds under investigation. LOPFI manages its own investments independently with approximately $3.15 billion under management; no documentation of contact with the bond issuer. With LOPFI's response, five of six Arkansas pension systems had responded.
 
-**May 8, 2026:** AJRS (Arkansas Judicial Retirement System) identified as the sixth Arkansas pension system covered by Act 498. AJRS is administered by APERS staff and shares investment infrastructure but operates as a separate benefit plan with its own Board of Trustees and trust fund (~$309 million AUM, ~89% funded). FOIA Round 4 request filed and acknowledged same-day by APERS Staff Attorney Richmond Giles — the single attorney handling FOIA correspondence for both pension systems, operationally confirming the shared-staff structure. Production deadline extended to May 15, 2026.
+**May 8, 2026:** AJRS (Arkansas Judicial Retirement System) identified as the sixth Arkansas pension system covered by Act 498. AJRS is administered by APERS staff and shares investment infrastructure but operates as a separate benefit plan with its own Board of Trustees and trust fund (~$309 million AUM, ~89% funded). FOIA Round 4 request filed and acknowledged same-day by APERS Staff Attorney Richmond Giles — the single attorney handling FOIA correspondence for both pension systems, operationally confirming the shared-staff structure. Production deadline extended to May 15, 2026. AJRS confirmed no responsive records — no holdings or board records (May 15) and no responsive communications (May 18, 2026); like ASPRS, AJRS commingles its investments with APERS under Act 1242. With AJRS, all six Act 498 pension systems have now responded.
 
 <div class="callout" markdown="1">
 

@@ -14,7 +14,7 @@ timeline_thread: true
 
 ## Our research
 
-Arkansans for Pension Integrity has analyzed **more than <span data-countup="1200" data-countup-suffix="" data-countup-duration="1.5">1,200</span> public records** from three rounds of Freedom of Information Act (FOIA) requests to Arkansas state agencies: the State Treasury, ATRS, APERS, the Auditor of State, and ASHERS. The first round (August 2025) covered four agencies; the second round (February–March 2026) produced responses from all four: Treasury (118 documents), APERS (16 documents including an 8,648-page production), ATRS (7 documents, partial response), and the Auditor of State (124 documents from three custodians, delivered March 3, 2026 via flash drive). The third round (March 2026) expanded to ASHERS, ASPRS, and LOPFI — ASHERS delivered 5 documents, ASPRS confirmed no responsive records, and LOPFI confirmed no responsive records and no current holdings of the bonds under investigation (April 9, 2026). Five of six pension agencies have responded; a FOIA request to the sixth (AJRS, the Arkansas Judicial Retirement System) was filed May 8, 2026 — response pending. Total corpus: 1,227 documents across three FOIA rounds.
+Arkansans for Pension Integrity has analyzed **more than <span data-countup="1200" data-countup-suffix="" data-countup-duration="1.5">1,200</span> public records** from three rounds of Freedom of Information Act (FOIA) requests to Arkansas state agencies: the State Treasury, ATRS, APERS, the Auditor of State, and ASHERS. The first round (August 2025) covered four agencies; the second round (February–March 2026) produced responses from all four: Treasury (118 documents), APERS (16 documents including an 8,648-page production), ATRS (7 documents, partial response), and the Auditor of State (124 documents from three custodians, delivered March 3, 2026 via flash drive). The third round (March 2026) expanded to ASHERS, ASPRS, and LOPFI — ASHERS delivered 5 documents, ASPRS confirmed no responsive records, and LOPFI confirmed no responsive records and no current holdings of the bonds under investigation (April 9, 2026). All six pension systems have now responded; the sixth (AJRS, the Arkansas Judicial Retirement System) confirmed no responsive records in May 2026 — AJRS commingles its investments with APERS under Act 1242. Total corpus: 1,227 documents across three FOIA rounds.
 
 Every claim on this site is backed by documents in the public record. Below are the key findings.
 
@@ -380,7 +380,7 @@ Authorizing up to $<span data-countup="100" data-countup-prefix="" data-countup-
 </ul>
 </noscript>
 
-<p class="bar-chart-note"><em>Treasury figure reflects current holdings (~0.5% of the Treasury's $11 billion portfolio), including $20M purchased since May 2025. ATRS authorization (~0.2% of ATRS's $23.7 billion portfolio) per Resolution 2025-22, June 2, 2025; full $50M deployed December 2025. APERS authorization (~0.2–0.4% of APERS's $11.58 billion portfolio) per Investment Subcommittee (May 15, 2025) and full board (June 11, 2025); at least one purchase confirmed by November 2025, exact amount unknown.</em></p>
+<p class="bar-chart-note"><em>Treasury figure reflects current holdings (~0.5% of the Treasury's $11 billion portfolio), including $20M purchased since May 2025. ATRS authorization (~0.2% of ATRS's $23.7 billion portfolio) per Resolution 2025-22, June 2, 2025; full $50M deployed December 2025. APERS authorization (~0.2–0.4% of APERS's $11.58 billion portfolio) per Investment Subcommittee (May 15, 2025) and full board (June 11, 2025); first $15 million deployed October 15, 2025.</em></p>
 
 <p><em>While these percentages are small, the investigation concerns whether standard fiduciary process was followed — not portfolio materiality. Hover over each bar for detail.</em></p>
 
@@ -560,6 +560,11 @@ Authorizing up to $<span data-countup="100" data-countup-prefix="" data-countup-
     <time>May 8, 2026</time>
     <h3>AJRS identified as sixth pension system; FOIA Round 4 filed and acknowledged</h3>
     <p>AJRS (Arkansas Judicial Retirement System) identified as the sixth Arkansas pension system covered by Act 498. AJRS is administered by APERS staff and shares investment infrastructure, but has its own Board of Trustees (five members appointed by the Arkansas Judicial Council) and trust fund (~$309 million AUM, ~89% funded, ~139 active members). FOIA request filed May 8, 2026 to determine whether AJRS trust assets were included in sovereign bond purchases made through the APERS investment pool. Same-day acknowledgment received from Richmond Giles, APERS Staff Attorney — the single attorney handling FOIA correspondence for both APERS and AJRS, operationally confirming the shared-staff structure. Production deadline extended to May 15, 2026 by mutual agreement.</p>
+  </li>
+  <li class="timeline-event" data-aos="fade-left">
+    <time>May 18, 2026</time>
+    <h3>AJRS confirms a complete null result; all six pension systems have responded</h3>
+    <p>APERS/AJRS Staff Attorney Richmond Giles confirmed no responsive records to any part of the FOIA request — no holdings or board records (May 15) and no responsive communications (May 18). AJRS commingles its investments with APERS under Act 1242, the same structure under which ASPRS confirmed null; the only Development Corporation for Israel communications reaching the shared APERS/AJRS staff were already produced in the APERS February 2026 response. With AJRS, all six Act 498 pension systems have now responded.</p>
   </li>
 </ol>
 </div>
