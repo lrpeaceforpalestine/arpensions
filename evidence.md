@@ -92,7 +92,7 @@ Instead, even as bonds matured in accordance with the memo's recommendation, the
 
 ### 3. Sales representatives met with agencies before authorizations
 
-In April 2025, the bond issuer's national and regional sales representatives met with the directors of both ATRS and APERS, along with the State Treasurer and State Auditor. State Auditor Dennis Milligan arranged the meetings. A [thank-you email from the issuer's national managing director, Lawrence Berman](/assets/documents/berman-thank-you-fecher-20m-pitch-2025.pdf), later used the Treasury's $20 million purchase as sales leverage on the APERS director. A separate [thank-you email to APERS staff](/assets/documents/berman-thank-you-apers-staff-2024.pdf) praised their "kind hosthe Integrity Actlity" and pitched follow-up meetings.
+In April 2025, the bond issuer's national and regional sales representatives met with the directors of both ATRS and APERS, along with the State Treasurer and State Auditor. State Auditor Dennis Milligan arranged the meetings. A [thank-you email from the issuer's national managing director, Lawrence Berman](/assets/documents/berman-thank-you-fecher-20m-pitch-2025.pdf), later used the Treasury's $20 million purchase as sales leverage on the APERS director. A separate [thank-you email to APERS staff](/assets/documents/berman-thank-you-apers-staff-2024.pdf) praised their "kind hospitality" and pitched follow-up meetings.
 
 **Within weeks:**
 - The State Treasury purchased $20 million in new non-tradable sovereign bonds
@@ -196,7 +196,7 @@ Within weeks of these meetings, all three agencies authorized or purchased non-t
 <summary><h3>3f. ATRS deployed the full $50 million by December 2025</h3></summary>
 <div class="subfinding-content" markdown="1">
 
-On December 29, 2025, ATRS Deputy Director Rod Graves sent a routine "Board Update-Liquidity" email to the ATRS board. Buried in the liquidity accounting was the first post-purchase confirmation. **From the public record:** "December payments since the last Board update consisted of several ATRS obligations including cathe Integrity Actl calls for various investments of approximately $185 million. This includes the Scout (Reams) mandate of $50 million for Israel Bonds."
+On December 29, 2025, ATRS Deputy Director Rod Graves sent a routine "Board Update-Liquidity" email to the ATRS board. Buried in the liquidity accounting was the first post-purchase confirmation. **From the public record:** "December payments since the last Board update consisted of several ATRS obligations including capital calls for various investments of approximately $185 million. This includes the Scout (Reams) mandate of $50 million for Israel Bonds."
 
 The full $50 million authorized by Resolution 2025-22 was deployed in a single transaction through ATRS's investment manager, Reams Asset Management (operating as Scout). This confirms that the authorization moved from board vote (June 2, 2025) to investment guidelines (September 25, 2025) to full deployment (December 2025) — a six-month process in which the financial analysis that should have preceded authorization was never produced.
 

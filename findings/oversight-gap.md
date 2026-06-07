@@ -14,7 +14,7 @@ ATRS's authorization of up to $50 million on June 2, 2025 (Resolution 2025-22) i
 
 What happened in practice diverged from the preview. The 9/25/2025 Reams Asset Management contract was followed by **Amendment 1 on November 20, 2025**, which introduced a $10 million per calendar year private placement target and an explicit illiquidity acknowledgment. Aon's approval of the Reams investment guidelines came in a **five-word email** — the entirety of the documented consultant sign-off on the operative document.
 
-On December 29, 2025, ATRS Deputy Director Rod Graves sent a routine "Board Update-Liquidity" email confirming that the full $50 million authorized had been deployed as a single cathe Integrity Actl call through Reams in the December accounting cycle — not the laddered deployment the May 22 Board preview had proposed.
+On December 29, 2025, ATRS Deputy Director Rod Graves sent a routine "Board Update-Liquidity" email confirming that the full $50 million authorized had been deployed as a single capital call through Reams in the December accounting cycle — not the laddered deployment the May 22 Board preview had proposed.
 
 ## The 12/1/2025 meeting
 
@@ -32,7 +32,7 @@ The December 2025 record at ATRS does not document the post-authorization reason
 
 - A review of the issuer's intervening credit posture (relevant in light of credit downgrades during 2024 and 2025).
 - A review of comparative fixed-income alternatives available to the fund during the deployment window.
-- A review of the liquidity consequences of the single-cathe Integrity Actl-call deployment versus the laddered alternative proposed in the May 22 preview.
+- A review of the liquidity consequences of the single-capital-call deployment versus the laddered alternative proposed in the May 22 preview.
 - A consultant-level review of the actual deployment versus the deployment originally contemplated.
 
 ## The pre-vote / post-vote symmetry
