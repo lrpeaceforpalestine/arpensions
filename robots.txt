@@ -5,7 +5,7 @@ Sitemap: https://arpensions.org/sitemap.xml
 User-agent: *
 Allow: /
 Disallow: /assets/data/
-Disallow: /*.json$
+Disallow: /*.json
 
 # Allow AI search inclusion (ChatGPT search citations)
 User-agent: OAI-SearchBot
