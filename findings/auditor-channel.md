@@ -24,7 +24,7 @@ The FOIA record, however, establishes that during the period covered by this inv
 
 **6. Press-response coordination.** When Arkansas Times reporter Jennifer Lenow sent APERS a request for comment about the sovereign bond authorization, APERS Executive Director Amy Fecher's first action was to forward the inquiry to Brady at the Auditor's office, with Spadoni copied. The FOIA record places the Auditor's office in the de facto role of media-response coordinator for APERS — an agency over which the Auditor has no statutory authority.
 
-**7. Public-facing video production.** Auditor's-office video producer Kurt Underwood produced an "I stand with Israel" YouTube video published on October 7, 2024. The same Auditor's-office video apparatus hosted the April 16, 2025 SFOF video recording session referenced in the SFOF pipeline.
+**7. Public-facing video production.** The Auditor's office ran an in-house video operation — the same apparatus that hosted the April 16, 2025 SFOF recording session referenced in the [SFOF pipeline](/findings/sfof-pipeline/). The operationally relevant fact is that an office with no investment authority over the pension funds maintained a promotional-video capacity tied to the same interstate network that distributed the bond-vote results. (The office's video producer, Kurt Underwood, also produced an October 2024 political solidarity video.)
 
 ## The senior-leadership tier
 
