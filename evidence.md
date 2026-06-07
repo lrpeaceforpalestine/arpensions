@@ -14,7 +14,7 @@ timeline_thread: true
 
 ## Our research
 
-Arkansans for Pension Integrity has analyzed **more than <span data-countup="1200" data-countup-suffix="" data-countup-duration="1.5">1,200</span> public records** from three rounds of Freedom of Information Act (FOIA) requests to Arkansas state agencies: the State Treasury, ATRS, APERS, the Auditor of State, and ASHERS. The first round (August 2025) covered four agencies; the second round (February–March 2026) produced responses from all four: Treasury (118 documents), APERS (16 documents including an 8,648-page production), ATRS (7 documents, partial response), and the Auditor of State (124 documents from three custodians, delivered March 3, 2026 via flash drive). The third round (March 2026) expanded to ASHERS, ASPRS, and LOPFI — ASHERS delivered 5 documents, ASPRS confirmed no responsive records, and LOPFI confirmed no responsive records and no current holdings of the bonds under investigation (April 9, 2026). All six pension systems have now responded; the sixth (AJRS, the Arkansas Judicial Retirement System) confirmed no responsive records in May 2026 — AJRS commingles its investments with APERS under Act 1242. Total corpus: 1,227 documents across three FOIA rounds.
+Arkansans for Pension Integrity has analyzed **more than <span data-countup="1200" data-countup-suffix="" data-countup-duration="1.5">1,200</span> public records** from three rounds of Freedom of Information Act (FOIA) requests to Arkansas state agencies: the State Treasury, ATRS, APERS, the Auditor of State, and ASHERS. The first round (August 2025) covered four agencies; the second round (February–March 2026) produced responses from all four: Treasury (118 documents), APERS (16 documents including an 8,648-page production), ATRS (7 documents, partial response), and the Auditor of State (124 documents from three custodians, delivered March 3, 2026 via flash drive). The third round (March 2026) expanded to ASHERS, ASPRS, and LOPFI — ASHERS delivered 5 documents, ASPRS confirmed no responsive records, and LOPFI confirmed no responsive records and no current holdings of the bonds under investigation (April 9, 2026). All six pension systems have now responded; the sixth (AJRS, the Arkansas Judicial Retirement System) confirmed no responsive records in May 2026 — AJRS commingles its investments with APERS under Act 1242. Total corpus: 1,227 documents across three FOIA rounds that produced documents (a fourth round, to AJRS, returned a null result).
 
 Every claim on this site is backed by documents in the public record. Below are the key findings.
 
@@ -86,7 +86,7 @@ Arkansas's pecuniary-factors standard (Act 498 of 2023, the State Government Emp
 
 On October 8, 2024, Steve Pulley, a Senior Investment Officer in the State Treasurer's office, wrote an internal memo raising concerns about the bonds under investigation. The memo noted that major credit-rating agencies — specifically Fitch, Moody's, and S&P — had downgraded the issuing country's credit rating, citing "heightened security risks and weakened economic prospects." The memo recommended that Arkansas "hold our positions and allow for the $17M to roll off in the first half of 2025 and the $20M maturing in the calendar year 2026." (For the investment standards that should have governed this decision, see the [Treasury investment policy](/assets/documents/treasury-investment-policy-2022.pdf).)
 
-Instead, even as bonds matured in accordance with the memo's recommendation, the state purchased $20 million in new non-tradable sovereign bonds. By May 2025, Senior Investment Officer Steve Pulley confirmed the Treasury held $55 million in these bonds — roughly the same level the memo had recommended letting decline. What changed was not the credit outlook, but the political calculus.
+Instead, even as bonds matured in accordance with the memo's recommendation, the state purchased $20 million in new non-tradable sovereign bonds. By May 2025, Senior Investment Officer Steve Pulley confirmed the Treasury held $55 million in these bonds — roughly the same level the memo had recommended letting decline. A further $10 million purchase in February 2026 (net of a $5 million February 2026 maturity) brought the position to $60 million. What changed was not the credit outlook, but the political calculus.
 
 ---
 
@@ -278,7 +278,7 @@ The two pension systems also have an established pattern of coordination: in the
 
 Larry Walther — who served as Arkansas's 40th Treasurer of State from August 2023 to January 2025 and maintained the Treasury's sovereign bond position throughout his tenure — chaired the Investment Finance Subcommittee that authorized APERS's first-ever purchase of these non-tradable sovereign bonds. The May 15, 2025 subcommittee minutes record "Mr. Larry Walther presided" as Chair of the Investment Finance Sub-Committee.
 
-The former Treasurer who oversaw $55 million in Treasury sovereign bond holdings now chairs the pension subcommittee that authorized $25–50 million more in the same instrument — and the subcommittee received zero pages of independent analysis before voting.
+The former Treasurer who oversaw the Treasury's sovereign bond holdings (~$55 million during his 2023–2025 tenure; $60 million as of February 2026) now chairs the pension subcommittee that authorized $25–50 million more in the same instrument — and the subcommittee received zero pages of independent analysis before voting.
 
 Additionally, APERS Board Secretary Daryl Bassett had previously appointed Jason Brady to preside over the March 5, 2025 subcommittee meeting, meaning Brady was sometimes the presiding officer of the very committee he later pitched these bonds to.
 
@@ -360,13 +360,13 @@ Authorizing up to $<span data-countup="100" data-countup-prefix="" data-countup-
 ## Authorized or committed exposure by agency
 
 <div class="chart-container" data-aos="fade-up" style="position: relative; max-width: 640px; height: 200px; margin-bottom: 1.25rem;">
-  <canvas id="exposure-chart" aria-label="Bar chart: Arkansas Treasury $55M, ATRS up to $50M, APERS $25–50M in non-tradable sovereign bond exposure" role="img"></canvas>
+  <canvas id="exposure-chart" aria-label="Bar chart: Arkansas Treasury $60M, ATRS up to $50M, APERS $25–50M in non-tradable sovereign bond exposure" role="img"></canvas>
 </div>
 
 <noscript>
 <ul class="bar-chart" role="list" aria-label="Non-tradable sovereign bond authorized or committed exposure by agency">
   <li>
-    <div class="bar-chart-label"><span>Arkansas Treasury</span><span>$55M</span></div>
+    <div class="bar-chart-label"><span>Arkansas Treasury</span><span>$60M</span></div>
     <div class="bar-chart-bar" style="width: 100%" aria-hidden="true"></div>
   </li>
   <li>
@@ -380,7 +380,7 @@ Authorizing up to $<span data-countup="100" data-countup-prefix="" data-countup-
 </ul>
 </noscript>
 
-<p class="bar-chart-note"><em>Treasury figure reflects current holdings (~0.5% of the Treasury's $11 billion portfolio), including $20M purchased since May 2025. ATRS authorization (~0.2% of ATRS's $23.7 billion portfolio) per Resolution 2025-22, June 2, 2025; full $50M deployed December 2025. APERS authorization (~0.2–0.4% of APERS's $11.58 billion portfolio) per Investment Subcommittee (May 15, 2025) and full board (June 11, 2025); first $15 million deployed October 15, 2025.</em></p>
+<p class="bar-chart-note"><em>Treasury figure reflects current holdings of $60 million as of February 2026 (~0.5% of the Treasury's $11 billion portfolio), including $20M purchased in May 2025 and $10M in February 2026, net of intervening bond maturities. ATRS authorization (~0.2% of ATRS's $23.7 billion portfolio) per Resolution 2025-22, June 2, 2025; full $50M deployed December 2025. APERS authorization (~0.2–0.4% of APERS's $11.58 billion portfolio) per Investment Subcommittee (May 15, 2025) and full board (June 11, 2025); first $15 million deployed October 15, 2025.</em></p>
 
 <p><em>While these percentages are small, the investigation concerns whether standard fiduciary process was followed — not portfolio materiality. Hover over each bar for detail.</em></p>
 
@@ -446,7 +446,7 @@ Authorizing up to $<span data-countup="100" data-countup-prefix="" data-countup-
   <li class="timeline-event timeline-event--highlight" data-aos="fade-left">
     <time>October 2023</time>
     <h3>$10M purchase after October 7 attacks</h3>
-    <p>State Board of Finance approves $10 million additional purchase of non-tradable sovereign bonds, bringing total holdings to $57 million. Officials frame the purchase in political rather than financial terms.</p>
+    <p>State Board of Finance approves $10 million additional purchase of non-tradable sovereign bonds, bringing total holdings to $57 million (holdings shown net of intervening bond maturities). Officials frame the purchase in political rather than financial terms.</p>
   </li>
 </ol>
 </div>

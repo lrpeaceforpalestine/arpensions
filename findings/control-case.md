@@ -20,7 +20,7 @@ Within forty-nine days of the April 2025 outreach:
 
 - **ATRS** (Auditor channel) — Board adopted Resolution 2025-22 on June 2, 2025, authorizing up to $50 million.
 - **APERS** (Auditor channel) — Investment Finance Subcommittee authorized $25–50 million on May 15, 2025; full board ratified on June 11, 2025.
-- **State Treasury** (Auditor channel) — Purchased $20 million in new bonds in May 2025 (followed by an additional $10 million purchase in February 2026 — see [the Pension Investment Integrity Act case](/legislators/)).
+- **State Treasury** (Auditor channel) — Purchased $20 million in new bonds in May 2025 (followed by an additional $10 million purchase in February 2026, bringing holdings to $60 million net of intervening maturities — see [the Pension Investment Integrity Act case](/legislators/)).
 - **ASHERS** (DFA channel) — Declined to invest. ASHERS's response to our FOIA Round 3 request, delivered March 27, 2026, contained five documents reflecting the parallel pitch and a passive non-engagement decline.
 
 ASHERS's overall holdings, per the FOIA production, include approximately $1.967 million across three publicly-traded technology equities listed on a single foreign exchange — none of the non-tradable sovereign bonds at issue here.
