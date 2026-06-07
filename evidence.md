@@ -380,7 +380,7 @@ Authorizing up to $<span data-countup="100" data-countup-prefix="" data-countup-
 </ul>
 </noscript>
 
-<p class="bar-chart-note"><em>Treasury figure reflects current holdings (~0.5% of the Treasury's $11 billion portfolio), including $20M purchased since May 2025. ATRS authorization (~0.2% of ATRS's $23.7 billion portfolio) per Resolution 2025-22, June 2, 2025; full $50M deployed December 2025. APERS authorization (~0.2–0.4% of APERS's $11.58 billion portfolio) per Investment Subcommittee (May 15, 2025) and full board (June 11, 2025); at least one purchase confirmed by November 2025, exact amount unknown.</em></p>
+<p class="bar-chart-note"><em>Treasury figure reflects current holdings (~0.5% of the Treasury's $11 billion portfolio), including $20M purchased since May 2025. ATRS authorization (~0.2% of ATRS's $23.7 billion portfolio) per Resolution 2025-22, June 2, 2025; full $50M deployed December 2025. APERS authorization (~0.2–0.4% of APERS's $11.58 billion portfolio) per Investment Subcommittee (May 15, 2025) and full board (June 11, 2025); first $15 million deployed October 15, 2025.</em></p>
 
 <p><em>While these percentages are small, the investigation concerns whether standard fiduciary process was followed — not portfolio materiality. Hover over each bar for detail.</em></p>
 
