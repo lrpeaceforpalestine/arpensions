@@ -13,12 +13,12 @@
     var dark = document.documentElement.getAttribute('data-theme') === 'dark';
     return {
       red:        dark ? '#e74c3c' : '#B91C1C',
-      blue:       dark ? '#5dade2' : '#1a5276',
+      blue:       dark ? '#5FBF8B' : '#013237',  /* data-primary slot: pine / jade-bright (green system) */
       amber:      dark ? '#F59E0B' : '#B45309',
-      grayFill:   dark ? '#242424' : '#e2e2e2',
-      text:       dark ? '#b0aba5' : '#474747',
-      textMuted:  dark ? '#8a8480' : '#6e6e6e',
-      tooltipBg:  dark ? '#2a2a2a' : '#ffffff',
+      grayFill:   dark ? '#14555C' : '#DCE8DC',
+      text:       dark ? '#A9CDB8' : '#3F4F46',
+      textMuted:  dark ? '#93B9A4' : '#5C6B62',
+      tooltipBg:  dark ? '#074750' : '#ffffff',
       gridLine:   dark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.06)'
     };
   }

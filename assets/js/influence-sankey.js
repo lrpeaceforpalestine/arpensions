@@ -20,15 +20,15 @@
     var dark = document.documentElement.getAttribute('data-theme') === 'dark';
     return {
       origin:    dark ? '#d4a574' : '#8B6914',
-      seller:    dark ? '#b0aba5' : '#474747',
-      conduit:   dark ? '#8a8480' : '#6e6e6e',
-      agency:    dark ? '#5dade2' : '#1a5276',
+      seller:    dark ? '#A9CDB8' : '#3F4F46',
+      conduit:   dark ? '#93B9A4' : '#5C6B62',
+      agency:    dark ? '#5FBF8B' : '#013237',
       external:  dark ? '#c4bfbb' : '#3d3d3d',
-      text:      dark ? '#b0aba5' : '#474747',
-      textMuted: dark ? '#8a8480' : '#6e6e6e',
+      text:      dark ? '#A9CDB8' : '#3F4F46',
+      textMuted: dark ? '#93B9A4' : '#5C6B62',
       linkBase:  dark ? 0.2 : 0.15,
       linkHover: dark ? 0.45 : 0.35,
-      bg:        dark ? '#1b1b1b' : '#ffffff'
+      bg:        dark ? '#013237' : '#ffffff'
     };
   }
 

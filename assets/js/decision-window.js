@@ -22,18 +22,18 @@
       // Decision window bars (solid)
       red:       dark ? '#e74c3c' : '#B91C1C',
       amber:     dark ? '#F59E0B' : '#B45309',
-      blue:      dark ? '#5dade2' : '#1a5276',
+      blue:      dark ? '#5FBF8B' : '#013237',  /* data-primary slot: pine / jade-bright (green system) */
       // Execution gap bars (lighter)
       redLight:   dark ? 'rgba(231, 76, 60, 0.35)' : 'rgba(185, 28, 28, 0.25)',
       amberLight: dark ? 'rgba(245, 158, 11, 0.35)' : 'rgba(180, 83, 9, 0.25)',
-      blueLight:  dark ? 'rgba(93, 173, 226, 0.35)' : 'rgba(26, 82, 118, 0.25)',
+      blueLight:  dark ? 'rgba(95, 191, 139, 0.35)' : 'rgba(1, 50, 55, 0.25)',
       // UI
-      text:      dark ? '#b0aba5' : '#474747',
-      textMuted: dark ? '#8a8480' : '#6e6e6e',
+      text:      dark ? '#A9CDB8' : '#3F4F46',
+      textMuted: dark ? '#93B9A4' : '#5C6B62',
       gridLine:  dark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.06)',
-      tooltipBg: dark ? '#2a2a2a' : '#ffffff',
+      tooltipBg: dark ? '#074750' : '#ffffff',
       annotLine: dark ? '#e74c3c' : '#B91C1C',
-      annotBg:   dark ? '#2a2a2a' : '#FFF7ED'
+      annotBg:   dark ? '#074750' : '#FFF7ED'
     };
   }
 
