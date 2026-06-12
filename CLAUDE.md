@@ -35,24 +35,26 @@ This is the public-facing campaign website for Arkansans for Pension Integrity, 
 
 ## Brand System
 
-**Colors (Public Record Elegance palette):**
-- Primary red: `#B91C1C` (CTAs, danger states only)
-- Dark blue: `#1a5276` (accent, links) — replaced teal `#0C7489`
-- Near-black: `#1b1b1b` (text)
-- White: `#ffffff` (backgrounds) — replaced warm off-white `#f8f7f5`
-- Secondary text: `#474747`
-- Muted text: `#6e6e6e`
-- Borders: `#e2e2e2`
+**Colors (green "money" system — June 2026 redesign, from Payne Moussa's design suite):**
+- Pine: `#013237` (brand dark — headings, links-hover, footer, hero, dark-mode bg)
+- Ink: `#152019` (body text on light)
+- White: `#FFFFFF` (page background, light mode)
+- Mint wash: `#F2FAF1` (light surfaces — bands, cards); mint pale `#E6F9E4` (text on dark, highlights); mint `#C0E7BA`
+- Jade: `#48A46D` (fills, charts, large display ONLY — 3.1:1 on white, never text)
+- Jade deep: `#1E7B47` (links + interactive on light, 5.3:1); jade bright `#5FBF8B` (links on dark)
+- Campaign red: `#B91C1C` (CTAs, alerts, key findings — unchanged)
+- Secondary text: `#3F4F46`; muted text: `#5C6B62` (green-tinted neutrals, AA on white + mint wash)
+- Borders: `#DCE8DC` light / `#14555C` dark
 
-**Typography:**
+**Typography (unchanged):**
 - Display: Cormorant Garamond (h1, h2)
-- Body: Source Serif 4 (prose) — replaced Inter for body text
+- Body: Source Serif 4 (prose)
 - UI/nav: Inter (sans-serif)
 - Data/mono: IBM Plex Mono
 
-**Logo:** "ART" wordmark — Cormorant Garamond Medium (500) glyph outlines with red underline bar. Extracted via fonttools from CormorantGaramond-Medium.ttf (SIL OFL). Two variants: `art-logo.svg` (light, #1b2127) and `art-logo-dark.svg` (dark, #f8f7f5). ViewBox: 0 0 1994 747.
+**Logo:** "api" badge — lowercase League Spartan Bold glyph outlines (SIL OFL, extracted via fonttools) set in a simplified Arkansas keystone. Working render of Payne Moussa's concept pending her final design suite. Variants: `api-badge.svg` (pine fill, mint monogram — light surfaces), `api-badge-dark.svg` (mint keyline — dark surfaces), `api-badge-512.png` (raster for structured data), `apple-touch-icon.png` (180px, pine tile), `favicon.svg`/`favicon.ico`.
 
-**CSS custom properties:** New semantic tokens use `--bg-*`, `--text-*`, `--accent`, `--border-*`, `--link-*` prefixes. Legacy `--art-*` tokens aliased to new values for backwards compatibility.
+**CSS custom properties:** Brand primitives are `--api-pine`, `--api-ink`, `--api-white`, `--api-mint*`, `--api-jade*`, `--api-red`, `--api-gray` in `main.css :root`; semantic tokens use `--bg-*`, `--text-*`, `--accent`, `--border-*`, `--link-*` prefixes and cascade from the primitives. Legacy navy/gold-era primitive names (`--api-navy`, `--api-gold`, `--api-cream`, `--api-charcoal`, `--api-slate`, `--api-forest`) are aliased to green values for backwards compatibility — do not use them in new code. The anti-FOUC critical CSS in `_includes/head.html` and `syncBrowserTheme()` in `theme-toggle.js` hardcode the token values and must be kept in sync with `main.css`; the inline FOUC script is CSP-hashed (recompute the sha256 in the CSP meta when editing it).
 
 ## Development
 
