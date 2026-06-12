@@ -302,6 +302,13 @@ nav[aria-label="Continue reading"] a:focus-visible {
   color: #fff;
 }
 
+/* Dark mode link-color is jade-bright — white text on it fails AA (~2.2:1).
+   Pine text reads at ~6.2:1 on the filled hover state. */
+[data-theme="dark"] .letter-template button:hover,
+[data-theme="dark"] .letter-template .copy-letter-btn:hover {
+  color: var(--api-pine);
+}
+
 .letter-template button:focus-visible,
 .letter-template .copy-letter-btn:focus-visible {
   outline: 2px solid var(--link-color);
@@ -769,12 +776,12 @@ hr + * > .section-label:first-child {
 }
 
 .document-item:hover {
-  background-color: rgba(26, 82, 118, 0.04);
+  background-color: rgba(72, 164, 109, 0.06);
   border-left-width: 6px;
 }
 
 [data-theme="dark"] .document-item:hover {
-  background-color: rgba(26, 82, 118, 0.08);
+  background-color: rgba(95, 191, 139, 0.10);
 }
 
 .document-item:hover .doc-icon {
@@ -806,7 +813,7 @@ hr + * > .section-label:first-child {
     padding: 1rem;
     border: 1px solid rgba(85, 96, 104, 0.15);
     border-radius: 8px;
-    background: rgba(26, 82, 118, 0.02);
+    background: rgba(72, 164, 109, 0.04);
   }
 
   .issue-agency-table td {
@@ -1348,6 +1355,11 @@ html {
 .subfindings-toggle-all:hover {
   background: var(--link-color);
   color: #fff;
+}
+
+[data-theme="dark"] .subfindings-toggle-all:hover {
+  /* dark link-color is jade-bright — pine text instead of white for AA */
+  color: var(--api-pine);
 }
 
 .subfinding {

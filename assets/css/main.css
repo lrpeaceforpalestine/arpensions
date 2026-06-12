@@ -23,6 +23,7 @@
   --api-jade: #48A46D;        /* fills, charts, large display only */
   --api-jade-deep: #1E7B47;   /* links + interactive on light */
   --api-jade-bright: #5FBF8B; /* links + accents on dark surfaces */
+  --api-jade-soft: #7ED3A4;   /* hover state for jade-bright on dark surfaces */
   --api-red: #B91C1C;         /* CTAs, alerts, key findings — unchanged */
   --api-gray: #3F4F46;        /* secondary text (green-tinted neutral) */
 
@@ -157,12 +158,12 @@
   --text-heading: var(--api-mint-pale);
 
   --accent: var(--api-jade-bright);
-  --accent-hover: #7ED3A4;
+  --accent-hover: var(--api-jade-soft);
   --accent-cta: var(--api-red);
   --accent-cta-hover: #D43838;
 
   --link-color: var(--api-jade-bright);
-  --link-hover: #7ED3A4;
+  --link-hover: var(--api-jade-soft);
   --link-visited: #4FA77B;
 
   --border-default: #14555C;
@@ -659,7 +660,7 @@ hr {
 
 [data-theme="dark"] .nav-links a:hover,
 [data-theme="dark"] .nav-links a[aria-current="page"] {
-  color: var(--api-cream);
+  color: var(--api-mint-pale);
   background-color: transparent;
 }
 
@@ -709,7 +710,7 @@ hr {
     gap: 1.5rem;
     margin: 0;
     padding: 4rem 1.5rem;
-    background: var(--api-navy);
+    background: var(--api-pine);
     z-index: 105;
     overflow-y: auto;
   }
@@ -733,20 +734,20 @@ hr {
     font-family: var(--font-display);
     font-size: 1.5rem;
     font-weight: 500;
-    color: var(--api-cream);
+    color: var(--api-mint-pale);
     border-bottom: 2px solid transparent;
     padding: 0.5rem 0.75rem;
   }
 
   .nav-links a:hover,
   .nav-links a[aria-current="page"] {
-    color: var(--api-gold);
-    border-bottom-color: var(--api-gold);
+    color: var(--api-jade-bright);
+    border-bottom-color: var(--api-jade-bright);
   }
 
   /* Theme toggle stays in nav-end at top-right while overlay open */
   .nav-toggle[aria-expanded="true"] {
-    color: var(--api-cream);
+    color: var(--api-mint-pale);
   }
 }
 
@@ -776,7 +777,7 @@ hr {
   content: '';
   position: absolute;
   inset: 0;
-  background: var(--api-navy);
+  background: var(--api-pine);
   opacity: 0.70;
   z-index: 1;
   pointer-events: none;
@@ -788,7 +789,7 @@ hr {
 }
 
 [data-theme="dark"] .hero::before {
-  background: var(--api-charcoal);
+  background: var(--api-pine-deep);
   opacity: 0.74;
 }
 
@@ -814,7 +815,7 @@ hr {
   font-weight: 600;
   line-height: 1.15;
   letter-spacing: -0.01em;
-  color: var(--api-cream);
+  color: var(--api-mint-pale);
   margin: 0;
   max-width: 24ch;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
@@ -930,8 +931,15 @@ hr {
 .btn-secondary:hover,
 .btn-secondary:focus-visible {
   background: var(--accent);
-  color: var(--api-navy);
+  /* light accent is jade-deep: white reads at 5.3:1, pine would sink to 2.6:1 */
+  color: #FFFFFF;
   text-decoration: none;
+}
+
+[data-theme="dark"] .btn-secondary:hover,
+[data-theme="dark"] .btn-secondary:focus-visible {
+  /* dark accent is jade-bright: pine reads at 6.2:1, white fails at 2.2:1 */
+  color: var(--api-pine);
 }
 
 /* --- Text Button (tertiary CTA) --- */
@@ -972,15 +980,18 @@ hr {
 }
 
 .btn-hero-primary {
-  background: var(--api-gold);
-  color: var(--api-navy);
-  border-color: var(--api-gold);
+  background: var(--api-jade-bright);
+  color: var(--api-pine);
+  border-color: var(--api-jade-bright);
 }
 
+/* The hero sits on pine in BOTH themes, so hover must use the named
+   jade-soft primitive — not var(--accent-hover), which resolves to a
+   darker green in light mode and would sink into the pine overlay. */
 .btn-hero-primary:hover,
 .btn-hero-primary:focus-visible {
-  background: #7ED3A4;
-  border-color: #7ED3A4;
+  background: var(--api-jade-soft);
+  border-color: var(--api-jade-soft);
   color: var(--api-pine);
   box-shadow: 0 2px 12px rgba(95, 191, 139, 0.35);
   text-decoration: none;
@@ -988,16 +999,16 @@ hr {
 
 .btn-hero-secondary {
   background: transparent;
-  color: var(--api-cream);
-  border: 2px solid var(--api-cream);
+  color: var(--api-mint-pale);
+  border: 2px solid var(--api-mint-pale);
   font-weight: 600;
 }
 
 .btn-hero-secondary:hover,
 .btn-hero-secondary:focus-visible {
   background: rgba(230, 249, 228, 0.12);
-  border-color: var(--api-cream);
-  color: var(--api-cream);
+  border-color: var(--api-mint-pale);
+  color: var(--api-mint-pale);
   text-decoration: none;
 }
 
@@ -1043,7 +1054,7 @@ hr {
   font-family: var(--font-mono);
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 700;
-  color: var(--api-navy);
+  color: var(--api-pine);
   line-height: 1;
   letter-spacing: -0.02em;
   font-variant-numeric: tabular-nums;
@@ -1054,7 +1065,7 @@ hr {
 }
 
 [data-theme="dark"] .stat-number {
-  color: var(--api-cream);
+  color: var(--api-mint-pale);
 }
 
 [data-theme="dark"] .stat-number--danger {
@@ -1244,7 +1255,7 @@ hr {
 .audience-card:focus-visible {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  border-color: var(--api-navy);
+  border-color: var(--api-pine);
   border-top-color: var(--accent);
   color: var(--text-primary);
   text-decoration: none;
@@ -1259,7 +1270,7 @@ hr {
 [data-theme="dark"] .audience-card:hover,
 [data-theme="dark"] .audience-card:focus-visible {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  border-color: var(--api-gold);
+  border-color: var(--api-jade-bright);
   border-top-color: rgba(95, 191, 139, 0.8);
 }
 
@@ -1479,7 +1490,7 @@ hr {
   display: flex;
   align-items: center;
   padding: 4rem 1.5rem 3.5rem;
-  color: var(--api-cream);
+  color: var(--api-mint-pale);
   margin-bottom: 0;
 }
 
@@ -1489,10 +1500,8 @@ hr {
   margin: 0 auto;
 }
 
-.hero-band--forest    { background: var(--api-forest); }
-.hero-band--slate     { background: var(--api-slate); }
-.hero-band--navy      { background: var(--api-navy); }
-.hero-band--charcoal  { background: var(--api-charcoal); }
+.hero-band--pine      { background: var(--api-pine); }
+.hero-band--pine-deep { background: var(--api-pine-deep); }
 
 .hero-band .breadcrumb {
   font-family: var(--font-sans);
@@ -1509,11 +1518,11 @@ hr {
 }
 
 .hero-band .breadcrumb a:hover {
-  border-bottom-color: var(--api-gold);
+  border-bottom-color: var(--api-jade-bright);
 }
 
 .hero-band .breadcrumb [aria-current="page"] {
-  color: var(--api-cream);
+  color: var(--api-mint-pale);
   font-weight: 500;
 }
 
@@ -1523,7 +1532,7 @@ hr {
   font-size: clamp(1.85rem, 2vw + 1rem, 2.6rem);
   line-height: 1.15;
   letter-spacing: -0.01em;
-  color: var(--api-cream);
+  color: var(--api-mint-pale);
   margin: 0 0 0.85rem;
   max-width: 30ch;
 }
@@ -1589,7 +1598,7 @@ hr {
   background: var(--accent);
   border-color: var(--accent);
   color: var(--bg-primary);
-  box-shadow: 0 0 0 3px rgba(26, 82, 118, 0.4);
+  box-shadow: 0 0 0 3px rgba(30, 123, 71, 0.4);
 }
 
 /* --- Letter Template --- */
@@ -1754,7 +1763,7 @@ blockquote footer {
 }
 
 .site-footer a:hover {
-  color: var(--api-gold);
+  color: var(--api-jade-bright);
 }
 
 .footer-grid {
@@ -1785,7 +1794,7 @@ blockquote footer {
   font-family: var(--font-display);
   font-size: 1.15rem;
   font-weight: 500;
-  color: var(--api-cream);
+  color: var(--api-mint-pale);
   letter-spacing: 0.01em;
   margin: 0;
 }
@@ -1793,7 +1802,7 @@ blockquote footer {
 .footer-tagline {
   font-family: var(--font-display);
   font-style: italic;
-  color: var(--api-gold);
+  color: var(--api-jade-bright);
   font-size: 1rem;
   letter-spacing: 0.01em;
   margin: 0.25rem 0 0;
@@ -1814,18 +1823,18 @@ blockquote footer {
 }
 
 .footer-contact a {
-  color: var(--api-gold);
+  color: var(--api-jade-bright);
   font-weight: 500;
 }
 
 .footer-contact a:hover {
-  color: var(--api-cream);
+  color: var(--api-mint-pale);
   text-decoration: underline;
 }
 
 .footer-rule {
   border: none;
-  border-top: 1px solid var(--api-gold);
+  border-top: 1px solid var(--api-jade-bright);
   opacity: 0.6;
   margin: 3rem 0 1.5rem;
 }
@@ -1851,7 +1860,7 @@ blockquote footer {
 }
 
 .footer-back-to-top:hover {
-  color: var(--api-gold);
+  color: var(--api-jade-bright);
 }
 
 @media (max-width: 768px) {
@@ -2377,6 +2386,13 @@ blockquote footer {
   background: var(--color-success);
   color: var(--text-on-accent);
   border-color: var(--color-success);
+}
+
+/* Dark mode success bg is jade-bright — white text fails AA on it (~2.2:1).
+   Pine text reads at ~6.2:1, matching the hero-button pattern. */
+[data-theme="dark"] .copy-letter-btn--copied,
+[data-theme="dark"] .copy-letter-btn--copied:hover {
+  color: var(--api-pine);
 }
 
 /* --- Compact Letter Template (shorter letters on take-action page) --- */
@@ -3168,7 +3184,9 @@ html.theme-transition *::after {
 
 .action-tier-label--quick {
   background: #DCFCE7;
-  color: var(--color-success);
+  /* fixed pair like --medium below: the chip bg never changes with theme,
+     so the text must not either (dark-mode --color-success would fail AA) */
+  color: #155E36;
 }
 
 .action-tier-label--medium {
