@@ -1,5 +1,7 @@
 # REDESIGN-SPEC.md — Arkansans for Pension Integrity (API) Website Overhaul
 
+> **SUPERSEDED (June 2026).** This document describes the v1/v2 navy/gold/cream "statehouse" system. The site has since shipped the green (pine/jade/mint) "money" retheme: the navy/gold/cream tokens and the `.hero-band--forest/slate/navy/charcoal` classes below no longer exist, and the `api-logo-mark*.png` marks were replaced by `api-badge*.svg`. Treat this as historical only — the current source of truth for tokens, band classes, and logo assets is `assets/css/main.css :root` and `CLAUDE.md`.
+
 > **Read CLAUDE.md first.** This spec assumes you know the brand, color palette, logo files, and content guidelines defined there. This document is the structural and visual blueprint for the May 2026 redesign.
 
 ## Design Philosophy

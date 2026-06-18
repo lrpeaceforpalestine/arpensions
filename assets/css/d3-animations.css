@@ -33,11 +33,11 @@
 }
 
 [data-theme="dark"] .timeline-thread line {
-  stroke: #5dade2;
+  stroke: #5FBF8B;
 }
 
 [data-theme="dark"] .timeline-thread .thread-dot {
-  fill: #5dade2;
+  fill: #5FBF8B;
 }
 
 @media (max-width: 600px) {
@@ -114,7 +114,7 @@
 }
 
 [data-theme="dark"] .unit-chart__grid .unit--filled {
-  background: #5dade2;
+  background: #5FBF8B;
 }
 
 [data-theme="dark"] .unit-chart__grid .unit--empty {

@@ -5,7 +5,7 @@ description: "Policy brief for Arkansas legislators on up to $100 million in aut
 permalink: /legislators/
 audience_nav: true
 breadcrumb: "For Legislators"
-hero_band: navy
+hero_band: pine
 ---
 
 ## Executive summary

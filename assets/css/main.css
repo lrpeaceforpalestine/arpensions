@@ -164,7 +164,7 @@
 
   --link-color: var(--api-jade-bright);
   --link-hover: var(--api-jade-soft);
-  --link-visited: #4FA77B;
+  --link-visited: #6FCB97;
 
   --border-default: #14555C;
   --border-light: var(--border-default);
@@ -539,7 +539,7 @@ hr {
   padding-inline: 0;
 }
 
-/* --- Navigation — flat, sticky, gold active underline --- */
+/* --- Navigation — flat, sticky, jade active underline --- */
 .site-nav {
   position: sticky;
   top: 0;
@@ -752,7 +752,7 @@ hr {
 }
 
 /* ==========================================================================
-   HERO — Full-viewport navy with centered logo, headline, tagline, CTAs
+   HERO — Full-viewport pine with centered logo, headline, tagline, CTAs
    ========================================================================== */
 .hero {
   min-height: 100vh;
@@ -961,7 +961,7 @@ hr {
   content: " \2192";
 }
 
-/* Hero CTAs — gold-fill primary, cream-outline secondary */
+/* Hero CTAs — filled primary, outline secondary */
 .btn-hero-primary,
 .btn-hero-secondary {
   display: inline-block;
@@ -1171,8 +1171,8 @@ hr {
 .pathway-arrow {
   font-family: var(--font-sans);
   font-size: 1.5rem;
-  /* Was --accent (gold) — fails WCAG AA on cream/white. --link-color resolves
-     to navy in light mode and gold in dark mode, both pass. */
+  /* Was --accent — fails WCAG AA on white/mint surfaces. --link-color resolves
+     to jade-deep in light mode and jade-bright in dark mode, both pass. */
   color: var(--link-color);
   transition: transform 0.2s ease;
   justify-self: end;
@@ -1262,7 +1262,7 @@ hr {
 }
 
 [data-theme="dark"] .audience-card {
-  /* Slightly lighter border weight in dark mode (gold border at ~80% alpha)
+  /* Slightly lighter border weight in dark mode (jade border at ~80% alpha)
      so the accent reads as a tasteful underline rather than a heavy bar. */
   border-top-color: rgba(95, 191, 139, 0.8);
 }
@@ -1294,8 +1294,8 @@ hr {
   font-family: var(--font-sans);
   font-size: 0.9rem;
   font-weight: 600;
-  /* Was --accent (gold) — fails WCAG AA on cream/white. --link-color resolves
-     to navy in light mode and gold in dark mode, both pass. */
+  /* Was --accent — fails WCAG AA on white/mint surfaces. --link-color resolves
+     to jade-deep in light mode and jade-bright in dark mode, both pass. */
   color: var(--link-color);
   margin-top: 0.5rem;
   letter-spacing: 0.02em;
@@ -1387,7 +1387,7 @@ hr {
   padding-top: 3rem;
 }
 
-/* Full-bleed cream header band for content pages.
+/* Full-bleed mint-wash header band for content pages.
    Mirrors the structural treatment of the audience-page pine hero bands
    (.hero-band) so titled content pages feel like a single visual family.
    ~3% darker than --bg-primary in light mode (same approach as
@@ -1481,16 +1481,19 @@ hr {
   color: var(--text-secondary);
 }
 
-/* --- Audience-page colored hero band ---
-   Each audience page sets `hero_band:` front matter (forest / slate /
-   navy / charcoal). The band is ~30vh, accent-colored, with a cream
-   Cormorant Garamond title and an 80%-opacity cream subtitle. */
+/* --- Audience-page hero band ---
+   Each audience page sets `hero_band:` front matter (pine / pine-deep). The
+   band is ~30vh with a Cormorant Garamond title and an 80%-opacity mint
+   subtitle over a pine background. The base rule carries the pine background
+   itself so a missing or mistyped modifier never leaves the band bare; the
+   FOUC critical CSS in head.html paints the same value before main.css loads. */
 .hero-band {
   min-height: 30vh;
   display: flex;
   align-items: center;
   padding: 4rem 1.5rem 3.5rem;
   color: var(--api-mint-pale);
+  background: var(--api-pine);
   margin-bottom: 0;
 }
 
@@ -1641,7 +1644,7 @@ hr {
 /* === Editorial Blockquotes — legal citation style (bilateral indentation) === */
 blockquote {
   margin: 1.75em 2.5em;
-  /* Subtle paper-like tint + thin gold accent gives FOIA quotes the feel
+  /* Subtle paper-like tint + thin jade accent gives FOIA quotes the feel
      of a document excerpt rather than indented prose. */
   padding: 1rem 1.25rem 1rem 1.5rem;
   border-left: 3px solid var(--accent);
@@ -1741,7 +1744,7 @@ blockquote footer {
   text-decoration: none;
 }
 
-/* --- Footer — three-column navy with gold rule --- */
+/* --- Footer — three-column pine with jade rule --- */
 .site-footer {
   background: var(--bg-footer);
   color: var(--text-on-dark);
@@ -1875,7 +1878,7 @@ blockquote footer {
   }
 }
 
-/* Dark mode: footer goes near-black per spec; gold/cream stay readable */
+/* Dark mode: footer goes near-black per spec; jade/mint stay readable */
 [data-theme="dark"] .site-footer {
   background: var(--bg-footer);
 }
@@ -2828,7 +2831,7 @@ html.theme-transition *::after {
    DARK MODE — Pico Overrides (semantic tokens are defined near the top)
    ========================================================================== */
 [data-theme="dark"] {
-  --link-visited: #4FA77B;
+  --link-visited: #6FCB97;
   --border-dark: #888888;
   --color-data-secondary: var(--api-red);
   --color-data-tertiary: #A9CDB8;
@@ -2851,7 +2854,7 @@ html.theme-transition *::after {
    DARK MODE — Component Overrides
    ========================================================================== */
 
-/* --- Navigation — dark mode uses cream text + gold underline (no extra rules
+/* --- Navigation — dark mode uses mint text + jade underline (no extra rules
    needed; token cascade + base nav rules already produce the right result). --- */
 
 /* --- Skip Link --- */
@@ -3184,8 +3187,8 @@ html.theme-transition *::after {
 
 .action-tier-label--quick {
   background: #DCFCE7;
-  /* fixed pair like --medium below: the chip bg never changes with theme,
-     so the text must not either (dark-mode --color-success would fail AA) */
+  /* Light-mode pair only (dark mode is overridden below). Fixed hex, decoupled
+     from --color-success so the dark theme can't drag it to a failing value. */
   color: #155E36;
 }
 
@@ -3199,16 +3202,22 @@ html.theme-transition *::after {
   color: var(--accent-cta);
 }
 
+/* Dark mode: the wash backgrounds go dark, so the dark light-mode text must be
+   lifted to a light, hue-matched value. Each clears WCAG AA on the chip wash
+   composited over pine / pine-soft (quick ~8.3:1, medium ~9.3:1, ongoing ~7.4:1). */
 [data-theme="dark"] .action-tier-label--quick {
   background: rgba(22, 101, 52, 0.15);
+  color: #6EE7B7;
 }
 
 [data-theme="dark"] .action-tier-label--medium {
   background: rgba(146, 64, 14, 0.15);
+  color: #FCD34D;
 }
 
 [data-theme="dark"] .action-tier-label--ongoing {
   background: rgba(185, 28, 28, 0.1);
+  color: #FCA5A5;
 }
 
 /* ==========================================================================

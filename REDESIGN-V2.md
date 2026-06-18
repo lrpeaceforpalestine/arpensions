@@ -1,5 +1,7 @@
 # REDESIGN ITERATION 2 — Claude Code Prompt
 
+> **SUPERSEDED (June 2026).** Describes the navy/gold/cream system and the old `api-logo-mark*.png` marks. The site has since shipped the green (pine/jade/mint) retheme with `api-badge*.svg` marks; see `assets/css/main.css :root` and `CLAUDE.md` for current tokens and assets.
+
 Read `CLAUDE.md` and `REDESIGN-SPEC.md` before starting. This prompt supersedes any conflicting instructions in those files.
 
 ## Context

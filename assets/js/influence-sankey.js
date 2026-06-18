@@ -22,7 +22,7 @@
       origin:    dark ? '#d4a574' : '#8B6914',
       seller:    dark ? '#A9CDB8' : '#3F4F46',
       conduit:   dark ? '#93B9A4' : '#5C6B62',
-      agency:    dark ? '#5FBF8B' : '#013237',
+      agency:    dark ? '#5FBF8B' : '#48A46D',  /* jade fill keeps the payoff (Treasury/APERS/ATRS) nodes distinct from the dark seller/external grays in light mode */
       external:  dark ? '#c4bfbb' : '#3d3d3d',
       text:      dark ? '#A9CDB8' : '#3F4F46',
       textMuted: dark ? '#93B9A4' : '#5C6B62',
