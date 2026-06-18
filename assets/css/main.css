@@ -5,25 +5,44 @@
 /* --- Design Tokens --- */
 :root {
   /* === API Brand Primitives — single source for brand identity ===
-     The eight color primitives below are the only authoritative brand colors.
-     Semantic tokens further down cascade from these via var() chains. */
+     Green "money" system (June 2026 redesign, from Payne Moussa's design
+     suite): pine + jade + mint, with campaign red retained for CTAs and
+     alerts. Semantic tokens further down cascade from these via var()
+     chains. Jade #48A46D is 3.1:1 on white — fills and large display only,
+     never text; jade-deep carries links at 5.3:1. */
 
   /* Primary */
-  --api-navy: #1A3057;
-  --api-cream: #F8F5F0;
-  --api-charcoal: #1C1917;
+  --api-pine: #013237;        /* brand dark — headings, footer, hero, dark-mode bg */
+  --api-ink: #152019;         /* body text on light (pine-tinted near-black) */
+  --api-white: #FFFFFF;       /* page background, light mode */
+  --api-mint-wash: #F2FAF1;   /* light surfaces — bands, cards */
+  --api-mint-pale: #E6F9E4;   /* palest mint — text on dark, highlights */
+  --api-mint: #C0E7BA;        /* light tint — secondary text on dark accents */
 
   /* Accent */
-  --api-gold: #CBA648;
-  --api-red: #B91C1C;
-  --api-forest: #224D36;
-  --api-slate: #5F7391;
-  --api-gray: #696965;  /* darkened from #777773 to clear WCAG AA 4.5:1 on cream + white */
+  --api-jade: #48A46D;        /* fills, charts, large display only */
+  --api-jade-deep: #1E7B47;   /* links + interactive on light */
+  --api-jade-bright: #5FBF8B; /* links + accents on dark surfaces */
+  --api-jade-soft: #7ED3A4;   /* hover state for jade-bright on dark surfaces */
+  --api-red: #B91C1C;         /* CTAs, alerts, key findings — unchanged */
+  --api-gray: #3F4F46;        /* secondary text (green-tinted neutral) */
 
   /* Hover / deep variants for transitions */
-  --api-navy-deep: #122444;
+  --api-pine-deep: #001E22;   /* footer + hero in dark mode, hovers on pine */
+  --api-pine-soft: #074750;   /* raised surfaces in dark mode */
+  --api-jade-deeper: #155E36; /* hover state for jade-deep */
   --api-red-deep: #9B1818;
-  --api-gold-deep: #B59238;
+
+  /* Legacy slot aliases (navy/gold era) — keep older rules resolving.
+     Do not use in new code; reference the green primitives above. */
+  --api-navy: var(--api-pine);
+  --api-navy-deep: var(--api-pine-deep);
+  --api-cream: var(--api-mint-pale);
+  --api-charcoal: var(--api-pine-deep);
+  --api-gold: var(--api-jade-bright);
+  --api-gold-deep: #4FA77B;
+  --api-forest: #175E3D;
+  --api-slate: #46735F;
 
   /* === Typography stacks === */
   --font-display: 'Cormorant Garamond', Georgia, serif;
@@ -35,44 +54,44 @@
   /* === Semantic tokens — Light Mode (default) === */
 
   /* Backgrounds */
-  --bg-primary: var(--api-cream);
-  --bg-secondary: #FFFFFF;
-  --bg-surface: #FFFFFF;
-  --bg-hero: var(--api-navy);
-  --bg-footer: var(--api-navy);
+  --bg-primary: var(--api-white);
+  --bg-secondary: var(--api-mint-wash);
+  --bg-surface: var(--api-mint-wash);
+  --bg-hero: var(--api-pine);
+  --bg-footer: var(--api-pine);
 
   /* Text */
-  --text-primary: var(--api-charcoal);
+  --text-primary: var(--api-ink);
   --text-secondary: var(--api-gray);
-  --text-muted: #666664;  /* darkened from #6e6e6e to clear WCAG AA 4.5:1 on cream + white */
-  --text-on-dark: var(--api-cream);
-  --text-on-accent: var(--api-cream);
-  --text-heading: var(--api-navy);
+  --text-muted: #5C6B62;  /* clears WCAG AA 4.5:1 on white + mint wash */
+  --text-on-dark: var(--api-mint-pale);
+  --text-on-accent: #FFFFFF;
+  --text-heading: var(--api-pine);
 
-  /* Accent (gold) and CTA (red) */
-  --accent: var(--api-gold);
-  --accent-hover: var(--api-gold-deep);
+  /* Accent (jade) and CTA (red) */
+  --accent: var(--api-jade-deep);
+  --accent-hover: var(--api-jade-deeper);
   --accent-cta: var(--api-red);
   --accent-cta-hover: var(--api-red-deep);
 
   /* Links */
-  --link-color: var(--api-navy);
-  --link-hover: var(--api-slate);
-  --link-visited: #4a235a;
+  --link-color: var(--api-jade-deep);
+  --link-hover: var(--api-pine);
+  --link-visited: #175E3D;
 
   /* Borders */
-  --border-default: #E2E2E2;
+  --border-default: #DCE8DC;
   --border-light: var(--border-default);
-  --border-medium: #c4c4c4;
-  --border-accent: var(--api-gold);
-  --border-dark: #303030;
+  --border-medium: #B9CCBB;
+  --border-accent: var(--api-jade);
+  --border-dark: #2A3A30;
 
   /* Functional — NOT for decoration */
   --color-danger: var(--api-red);
-  --color-data-primary: var(--api-navy);
+  --color-data-primary: var(--api-pine);
   --color-data-secondary: var(--api-red);
   --color-data-tertiary: var(--api-gray);
-  --color-success: #166534;
+  --color-success: var(--api-jade-deep);
 
   /* Aliases used by legacy component code (kept so older rules compile). */
   --color-text-primary: var(--text-primary);
@@ -125,32 +144,32 @@
 
 /* === Semantic tokens — Dark Mode === */
 [data-theme="dark"] {
-  --bg-primary: var(--api-charcoal);
-  --bg-secondary: #242220;
-  --bg-surface: #242220;
-  --bg-hero: var(--api-charcoal);
-  --bg-footer: #0E0D0C;
+  --bg-primary: var(--api-pine);
+  --bg-secondary: var(--api-pine-soft);
+  --bg-surface: var(--api-pine-soft);
+  --bg-hero: var(--api-pine-deep);
+  --bg-footer: var(--api-pine-deep);
 
-  --text-primary: var(--api-cream);
-  --text-secondary: #A8A5A0;
-  --text-muted: #8A8784;
-  --text-on-dark: var(--api-cream);
-  --text-on-accent: var(--api-cream);
-  --text-heading: var(--api-cream);
+  --text-primary: var(--api-mint-pale);
+  --text-secondary: #A9CDB8;
+  --text-muted: #93B9A4;
+  --text-on-dark: var(--api-mint-pale);
+  --text-on-accent: #FFFFFF;
+  --text-heading: var(--api-mint-pale);
 
-  --accent: var(--api-gold);
-  --accent-hover: #D4B968;
+  --accent: var(--api-jade-bright);
+  --accent-hover: var(--api-jade-soft);
   --accent-cta: var(--api-red);
   --accent-cta-hover: #D43838;
 
-  --link-color: var(--api-gold);
-  --link-hover: #D4B968;
-  --link-visited: #B59238;
+  --link-color: var(--api-jade-bright);
+  --link-hover: var(--api-jade-soft);
+  --link-visited: #6FCB97;
 
-  --border-default: #3A3835;
+  --border-default: #14555C;
   --border-light: var(--border-default);
-  --border-medium: #4A4845;
-  --border-accent: var(--api-gold);
+  --border-medium: #1E646C;
+  --border-accent: var(--api-jade);
 
   --color-danger: var(--api-red);
   --color-text-primary: var(--text-primary);
@@ -337,9 +356,9 @@ a:hover {
   color: var(--link-hover);
 }
 
-/* Prevent purple visited links in nav and footer */
+/* Visited nav links must match unvisited — no state bleed in chrome */
 .site-nav a:visited {
-  color: var(--text-secondary);
+  color: inherit;
 }
 
 .site-footer a:visited {
@@ -520,7 +539,7 @@ hr {
   padding-inline: 0;
 }
 
-/* --- Navigation — flat, sticky, gold active underline --- */
+/* --- Navigation — flat, sticky, jade active underline --- */
 .site-nav {
   position: sticky;
   top: 0;
@@ -631,7 +650,7 @@ hr {
 
 .nav-links a:hover {
   color: var(--text-heading);
-  border-bottom-color: rgba(203, 166, 72, 0.4);
+  border-bottom-color: rgba(95, 191, 139, 0.4);
 }
 
 .nav-links a[aria-current="page"] {
@@ -641,7 +660,7 @@ hr {
 
 [data-theme="dark"] .nav-links a:hover,
 [data-theme="dark"] .nav-links a[aria-current="page"] {
-  color: var(--api-cream);
+  color: var(--api-mint-pale);
   background-color: transparent;
 }
 
@@ -691,7 +710,7 @@ hr {
     gap: 1.5rem;
     margin: 0;
     padding: 4rem 1.5rem;
-    background: var(--api-navy);
+    background: var(--api-pine);
     z-index: 105;
     overflow-y: auto;
   }
@@ -715,25 +734,25 @@ hr {
     font-family: var(--font-display);
     font-size: 1.5rem;
     font-weight: 500;
-    color: var(--api-cream);
+    color: var(--api-mint-pale);
     border-bottom: 2px solid transparent;
     padding: 0.5rem 0.75rem;
   }
 
   .nav-links a:hover,
   .nav-links a[aria-current="page"] {
-    color: var(--api-gold);
-    border-bottom-color: var(--api-gold);
+    color: var(--api-jade-bright);
+    border-bottom-color: var(--api-jade-bright);
   }
 
   /* Theme toggle stays in nav-end at top-right while overlay open */
   .nav-toggle[aria-expanded="true"] {
-    color: var(--api-cream);
+    color: var(--api-mint-pale);
   }
 }
 
 /* ==========================================================================
-   HERO — Full-viewport navy with centered logo, headline, tagline, CTAs
+   HERO — Full-viewport pine with centered logo, headline, tagline, CTAs
    ========================================================================== */
 .hero {
   min-height: 100vh;
@@ -758,7 +777,7 @@ hr {
   content: '';
   position: absolute;
   inset: 0;
-  background: var(--api-navy);
+  background: var(--api-pine);
   opacity: 0.70;
   z-index: 1;
   pointer-events: none;
@@ -770,7 +789,7 @@ hr {
 }
 
 [data-theme="dark"] .hero::before {
-  background: var(--api-charcoal);
+  background: var(--api-pine-deep);
   opacity: 0.74;
 }
 
@@ -796,7 +815,7 @@ hr {
   font-weight: 600;
   line-height: 1.15;
   letter-spacing: -0.01em;
-  color: var(--api-cream);
+  color: var(--api-mint-pale);
   margin: 0;
   max-width: 24ch;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
@@ -807,7 +826,8 @@ hr {
   font-size: 1rem;
   font-weight: 500;
   letter-spacing: 0.04em;
-  color: var(--api-gold);
+  /* mint, not jade — jade sits too close to the photo overlay to read */
+  color: var(--api-mint);
   margin: 0;
   text-transform: none;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
@@ -826,7 +846,7 @@ hr {
   font-size: 0.85rem;
   font-weight: 400;
   letter-spacing: 0.02em;
-  color: rgba(248, 245, 240, 0.82);  /* 0.7 → 0.82 — clearly readable while staying subordinate to the headline; still passes WCAG AA against navy hero */
+  color: rgba(230, 249, 228, 0.82);  /* 0.7 → 0.82 — clearly readable while staying subordinate to the headline; still passes WCAG AA against pine hero */
   margin: 1.5rem 0 0;
   max-width: 36rem;
   line-height: 1.5;
@@ -911,8 +931,15 @@ hr {
 .btn-secondary:hover,
 .btn-secondary:focus-visible {
   background: var(--accent);
-  color: var(--api-navy);
+  /* light accent is jade-deep: white reads at 5.3:1, pine would sink to 2.6:1 */
+  color: #FFFFFF;
   text-decoration: none;
+}
+
+[data-theme="dark"] .btn-secondary:hover,
+[data-theme="dark"] .btn-secondary:focus-visible {
+  /* dark accent is jade-bright: pine reads at 6.2:1, white fails at 2.2:1 */
+  color: var(--api-pine);
 }
 
 /* --- Text Button (tertiary CTA) --- */
@@ -934,7 +961,7 @@ hr {
   content: " \2192";
 }
 
-/* Hero CTAs — gold-fill primary, cream-outline secondary */
+/* Hero CTAs — filled primary, outline secondary */
 .btn-hero-primary,
 .btn-hero-secondary {
   display: inline-block;
@@ -953,32 +980,35 @@ hr {
 }
 
 .btn-hero-primary {
-  background: var(--api-gold);
-  color: var(--api-navy);
-  border-color: var(--api-gold);
+  background: var(--api-jade-bright);
+  color: var(--api-pine);
+  border-color: var(--api-jade-bright);
 }
 
+/* The hero sits on pine in BOTH themes, so hover must use the named
+   jade-soft primitive — not var(--accent-hover), which resolves to a
+   darker green in light mode and would sink into the pine overlay. */
 .btn-hero-primary:hover,
 .btn-hero-primary:focus-visible {
-  background: #D4B968;
-  border-color: #D4B968;
-  color: var(--api-navy);
-  box-shadow: 0 2px 12px rgba(203, 166, 72, 0.35);
+  background: var(--api-jade-soft);
+  border-color: var(--api-jade-soft);
+  color: var(--api-pine);
+  box-shadow: 0 2px 12px rgba(95, 191, 139, 0.35);
   text-decoration: none;
 }
 
 .btn-hero-secondary {
   background: transparent;
-  color: var(--api-cream);
-  border: 2px solid var(--api-cream);
+  color: var(--api-mint-pale);
+  border: 2px solid var(--api-mint-pale);
   font-weight: 600;
 }
 
 .btn-hero-secondary:hover,
 .btn-hero-secondary:focus-visible {
-  background: rgba(248, 245, 240, 0.12);
-  border-color: var(--api-cream);
-  color: var(--api-cream);
+  background: rgba(230, 249, 228, 0.12);
+  border-color: var(--api-mint-pale);
+  color: var(--api-mint-pale);
   text-decoration: none;
 }
 
@@ -1024,7 +1054,7 @@ hr {
   font-family: var(--font-mono);
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 700;
-  color: var(--api-navy);
+  color: var(--api-pine);
   line-height: 1;
   letter-spacing: -0.02em;
   font-variant-numeric: tabular-nums;
@@ -1035,7 +1065,7 @@ hr {
 }
 
 [data-theme="dark"] .stat-number {
-  color: var(--api-cream);
+  color: var(--api-mint-pale);
 }
 
 [data-theme="dark"] .stat-number--danger {
@@ -1141,8 +1171,8 @@ hr {
 .pathway-arrow {
   font-family: var(--font-sans);
   font-size: 1.5rem;
-  /* Was --accent (gold) — fails WCAG AA on cream/white. --link-color resolves
-     to navy in light mode and gold in dark mode, both pass. */
+  /* Was --accent — fails WCAG AA on white/mint surfaces. --link-color resolves
+     to jade-deep in light mode and jade-bright in dark mode, both pass. */
   color: var(--link-color);
   transition: transform 0.2s ease;
   justify-self: end;
@@ -1225,23 +1255,23 @@ hr {
 .audience-card:focus-visible {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  border-color: var(--api-navy);
+  border-color: var(--api-pine);
   border-top-color: var(--accent);
   color: var(--text-primary);
   text-decoration: none;
 }
 
 [data-theme="dark"] .audience-card {
-  /* Slightly lighter border weight in dark mode (gold border at ~80% alpha)
+  /* Slightly lighter border weight in dark mode (jade border at ~80% alpha)
      so the accent reads as a tasteful underline rather than a heavy bar. */
-  border-top-color: rgba(203, 166, 72, 0.8);
+  border-top-color: rgba(95, 191, 139, 0.8);
 }
 
 [data-theme="dark"] .audience-card:hover,
 [data-theme="dark"] .audience-card:focus-visible {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  border-color: var(--api-gold);
-  border-top-color: rgba(203, 166, 72, 0.8);
+  border-color: var(--api-jade-bright);
+  border-top-color: rgba(95, 191, 139, 0.8);
 }
 
 .audience-card-label {
@@ -1264,8 +1294,8 @@ hr {
   font-family: var(--font-sans);
   font-size: 0.9rem;
   font-weight: 600;
-  /* Was --accent (gold) — fails WCAG AA on cream/white. --link-color resolves
-     to navy in light mode and gold in dark mode, both pass. */
+  /* Was --accent — fails WCAG AA on white/mint surfaces. --link-color resolves
+     to jade-deep in light mode and jade-bright in dark mode, both pass. */
   color: var(--link-color);
   margin-top: 0.5rem;
   letter-spacing: 0.02em;
@@ -1285,16 +1315,17 @@ hr {
    ========================================================================== */
 .about-section {
   padding: 6rem 1.5rem;
-  /* ~3% darker than --bg-primary (#F8F5F0) so the section reads as a
-     distinct content block rather than continuous with the page bg. */
-  background: #F3EFE9;
+  /* Mint wash, a step off the white --bg-primary, so the section reads as
+     a distinct content block rather than continuous with the page bg. */
+  background: #F2FAF1;
   border-top: 1px solid var(--border-default);
 }
 
-/* In dark mode the section needs --bg-secondary (#242220), not --bg-primary
-   (#1C1917), to keep section distinction from the page bg AND to match the
-   anti-FOUC inline rule in head.html. Without this override, main.css
-   would repaint the section #1C1917 once it loads, creating a flash. */
+/* In dark mode the section needs --bg-secondary (pine-soft), not
+   --bg-primary (pine), to keep section distinction from the page bg AND to
+   match the anti-FOUC inline rule in head.html. Without this override,
+   main.css would repaint the section in the page color once it loads,
+   creating a flash. */
 [data-theme="dark"] .about-section {
   background: var(--bg-secondary);
 }
@@ -1356,14 +1387,14 @@ hr {
   padding-top: 3rem;
 }
 
-/* Full-bleed cream header band for content pages.
-   Mirrors the structural treatment of the audience-page navy hero bands
+/* Full-bleed mint-wash header band for content pages.
+   Mirrors the structural treatment of the audience-page pine hero bands
    (.hero-band) so titled content pages feel like a single visual family.
    ~3% darker than --bg-primary in light mode (same approach as
    .about-section) so the band reads as a distinct content block; in dark
    mode --bg-secondary keeps the band visible against the page bg. */
 .page-header-band {
-  background: #F3EFE9;
+  background: #F2FAF1;
   border-bottom: 1px solid var(--border-default);
   padding: 4.5rem 0 3.5rem;
   margin-bottom: 0;
@@ -1450,16 +1481,19 @@ hr {
   color: var(--text-secondary);
 }
 
-/* --- Audience-page colored hero band ---
-   Each audience page sets `hero_band:` front matter (forest / slate /
-   navy / charcoal). The band is ~30vh, accent-colored, with a cream
-   Cormorant Garamond title and an 80%-opacity cream subtitle. */
+/* --- Audience-page hero band ---
+   Each audience page sets `hero_band:` front matter (pine / pine-deep). The
+   band is ~30vh with a Cormorant Garamond title and an 80%-opacity mint
+   subtitle over a pine background. The base rule carries the pine background
+   itself so a missing or mistyped modifier never leaves the band bare; the
+   FOUC critical CSS in head.html paints the same value before main.css loads. */
 .hero-band {
   min-height: 30vh;
   display: flex;
   align-items: center;
   padding: 4rem 1.5rem 3.5rem;
-  color: var(--api-cream);
+  color: var(--api-mint-pale);
+  background: var(--api-pine);
   margin-bottom: 0;
 }
 
@@ -1469,31 +1503,29 @@ hr {
   margin: 0 auto;
 }
 
-.hero-band--forest    { background: var(--api-forest); }
-.hero-band--slate     { background: var(--api-slate); }
-.hero-band--navy      { background: var(--api-navy); }
-.hero-band--charcoal  { background: var(--api-charcoal); }
+.hero-band--pine      { background: var(--api-pine); }
+.hero-band--pine-deep { background: var(--api-pine-deep); }
 
 .hero-band .breadcrumb {
   font-family: var(--font-sans);
   font-size: 0.85rem;
-  color: rgba(248, 245, 240, 0.7);
+  color: rgba(230, 249, 228, 0.7);
   margin-bottom: 1.25rem;
 }
 
 .hero-band .breadcrumb a {
-  color: rgba(248, 245, 240, 0.85);
+  color: rgba(230, 249, 228, 0.85);
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: border-color 0.15s;
 }
 
 .hero-band .breadcrumb a:hover {
-  border-bottom-color: var(--api-gold);
+  border-bottom-color: var(--api-jade-bright);
 }
 
 .hero-band .breadcrumb [aria-current="page"] {
-  color: var(--api-cream);
+  color: var(--api-mint-pale);
   font-weight: 500;
 }
 
@@ -1503,7 +1535,7 @@ hr {
   font-size: clamp(1.85rem, 2vw + 1rem, 2.6rem);
   line-height: 1.15;
   letter-spacing: -0.01em;
-  color: var(--api-cream);
+  color: var(--api-mint-pale);
   margin: 0 0 0.85rem;
   max-width: 30ch;
 }
@@ -1512,7 +1544,7 @@ hr {
   font-family: var(--font-body);
   font-size: 1.1rem;
   line-height: 1.55;
-  color: rgba(248, 245, 240, 0.8);
+  color: rgba(230, 249, 228, 0.8);
   max-width: 56ch;
   margin: 0;
 }
@@ -1569,7 +1601,7 @@ hr {
   background: var(--accent);
   border-color: var(--accent);
   color: var(--bg-primary);
-  box-shadow: 0 0 0 3px rgba(26, 82, 118, 0.4);
+  box-shadow: 0 0 0 3px rgba(30, 123, 71, 0.4);
 }
 
 /* --- Letter Template --- */
@@ -1612,7 +1644,7 @@ hr {
 /* === Editorial Blockquotes — legal citation style (bilateral indentation) === */
 blockquote {
   margin: 1.75em 2.5em;
-  /* Subtle paper-like tint + thin gold accent gives FOIA quotes the feel
+  /* Subtle paper-like tint + thin jade accent gives FOIA quotes the feel
      of a document excerpt rather than indented prose. */
   padding: 1rem 1.25rem 1rem 1.5rem;
   border-left: 3px solid var(--accent);
@@ -1712,7 +1744,7 @@ blockquote footer {
   text-decoration: none;
 }
 
-/* --- Footer — three-column navy with gold rule --- */
+/* --- Footer — three-column pine with jade rule --- */
 .site-footer {
   background: var(--bg-footer);
   color: var(--text-on-dark);
@@ -1728,13 +1760,13 @@ blockquote footer {
 }
 
 .site-footer a {
-  color: rgba(248, 245, 240, 0.75);
+  color: rgba(230, 249, 228, 0.75);
   text-decoration: none;
   transition: color 0.15s;
 }
 
 .site-footer a:hover {
-  color: var(--api-gold);
+  color: var(--api-jade-bright);
 }
 
 .footer-grid {
@@ -1765,7 +1797,7 @@ blockquote footer {
   font-family: var(--font-display);
   font-size: 1.15rem;
   font-weight: 500;
-  color: var(--api-cream);
+  color: var(--api-mint-pale);
   letter-spacing: 0.01em;
   margin: 0;
 }
@@ -1773,7 +1805,7 @@ blockquote footer {
 .footer-tagline {
   font-family: var(--font-display);
   font-style: italic;
-  color: var(--api-gold);
+  color: var(--api-jade-bright);
   font-size: 1rem;
   letter-spacing: 0.01em;
   margin: 0.25rem 0 0;
@@ -1794,18 +1826,18 @@ blockquote footer {
 }
 
 .footer-contact a {
-  color: var(--api-gold);
+  color: var(--api-jade-bright);
   font-weight: 500;
 }
 
 .footer-contact a:hover {
-  color: var(--api-cream);
+  color: var(--api-mint-pale);
   text-decoration: underline;
 }
 
 .footer-rule {
   border: none;
-  border-top: 1px solid var(--api-gold);
+  border-top: 1px solid var(--api-jade-bright);
   opacity: 0.6;
   margin: 3rem 0 1.5rem;
 }
@@ -1816,7 +1848,7 @@ blockquote footer {
   align-items: center;
   gap: 1.5rem;
   font-size: 0.8rem;
-  color: rgba(248, 245, 240, 0.6);
+  color: rgba(230, 249, 228, 0.6);
 }
 
 .footer-copyright {
@@ -1827,11 +1859,11 @@ blockquote footer {
 .footer-back-to-top {
   font-size: 0.8rem;
   white-space: nowrap;
-  color: rgba(248, 245, 240, 0.6);
+  color: rgba(230, 249, 228, 0.6);
 }
 
 .footer-back-to-top:hover {
-  color: var(--api-gold);
+  color: var(--api-jade-bright);
 }
 
 @media (max-width: 768px) {
@@ -1846,7 +1878,7 @@ blockquote footer {
   }
 }
 
-/* Dark mode: footer goes near-black per spec; gold/cream stay readable */
+/* Dark mode: footer goes near-black per spec; jade/mint stay readable */
 [data-theme="dark"] .site-footer {
   background: var(--bg-footer);
 }
@@ -2354,9 +2386,16 @@ blockquote footer {
 
 .copy-letter-btn--copied,
 .copy-letter-btn--copied:hover {
-  background: #166534;
+  background: var(--color-success);
   color: var(--text-on-accent);
-  border-color: #166534;
+  border-color: var(--color-success);
+}
+
+/* Dark mode success bg is jade-bright — white text fails AA on it (~2.2:1).
+   Pine text reads at ~6.2:1, matching the hero-button pattern. */
+[data-theme="dark"] .copy-letter-btn--copied,
+[data-theme="dark"] .copy-letter-btn--copied:hover {
+  color: var(--api-pine);
 }
 
 /* --- Compact Letter Template (shorter letters on take-action page) --- */
@@ -2376,7 +2415,7 @@ blockquote footer {
 .email-callout {
   background: var(--color-bg-surface);
   border: 1px solid var(--border-default);
-  border-left: 4px solid #166534;
+  border-left: 4px solid var(--color-success);
   font-size: 0.95rem;
 }
 
@@ -2792,10 +2831,11 @@ html.theme-transition *::after {
    DARK MODE — Pico Overrides (semantic tokens are defined near the top)
    ========================================================================== */
 [data-theme="dark"] {
-  --link-visited: #B59238;
+  --link-visited: #6FCB97;
   --border-dark: #888888;
   --color-data-secondary: var(--api-red);
-  --color-data-tertiary: var(--api-gray);
+  --color-data-tertiary: #A9CDB8;
+  --color-success: var(--api-jade-bright);
 
   /* Pico dark mode overrides */
   --pico-color: var(--text-primary);
@@ -2814,7 +2854,7 @@ html.theme-transition *::after {
    DARK MODE — Component Overrides
    ========================================================================== */
 
-/* --- Navigation — dark mode uses cream text + gold underline (no extra rules
+/* --- Navigation — dark mode uses mint text + jade underline (no extra rules
    needed; token cascade + base nav rules already produce the right result). --- */
 
 /* --- Skip Link --- */
@@ -3147,7 +3187,9 @@ html.theme-transition *::after {
 
 .action-tier-label--quick {
   background: #DCFCE7;
-  color: #166534;
+  /* Light-mode pair only (dark mode is overridden below). Fixed hex, decoupled
+     from --color-success so the dark theme can't drag it to a failing value. */
+  color: #155E36;
 }
 
 .action-tier-label--medium {
@@ -3160,16 +3202,22 @@ html.theme-transition *::after {
   color: var(--accent-cta);
 }
 
+/* Dark mode: the wash backgrounds go dark, so the dark light-mode text must be
+   lifted to a light, hue-matched value. Each clears WCAG AA on the chip wash
+   composited over pine / pine-soft (quick ~8.3:1, medium ~9.3:1, ongoing ~7.4:1). */
 [data-theme="dark"] .action-tier-label--quick {
   background: rgba(22, 101, 52, 0.15);
+  color: #6EE7B7;
 }
 
 [data-theme="dark"] .action-tier-label--medium {
   background: rgba(146, 64, 14, 0.15);
+  color: #FCD34D;
 }
 
 [data-theme="dark"] .action-tier-label--ongoing {
   background: rgba(185, 28, 28, 0.1);
+  color: #FCA5A5;
 }
 
 /* ==========================================================================
@@ -3202,7 +3250,7 @@ html.theme-transition *::after {
 }
 
 .bar-chart-bar--secondary {
-  background: #166534;
+  background: var(--color-success);
 }
 
 .bar-chart-bar--tertiary {
@@ -3241,6 +3289,10 @@ html.theme-transition *::after {
     width: 100%;
     padding: 0.85rem;
     font-size: 1.05rem;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
   }
 
   /* Add padding to body so footer content isn't hidden behind the sticky bar */
@@ -3472,8 +3524,8 @@ hr.section-break {
     --bg-secondary: #F3F4F6;
     --text-primary: #1A1A1A;
     --text-secondary: #4B5563;
-    --link-color: #B91C1C;
-    --link-hover: #991B1B;
+    --link-color: #1E7B47;
+    --link-hover: #155E36;
     --border-default: #E5E7EB;
     --accent-cta: #B91C1C;
   }

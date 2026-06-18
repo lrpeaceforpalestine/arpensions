@@ -5,7 +5,7 @@ description: "What Arkansas teachers and retired educators need to know about AT
 permalink: /educators/
 audience_nav: true
 breadcrumb: "For Educators"
-hero_band: forest
+hero_band: pine
 charts: true
 ---
 

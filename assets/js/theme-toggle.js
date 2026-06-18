@@ -25,8 +25,8 @@
   function syncBrowserTheme(theme) {
     var root = document.documentElement;
     root.style.colorScheme = theme;
-    root.style.backgroundColor = theme === 'dark' ? '#1C1917' : '#F8F5F0';
-    root.style.color = theme === 'dark' ? '#F8F5F0' : '#1C1917';
+    root.style.backgroundColor = theme === 'dark' ? '#013237' : '#FFFFFF';
+    root.style.color = theme === 'dark' ? '#E6F9E4' : '#152019';
     var meta = document.querySelector('meta[name="color-scheme"]');
     if (meta) {
       meta.setAttribute('content', theme);

@@ -17,13 +17,13 @@
 }
 
 .timeline-thread line {
-  stroke: var(--accent, #1a5276);
+  stroke: var(--accent, #1E7B47);
   stroke-width: 1.5;
   opacity: 0.4;
 }
 
 .timeline-thread .thread-dot {
-  fill: var(--accent, #1a5276);
+  fill: var(--accent, #1E7B47);
   opacity: 0;
   transition: opacity 0.4s ease;
 }
@@ -33,11 +33,11 @@
 }
 
 [data-theme="dark"] .timeline-thread line {
-  stroke: #5dade2;
+  stroke: #5FBF8B;
 }
 
 [data-theme="dark"] .timeline-thread .thread-dot {
-  fill: #5dade2;
+  fill: #5FBF8B;
 }
 
 @media (max-width: 600px) {
@@ -86,7 +86,7 @@
 }
 
 .unit-chart__grid .unit--filled {
-  background: var(--accent, #1a5276);
+  background: var(--accent, #1E7B47);
   opacity: 0;
   transition: opacity 0.2s ease;
 }
@@ -114,7 +114,7 @@
 }
 
 [data-theme="dark"] .unit-chart__grid .unit--filled {
-  background: #5dade2;
+  background: #5FBF8B;
 }
 
 [data-theme="dark"] .unit-chart__grid .unit--empty {

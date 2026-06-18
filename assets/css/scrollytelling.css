@@ -99,7 +99,7 @@
 }
 
 .viz-stat--accent {
-  color: var(--accent, #1a5276);
+  color: var(--accent, #1E7B47);
 }
 
 .viz-stat--danger {
@@ -127,7 +127,7 @@
 /* --- Dark mode --- */
 
 [data-theme="dark"] .viz-stat--accent {
-  color: #5dade2; /* lighter blue for dark bg contrast */
+  color: #5FBF8B; /* jade-bright for dark bg contrast */
 }
 
 [data-theme="dark"] .viz-stat--danger {
