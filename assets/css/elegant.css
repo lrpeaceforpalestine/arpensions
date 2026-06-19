@@ -1624,6 +1624,13 @@ html {
   font-style: normal;
 }
 
+/* The two keystone figures (top of the page) read as more prominent than the
+   standard profile cards via a thicker accent border-top. (The dark-mode accent
+   override lives below, after the base dark .figure-card rule, so it wins.) */
+.figure-card--central {
+  border-top-width: 4px;
+}
+
 /* Pattern narrative sections */
 .pattern-section {
   border-left: 3px solid var(--accent);
@@ -1638,6 +1645,12 @@ html {
 /* Dark mode adjustments */
 [data-theme="dark"] .figure-card {
   border-top-color: var(--border-default);
+}
+
+/* Central figures keep the jade accent in dark mode (placed after the base
+   rule above so it wins at equal specificity) to stay visually distinct. */
+[data-theme="dark"] .figure-card--central {
+  border-top-color: var(--accent);
 }
 
 [data-theme="dark"] .figure-subtitle,

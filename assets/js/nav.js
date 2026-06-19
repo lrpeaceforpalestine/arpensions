@@ -80,58 +80,9 @@
   });
 })();
 
-// Scroll-triggered stat counter animation
-(function() {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-  var stats = document.querySelectorAll('[data-count]');
-  if (!stats.length) return;
-
-  var animated = false;
-
-  function animateCount(el) {
-    var target = parseInt(el.getAttribute('data-count'), 10);
-    var prefix = el.getAttribute('data-prefix') || '';
-    var suffix = el.getAttribute('data-suffix') || '';
-    var duration = 1500;
-    var start = performance.now();
-
-    if (target === 0) {
-      el.textContent = '0';
-      setTimeout(function() {
-        el.classList.add('stat-number--revealed');
-      }, duration + 300);
-      return;
-    }
-
-    function step(now) {
-      var elapsed = now - start;
-      var progress = Math.min(elapsed / duration, 1);
-      var eased = 1 - Math.pow(1 - progress, 3);
-      var current = Math.round(target * eased);
-      el.textContent = prefix + current + suffix;
-      if (progress < 1) {
-        requestAnimationFrame(step);
-      }
-    }
-
-    el.textContent = prefix + '0' + suffix;
-    requestAnimationFrame(step);
-  }
-
-  var observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting && !animated) {
-        animated = true;
-        stats.forEach(animateCount);
-        observer.disconnect();
-      }
-    });
-  }, { threshold: 0.3 });
-
-  var bar = document.querySelector('.stats-bar');
-  if (bar) observer.observe(bar);
-})();
+// (The homepage stat numbers are static by design; the live scroll-triggered
+//  count-up animation for other pages lives in scroll-animations.js. An unused
+//  duplicate counter that targeted markup/CSS hooks no longer present was removed.)
 
 // External links — add target="_blank" and rel="noopener noreferrer" to off-site links
 // Uses relList.add() to avoid clobbering existing rel values (WCAG 2.4.4)
