@@ -80,9 +80,7 @@
   });
 })();
 
-// (The homepage stat numbers are static by design; the live scroll-triggered
-//  count-up animation for other pages lives in scroll-animations.js. An unused
-//  duplicate counter that targeted markup/CSS hooks no longer present was removed.)
+// Static stat numbers; live count-up animation lives in scroll-animations.js ([data-countup]).
 
 // External links — add target="_blank" and rel="noopener noreferrer" to off-site links
 // Uses relList.add() to avoid clobbering existing rel values (WCAG 2.4.4)
