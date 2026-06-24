@@ -3,6 +3,8 @@ layout: page
 title: "About — Our Investigation, Approach, and Frequently Asked Questions"
 description: "Public records. Arkansas law. Fiduciary accountability. That's the whole campaign."
 permalink: /about/
+header_image: /assets/images/about-highsmith-capitol-duotone-wide.jpg
+header_image_alt: "Arkansas State Capitol, Little Rock — Carol M. Highsmith, Library of Congress (public domain), rendered as a pine-and-mint duotone."
 ---
 
 ## Our mission
