@@ -1,24 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200"
-  role="img" aria-label="">
-  <title>1,227 public records obtained through FOIA</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200">
+  <title>1,227 public records obtained through Arkansas FOIA. 12 anchor documents cited across these pages.</title>
   <!-- top and bottom frame rules -->
   <line x1="0" y1="2" x2="1200" y2="2" stroke="#E6F9E4" stroke-width="1" opacity="0.35"/>
   <line x1="0" y1="198" x2="1200" y2="198" stroke="#E6F9E4" stroke-width="1" opacity="0.35"/>
-  <!-- left eyebrow -->
+  <!-- eyebrow -->
   <text x="600.0" y="48" text-anchor="middle"
-    font-family="Inter, system-ui, sans-serif" font-weight="600"
+    font-family="Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-weight="600"
     font-size="11" letter-spacing="3" fill="#E6F9E4" opacity="0.60">
     PUBLIC RECORDS OBTAINED THROUGH ARKANSAS FOIA
   </text>
   <!-- the number, big editorial mono -->
   <text x="600.0" y="124" text-anchor="middle"
-    font-family="IBM Plex Mono, 'Courier New', monospace" font-weight="500"
+    font-family="'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" font-weight="500"
     font-size="68" fill="#E6F9E4" opacity="0.92" letter-spacing="2">
     1,227
   </text>
   <!-- below: anchor-document context -->
   <text x="600.0" y="162" text-anchor="middle"
-    font-family="Inter, system-ui, sans-serif" font-weight="400"
+    font-family="Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-weight="400"
     font-size="13" fill="#E6F9E4" opacity="0.55">
     12 anchor documents cited across these pages
   </text>
