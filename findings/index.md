@@ -8,7 +8,7 @@ breadcrumb: "Key Findings"
 
 Our [evidence page](/evidence/) reports the numbered findings of the FOIA investigation. The pages below take six of the most analytically consequential findings and treat each one in depth — explaining what the public record establishes, what Arkansas law requires, and where each finding fits in the fiduciary architecture the Pension Investment Integrity Act would clarify.
 
-Each finding is sourced from one or more concept pages on the [investigation wiki](https://israelbonds.wiki), the comprehensive evidentiary base maintained by Arkansans for Pension Integrity. The wiki documents the underlying FOIA productions; these pages translate that record into the public-facing fiduciary argument.
+Each finding cites its own primary sources inline. The pension-system FOIA productions and Treasury records that ground most of the analysis are documented on our [evidence](/evidence/) and [documents](/documents/) pages; additional regulatory records (Arkansas Securities Department, FINRA disclosures) and other public records are cited directly on each finding page.
 
 <div class="findings-grid" markdown="1">
 
@@ -76,4 +76,4 @@ The Pension Investment Integrity Act addresses each structural feature these fin
 
 - [Read the policy brief](/legislators/) — the Pension Investment Integrity Act and the statutory anchors
 - [See the evidence](/evidence/) — primary source documents from 1,227 FOIA records
-- [Investigation wiki](https://israelbonds.wiki) — the comprehensive evidentiary base, including all FOIA productions and the wiki concept pages that source these findings
+- [Browse the documents](/documents/) — the FOIA-obtained record archive

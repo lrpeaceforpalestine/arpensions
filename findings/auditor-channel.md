@@ -37,8 +37,6 @@ The Auditor's-office coordination on the bonds and on SFOF activity is not limit
 - **Kurt Underwood**, video producer.
 - **T.J. Fowler**, General Counsel — formal legal authority over Auditor FOIA responses.
 
-The Auditor's-office org chart relevant to the investigation is documented in full at the wiki source page on [Auditor's Office Senior Leadership Structure](https://www.israelbonds.wiki/concepts/auditor-office-org-structure).
-
 ## What the pattern means for the fiduciary record
 
 The Auditor's office is not within the Act 498 fiduciary chain. Pension benefit plan trustees and treasurer's-office officials are. But the operational record matters for fiduciary review under A.C.A. § 24-2-611(d), which requires trustees to "make a reasonable effort to verify facts relevant to the investment and management of trust assets."
