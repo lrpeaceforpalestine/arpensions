@@ -217,12 +217,12 @@
   relevance: key
   summary: >-
     Authored an internal memo recommending against new sovereign bond
-    purchases, citing credit downgrades by all three major rating agencies.
+    purchases, citing credit downgrades by S&P and Moody's.
     His recommendation was overridden.
   key_facts:
     - "Senior Investment Officer, Arkansas State Treasury"
     - "Authored internal memo recommending against new purchases"
-    - "Cited credit downgrades (Moody's September 27, 2024, plus Fitch and S&P downgrades)"
+    - "Cited credit downgrades (S&P October 1 and Moody's September 27, 2024)"
     - "Recommendation was overridden"
   connections:
     - target: dennis-milligan
