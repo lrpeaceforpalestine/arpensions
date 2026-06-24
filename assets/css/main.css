@@ -1854,6 +1854,7 @@ blockquote footer {
 .footer-copyright {
   margin: 0;
   letter-spacing: 0.02em;
+  color: rgba(230, 249, 228, 0.6);
 }
 
 .footer-back-to-top {
