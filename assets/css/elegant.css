@@ -1724,36 +1724,29 @@ html {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
-  opacity: 0.55;
+  /* `contain` so the transcript SVG isn't cropped off the left edge on wider
+     viewports; positioned at bottom-left so it sits below the centered CTAs
+     rather than competing with the api badge / headline area. */
+  object-fit: contain;
+  object-position: left bottom;
+  opacity: 0.22;
   pointer-events: none;
 }
 @media (max-width: 640px) {
-  .hero-document-wash { opacity: 0.35; }
+  .hero-document-wash { opacity: 0.16; }
 }
 
-/* (2) Footer — 1,227 record-tick band */
+/* (2) Footer — editorial 1,227-record stamp */
 .footer-record-band {
   text-align: center;
-  margin-top: 2.5rem;
-  margin-bottom: 0.5rem;
+  margin: 2.5rem auto 0.5rem;
+  max-width: 720px;
 }
 .footer-record-band img {
   display: block;
   width: 100%;
   height: auto;
-  max-height: 40px;
-  opacity: 0.85;
-}
-.footer-record-band-caption {
-  font-family: var(--font-mono, 'IBM Plex Mono', monospace);
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--api-mint, #C0E7BA);
-  opacity: 0.55;
-  margin: 0.6rem 0 0;
+  opacity: 0.92;
 }
 
 /* (3) Home — guilloché section divider */
