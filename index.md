@@ -10,6 +10,8 @@ description: "Arkansas pension funds authorized up to $100 million in non-tradab
 
 {% include pathway-cards.html %}
 
+<hr class="section-divider section-divider--guilloche" aria-hidden="true">
+
 {% include role-ctas.html %}
 
 <section class="about-section">

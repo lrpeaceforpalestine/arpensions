@@ -1708,3 +1708,102 @@ html {
 [data-theme="dark"] .finding-card {
   border-top-color: var(--border-default);
 }
+
+/* ============================================================
+   Imagery v1 — starter surfaces
+   See _includes/hero.html, footer.html, stats-bar.html;
+   _layouts/page.html; index.md.
+   ============================================================ */
+
+/* (1) Home hero — trustee-dissent transcript wash, layered
+   between the capitol-hero photo's pine overlay and the
+   hero content. Inherits z-index: 2 from .hero > * but
+   renders first in DOM, so it sits under .hero-content. */
+.hero-document-wash {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.55;
+  pointer-events: none;
+}
+@media (max-width: 640px) {
+  .hero-document-wash { opacity: 0.35; }
+}
+
+/* (2) Footer — 1,227 record-tick band */
+.footer-record-band {
+  text-align: center;
+  margin-top: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.footer-record-band img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 40px;
+  opacity: 0.85;
+}
+.footer-record-band-caption {
+  font-family: var(--font-mono, 'IBM Plex Mono', monospace);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--api-mint, #C0E7BA);
+  opacity: 0.55;
+  margin: 0.6rem 0 0;
+}
+
+/* (3) Home — guilloché section divider */
+.section-divider {
+  border: 0;
+  margin: 2.5rem 0;
+  padding: 0;
+}
+.section-divider--guilloche {
+  height: 56px;
+  background-image: url('/assets/images/divider-guilloche.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 56px;
+  opacity: 0.6;
+}
+[data-theme="dark"] .section-divider--guilloche { opacity: 0.45; }
+
+/* (4) Stats-bar — zero w/ redaction-bar treatment */
+.stat-number--redaction {
+  display: block;
+  line-height: 0;
+  margin: 0 auto 0.25rem;
+}
+.stat-number--redaction img {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* (5) About page — Highsmith Capitol header background */
+.page-header-band--has-image {
+  position: relative;
+  overflow: hidden;
+}
+.page-header-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  opacity: 0.16;
+  pointer-events: none;
+  z-index: 0;
+}
+[data-theme="dark"] .page-header-image { opacity: 0.22; }
+.page-header-band--has-image > .container {
+  position: relative;
+  z-index: 1;
+}
