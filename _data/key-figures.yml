@@ -222,7 +222,7 @@
   key_facts:
     - "Senior Investment Officer, Arkansas State Treasury"
     - "Authored internal memo recommending against new purchases"
-    - "Cited credit downgrades (S&P October 1 and Moody's September 27, 2024)"
+    - "Cited the S&P (October 1, 2024) and Moody's (September 27, 2024) downgrades"
     - "Recommendation was overridden"
   connections:
     - target: dennis-milligan
