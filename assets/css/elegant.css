@@ -1797,12 +1797,17 @@ html {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 40%;
-  opacity: 0.16;
+  object-position: center 30%;
+  opacity: 0.09;
   pointer-events: none;
   z-index: 0;
+  /* Fade the bottom of the image so the title sits on clean band background.
+     `mask-image` is well-supported in evergreen browsers; older browsers
+     simply get the un-masked (full-rectangle) image — still subtle at 0.09. */
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 95%);
+          mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 95%);
 }
-[data-theme="dark"] .page-header-image { opacity: 0.22; }
+[data-theme="dark"] .page-header-image { opacity: 0.14; }
 .page-header-band--has-image > .container {
   position: relative;
   z-index: 1;
