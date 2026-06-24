@@ -1,16 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220"
-  role="img" aria-label="The figure zero, against a pine redaction bar">
+  role="img" aria-label="The figure zero, on a solid pine redaction bar">
   <title>Zero</title>
-  <defs>
-    <linearGradient id="rb" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="0" stop-color="#013237" stop-opacity="0"/>
-      <stop offset="0.20" stop-color="#013237"/>
-      <stop offset="0.80" stop-color="#013237"/>
-      <stop offset="1" stop-color="#013237" stop-opacity="0"/>
-    </linearGradient>
-  </defs>
-  <rect x="6" y="22" width="208" height="176" fill="url(#rb)"/>
-  <text x="110.0" y="166" text-anchor="middle"
+  <rect x="6" y="22" width="208" height="176" rx="4" fill="#013237"/>
+  <text x="110.0" y="170" text-anchor="middle"
     font-family="IBM Plex Mono, 'Courier New', monospace" font-weight="700"
     font-size="180" fill="#E6F9E4" letter-spacing="-2">0</text>
 </svg>
