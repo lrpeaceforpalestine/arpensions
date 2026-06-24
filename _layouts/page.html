@@ -4,7 +4,7 @@ layout: default
 <article class="page-content" aria-labelledby="page-heading">
   <div class="page-header-band{% if page.hide_rule %} page-header-band--no-rule{% endif %}{% if page.header_image %} page-header-band--has-image{% endif %}">
     {% if page.header_image %}
-    <img class="page-header-image" src="{{ page.header_image | relative_url }}" alt="{{ page.header_image_alt | default: '' }}" aria-hidden="{% if page.header_image_alt %}false{% else %}true{% endif %}">
+    <img class="page-header-image" src="{{ page.header_image | relative_url }}" alt="{{ page.header_image_alt | default: '' }}"{% unless page.header_image_alt %} aria-hidden="true"{% endunless %}>
     {% endif %}
     <div class="container container-prose">
       {% if page.breadcrumb %}
