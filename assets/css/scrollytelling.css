@@ -90,7 +90,7 @@
 }
 
 .viz-stat {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: var(--font-display, 'League Spartan', sans-serif);
   font-weight: 600;
   font-size: clamp(3rem, 8vw, 5rem);
   line-height: 1.1;
