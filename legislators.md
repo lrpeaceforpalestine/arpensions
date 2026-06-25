@@ -61,7 +61,7 @@ The pattern in the public record raises questions about whether these standards 
 
 **Public statements emphasized political symbolism.** As documented in public records, Governor Sanders stated: "Arkansas puts its money where its mouth is and is investing millions in Israeli bonds." At the APERS committee meeting, as documented in public records, Deputy Auditor Jason Brady referenced the U.S. Ambassador to Israel as "my and Amy's former boss." None of these are pecuniary factors.
 
-**The normal investment process was bypassed.** ATRS Board Chair Danny Knight warned that selecting a specific bond at a trustee's request was "going outside of the scope of the way we usually do things." ATRS typically relies on professional investment managers — not board members — to recommend specific securities.
+**The normal investment process was bypassed.** ATRS Board Chair Danny Knight cast the lone "no" vote and objected to the process on the record: "I do have a problem with the procedure." ATRS typically relies on professional investment managers — not board members — to recommend specific securities.
 
 The process divergence extends further: APERS chose to purchase the bonds directly without an external manager, while ATRS hired Reams Asset Management and established — as documented in the public record — a dedicated "Israeli Jubilee bond account" with written investment guidelines, but only four months after the board authorized the purchase. In neither case was independent credit analysis completed before authorization.
 

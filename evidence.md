@@ -62,7 +62,7 @@ Every claim on this site is backed by documents in the public record. Below are 
     <div class="scrolly__step" data-step="4">
       <div class="step__content">
         <h3>One voice of dissent</h3>
-        <p>ATRS Board Chair Danny Knight cast the sole "no" vote, warning that selecting a specific bond at a trustee's request was "going outside of the scope of the way we usually do things." Read the full evidence below.</p>
+        <p>ATRS Board Chair Danny Knight cast the sole "no" vote, objecting to the process on the record: "I do have a problem with the procedure." Read the full evidence below.</p>
       </div>
     </div>
   </div>
@@ -293,7 +293,7 @@ Additionally, APERS Board Secretary Daryl Bassett had previously appointed Jason
 
 ### 4. Board Chair raised process concerns
 
-ATRS Board Chair Danny Knight cast the sole "no" vote on Resolution 2025-22 (June 2, 2025), warning that selecting a specific bond at a trustee's request was "going outside of the scope of the way we usually do things." ATRS typically relies on professional investment managers — not board members or their proxies — to recommend specific securities.
+ATRS Board Chair Danny Knight cast the sole "no" vote on Resolution 2025-22 (June 2, 2025), objecting to the process on the record: "I do have a problem with the procedure." ATRS typically relies on professional investment managers — not board members or their proxies — to recommend specific securities.
 
 <div class="pull-quote" data-aos="fade-up" markdown="1">
 

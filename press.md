@@ -193,7 +193,7 @@ The campaign's ask is legislative: passage of the **Pension Investment Integrity
 
 **From the public record:**
 
-"[The Board is] going outside of the scope of the way we usually do things."
+"I do have a problem with the procedure."
 
 <span class="pull-quote-attribution">— Danny Knight, ATRS Board Chair and sole dissenting vote (June 2025)</span>
 
