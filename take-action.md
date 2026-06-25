@@ -25,6 +25,10 @@ Every Arkansan whose retirement is managed by a state pension fund has a stake i
     <span class="step-ladder-node">4</span>
     <span class="step-ladder-label">Volunteer</span>
   </a>
+  <a href="#spread" class="step-ladder-item">
+    <span class="step-ladder-node">5</span>
+    <span class="step-ladder-label">Spread the word</span>
+  </a>
 </div>
 
 <div class="action-tier" markdown="1">
@@ -137,6 +141,26 @@ We need Arkansans across the state — especially educators and public employees
 - **Legislative advocacy** — Contact and meet with legislators ahead of the 2027 session
 
 **Email [info@arpensions.org](mailto:info@arpensions.org?subject=I%20want%20to%20volunteer&body=Name%3A%20%0ACity%3A%20%0AI%27m%20interested%20in%3A%20%5Bresearch%20%2F%20outreach%20%2F%20communications%20%2F%20legislative%20advocacy%5D%0A)** to get started.
+
+</section>
+</div>
+
+<div class="action-tier" markdown="1">
+<span class="action-tier-label action-tier-label--ongoing">Anytime</span>
+
+<section class="action-step" markdown="1">
+
+## Spread the word {#spread}
+
+Print it, post it, hand it out. Share this note — or point people to the QR code — and send them straight to the public record.
+
+<figure style="margin: 1.5rem 0; max-width: 640px;">
+  <picture>
+    <source srcset="{{ '/assets/images/banknote-share.webp' | relative_url }}" type="image/webp">
+    <img src="{{ '/assets/images/banknote-share.jpg' | relative_url }}" alt="Arkansans for Pension Integrity note reading 'They're messing with your money' beside a dollar sign and a QR code linking to arpensions.org" width="1600" height="680" loading="lazy" style="width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--border-default, #DCE8DC);">
+  </picture>
+  <figcaption style="margin-top: 0.5rem; font-size: 0.85rem;"><a href="{{ '/assets/images/banknote-share.jpg' | relative_url }}" download>Download the share graphic</a></figcaption>
+</figure>
 
 </section>
 </div>
