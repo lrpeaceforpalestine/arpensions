@@ -127,7 +127,7 @@ Arkansas law is clear about how pension investments must be made:
 
 Several red flags suggest these standards may not have been followed:
 
-**The ATRS Board Chair dissented.** Danny Knight, the lone "no" vote on the June 2025 authorization, warned that selecting a specific bond at a trustee's request was "going outside of the scope of the way we usually do things." ATRS typically relies on professional investment managers — not board members — to recommend specific securities.
+**The ATRS Board Chair dissented.** Danny Knight, the lone "no" vote on the June 2025 authorization, objected to the process on the record: "I do have a problem with the procedure." ATRS typically relies on professional investment managers — not board members — to recommend specific securities.
 
 **No independent credit analysis was produced.** Our review of more than 1,200 public records obtained through FOIA requests to Arkansas state agencies found zero independent credit analyses of these bonds prepared before the authorizations. The normal process — where investment consultants provide written recommendations — appears to have been bypassed. The same APERS meetings that produced 37 pages of Callan analysis for other investments contained zero pages of analysis for the sovereign bond authorization. (The [Treasury's own investment policy](/assets/documents/treasury-investment-policy-2022.pdf) establishes the standards that should have governed this decision.)
 

@@ -12,7 +12,7 @@ This is the public-facing campaign website for Arkansans for Pension Integrity, 
 | Stack | Jekyll + GitHub Pages + Pico CSS v2 |
 | Email | info@arpensions.org |
 | Organization | Arkansans for Pension Integrity (API) |
-| Tagline | Your money. Zero analysis. |
+| Tagline | They're messing with your money. |
 
 ## Site Structure
 
