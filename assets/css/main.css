@@ -47,7 +47,7 @@
   /* === Typography stacks === */
   --font-display: 'League Spartan', 'Arial Narrow', Arial, sans-serif;
   --font-body: 'Avenir Next', 'Avenir', 'Mulish', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-serif: var(--font-body);
+  --font-serif: var(--font-display); /* h3 + key-finding labels follow the display face */
   --font-sans: 'Avenir Next', 'Avenir', 'Mulish', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
 
