@@ -3793,7 +3793,7 @@ hr.section-break {
 #can_embed_form textarea:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 0 2px rgba(72, 164, 109, 0.25);
+  box-shadow: 0 0 0 2px var(--accent);
 }
 /* Submit — matches .btn-primary (brand CTA) */
 #can_embed_form input[type="submit"],
@@ -3815,7 +3815,8 @@ hr.section-break {
 }
 #can_embed_form input[type="submit"]:hover,
 #can_embed_form input[type="submit"]:focus-visible,
-#can_embed_form .can_button:hover {
+#can_embed_form .can_button:hover,
+#can_embed_form .can_button:focus-visible {
   background: var(--accent-cta-hover);
   border-color: var(--accent-cta-hover);
   box-shadow: 0 2px 8px rgba(185, 28, 28, 0.25);
