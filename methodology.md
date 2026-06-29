@@ -58,7 +58,7 @@ Every factual claim in our evidence materials traces back to a specific source d
 
 <div class="callout" markdown="1">
 
-**Important:** Our evidence is limited to what agencies have provided through FOIA. Some requests are still pending, and agencies may hold responsive documents that were not included in their responses. Where we identify gaps, we note them and file follow-up requests.
+**Important:** Our evidence is limited to what agencies have provided through FOIA, and agencies may hold responsive documents that were not included in their responses. Where we identify gaps, we note them and file follow-up requests.
 
 </div>
 

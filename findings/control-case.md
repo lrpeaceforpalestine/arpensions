@@ -12,7 +12,7 @@ A central question for the fiduciary record is whether the rapid adoption of non
 
 In April 2025, the bond issuer's national managing director and southeast regional executive director conducted a coordinated outreach to Arkansas pension and treasury principals. The Auditor of State's office orchestrated the bulk of those meetings — four meetings scheduled within 18 minutes by Auditor Dennis Milligan and his executive assistant Wendy Spadoni, all held in the Auditor's own Capitol office (Room 230), all staffed by his deputy Jason Brady, and all CC'd to the Auditor's-office leadership. The April 14–15, 2025 itinerary placed the issuer's representatives in front of the directors of ATRS, APERS, and the State Treasurer.
 
-A fourth Arkansas pension benefit plan — **ASHERS**, the Arkansas State Highway Employees' Retirement System — received the **same sales pitch from the same representatives in the same window**, but through a different intermediary: the Arkansas Department of Finance and Administration, not the Auditor's office.
+A third Arkansas pension benefit plan — **ASHERS**, the Arkansas State Highway Employees' Retirement System — received the **same sales pitch from the same representatives in the same window**, but through a different intermediary: the Arkansas Department of Finance and Administration, not the Auditor's office.
 
 ## The outcomes diverged
 

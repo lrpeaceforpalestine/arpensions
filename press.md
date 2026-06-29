@@ -23,7 +23,7 @@ The campaign's ask is legislative: passage of the **Pension Investment Integrity
 | **$50M** | ATRS (teacher retirement) authorization for these bonds (June 2, 2025; Board Chair cast lone "no" vote); full $50M deployed December 2025 |
 | **$25–50M** | APERS (public employee retirement) authorization for non-tradable sovereign bonds (May 15, 2025) |
 | **$60M** | Arkansas State Treasury holdings in the same instruments as of February 2026 — separately governed under Treasury investment authority, not Act 498; including $20M purchased in May 2025 and $10M in February 2026, net of intervening bond maturities |
-| **1,227** | Public records obtained and analyzed across three FOIA rounds to Arkansas state agencies |
+| **1,227** | Public records obtained and analyzed across four FOIA rounds to Arkansas state agencies (the fourth returned a null result) |
 | **3** | Major credit agencies (S&P, Moody's, Fitch) that have downgraded the issuing country's credit rating since 2024 |
 | **0** | Independent credit analyses of these non-tradable sovereign bonds found in the entire document record |
 | **5** | Arkansas state agencies that produced documents — three pension systems (ATRS, APERS, ASHERS) and two non-pension state offices (the State Treasury and the Auditor of State). Three additional pension systems (ASPRS, LOPFI, AJRS) confirmed null results. Six pension systems total are covered by Act 498; all six have now responded. |

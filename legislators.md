@@ -36,7 +36,7 @@ We are asking the General Assembly to strengthen the integrity of how pension in
 | **Dual fiduciary standard** | Same APERS meetings: 37 pages of Callan analysis for other investments, 0 pages for the sovereign bond authorization |
 | **Cross-system coordination** | ATRS Executive Director attended the APERS subcommittee meeting where the sovereign bond purchase was authorized |
 | **Subcommittee chair conflict** | Larry Walther, former Treasurer who maintained the Treasury's sovereign bond holdings (~$55M during his 2023–2025 tenure; now $60M as of February 2026), chaired the APERS subcommittee that authorized $25–50M more |
-| **Total documents reviewed** | 1,227 across three FOIA rounds to Arkansas state agencies |
+| **Total documents reviewed** | 1,227 across four FOIA rounds to Arkansas state agencies |
 
 </div>
 
