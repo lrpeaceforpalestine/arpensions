@@ -40,6 +40,8 @@ Every Arkansan whose retirement is managed by a state pension fund has a stake i
 
 We're building a list of Arkansans — educators, public employees, retirees, and concerned taxpayers — who believe pension investments should be based solely on financial merit, with documented due diligence on the record.
 
+**What you're signing.** This petition calls on the Arkansas General Assembly to require — before any state pension plan commits members' money to non-tradable foreign sovereign debt — an independent credit analysis, a written comparison against comparable alternatives, disclosure of the investment's liquidity risk, a documented determination that it meets the financial-merit standard the law already requires, and public posting of that analysis within 30 days. It asks no board to buy or sell any specific investment — only to do the homework, on the record. That's the **[Pension Investment Integrity Act](/legislators/)**.
+
 **Add your name:**
 
 <div class="an-embed">

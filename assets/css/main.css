@@ -3766,6 +3766,17 @@ hr.section-break {
 .an-embed {
   margin: 1.25rem 0 0.5rem;
 }
+/* AN wraps the fields in a <ul>; remove Pico's list bullets (incl. the empty
+   hidden-field row that renders as a stray dot at the top). */
+.an-embed ul,
+.an-embed ol {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+.an-embed li {
+  margin-left: 0;
+}
 #can_embed_form {
   max-width: 30rem;
 }
