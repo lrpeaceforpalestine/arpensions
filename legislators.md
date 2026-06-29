@@ -103,6 +103,8 @@ The "extraordinary care and caution" the statute requires has independent conten
 
 We urge the Arkansas General Assembly to enact the **Pension Investment Integrity Act** during the **2027 Regular Session**. This legislation is issuer-neutral — it does not single out any country, issuer, or political position. It establishes procedural standards for acquisitions of non-tradable sovereign debt by any Arkansas pension benefit plan within the scope of Act 498 of 2023: ATRS, APERS, ASHERS, ASPRS, AJRS, and LOPFI.
 
+In June 2026, the **Citizens First Congress** — a coalition of roughly 50 Arkansas civic and good-government organizations — adopted pension investment integrity as one of its short-term legislative priorities for the 2027 session. The coalition's endorsement reflects broad statewide support for requiring documented, issuer-neutral fiduciary analysis before an Arkansas pension plan acquires non-tradable sovereign debt.
+
 ### The five provisions
 
 For any acquisition of non-tradable sovereign debt by an Arkansas pension benefit plan, the Integrity Act would require:
