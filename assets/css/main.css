@@ -3757,3 +3757,80 @@ hr.section-break {
     display: none;
   }
 }
+
+/* ==========================================================================
+   Action Network embedded petition (Take Action — "Sign on")
+   No-styles embed: AN injects raw form markup into #can-petition-area-*; we
+   style it here to the green brand. Theme-aware via semantic tokens.
+   ========================================================================== */
+.an-embed {
+  margin: 1.25rem 0 0.5rem;
+}
+#can_embed_form {
+  max-width: 30rem;
+}
+#can_embed_form input[type="text"],
+#can_embed_form input[type="email"],
+#can_embed_form input[type="tel"],
+#can_embed_form select,
+#can_embed_form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  border: 1px solid var(--text-secondary);
+  border-radius: 4px;
+  padding: 0.6rem 0.75rem;
+  margin-bottom: 0.75rem;
+}
+#can_embed_form input::placeholder {
+  color: var(--text-muted);
+}
+#can_embed_form input:focus,
+#can_embed_form select:focus,
+#can_embed_form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(72, 164, 109, 0.25);
+}
+/* Submit — matches .btn-primary (brand CTA) */
+#can_embed_form input[type="submit"],
+#can_embed_form .can_button {
+  display: inline-block;
+  width: 100%;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  background: var(--accent-cta);
+  border: 2px solid var(--accent-cta);
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  min-height: 44px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+#can_embed_form input[type="submit"]:hover,
+#can_embed_form input[type="submit"]:focus-visible,
+#can_embed_form .can_button:hover {
+  background: var(--accent-cta-hover);
+  border-color: var(--accent-cta-hover);
+  box-shadow: 0 2px 8px rgba(185, 28, 28, 0.25);
+}
+/* Opt-in row, helper text, and AN's injected links */
+#can_embed_form .can_embed_opt_in,
+#can_embed_form label[for^="name_optin"],
+#can_embed_form .can_field_subtext {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+#can_embed_form a {
+  color: var(--link-color);
+}
+#can_embed_form .can_embed_thank_you,
+#can_embed_form #can_thank_you {
+  color: var(--text-primary);
+}

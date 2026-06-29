@@ -3,7 +3,15 @@
 <!-- CSP: sha256 hash whitelists the anti-FOUC inline script below.
      If you change the script content, recompute with:
      node -e "const c=require('crypto');const s=`SCRIPT_CONTENT`;console.log(c.createHash('sha256').update(s,'utf8').digest('base64'))" -->
+{% if page.url == "/take-action/" %}
+<!-- Take Action only: relax CSP to allow the Action Network petition embed
+     (script + XHR submit to actionnetwork.org). Scoped to this page so the rest
+     of the site keeps the strict policy. No reCAPTCHA/Google — this petition
+     does not load it. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-A2OjEGCbS6qImIS66ELxAVHhQOxctdwT3zDdCpT2g/M=' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://actionnetwork.org; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://actionnetwork.org; font-src https://fonts.gstatic.com; img-src 'self' data: https://actionnetwork.org; connect-src 'self' https://actionnetwork.org; form-action 'self' https://actionnetwork.org; object-src 'self';">
+{% else %}
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-A2OjEGCbS6qImIS66ELxAVHhQOxctdwT3zDdCpT2g/M=' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com; img-src 'self' data:; object-src 'self';">
+{% endif %}
 
 <!-- Anti-FOUC: set theme + color-scheme + background/color before any rendering.
      Also creates an exact-match <meta name="color-scheme"> dynamically
