@@ -137,4 +137,4 @@ Sitting in on board meetings is one of the most useful things an ATRS member can
 
 Talk to other educators about what's happening with your pension. Share this page directly — the more members who speak up, the harder it is to ignore.
 
-{% include cta-box.html heading="Want to do more?" text="Join the broader campaign for Arkansas pension transparency. See all the ways you can get involved." url="/take-action/" button="See All Actions" %}
+{% include cta-box.html heading="Want to do more?" text="Join the broader campaign for Arkansas pension integrity. See all the ways you can get involved." url="/take-action/" button="See All Actions" %}

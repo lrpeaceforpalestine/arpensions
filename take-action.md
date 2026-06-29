@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "Take Action — Support Arkansas Pension Transparency"
-description: "Join Arkansans supporting pension transparency and fiduciary accountability. Here's how you can help."
+title: "Take Action — Support Arkansas Pension Integrity"
+description: "Join Arkansans supporting pension integrity and fiduciary accountability. Here's how you can help."
 permalink: /take-action/
 hide_rule: true
 ---
@@ -40,7 +40,7 @@ Every Arkansan whose retirement is managed by a state pension fund has a stake i
 
 We're building a list of Arkansans — educators, public employees, retirees, and concerned taxpayers — who believe pension investments should be based solely on financial merit, with documented due diligence on the record.
 
-**Add your name** by emailing **[info@arpensions.org](mailto:info@arpensions.org?subject=I%20support%20pension%20transparency&body=I%20am%20an%20Arkansan%20who%20supports%20pension%20transparency%20and%20fiduciary%20accountability.%0A%0AName%3A%20%0ACity%3A%20%0AReason%20I%20care%3A%20)** with your name, city, and why you care.
+**Add your name** by emailing **[info@arpensions.org](mailto:info@arpensions.org?subject=I%20support%20pension%20integrity&body=I%20am%20an%20Arkansan%20who%20supports%20pension%20integrity%20and%20fiduciary%20accountability.%0A%0AName%3A%20%0ACity%3A%20%0AReason%20I%20care%3A%20)** with your name, city, and why you care.
 
 </section>
 </div>
@@ -52,7 +52,7 @@ We're building a list of Arkansans — educators, public employees, retirees, an
 
 ## Contact your legislators {#contact-legislators}
 
-The 2027 Arkansas legislative session is an opportunity to establish stronger pension transparency requirements through the **[Pension Investment Integrity Act](/legislators/)**. Three concrete actions map cleanly to legislator action.
+The 2027 Arkansas legislative session is an opportunity to strengthen the integrity of how pension investment decisions are made through the **[Pension Investment Integrity Act](/legislators/)**. Three concrete actions map cleanly to legislator action.
 
 **Text RESIST to 50409** to reach your Arkansas state legislators through Resistbot, or find your legislators at [arkleg.state.ar.us](https://www.arkleg.state.ar.us/). Ask them to:
 

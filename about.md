@@ -21,7 +21,7 @@ We believe the strongest advocacy is built on evidence, not rhetoric. Our campai
 
 **Fiduciary-first framing.** We lead with financial analysis and legal standards, not political arguments. Arkansas law requires that pension investments be made based solely on "pecuniary factors" — financial merit. That's the standard we hold decision-makers to. Our questions are straightforward: Was an independent credit analysis performed? Were internal staff recommendations followed? Does the investment process meet the prudent-investor standard? These are the questions the law requires pension fiduciaries to answer.
 
-**Coalition building.** Pension accountability isn't a partisan issue — it matters to every Arkansan whose retirement depends on sound investment decisions. We work to build a broad coalition of educators, public employees, retirees, and concerned taxpayers across the state. When 140,000 ATRS members and tens of thousands of APERS members have a shared interest in how their retirement savings are managed, the campaign for transparency becomes a shared cause.
+**Coalition building.** Pension accountability isn't a partisan issue — it matters to every Arkansan whose retirement depends on sound investment decisions. We work to build a broad coalition of educators, public employees, retirees, and concerned taxpayers across the state. When 140,000 ATRS members and tens of thousands of APERS members have a shared interest in how their retirement savings are managed, the campaign for pension integrity becomes a shared cause.
 
 </div>
 
@@ -31,8 +31,8 @@ We believe the strongest advocacy is built on evidence, not rhetoric. Our campai
 
 Our asks are narrow, legislative, and rooted in existing Arkansas law:
 
-1. **Pension transparency legislation** — Support the **Pension Investment Integrity Act** for the 2027 Arkansas legislative session, requiring independent credit analysis, consultant independence, liquidity risk disclosure, and documented financial rationale before pension boards commit members' retirement funds to non-tradable sovereign debt. [Read the full policy brief →](/legislators/)
-2. **Transparency** — Publish the financial analysis that justifies these investments, comparing risk, return, and liquidity against comparable alternatives. [See the financial profile →](/glossary/)
+1. **Pension integrity legislation** — Support the **Pension Investment Integrity Act** for the 2027 Arkansas legislative session, requiring independent credit analysis, consultant independence, liquidity risk disclosure, and documented financial rationale before pension boards commit members' retirement funds to non-tradable sovereign debt. [Read the full policy brief →](/legislators/)
+2. **Disclosure** — Publish the financial analysis that justifies these investments, comparing risk, return, and liquidity against comparable alternatives. [See the financial profile →](/glossary/)
 3. **Process review** — Document and explain how recent authorizations complied with Arkansas's pecuniary-only standard under Act 498 of 2023 and the established manager-driven investment process.
 
 </div>
@@ -103,4 +103,4 @@ Arkansans for Pension Integrity operates on a shoestring budget through small do
 
 **Email:** [info@arpensions.org](mailto:info@arpensions.org)
 
-<p class="campaign-attribution">Arkansans for Pension Integrity (API) is a grassroots Arkansas campaign for pension transparency and fiduciary accountability.</p>
+<p class="campaign-attribution">Arkansans for Pension Integrity (API) is a grassroots Arkansas campaign for pension integrity and fiduciary accountability.</p>

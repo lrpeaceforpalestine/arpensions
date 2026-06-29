@@ -355,4 +355,4 @@ For source documents and detailed research findings, contact us directly. All cl
 
 </div>
 
-<p class="campaign-attribution">Arkansans for Pension Integrity (API) is a grassroots Arkansas campaign for pension transparency and fiduciary accountability.</p>
+<p class="campaign-attribution">Arkansans for Pension Integrity (API) is a grassroots Arkansas campaign for pension integrity and fiduciary accountability.</p>
