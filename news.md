@@ -9,7 +9,7 @@ Follow the progress of our investigation and campaign.
 
 ## 2026
 
-**June 27** — A statewide coalition adopts pension investment integrity as a 2027 priority. The Citizens First Congress — a coalition of roughly 50 Arkansas civic and good-government organizations — named pension investment integrity one of its short-term legislative priorities for the 2027 session, endorsing the issuer-neutral, fiduciary-first procedural standards the Pension Investment Integrity Act would establish.
+**June 27** — A statewide coalition adopts pension investment integrity as a 2027 priority. The [Citizens First Congress](https://www.citizensfirst.org/) — a coalition of roughly 50 Arkansas civic and good-government organizations — named pension investment integrity one of its short-term legislative priorities for the 2027 session, endorsing the issuer-neutral, fiduciary-first procedural standards the Pension Investment Integrity Act would establish.
 
 **May 18** — AJRS confirms a complete null result. APERS/AJRS Staff Attorney Richmond Giles confirmed no responsive records to any paragraph of the Round 4 request — no holdings or board records (May 15) and no responsive communications (May 18). AJRS commingles its investments with APERS under Act 1242 (the same structure under which ASPRS confirmed null); the only Development Corporation for Israel communications reaching the shared APERS/AJRS staff had already been produced in the APERS February 2026 response. With AJRS, all six Act 498 pension systems have now responded.
 
