@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Arkansans for Pension Integrity — Arkansas Pension Integrity Campaign"
-description: "Arkansas pension funds authorized up to $100 million in non-tradable foreign sovereign debt while an internal memo recommended against new purchases. We're fighting for pension integrity and fiduciary accountability."
+description: "Arkansas pension funds authorized up to $100 million in non-tradable foreign sovereign debt with no independent credit analysis — even as the State Treasury's own staff warned of the credit downgrades. We're fighting for pension integrity and fiduciary accountability."
 ---
 
 {% include hero.html %}
