@@ -23,6 +23,7 @@
   var currentStep = -1;
   var statEl = document.getElementById('scrolly-stat');
   var subEl = document.getElementById('scrolly-subtitle');
+  if (!statEl || !subEl) return;
   // Generation counter — prevents stale setTimeout callbacks from
   // overwriting content when the user scrolls fast between steps
   var transitionId = 0;
