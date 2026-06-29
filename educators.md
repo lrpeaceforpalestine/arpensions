@@ -38,7 +38,7 @@ Here's what the record shows:
 - **No independent credit analysis was produced.** Our review of more than 1,200 public records obtained through FOIA requests found zero independent credit analyses of these bonds prepared before the authorization.
 - **A tale of two pension funds.** While ATRS hired a professional manager for its sovereign bond investment, APERS chose to purchase directly with no external oversight — its CIO stated there was "not a need to incur management fees." Both funds authorized investments through the same political channel, but arrived at different management structures. Neither produced independent credit analysis before authorization.
 - **The full $50 million was deployed without independent analysis at any stage.** The authorization moved from board vote (June 2, 2025) to investment guidelines (September 25, 2025) to full deployment (December 2025) — a six-month process in which the financial analysis that should have preceded authorization was never produced.
-- **The dual standard is visible across systems.** While ATRS hired Reams Asset Management and established formal investment guidelines (albeit four months after authorization), the underlying pattern is the same: at APERS, the same kind of rigorous process that produced 32 pages of Callan analysis for infrastructure investments was completely absent for these non-tradable sovereign bonds. ATRS members should ask whether their system's sovereign bond decision received equivalent consultant analysis to its other investment commitments. (Source: APERS Board Packet for June 11, 2025, publicly posted at apers.org.)
+- **The dual standard is visible across systems.** While ATRS hired Reams Asset Management and established formal investment guidelines (albeit four months after authorization), the underlying pattern is the same: at APERS, the same kind of rigorous process that produced 37 pages of Callan analysis for other investments was completely absent for these non-tradable sovereign bonds. ATRS members should ask whether their system's sovereign bond decision received equivalent consultant analysis to its other investment commitments. (Source: APERS Board Packet for June 11, 2025, publicly posted at apers.org.)
 
 <div class="callout" markdown="1">
 
@@ -137,4 +137,4 @@ Sitting in on board meetings is one of the most useful things an ATRS member can
 
 Talk to other educators about what's happening with your pension. Share this page directly — the more members who speak up, the harder it is to ignore.
 
-{% include cta-box.html heading="Want to do more?" text="Join the broader campaign for Arkansas pension transparency. See all the ways you can get involved." url="/take-action/" button="See All Actions" %}
+{% include cta-box.html heading="Want to do more?" text="Join the broader campaign for Arkansas pension integrity. See all the ways you can get involved." url="/take-action/" button="See All Actions" %}

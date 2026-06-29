@@ -1,7 +1,7 @@
 ---
 layout: landing
-title: "Policy Brief — Arkansas Pension Transparency for 2027"
-description: "Policy brief for Arkansas legislators on up to $100 million in authorized pension fund exposure to non-tradable foreign sovereign debt and the case for transparency legislation in 2027."
+title: "Policy Brief — Arkansas Pension Integrity for 2027"
+description: "Policy brief for Arkansas legislators on up to $100 million in authorized pension fund exposure to non-tradable foreign sovereign debt and the case for pension integrity legislation in 2027."
 permalink: /legislators/
 audience_nav: true
 breadcrumb: "For Legislators"
@@ -14,7 +14,7 @@ Arkansas pension funds have authorized up to **$100 million** in non-tradable fo
 
 Six Arkansas pension benefit plans fall within the scope of Act 498 of 2023 (A.C.A. § 24-2-802(3)): **the Arkansas Teacher Retirement System (ATRS), the Arkansas Public Employees' Retirement System (APERS), the Arkansas State Highway Employees' Retirement System (ASHERS), the Arkansas State Police Retirement System (ASPRS), the Arkansas Judicial Retirement System (AJRS), and the Arkansas Local Police and Fire Retirement System (LOPFI).** The Pension Investment Integrity Act would apply to acquisitions of non-tradable sovereign debt by any of these plans.
 
-We are asking the General Assembly to strengthen pension transparency requirements so that Arkansans can be confident their retirement savings are managed based on financial merit — as the law already requires.
+We are asking the General Assembly to strengthen the integrity of how pension investment decisions are made so that Arkansans can be confident their retirement savings are managed based on financial merit — as the law already requires.
 
 ## Key facts
 
@@ -36,7 +36,7 @@ We are asking the General Assembly to strengthen pension transparency requiremen
 | **Dual fiduciary standard** | Same APERS meetings: 37 pages of Callan analysis for other investments, 0 pages for the sovereign bond authorization |
 | **Cross-system coordination** | ATRS Executive Director attended the APERS subcommittee meeting where the sovereign bond purchase was authorized |
 | **Subcommittee chair conflict** | Larry Walther, former Treasurer who maintained the Treasury's sovereign bond holdings (~$55M during his 2023–2025 tenure; now $60M as of February 2026), chaired the APERS subcommittee that authorized $25–50M more |
-| **Total documents reviewed** | 1,227 across three FOIA rounds to Arkansas state agencies |
+| **Total documents reviewed** | 1,227 across four FOIA rounds to Arkansas state agencies |
 
 </div>
 
@@ -127,7 +127,7 @@ This legislation would go through the **Joint Committee on Public Retirement and
 
 **Committee leadership:**
 
-- **Senate Co-Chair: Sen. Jim Dotson (R, SD-34)** — Senate Republican leadership. Sensitive to any framing that resembles a political boycott; transparency legislation must be presented strictly as fiduciary process and asset-class discipline.
+- **Senate Co-Chair: Sen. Jim Dotson (R, SD-34)** — Senate Republican leadership. Sensitive to any framing that resembles a political boycott; the legislation must be presented strictly as fiduciary process and asset-class discipline.
 - **House Co-Chair: Rep. Les Warren (R, HD-84)** — FOIA records place Warren at the April 14, 2025 meeting where bond issuer sales executives pitched state officials in the Auditor's Capitol office — the same meeting that preceded the pension fund authorizations. Warren attended alongside Speaker Brian Evans and the bond issuer's national managing director, Lawrence Berman.
 
 Five current committee members co-sponsored Act 411 of 2023.
