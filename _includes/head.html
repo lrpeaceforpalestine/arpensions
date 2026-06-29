@@ -4,14 +4,15 @@
      If you change the script content, recompute with:
      node -e "const c=require('crypto');const s=`SCRIPT_CONTENT`;console.log(c.createHash('sha256').update(s,'utf8').digest('base64'))" -->
 {% if page.url == "/take-action/" %}
-<!-- Take Action only: relax CSP to allow the Action Network petition embed
-     (script + XHR submit to actionnetwork.org). Scoped to this page so the rest
-     of the site keeps the strict policy. No reCAPTCHA/Google — this petition
-     does not load it. NOTE: allowing actionnetwork.org in script-src trusts the
-     ENTIRE origin — any script AN serves there executes in this page's context.
-     That is the inherent third-party-embed trade-off; do not widen further
-     without cause. -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-A2OjEGCbS6qImIS66ELxAVHhQOxctdwT3zDdCpT2g/M=' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://actionnetwork.org; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://actionnetwork.org; font-src https://fonts.gstatic.com; img-src 'self' data: https://actionnetwork.org; connect-src 'self' https://actionnetwork.org; form-action 'self' https://actionnetwork.org; object-src 'none';">
+<!-- Take Action only: relax CSP for the Action Network petition embed. AN loads
+     scripts from actionnetwork.org AND injects an inline script, so script-src
+     needs actionnetwork.org plus 'unsafe-inline'. The anti-FOUC sha256 hash is
+     dropped on THIS page only — a hash and 'unsafe-inline' cancel each other,
+     and 'unsafe-inline' covers both our inline script and AN's. Scoped here;
+     every other page keeps the strict hash-based policy. No reCAPTCHA/Google.
+     This trusts AN's whole origin — the inherent third-party-embed trade-off;
+     do not widen further without cause. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://actionnetwork.org; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://actionnetwork.org; font-src https://fonts.gstatic.com; img-src 'self' data: https://actionnetwork.org; connect-src 'self' https://actionnetwork.org; form-action 'self' https://actionnetwork.org; object-src 'none';">
 {% else %}
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-A2OjEGCbS6qImIS66ELxAVHhQOxctdwT3zDdCpT2g/M=' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com; img-src 'self' data:; object-src 'none';">
 {% endif %}
