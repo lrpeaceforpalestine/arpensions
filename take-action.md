@@ -40,7 +40,14 @@ Every Arkansan whose retirement is managed by a state pension fund has a stake i
 
 We're building a list of Arkansans — educators, public employees, retirees, and concerned taxpayers — who believe pension investments should be based solely on financial merit, with documented due diligence on the record.
 
-**Add your name** by emailing **[info@arpensions.org](mailto:info@arpensions.org?subject=I%20support%20pension%20integrity&body=I%20am%20an%20Arkansan%20who%20supports%20pension%20integrity%20and%20fiduciary%20accountability.%0A%0AName%3A%20%0ACity%3A%20%0AReason%20I%20care%3A%20)** with your name, city, and why you care.
+**Add your name:**
+
+<div class="an-embed">
+<script src="https://actionnetwork.org/widgets/v6/petition/stand-for-pension-integrity?format=js&source=widget"></script>
+<div id="can-petition-area-stand-for-pension-integrity" style="width: 100%"></div>
+</div>
+
+<noscript><p>JavaScript is required to add your name here. <a href="https://actionnetwork.org/petitions/stand-for-pension-integrity?source=arpensions" target="_blank" rel="noopener">Add your name on the petition page &rarr;</a> or email <a href="mailto:info@arpensions.org?subject=I%20support%20pension%20integrity">info@arpensions.org</a>.</p></noscript>
 
 </section>
 </div>
