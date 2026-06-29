@@ -9,6 +9,8 @@ Follow the progress of our investigation and campaign.
 
 ## 2026
 
+**June 27** — A statewide coalition adopts pension investment integrity as a 2027 priority. The [Citizens First Congress](https://www.citizensfirst.org/) — a coalition of roughly 50 Arkansas civic and good-government organizations — named pension investment integrity one of its short-term legislative priorities for the 2027 session, endorsing the issuer-neutral, fiduciary-first procedural standards the Pension Investment Integrity Act would establish.
+
 **May 18** — AJRS confirms a complete null result. APERS/AJRS Staff Attorney Richmond Giles confirmed no responsive records to any paragraph of the Round 4 request — no holdings or board records (May 15) and no responsive communications (May 18). AJRS commingles its investments with APERS under Act 1242 (the same structure under which ASPRS confirmed null); the only Development Corporation for Israel communications reaching the shared APERS/AJRS staff had already been produced in the APERS February 2026 response. With AJRS, all six Act 498 pension systems have now responded.
 
 **May 8** — AJRS (Arkansas Judicial Retirement System) identified as the sixth Arkansas public pension system covered by Act 498 of 2023. FOIA request filed (Round 4) and acknowledged same-day by Richmond Giles, APERS Staff Attorney — operationally confirming that the same legal staff handles correspondence for both APERS and AJRS. AJRS is administered by APERS staff and shares investment infrastructure, but operates as a separate benefit plan with its own Board of Trustees and approximately $309 million in trust assets (~89% funded). Production deadline extended to May 15, 2026 by mutual agreement; response pending.
