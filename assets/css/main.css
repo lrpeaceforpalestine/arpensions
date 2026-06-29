@@ -3766,11 +3766,16 @@ hr.section-break {
 .an-embed {
   margin: 1.25rem 0 0.5rem;
 }
-/* AN wraps the fields in a <ul>; remove Pico's list bullets (incl. the empty
-   hidden-field row that renders as a stray dot at the top). */
+/* AN renders each field as an <li> placed directly inside a <div> (not a <ul>),
+   so list-style:none must be on the <li> ITSELF — a parent ul/ol rule does not
+   reach them. This also clears the empty hidden-field <li> (the stray dot). */
+.an-embed ul,
+.an-embed ol,
+.an-embed li {
+  list-style: none;
+}
 .an-embed ul,
 .an-embed ol {
-  list-style: none;
   margin: 0;
   padding-left: 0;
 }
