@@ -1744,20 +1744,6 @@ html {
 }
 [data-theme="dark"] .section-divider--guilloche { opacity: 0.45; }
 
-/* (3) Stats-bar — zero w/ redaction-bar treatment */
-.stat-number--redaction {
-  display: block;
-  line-height: 0;
-  margin: 0 auto 0.25rem;
-}
-.stat-number--redaction img {
-  display: block;
-  width: 100%;
-  max-width: 220px;
-  height: auto;
-  margin: 0 auto;
-}
-
 /* (4) About page — Highsmith Capitol header background */
 .page-header-band--has-image {
   position: relative;
