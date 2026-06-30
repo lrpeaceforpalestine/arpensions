@@ -46,10 +46,9 @@ This is the public-facing campaign website for Arkansans for Pension Integrity, 
 - Secondary text: `#3F4F46`; muted text: `#5C6B62` (green-tinted neutrals, AA on white + mint wash)
 - Borders: `#DCE8DC` light / `#14555C` dark
 
-**Typography (unchanged):**
-- Display: Cormorant Garamond (h1, h2)
-- Body: Source Serif 4 (prose)
-- UI/nav: Inter (sans-serif)
+**Typography:**
+- Display: League Spartan (h1, h2)
+- Body: Mulish (Avenir substitute) (prose)
 - Data/mono: IBM Plex Mono
 
 **Logo:** "api" badge — lowercase League Spartan Bold glyph outlines (SIL OFL, extracted via fonttools) set in a simplified Arkansas keystone. Working render of Payne Moussa's concept pending her final design suite. Variants: `api-badge.svg` (pine fill, mint monogram — light surfaces), `api-badge-dark.svg` (mint keyline — dark surfaces), `api-badge-512.png` (raster for structured data), `apple-touch-icon.png` (180px, pine tile), `favicon.svg`/`favicon.ico`.
@@ -68,7 +67,7 @@ bundle exec jekyll serve
 - `_config.yml` — site configuration
 - `_includes/` — nav, footer, head, components
 - `_layouts/` — default, page, post, landing
-- `assets/css/main.css` — core styles (~71KB, `--art-*` tokens)
+- `assets/css/main.css` — core styles (~71KB, `--api-*` tokens)
 - `assets/css/elegant.css` — design layer (~33KB)
 - `assets/js/` — nav, theme toggle, animations
 
@@ -76,10 +75,9 @@ bundle exec jekyll serve
 
 1. **Fiduciary-first framing** — financial merit and legal standards, not political arguments
 2. **Source everything** — every factual claim must trace to a FOIA document
-3. **Issuer-neutral language** — all campaign-voice content uses financial terminology ("non-marketable foreign sovereign debt," "non-tradable sovereign bonds," "the bonds under investigation") rather than naming the bond issuer. Official quotes stay verbatim with "From the public record:" prefix. The glossary page (`/glossary/`) explains the approach and provides the financial profile. See `REFRAME-INSTRUCTIONS.md` for the complete terminology table.
-4. **No BDS self-identification** — this is a transparency and accountability campaign
-5. **Current data only** — keep stats updated (ATRS: $23.7B, ~84% funded; APERS: $11.58B, ~83% funded)
-6. **Corpus state** — 1,227 total documents (1,044 active after dedup) from the producing-docs agencies (Treasury, ATRS, APERS, ASHERS, Auditor); 12 FOIA requests across 4 rounds to 8 state entities (six pension systems covered by Act 498 plus Treasury and Auditor of State); AJRS Round 4 filed May 8, 2026 and acknowledged by Richmond Giles (APERS Staff Attorney handling both pension systems' legal); production extended to May 15, 2026
+3. **Issuer-neutral language** — all campaign-voice content uses financial terminology ("non-marketable foreign sovereign debt," "non-tradable sovereign bonds," "the bonds under investigation"). Official quotes stay verbatim with "From the public record:" prefix. The glossary page (`/glossary/`) explains the approach and provides the financial profile.
+4. **Current data only** — keep stats updated (ATRS: $23.7B, ~84% funded; APERS: $11.58B, ~83% funded)
+5. **Corpus state** — 1,227 total documents (1,044 active after dedup) from the producing-docs agencies (Treasury, ATRS, APERS, ASHERS, Auditor); 12 FOIA requests across 4 rounds to 8 state entities (six pension systems covered by Act 498 plus Treasury and Auditor of State); AJRS Round 4 filed May 8, 2026 and acknowledged by Richmond Giles (APERS Staff Attorney handling both pension systems' legal); production extended to May 15, 2026
 
 ## Accessibility
 
@@ -93,42 +91,4 @@ bundle exec jekyll serve
 
 ## About the Campaign
 
-Arkansans for Pension Integrity (API) is a grassroots Arkansas campaign for pension transparency and fiduciary accountability. The campaign focuses on passing the Pension Investment Integrity Act in the 2027 Arkansas legislative session.
-
----
-
-## Audit Log — March 27, 2026
-
-### PR #2: Critical structural fixes
-
-**CRITICAL-1 — Nav HTML/CSS mismatch:** `nav.html` had been restructured with CSS classes that had zero definitions. Reverted to reference site structure with ART brand changes only.
-
-**CRITICAL-2 — Dark mode broken:** Theme toggle button missing `id` attribute + localStorage key mismatch (`art-theme` vs `d4arf-theme`). Both fixed.
-
-**MEDIUM — robots.txt:** Restored OAI-SearchBot and PerplexityBot allow rules.
-
-**LOW:** Removed unused d4arf-logo PNG files.
-
-### PR #3: Logo replacement
-
-Replaced hand-drawn geometric SVG with Cormorant Garamond Medium (500) glyph outlines extracted via fonttools. Red underline bar height set to 55 units (renders ~2px at nav size). Trailing newlines added to all files.
-
-### PR #4: Theme polish + CSS rename
-
-**Logo crossfade:** Changed from `display:none/block` to `opacity:0/1` with absolute positioning. Eliminates layout shift during toggle and between-page logo flash.
-
-**Anti-FOUC inline style:** Expanded to cover logo stacking, pointer-events, and explicit opacity values.
-
-**CSS rename:** Full `--d4arf-*` → `--art-*` custom property rename across all 5 CSS files.
-
-**JS improvements:** `prefers-reduced-motion` guard skips `theme-transition` class entirely. `updateLogoAria()` manages `aria-hidden` on inactive logo. Uses `removeAttribute` (not `"false"`).
-
-**Print URL:** Set to `arpensions.org`.
-
-### PR #5: Final comment cleanup
-
-Renamed "D4ARF" → "ART" in source code comments: `charts.js` line 2, `network.css` line 3, `network.js` line 2.
-
-#### Known remaining items
-
-All previously tracked items (og-default.png branding, favicon.ico branding) resolved as of March 29, 2026.
+Arkansans for Pension Integrity (API) is a grassroots Arkansas campaign for pension integrity and fiduciary accountability. The campaign focuses on passing the Pension Investment Integrity Act in the 2027 Arkansas legislative session.
