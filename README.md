@@ -1,6 +1,6 @@
 # Arkansans for Pension Integrity (API)
 
-Grassroots Arkansas campaign for pension transparency and fiduciary accountability.
+Grassroots Arkansas campaign for pension integrity and fiduciary accountability.
 
 **Live site:** [arpensions.org](https://arpensions.org)
 

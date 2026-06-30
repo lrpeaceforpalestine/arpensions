@@ -56,7 +56,7 @@ Every claim on this site is backed by documents in the public record. Below are 
     <div class="scrolly__step" data-step="3">
       <div class="step__content">
         <h3>37 pages vs. zero pages</h3>
-        <p>At the same board meetings, APERS received 37 pages of Callan analysis for infrastructure investments — and zero pages for the sovereign bond authorization. Every other investment had professional review. This one had a verbal pitch from the Auditor's proxy.</p>
+        <p>At the same board meetings, APERS received 37 pages of Callan analysis for its other investments — and zero pages for the sovereign bond authorization. Every other investment had professional review. This one had a verbal pitch from the Auditor's proxy.</p>
       </div>
     </div>
     <div class="scrolly__step" data-step="4">
@@ -211,9 +211,9 @@ ATRS's $23.7 billion portfolio now holds $50 million in non-tradable sovereign d
 
 The publicly-posted APERS board packets for the May 15 Investment Subcommittee and June 11 Full Board meetings reveal a stark contrast in how the board handled different investment decisions at the same meetings.
 
-<div class="unit-chart" aria-label="Visual comparison: 37 pages of analysis for infrastructure investments versus zero pages for sovereign bonds" role="img">
+<div class="unit-chart" aria-label="Visual comparison: 37 pages of analysis for other investments versus zero pages for sovereign bonds" role="img">
   <div class="unit-chart__section">
-    <div class="unit-chart__label">Infrastructure investments</div>
+    <div class="unit-chart__label">Other investments</div>
     <div class="unit-chart__grid" id="unit-chart-filled"></div>
     <div class="unit-chart__count">37 pages</div>
   </div>
@@ -544,12 +544,12 @@ Authorizing up to $<span data-countup="100" data-countup-prefix="" data-countup-
   <li class="timeline-event timeline-event--highlight" data-aos="fade-left">
     <time>March 2026</time>
     <h3>Board packet analysis reveals dual fiduciary standard; FOIA Round 3 filed</h3>
-    <p>Analysis of the publicly-posted APERS board packets reveals that 37 pages of Callan analysis were prepared for infrastructure investments while zero pages of analysis accompanied the sovereign bond authorization — at the same meetings. FOIA Round 3 filed with ASHERS and LOPFI, expanding the investigation to two previously uninvestigated pension systems.</p>
+    <p>Analysis of the publicly-posted APERS board packets reveals that 37 pages of Callan analysis were prepared for the board's other investments while zero pages of analysis accompanied the sovereign bond authorization — at the same meetings. FOIA Round 3 filed with ASHERS and LOPFI, expanding the investigation to two previously uninvestigated pension systems.</p>
   </li>
   <li class="timeline-event" data-aos="fade-left">
     <time>March 28, 2026</time>
     <h3>ASHERS delivers Round 3 response; ASPRS confirms null result</h3>
-    <p>ASHERS (Arkansas State Highway Employees' Retirement System) delivered 5 documents including email correspondence revealing that the bond issuer's national sales leadership was introduced to ASHERS staff through the same April 2025 pitch tour, but ASHERS declined to invest. ASPRS (Arkansas State Police Retirement System) confirmed no responsive documents — assets commingled with APERS under Act 1242 of 2009. Investigation corpus reaches 1,227 total documents (1,044 active after deduplication).</p>
+    <p>ASHERS (Arkansas State Highway Employees' Retirement System) delivered 5 documents including email correspondence revealing that the bond issuer's national sales leadership was introduced to ASHERS staff through the same April 2025 pitch tour — via the Department of Finance and Administration, not the Auditor's office — but ASHERS declined to invest. ASPRS (Arkansas State Police Retirement System) confirmed no responsive documents — assets commingled with APERS under Act 1242 of 2009. Investigation corpus reaches 1,227 total documents (1,044 active after deduplication).</p>
   </li>
   <li class="timeline-event" data-aos="fade-left">
     <time>April 9, 2026</time>
@@ -564,7 +564,7 @@ Authorizing up to $<span data-countup="100" data-countup-prefix="" data-countup-
   <li class="timeline-event" data-aos="fade-left">
     <time>May 18, 2026</time>
     <h3>AJRS confirms a complete null result; all six pension systems have responded</h3>
-    <p>APERS/AJRS Staff Attorney Richmond Giles confirmed no responsive records to any part of the FOIA request — no holdings or board records (May 15) and no responsive communications (May 18). AJRS commingles its investments with APERS under Act 1242, the same structure under which ASPRS confirmed null; the only Development Corporation for Israel communications reaching the shared APERS/AJRS staff were already produced in the APERS February 2026 response. With AJRS, all six Act 498 pension systems have now responded.</p>
+    <p>APERS/AJRS Staff Attorney Richmond Giles confirmed no responsive records to any part of the FOIA request — no holdings or board records (May 15) and no responsive communications (May 18). AJRS commingles its investments with APERS under Act 1242, the same structure under which ASPRS confirmed null; the only communications from the bond issuer reaching the shared APERS/AJRS staff were already produced in the APERS February 2026 response. With AJRS, all six Act 498 pension systems have now responded.</p>
   </li>
 </ol>
 </div>

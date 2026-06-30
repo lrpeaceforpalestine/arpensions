@@ -183,7 +183,7 @@ A third round of FOIA requests expanded the investigation to previously uninvest
     <p><strong>ASHERS</strong> (Arkansas State Highway Employees' Retirement System)</p>
     <ul>
       <li><strong>Documents:</strong> 5</li>
-      <li><strong>Contents:</strong> Email correspondence revealing that the bond issuer's national sales leadership was introduced to ASHERS staff through the same April 2025 pitch tour, but ASHERS declined to invest</li>
+      <li><strong>Contents:</strong> Email correspondence revealing that the bond issuer's national sales leadership was introduced to ASHERS staff through the same April 2025 pitch tour — via the Department of Finance and Administration, not the Auditor's office — but ASHERS declined to invest</li>
     </ul>
   </div>
   <div class="meeting-info">
@@ -214,7 +214,7 @@ A fourth round of FOIA requests was filed in May 2026 after AJRS was identified 
   <div class="meeting-info">
     <p><strong>AJRS</strong> (Arkansas Judicial Retirement System)</p>
     <ul>
-      <li><strong>Status:</strong> Confirmed null result. APERS/AJRS Staff Attorney Richmond Giles confirmed no responsive records — no holdings or board records (May 15, 2026) and no responsive communications (May 18, 2026). FOIA filed May 8, 2026; acknowledged same-day; production completed May 18, 2026. AJRS commingles its investments with APERS under Act 1242 — the same administrative structure under which ASPRS confirmed no responsive records — and the only Development Corporation for Israel communications reaching the shared APERS/AJRS staff were already produced in the APERS February 2026 response.</li>
+      <li><strong>Status:</strong> Confirmed null result. APERS/AJRS Staff Attorney Richmond Giles confirmed no responsive records — no holdings or board records (May 15, 2026) and no responsive communications (May 18, 2026). FOIA filed May 8, 2026; acknowledged same-day; production completed May 18, 2026. AJRS commingles its investments with APERS under Act 1242 — the same administrative structure under which ASPRS confirmed no responsive records — and the only communications from the bond issuer reaching the shared APERS/AJRS staff were already produced in the APERS February 2026 response.</li>
       <li><strong>Contents:</strong> AJRS is administered by APERS staff and shares investment infrastructure, but operates as a separate benefit plan with its own Board of Trustees and trust fund (~$309 million AUM, ~89% funded). FOIA request filed to determine whether AJRS trust assets were included in sovereign bond purchases made through the APERS investment pool. The same-day acknowledgment by APERS legal counsel — the single attorney handling correspondence for both pension systems — operationally confirms the shared-staff structure.</li>
     </ul>
   </div>

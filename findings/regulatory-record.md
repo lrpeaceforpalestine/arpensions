@@ -6,7 +6,7 @@ permalink: /findings/regulatory-record/
 breadcrumb: "Key Findings"
 ---
 
-The bonds at the center of this investigation are not sold through ordinary fixed-income channels. They are sold exclusively, in the United States, through a single for-profit broker-dealer (FINRA CRD# 11148). The Arkansas Securities Department's records on that broker-dealer — obtained through our Round 4 FOIA response on April 20, 2026 — establish a regulatory history that bears directly on Arkansas's prudent-investor rule, including its single-agent / exclusive-agency provision at A.C.A. § 24-2-618(e).
+The bonds at the center of this investigation are not sold through ordinary fixed-income channels. They are sold exclusively, in the United States, through a single for-profit broker-dealer (FINRA CRD# 11148). The Arkansas Securities Department's records on that broker-dealer — obtained through a separate FOIA request to the Department (response received April 20, 2026) — establish a regulatory history that bears directly on Arkansas's prudent-investor rule, including its single-agent / exclusive-agency provision at A.C.A. § 24-2-618(e).
 
 ## The Arkansas registration
 
