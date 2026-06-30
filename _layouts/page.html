@@ -25,7 +25,7 @@ layout: default
   </div>
   <div class="container container-prose">
     {{ content }}
-    {% unless page.url == '/take-action/' %}
+    {% unless page.url == '/take-action/' or page.url == '/take-action/thanks/' %}
     {% include cta-box.html heading="Take Action" text="Ready to make a difference? Join Arkansans calling for pension integrity." url="/take-action/" button="Get Involved" %}
     {% endunless %}
   </div>

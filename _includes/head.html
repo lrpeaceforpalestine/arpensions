@@ -104,6 +104,7 @@ html[data-theme="dark"] .about-section{background:#074750}
 @view-transition{navigation:auto}
 </style>
 
+{% if page.unlisted %}<meta name="robots" content="noindex, nofollow">{% endif %}
 {% seo %}
 {% include jsonld.html %}
 
