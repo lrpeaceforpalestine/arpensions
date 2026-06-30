@@ -3,7 +3,7 @@ layout: page
 title: "Thank you — your name is on the record"
 description: "Thank you for adding your name in support of pension integrity in Arkansas."
 permalink: /take-action/thanks/
-noindex: true
+unlisted: true
 sitemap: false
 hide_rule: true
 ---
