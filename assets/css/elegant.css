@@ -55,68 +55,6 @@ h1, h2, h3, h4, h5, h6 {
   scroll-margin-top: var(--nav-height);
 }
 
-/* ========================================================================
-   SECTION HEADINGS — Teal dash above, Cormorant Garamond weight 300
-   ======================================================================== */
-
-.elegant-heading {
-  font-family: var(--font-display);
-  font-weight: 300;
-  font-size: var(--fs-h2);
-  line-height: 1.25;
-  letter-spacing: -0.2px;
-  color: var(--color-text-primary);
-  margin: 0 0 2rem;
-  padding-bottom: 0;
-  position: relative;
-}
-
-.elegant-heading::before {
-  content: '';
-  display: block;
-  width: 1.5rem;
-  height: 1px;
-  background: var(--border-medium);
-  margin-bottom: 0.5rem;
-}
-
-.elegant-heading--center {
-  text-align: center;
-}
-
-.elegant-heading--center::before {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.section-heading {
-  font-family: var(--font-elegant);
-  font-weight: 300;
-  font-size: clamp(1.5rem, 3vw, 1.75rem);
-  letter-spacing: -0.2px;
-  padding-bottom: 0;
-}
-
-.section-heading::after {
-  display: none;
-}
-
-.section-heading::before {
-  content: '';
-  display: block;
-  width: 1.5rem;
-  height: 1px;
-  background: var(--border-medium);
-  margin-bottom: 0.5rem;
-}
-
-/* Center the dash only when the heading itself is centered (text-align inherits) */
-.section-heading[style*="text-align: center"]::before,
-.pathways .section-heading::before {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .about-section h2 {
   font-family: var(--font-elegant);
   font-weight: 300;
@@ -517,28 +455,6 @@ article > aside[role="complementary"] h3 {
 /* EVIDENCE FINDINGS — restyled in main.css (gray border, no accent) */
 
 /* ========================================================================
-   EVIDENCE CARD — Teal top border
-   ======================================================================== */
-
-.evidence-card {
-  border-top-color: var(--link-color);
-}
-
-/* ========================================================================
-   CALLOUT BOX (The Markup pattern) — Refined
-   ======================================================================== */
-
-.callout-box {
-  border-color: var(--color-border);
-  box-shadow: 3px 3px 0 var(--color-border);
-}
-
-[data-theme="dark"] .callout-box {
-  border-color: var(--color-border);
-  box-shadow: 3px 3px 0 rgba(255, 255, 255, 0.06);
-}
-
-/* ========================================================================
    PRINCIPLE SECTION — Subtle background
    ======================================================================== */
 
@@ -697,8 +613,7 @@ article > aside[role="complementary"] h3 {
    BUTTONS — Sitewide refinement (only novel property: border-radius)
    ======================================================================== */
 
-.btn-primary,
-.btn-secondary {
+.btn-primary {
   border-radius: 2px;
 }
 
@@ -712,18 +627,6 @@ article > aside[role="complementary"] h3 {
 }
 
 /* MOBILE — homepage component mobile rules also moved to main.css */
-
-/* ========================================================================
-   PAGE HEADER RULE — Visual separator between header and content
-   ======================================================================== */
-
-.page-header-rule {
-  border: none;
-  border-top: 1px solid var(--border-medium);
-  opacity: 1;
-  margin: 0.75rem 0 1.25rem;
-  max-width: 100%;
-}
 
 /* ========================================================================
    SECTION-LABEL SPACING — Breathing room after horizontal rules
@@ -863,16 +766,6 @@ hr + * > .section-label:first-child {
 /* Pull-quote AOS border animation — removed (pull-quote no longer has border-left) */
 
 /* ========================================================================
-   PATHWAY CARD HOVER — Reduced-motion safety
-   ======================================================================== */
-
-@media (prefers-reduced-motion: reduce) {
-  .pathway-card:hover {
-    transform: none;
-  }
-}
-
-/* ========================================================================
    PRINT
    ======================================================================== */
 
@@ -888,11 +781,9 @@ hr + * > .section-label:first-child {
   .mobile-cta-bar,
   .cta-bar,
   .evidence-toc-sidebar,
-  .hero-ghost,
   .skip-link,
   .page-flow,
   .btn-primary,
-  .btn-secondary,
   .subfindings-controls {
     display: none !important;
   }
@@ -905,8 +796,6 @@ hr + * > .section-label:first-child {
 
   /* --- Typography fallbacks --- */
   .hero h1,
-  .elegant-heading,
-  .section-heading,
   .page-header h1,
   .page-content h2,
   .landing-content h2 {
