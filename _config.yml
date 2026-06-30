@@ -50,6 +50,3 @@ exclude:
   - Gemfile.lock
   - node_modules
   - vendor
-  - REFRAME-INSTRUCTIONS.md
-  - REDESIGN-SPEC.md
-  - REDESIGN-V2.md
