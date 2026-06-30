@@ -51,7 +51,7 @@
       chart: {
         type: 'rangeBar',
         height: 260,
-        fontFamily: 'Inter, system-ui, sans-serif',
+        fontFamily: 'Mulish, system-ui, sans-serif',
         background: 'transparent',
         toolbar: { show: false },
         animations: {
@@ -148,7 +148,7 @@
           var days = Math.round((y2 - y1) / (1000 * 60 * 60 * 24));
           var durationLabel = days <= 2 ? 'Immediate' : days + ' days';
           var tc = getColors();
-          return '<div style="padding:10px 14px;font-family:Inter,system-ui,sans-serif;font-size:12px;' +
+          return '<div style="padding:10px 14px;font-family:Mulish,system-ui,sans-serif;font-size:12px;' +
             'background:' + tc.tooltipBg + ';color:' + tc.text + ';' +
             'border:1px solid ' + tc.gridLine + ';border-radius:2px;">' +
             '<strong>' + seriesName + '</strong><br>' +

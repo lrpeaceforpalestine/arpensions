@@ -199,7 +199,7 @@
       .attr('y', function (d) { return (d.y0 + d.y1) / 2; })
       .attr('dy', '0.35em')
       .attr('text-anchor', function (d) { return d.x0 < innerW / 2 ? 'start' : 'end'; })
-      .attr('font-family', 'Inter, system-ui, sans-serif')
+      .attr('font-family', 'Mulish, system-ui, sans-serif')
       .attr('font-size', '11px')
       .attr('font-weight', '500')
       .attr('fill', c.text)

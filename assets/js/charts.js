@@ -78,7 +78,7 @@
             padding: 12,
             cornerRadius: 2,
             titleFont: {
-              family: 'Inter, system-ui, sans-serif',
+              family: 'Mulish, system-ui, sans-serif',
               size: 13,
               weight: '600'
             },
@@ -114,7 +114,7 @@
             ticks: {
               color: c.text,
               font: {
-                family: 'Inter, system-ui, sans-serif',
+                family: 'Mulish, system-ui, sans-serif',
                 size: 12,
                 weight: '500'
               }
@@ -152,7 +152,7 @@
 
         // Big percentage number
         var pctSize = Math.max(28, Math.round(w * 0.13));
-        cx.font = '600 ' + pctSize + 'px Inter, system-ui, sans-serif';
+        cx.font = '600 ' + pctSize + 'px Mulish, system-ui, sans-serif';
         cx.fillStyle = colors.text;
         cx.textAlign = 'center';
         cx.textBaseline = 'bottom';
