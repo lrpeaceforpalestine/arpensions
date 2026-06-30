@@ -37,7 +37,7 @@ The December 2025 record at ATRS does not document the post-authorization reason
 
 ## The pre-vote / post-vote symmetry
 
-The pre-vote analytical record on this investment (June 2, 2025): an Attachment 17 memo with header and disclaimer text only, no body content; an explicit framing by the Executive Director that Aon was not making "a formal recommendation"; a verbal pitch from Auditor's deputy Brady citing Treasury holdings as precedent; one dissenting vote (Board Chair Danny Knight, "going outside the scope of the way we usually do things").
+The pre-vote analytical record on this investment (June 2, 2025): an Attachment 17 memo with header and disclaimer text only, no body content; an explicit framing by the Executive Director that Aon was not making "a formal recommendation"; a verbal pitch from Auditor's deputy Brady citing Treasury holdings as precedent; one dissenting vote (Board Chair Danny Knight, "I do have a problem with the procedure").
 
 The post-vote record at the routine six-month checkpoint (December 1, 2025): zero substantive references across approximately 2,966 audio segments.
 
