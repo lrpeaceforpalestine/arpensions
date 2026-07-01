@@ -53,13 +53,12 @@
   border-radius: 2px;
 }
 
-/* Navigational links inside the content containers (the breadcrumb and the
-   "Continue reading" page-flow) are not body prose — keep the resting prose
-   underline above off them. */
+/* Breadcrumb links live inside the content containers but are not body prose,
+   and they are unclassed — so keep the resting prose underline above off them.
+   (The "Continue reading" page-flow links carry .btn-text, so :not([class])
+   already skips them.) */
 .page-content .breadcrumb a,
-.landing-content .breadcrumb a,
-.page-content .page-flow a,
-.landing-content .page-flow a {
+.landing-content .breadcrumb a {
   border-bottom: none;
 }
 
