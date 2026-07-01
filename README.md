@@ -19,3 +19,7 @@ Arkansans for Pension Integrity (API) is a grassroots campaign using public reco
 ## Contact
 
 info@arpensions.org
+
+## License
+
+This repository mixes several kinds of material under different terms: source code (MIT), site content (CC BY 4.0), public FOIA records (government records / public domain), third-party libraries and fonts (their own licenses), and the campaign name and logo (all rights reserved). See [LICENSE](LICENSE) for the full terms.

@@ -1,0 +1,100 @@
+Arkansans for Pension Integrity — arpensions.org
+================================================
+
+This repository combines several kinds of material, offered under different
+terms. Apply the term that matches what you are reusing.
+
+
+1. SOURCE CODE — MIT License
+----------------------------
+Applies to the website's source code authored by the campaign: the Jekyll
+layouts, includes, and configuration; and the JavaScript and CSS under
+assets/ — EXCEPT the third-party libraries listed in section 4.
+
+MIT License
+
+Copyright (c) 2026 Arkansans for Pension Integrity
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+2. SITE CONTENT — Creative Commons Attribution 4.0 International (CC BY 4.0)
+--------------------------------------------------------------------------
+Applies to the original written content and graphics authored by the campaign:
+the page text, findings, analysis, timelines, and original illustrations (for
+example, the self-produced SVG graphics). You are free to share and adapt this
+material, for any purpose including commercially, provided you give
+appropriate credit.
+
+Copyright (c) 2026 Arkansans for Pension Integrity
+Licensed under CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+
+Attribute to: "Arkansans for Pension Integrity (arpensions.org)."
+Attribution does not imply endorsement (see section 5).
+
+
+3. PUBLIC RECORDS — assets/documents/
+-------------------------------------
+The PDF documents under assets/documents/ are public records obtained from
+Arkansas state agencies through Freedom of Information Act requests, reproduced
+without alteration. They are government records, not original works of the
+campaign, and the campaign claims no copyright in them. Reuse them freely, and
+verify them against the issuing agencies where accuracy matters.
+
+
+4. THIRD-PARTY MATERIAL — each under its own license
+----------------------------------------------------
+Nothing above relicenses any third-party work. The following retain their own
+licenses and copyright:
+
+  Redistributed in this repository:
+  - assets/js/vendor/scrollama.min.js — Copyright (c) Russell Goldenberg,
+    MIT License.
+
+  Loaded at runtime from third-party CDNs (not redistributed here), listed for
+  acknowledgment:
+  - Pico CSS — MIT
+  - AOS (Animate On Scroll) — MIT
+  - Chart.js — MIT
+  - ApexCharts — MIT
+  - D3 and d3-sankey — ISC
+
+  Web fonts, loaded from Google Fonts (not redistributed here):
+  - League Spartan, Mulish, and IBM Plex Mono — SIL Open Font License 1.1.
+
+  Media used under public-domain or no-known-restrictions terms:
+  - Certain photographs (e.g., Library of Congress imagery); provenance is
+    noted where used.
+
+  Build toolchain:
+  - Jekyll, the github-pages gem, and their dependencies — under their
+    respective licenses (MIT and others).
+
+
+5. NAME, LOGO, AND BRAND — all rights reserved
+----------------------------------------------
+The name "Arkansans for Pension Integrity," the "api" badge/logo and its
+variants (for example assets/images/api-badge*.svg, the favicons, the
+apple-touch icon, and the Open Graph image), and the campaign's overall visual
+identity are NOT covered by the licenses in sections 1–2. All rights reserved.
+Do not use them, or any confusingly similar mark, in a way that suggests
+endorsement by or affiliation with the campaign.
+
+
+Questions about reuse: info@arpensions.org
