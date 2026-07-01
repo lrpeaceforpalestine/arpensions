@@ -22,21 +22,24 @@
 /* Footer — restyled in main.css (editorial centered layout) */
 
 /* ========================================================================
-   BODY TEXT LINKS — Restrained underline treatment
-   Removes heavy Pico default underline; shows subtle underline on hover
+   BODY TEXT LINKS — Underlined for accessibility
+   WCAG 1.4.1 (Use of Color): prose links must be distinguished from body
+   text by more than color alone. A thin resting underline provides that
+   non-color cue in both light and dark modes; it deepens on hover.
    ======================================================================== */
 
 .page-content a:not([class]),
 .landing-content a:not([class]) {
   text-decoration: none;
   color: var(--link-color);
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.15s;
+  border-bottom: 1px solid var(--link-color);
+  transition: color 0.15s, border-color 0.15s;
 }
 
 .page-content a:not([class]):hover,
 .landing-content a:not([class]):hover {
-  border-bottom-color: var(--link-color);
+  color: var(--link-hover);
+  border-bottom-color: var(--link-hover);
   text-decoration: none;
 }
 
