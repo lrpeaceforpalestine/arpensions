@@ -341,7 +341,7 @@ Multiple state officials made public statements that framed the investments in p
 
 </div>
 
-The [sovereign bond purchase confirmation from November 2023](/assets/documents/israel-bonds-purchase-confirmation-nov2023.pdf) — one month after the October 7 attacks — documents the timing of one of these politically framed purchases.
+The [sovereign bond purchase confirmation from November 2023](/assets/documents/sovereign-bond-purchase-confirmation-nov2023.pdf) — one month after the October 7 attacks — documents the timing of one of these politically framed purchases.
 
 Under Arkansas's pecuniary-only standard, none of these are lawful bases for an investment decision. They are political statements. The law requires that the evaluation be based "only on pecuniary factors" — those with a material financial effect on risk or return.
 

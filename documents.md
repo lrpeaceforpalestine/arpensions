@@ -41,7 +41,7 @@ All documents were provided by the agencies in response to lawful FOIA requests.
     <span class="doc-source">AUDIT-JUN25-0568</span>
   </li>
   <li class="document-item">
-    <a class="doc-title" href="/assets/documents/israel-bonds-marketing-to-milligan-gov-2025.pdf"><svg class="doc-icon" aria-hidden="true"><use href="#doc-icon"/></svg>Bond issuer marketing materials sent to Auditor's .gov email</a>
+    <a class="doc-title" href="/assets/documents/sovereign-bond-marketing-to-milligan-2025.pdf"><svg class="doc-icon" aria-hidden="true"><use href="#doc-icon"/></svg>Bond issuer marketing materials sent to Auditor's .gov email</a>
     <span class="doc-description">Marketing and promotional materials from the bond issuer directed to the State Auditor's government email address</span>
     <span class="doc-source">AUDIT-JUN25-0085</span>
   </li>
@@ -61,7 +61,7 @@ All documents were provided by the agencies in response to lawful FOIA requests.
     <span class="doc-source">TREAS-SEP25-0008</span>
   </li>
   <li class="document-item">
-    <a class="doc-title" href="/assets/documents/israel-bonds-purchase-confirmation-nov2023.pdf"><svg class="doc-icon" aria-hidden="true"><use href="#doc-icon"/></svg>Official purchase confirmation &mdash; November 2023</a>
+    <a class="doc-title" href="/assets/documents/sovereign-bond-purchase-confirmation-nov2023.pdf"><svg class="doc-icon" aria-hidden="true"><use href="#doc-icon"/></svg>Official purchase confirmation &mdash; November 2023</a>
     <span class="doc-description">State Treasury purchase confirmation for a $10 million non-tradable sovereign bond (3-year Jubilee at 5.40%), dated November 1, 2023. For context on the political statements surrounding this purchase, see our <a href="/evidence/#key-findings">evidence page</a></span>
     <span class="doc-source">TREAS-SEP25-0066</span>
   </li>
@@ -116,7 +116,7 @@ These are page-range extracts from larger compiled FOIA response documents.
     <span class="doc-source">TREAS-SEP25-0049</span>
   </li>
   <li class="document-item">
-    <a class="doc-title" href="/assets/documents/israel-bonds-purchase-confirmation-may2025.pdf"><svg class="doc-icon" aria-hidden="true"><use href="#doc-icon"/></svg>Purchase confirmation &mdash; May 2025</a>
+    <a class="doc-title" href="/assets/documents/sovereign-bond-purchase-confirmation-may2025.pdf"><svg class="doc-icon" aria-hidden="true"><use href="#doc-icon"/></svg>Purchase confirmation &mdash; May 2025</a>
     <span class="doc-description">State Treasury purchase confirmation for a $10 million non-tradable sovereign bond (3-year Jubilee at approximately 4.86%), dated May 2025. For context on how this purchase followed internal recommendations against new purchases, see our <a href="/evidence/#key-findings">evidence page</a></span>
     <span class="doc-source">TREAS-SEP25-0063</span>
   </li>
