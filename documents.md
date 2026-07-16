@@ -1,52 +1,145 @@
 ---
 layout: page
-title: "Documents — Selected Primary Records"
-description: "Privacy-reviewed anchor records supporting the principal findings on Arkansas public investment decisions."
+title: "Documents — Read the Primary Records"
+description: "Signed minutes, financial memoranda, transaction records, and manager-funding documents behind the site's principal findings."
 permalink: /documents/
-breadcrumb: "Documents"
-mobile_cta_label: "Request a source locator"
-mobile_cta_url: "mailto:info@arpensions.org?subject=Source%20locator%20request"
 ---
 
 {% assign inv = site.data.investigation %}
 
-## A curated source trail
+<div class="documents-page" markdown="1">
 
-This collection contains selected anchor records supporting the site's principal findings. Each record page identifies the agency source, date, exact page or locator, and any campaign-applied masking. The collection is not a complete mirror of every FOIA production.
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="doc-icon" viewBox="0 0 16 16" fill="none">
+    <path d="M4 1h5.5L13 4.5V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" stroke="currentColor" stroke-width="1.2"/>
+    <path d="M9 1v4h4" stroke="currentColor" stroke-width="1.2"/>
+    <path d="M5.5 8h5M5.5 10.5h5" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+  </symbol>
+</svg>
 
-Masking protects account numbers, transaction identifiers, user identifiers, direct contact information, and operational data that are not necessary to understand the public-interest finding. The underlying government records are not altered in the investigation corpus; the hosted excerpt is a separate publication copy.
+## Start here
 
-Hosted PDFs include a searchable text layer, native or OCR, for accessibility. The visible page image remains the controlling publication excerpt, including every campaign-applied mask disclosed on its record page.
+These are the records most useful for understanding Arkansas's Israel Bonds decisions. Each page gives the agency, date, exact location, a plain-language explanation, and a link to the excerpt.
 
-<div class="source-record-grid">
-{% for pair in inv.sources %}
-  {% assign source = pair[1] %}
-  {% if source.record_url contains '/documents/records/' %}
-  <article class="source-record-card">
-    <span class="section-label">{{ source.agency }}</span>
-    <h2><a href="{{ source.record_url | relative_url }}">{{ source.title }}</a></h2>
-    <p>{{ source.locator }}</p>
-    <p class="source-record-meta"><time datetime="{{ source.date }}">{{ source.date | date: "%B %-d, %Y" }}</time></p>
-  </article>
-  {% endif %}
-{% endfor %}
+Some agency files contain bank account numbers or operational details that should not be republished. When Arkansans for Pension Integrity applies masking, the document page says so. The underlying words, dates, amounts, and decision fields remain visible.
+
+<div class="callout" markdown="1">
+
+**The shortest reading path:** Open Aon's two-page ATRS memo, the APERS signed minutes and purchase record, and Treasury's internal credit overview and bondholder statement. Together they show the advice, authorizations, and transactions at the center of the campaign.
+
 </div>
 
-## Official legal record
+---
 
-- [Act 498 of 2023 — Arkansas General Assembly]({{ inv.legislation.act_498_url }}) establishes the pension pecuniary-factor framework relevant to the campaign's proposal.
+<span class="section-label">ATRS</span>
 
-## Additional hosted records
+## Teacher retirement documents
 
-Supplementary hosted records include Treasury purchase confirmations, investment policy, correspondence, and public news clippings. Read them with the [evidence ledger](/evidence/), status labels, and dated cutoffs.
+<ul class="document-list">
+  <li class="document-item">
+    <a class="doc-title" href="{{ inv.sources.atrs_aon.record_url }}"><svg class="doc-icon" aria-hidden="true"><use href="#doc-icon"/></svg>Aon implementation and manager-selection memo</a>
+    <span class="doc-description">ATRS Board packet pages 149&ndash;150. Aon compares managers, recommends Reams, discusses limited marketability, and defines the boundary of its advice.</span>
+    <span class="doc-source">June 2, 2025 · 2 pages</span>
+  </li>
+  <li class="document-item">
+    <a class="doc-title" href="{{ inv.sources.atrs_resolution.record_url }}"><svg class="doc-icon" aria-hidden="true"><use href="#doc-icon"/></svg>Executed ATRS Resolution 2025-22</a>
+    <span class="doc-description">The signed resolution authorizing up to $50 million and delegating implementation authority.</span>
+    <span class="doc-source">June 2, 2025 · 2 pages</span>
+  </li>
+  <li class="document-item">
+    <a class="doc-title" href="{{ inv.sources.atrs_funding.record_url }}"><svg class="doc-icon" aria-hidden="true"><use href="#doc-icon"/></svg>ATRS Board update on manager funding</a>
+    <span class="doc-description">The Board update reporting $50 million funded to the Reams account created for the strategy.</span>
+    <span class="doc-source">December 29, 2025 · 1 page</span>
+  </li>
+</ul>
 
-- [Treasury May 2025 purchase confirmation](/assets/documents/sovereign-bond-purchase-confirmation-may2025.pdf)
-- [Treasury November 2023 purchase confirmation](/assets/documents/sovereign-bond-purchase-confirmation-nov2023.pdf)
-- [Treasury investment policy](/assets/documents/treasury-investment-policy-2022.pdf)
-- [Selected 2025 institutional marketing email](/assets/documents/sovereign-bond-marketing-to-milligan-2025.pdf)
+---
 
-## How to cite these records
+<span class="section-label">APERS</span>
 
-Name the agency, document title, document date, and physical PDF page. If you use a hosted excerpt, note that Arkansans for Pension Integrity applied privacy masks and link to the associated record page, which explains the excerpt boundary.
+## Public employee retirement documents
 
-[Read the methodology](/methodology/) · [See the detailed findings](/findings/) · [Request a source locator](mailto:info@arpensions.org?subject=Source%20locator%20request)
+<ul class="document-list">
+  <li class="document-item">
+    <a class="doc-title" href="{{ inv.sources.apers_authorization.record_url }}"><svg class="doc-icon" aria-hidden="true"><use href="#doc-icon"/></svg>APERS Investment Finance Subcommittee signed minutes</a>
+    <span class="doc-description">The proxy role, motion, $25&ndash;$50 million range, and recorded outcome.</span>
+    <span class="doc-source">May 15, 2025 · 2 selected pages</span>
+  </li>
+  <li class="document-item">
+    <a class="doc-title" href="{{ inv.sources.apers_analysis_email.record_url }}"><svg class="doc-icon" aria-hidden="true"><use href="#doc-icon"/></svg>APERS chief investment officer email</a>
+    <span class="doc-description">The officer's account of the Board material prepared by staff and consultants. Campaign-applied masking hides unrelated personal information.</span>
+    <span class="doc-source">February 13, 2026 · 1 page</span>
+  </li>
+  <li class="document-item">
+    <a class="doc-title" href="{{ inv.sources.apers_purchase.record_url }}"><svg class="doc-icon" aria-hidden="true"><use href="#doc-icon"/></svg>APERS $15 million purchase record</a>
+    <span class="doc-description">Transaction amount, date, beneficiary, and security fields for the two-year institutional bond. Account and operational fields are masked.</span>
+    <span class="doc-source">October 15, 2025 · 1 page</span>
+  </li>
+</ul>
+
+---
+
+<span class="section-label">State Treasury</span>
+
+## Treasury documents
+
+<ul class="document-list">
+  <li class="document-item">
+    <a class="doc-title" href="{{ inv.sources.treasury_hold.record_url }}"><svg class="doc-icon" aria-hidden="true"><use href="#doc-icon"/></svg>Treasury internal credit overview</a>
+    <span class="doc-description">A two-page overview of rating pressure, scheduled maturities, and the recommendation to hold existing positions and continue monitoring.</span>
+    <span class="doc-source">October 8, 2024 · 2 pages</span>
+  </li>
+  <li class="document-item">
+    <a class="doc-title" href="{{ inv.sources.treasury_holdings.record_url }}"><svg class="doc-icon" aria-hidden="true"><use href="#doc-icon"/></svg>Treasury June 2025 bondholder statement</a>
+    <span class="doc-description">A dated statement showing security-level positions after the May purchase. Account identifiers are omitted from the excerpt.</span>
+    <span class="doc-source">June 30, 2025 · 1 page</span>
+  </li>
+  <li class="document-item">
+    <a class="doc-title" href="{{ inv.sources.treasury_maturity.record_url }}"><svg class="doc-icon" aria-hidden="true"><use href="#doc-icon"/></svg>Treasury final-maturity cash-flow record</a>
+    <span class="doc-description">The $5 million February 2026 maturity used to derive the current $50 million completed-purchase total.</span>
+    <span class="doc-source">February 2, 2026 · 1 page</span>
+  </li>
+  <li class="document-item">
+    <a class="doc-title" href="{{ inv.sources.treasury_processing.record_url }}"><svg class="doc-icon" aria-hidden="true"><use href="#doc-icon"/></svg>Treasury outgoing-payment report</a>
+    <span class="doc-description">A $10 million payment instruction that the bank report still showed as processing. Sensitive bank and operational fields are masked.</span>
+    <span class="doc-source">February 17, 2026 · 1 page</span>
+  </li>
+</ul>
+
+---
+
+<span class="section-label">Additional context</span>
+
+## Earlier purchases and public promotion
+
+<ul class="document-list">
+  <li class="document-item">
+    <a class="doc-title" href="/assets/documents/sovereign-bond-purchase-confirmation-nov2023.pdf"><svg class="doc-icon" aria-hidden="true"><use href="#doc-icon"/></svg>Treasury purchase confirmation — November 2023</a>
+    <span class="doc-description">An earlier $10 million State Treasury purchase confirmation.</span>
+    <span class="doc-source">State Treasury</span>
+  </li>
+  <li class="document-item">
+    <a class="doc-title" href="/assets/documents/sovereign-bond-purchase-confirmation-may2025.pdf"><svg class="doc-icon" aria-hidden="true"><use href="#doc-icon"/></svg>Treasury purchase confirmation — May 2025</a>
+    <span class="doc-description">One of the confirmations supporting the $20 million in new Treasury positions that settled in May.</span>
+    <span class="doc-source">State Treasury</span>
+  </li>
+  <li class="document-item">
+    <a class="doc-title" href="/assets/documents/berman-thank-you-fecher-20m-pitch-2025.pdf"><svg class="doc-icon" aria-hidden="true"><use href="#doc-icon"/></svg>Seller follow-up to APERS leadership</a>
+    <span class="doc-description">A seller-authored message citing the Treasury's new purchase during follow-up outreach to APERS.</span>
+    <span class="doc-source">APERS files · selected pages</span>
+  </li>
+  <li class="document-item">
+    <a class="doc-title" href="/assets/documents/milligan-oct7-anniversary-berman-reply-2024.pdf"><svg class="doc-icon" aria-hidden="true"><use href="#doc-icon"/></svg>Seller correspondence with the Auditor of State</a>
+    <span class="doc-description">Correspondence showing the relationship and political context surrounding the investment's public promotion.</span>
+    <span class="doc-source">Auditor of State files</span>
+  </li>
+  <li class="document-item">
+    <a class="doc-title" href="/assets/documents/treasury-investment-policy-2022.pdf"><svg class="doc-icon" aria-hidden="true"><use href="#doc-icon"/></svg>State Treasury investment policy</a>
+    <span class="doc-description">The Treasury's policy framework for public investments.</span>
+    <span class="doc-source">2022</span>
+  </li>
+</ul>
+
+[Return to the public explainer &rarr;](/evidence/)
+
+</div>

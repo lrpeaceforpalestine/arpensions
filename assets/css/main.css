@@ -641,7 +641,6 @@ body > header {
 .nav-links > li {
   display: flex;
   align-items: center;
-  padding: 0;
 }
 
 .nav-links a {
@@ -1454,7 +1453,6 @@ body > header {
 }
 
 /* --- Responsive Tables --- */
-.table-scroll,
 .table-scroll-wrapper {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -1748,7 +1746,6 @@ blockquote footer {
   padding-top: 1rem;
   border-top: 1px solid var(--border-default);
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   gap: 0.75rem;
 }
@@ -2253,7 +2250,6 @@ blockquote footer {
 
 /* --- Copy to Clipboard Button --- */
 .copy-letter-btn {
-  display: none;
   position: absolute;
   top: 0.75rem;
   right: 0.75rem;
@@ -2271,8 +2267,6 @@ blockquote footer {
   line-height: 1;
   z-index: 1;
 }
-
-.copy-js .copy-letter-btn { display: inline-block; }
 
 .copy-letter-btn:hover {
   background: var(--accent-cta);
@@ -2596,25 +2590,9 @@ blockquote footer {
 }
 
 @media (max-width: 600px) {
-  .audience-nav .container {
-    overflow-x: visible;
-  }
-
   .audience-nav-list {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0;
+    justify-content: flex-start;
   }
-
-  .audience-nav-list a {
-    padding: 0.65rem 0.7rem;
-    text-align: center;
-    white-space: normal;
-  }
-}
-
-.nav-end .theme-toggle-btn {
-  margin: 0;
 }
 
 /* === Directional Page Flow === */
@@ -2649,7 +2627,7 @@ blockquote footer {
 }
 
 .theme-toggle-btn {
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 40px;
@@ -2661,10 +2639,6 @@ blockquote footer {
   color: var(--text-secondary);
   cursor: pointer;
   transition: color 0.15s, background-color 0.15s, border-color 0.15s;
-}
-
-.nav-js .theme-toggle-btn {
-  display: flex;
 }
 
 .theme-toggle-btn:hover {

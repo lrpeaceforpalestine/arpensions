@@ -1,7 +1,7 @@
 ---
 layout: record
-title: "APERS Analytical-Record Search Email"
-description: "The February 13, 2026 APERS email documenting the chief investment officer's account of Board and consultant materials responsive to the records request."
+title: "APERS Chief Investment Officer Email"
+description: "The APERS chief investment officer states that he prepared no Board material for the Israel Bonds decision and believed the consultants had prepared none."
 permalink: /documents/records/apers-analysis-email/
 source_agency: "Arkansas Public Employees Retirement System"
 source_date: "2026-02-13"
@@ -11,16 +11,13 @@ publication_treatment: "Campaign crop; direct contact information masked; quoted
 asset_url: /assets/documents/apers-analysis-email-page-3081-masked.pdf
 ---
 
-## What the email establishes
+## What the email says
 
-In a February 13, 2026 email responding to the records search, APERS Chief Investment Officer Carlos Borromeo wrote, **“I did not prepare anything for the Board on this topic,”** and stated that he was certain the investment consultants had not prepared material either.
+During APERS's search for responsive records, Chief Investment Officer Carlos Borromeo wrote, **“I did not prepare anything for the Board on this topic,”** and said he was certain the investment consultants had not prepared material either.
 
-The email is direct evidence of the chief investment officer's account of responsive Board and consultant materials. It does not establish the content of every oral discussion, material held by another custodian, or records outside the request and production.
+This is Borromeo's account of the Board material prepared by staff and consultants. It does not describe every conversation that may have occurred or material held outside the search.
 
-{% include evidence-boundary.html
-  established="APERS's chief investment officer documented his account of Board and consultant materials during the FOIA search."
-  unresolved="Any oral advice, material outside the production, or records held by another custodian remain separate questions."
-  not_claimed="The email is not treated as an adjudication of the investment process or a universal absence finding."
-%}
+[Read the APERS member explainer &rarr;](/public-employees/)
 
-[Read the APERS audience page](/public-employees/) · [Open the signed authorization minutes](/documents/records/apers-authorization/) · [Open the confirmed purchase record](/documents/records/apers-purchase/)
+[Open the signed authorization minutes &rarr;](/documents/records/apers-authorization/)
+[Open the purchase record &rarr;](/documents/records/apers-purchase/)

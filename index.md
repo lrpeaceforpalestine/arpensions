@@ -1,58 +1,25 @@
 ---
 layout: default
-title: "Arkansans for Pension Integrity — Arkansas Pension Accountability"
-description: "The evidence-led Arkansas Israel Bonds record: confirmed securities, ATRS manager funding, conditional transactions, primary documents, and issuer-neutral safeguards."
+title: "Arkansans for Pension Integrity — Public Money Deserves a Public Investment Record"
+description: "Arkansans for Pension Integrity is advancing clear, issuer-neutral safeguards for public pension investments through the Pension Investment Integrity Act."
 ---
 
-{% assign inv = site.data.investigation %}
-{% assign apers = inv.agencies | where: "id", "apers" | first %}
 {% include hero.html %}
 
 {% include stats-bar.html %}
 
-<section class="home-record-section">
-  <div class="container container-prose">
-    <span class="section-label">The decision record</span>
-    <h2>What the decision files address—and what they leave open</h2>
-    <p class="record-lead">{{ inv.analysis_record.lead }}</p>
-
-    <div class="breakout">{% include analysis-record-matrix.html %}</div>
-
-    <p><a class="btn-primary" href="{{ '/evidence/' | relative_url }}">Follow the evidence trail</a></p>
-  </div>
-</section>
+{% include pathway-cards.html %}
 
 <hr class="section-divider section-divider--guilloche" aria-hidden="true">
 
 {% include role-ctas.html %}
 
 <section class="about-section">
-  <div class="container container-prose">
-    <span class="section-label">A 2027 legislative priority</span>
-    <h2>The Pension Investment Integrity Act</h2>
-    <p class="proposal-kicker"><strong>{{ inv.legislation.stage }}</strong> · {{ inv.legislation.sponsor_status }} · {{ inv.legislation.bill_number | prepend: "Bill number: " }}</p>
-    <p>{{ inv.legislation.full_summary }}</p>
-    <p>{{ inv.legislation.cfc_status }} The proposal is issuer-neutral: it governs the process used for this asset class, not the identity of a country or issuer.</p>
-    <p class="campaign-clock-note"><strong>Next milestone:</strong> bill prefiling opens <time datetime="{{ inv.legislation.prefiling_opens }}">{{ inv.legislation.prefiling_opens_display }}</time>. Sponsor and drafting work must come first. <a href="{{ inv.legislation.important_dates_url }}">See the official 2027 calendar</a>.</p>
-    <p><a href="{{ '/legislators/' | relative_url }}" class="about-link">Read the policy brief &rarr;</a></p>
-  </div>
-</section>
-
-<section class="pathways" aria-label="Campaign actions">
-  <div class="pathway-list">
-    <a href="{{ '/documents/' | relative_url }}" class="pathway-row">
-      <div class="container pathway-row-inner">
-        <span class="pathway-title">Read the primary records</span>
-        <span class="pathway-desc">Open the curated source trail and exact page locators</span>
-        <span class="pathway-arrow" aria-hidden="true">&rarr;</span>
-      </div>
-    </a>
-    <a href="{{ '/take-action/' | relative_url }}" class="pathway-row">
-      <div class="container pathway-row-inner">
-        <span class="pathway-title">Back the Integrity Act</span>
-        <span class="pathway-desc">Sign on, contact legislators, and share the campaign</span>
-        <span class="pathway-arrow" aria-hidden="true">&rarr;</span>
-      </div>
-    </a>
+  <div class="container-prose">
+    <h2>What we&rsquo;re about</h2>
+    <p>Arkansans for Pension Integrity is a statewide campaign for transparent, financially sound stewardship of public retirement money. Teachers, public employees, retirees, and taxpayers should be able to see the financial reasoning behind major pension decisions.</p>
+    <p>Arkansas agencies put at least <strong>$65 million into completed Israel Bonds purchases</strong>. ATRS separately moved <strong>$50 million into a manager account</strong> created for the same strategy. Those decisions show why Arkansas needs a consistent written process for weighing credit risk, liquidity, alternatives, and the interests of pension members.</p>
+    <p>The Pension Investment Integrity Act would create that process without telling a pension board what to buy or sell. In June 2026, Citizens First Congress selected pension investment integrity as a short-term priority for the 2027 legislative session.</p>
+    <a href="{{ '/about/' | relative_url }}" class="about-link">Learn more about us &rarr;</a>
   </div>
 </section>

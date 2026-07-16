@@ -1,29 +1,21 @@
 ---
 layout: record
-title: "APERS Confirmed Purchase Record"
-description: "The October 15, 2025 transaction record documenting the confirmed APERS purchase."
+title: "APERS $15 Million Purchase Record"
+description: "The October 15, 2025 transaction record for APERS's two-year Israel Bond purchase."
 permalink: /documents/records/apers-purchase/
 source_agency: "Arkansas Public Employees Retirement System"
 source_date: "2025-10-15"
 source_file: "IB_FOIA_FINAL. 2.27.2026 Redacted.LMG.pdf"
 source_locator: "Physical PDF page 6,925"
-publication_treatment: "Campaign crop; transaction and account identifiers masked."
+publication_treatment: "Campaign crop; account and operational identifiers masked."
 asset_url: /assets/documents/apers-purchase-record-page-6925-masked.pdf
 ---
 
-{% assign inv = site.data.investigation %}
-{% assign apers = inv.agencies | where: "id", "apers" | first %}
+## What the record says
 
-## What the record establishes
+The page shows a **$15 million purchase** dated October 15, 2025. It identifies the seller's wire-purchase account and a two-year institutional bond.
 
-The page shows a purchase of **{{ apers.measure_display }}** dated October 15, 2025, with a beneficiary descriptor for the seller's wire-purchase account and a two-year bond CUSIP.
+The amount is $10 million below the minimum named in the May 15 motion. The selected minutes and transaction record do not explain whether APERS treated the purchase as a first stage, a final amount, or an implementation step requiring later Board action.
 
-The amount is below the motion's stated range. The selected files do not resolve whether the purchase was intended as a first stage, the final amount, or an implementation requiring later Board treatment.
-
-{% include evidence-boundary.html
-  established="APERS made the documented security purchase."
-  unresolved="The operational or legal effect of the purchase being below the stated minimum remains open."
-  not_claimed="The authorization ceiling is not presented as purchased or held."
-%}
-
-[Read the signed authorization minutes](/documents/records/apers-authorization/) · [See APERS in the agency ledger](/evidence/#agency-apers)
+[Read the signed authorization minutes &rarr;](/documents/records/apers-authorization/)
+[Read the APERS member explainer &rarr;](/public-employees/)

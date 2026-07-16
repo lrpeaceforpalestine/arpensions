@@ -23,15 +23,10 @@ layout: default
       </header>
     </div>
   </div>
-  {% include legacy-anchors.html %}
   <div class="container container-prose">
     {{ content }}
-    {% unless page.hide_cta or page.url == '/take-action/' or page.url == '/take-action/thanks/' %}
-    {% assign cta_heading = page.cta_heading | default: "Back the Integrity Act" %}
-    {% assign cta_text = page.cta_text | default: "You have seen the public record. Add your name for issuer-neutral pension safeguards." %}
-    {% assign cta_url = page.cta_url | default: "/take-action/#sign-on" %}
-    {% assign cta_button = page.cta_button | default: "Sign on" %}
-    {% include cta-box.html heading=cta_heading text=cta_text url=cta_url button=cta_button %}
+    {% unless page.url == '/take-action/' or page.url == '/take-action/thanks/' %}
+    {% include cta-box.html heading="Take Action" text="Ready to make a difference? Join Arkansans calling for pension integrity." url="/take-action/" button="Get Involved" %}
     {% endunless %}
   </div>
 </article>

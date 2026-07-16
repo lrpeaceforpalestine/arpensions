@@ -1,7 +1,7 @@
 ---
 layout: record
-title: "Aon Implementation and Manager-Selection Memorandum"
-description: "Rendered ATRS packet pages 149–150: substantive manager advice on page 149 and the invest-or-not boundary on page 150."
+title: "Aon Implementation and Manager-Selection Memo"
+description: "ATRS packet pages 149–150: manager advice on page 149 and the scope of Aon's recommendation on page 150."
 permalink: /documents/records/atrs-aon-memo/
 source_agency: "Arkansas Teacher Retirement System"
 source_date: "2025-06-02"
@@ -11,16 +11,13 @@ publication_treatment: "Pages reproduced in full; no campaign masking applied."
 asset_url: /assets/documents/atrs-aon-memo-pages-149-150.pdf
 ---
 
-## What the pages establish
+## Read the two pages together
 
-Physical page 149 advises ATRS to use an investment manager, compares BlackRock and Reams, recommends Reams on the proposed fee, and notes limited marketability. Physical page 150 states that the memorandum does not recommend whether ATRS should invest in Israel Bonds and does not recommend buying or selling an individual security.
+Page 149 advises ATRS to use an investment manager, compares BlackRock and Reams, recommends Reams based on the proposed fee, and notes limited marketability.
 
-The accurate combined description is **substantive implementation and manager-selection advice, bounded by an invest-or-not and individual-security disclaimer**.
+Page 150 says the memo does not recommend whether ATRS should invest in Israel Bonds and does not recommend buying or selling an individual security.
 
-{% include evidence-boundary.html
-  established="Aon provided substantive implementation advice, compared managers, recommended Reams, and noted marketability limits."
-  unresolved="The pages do not supply a sovereign-credit and portfolio-fit merits recommendation for the affirmative authorization."
-  not_claimed="The scope disclaimer does not convert the implementation advice into a merits recommendation."
-%}
+Together, the pages show meaningful advice about implementation and manager selection while leaving the invest-or-not decision with trustees.
 
-[Read the ATRS decision-record finding](/findings/procedural-asymmetry/) · [Open Resolution 2025-22](/documents/records/atrs-resolution/)
+[Read the ATRS finding &rarr;](/findings/procedural-asymmetry/)
+[Open Resolution 2025-22 &rarr;](/documents/records/atrs-resolution/)

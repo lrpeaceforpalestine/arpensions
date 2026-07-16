@@ -1,13 +1,11 @@
 ---
 layout: landing
-title: "The Pension Investment Integrity Act — 2027 Policy Brief"
-description: "Issuer-neutral safeguards for credit analysis, alternatives comparison, liquidity disclosure, fiduciary findings, and public posting."
+title: "Policy Brief — Pension Investment Integrity Act"
+description: "A concise legislative brief on issuer-neutral safeguards for covered Arkansas pension purchases of non-tradable sovereign debt."
 permalink: /legislators/
 audience_nav: true
-breadcrumb: "Integrity Act"
+breadcrumb: "For Legislators"
 hero_band: pine
-mobile_cta_label: "Request a briefing"
-mobile_cta_url: "mailto:info@arpensions.org?subject=Pension%20Investment%20Integrity%20Act%20briefing"
 ---
 
 {% assign inv = site.data.investigation %}
@@ -17,97 +15,82 @@ mobile_cta_url: "mailto:info@arpensions.org?subject=Pension%20Investment%20Integ
 
 ## Executive summary
 
-Arkansas records establish a **{{ inv.metrics.confirmed_security_floor.display }} security-level floor** across the State Treasury and APERS. Separately, ATRS documented **{{ inv.metrics.atrs_manager_funding.display }} in funding to a manager mandate** whose security-level holdings were not produced. A further Treasury payment of {{ inv.metrics.treasury_conditional_payment.display }} remained marked “Processing By Bank” and is conditional.
+Arkansas pension boards need a clear, consistent process for covered purchases of non-tradable sovereign debt.
 
-The files contain manager-selection, implementation, marketability, and credit-related materials. They leave material questions about how sovereign-credit risk and portfolio fit were evaluated and connected to each affirmative investment decision.
+ATRS authorized {{ atrs.authorization_display | replace: 'Up to', 'up to' }} and later moved {{ atrs.measure_display }} into a manager account for an Israel Bonds strategy. APERS authorized a $25&ndash;$50 million range and later completed a {{ apers.measure_display }} purchase. The available files show implementation advice, signed motions, operational correspondence, and later transactions. They do not give members one decision-specific written comparison of credit risk, expected return, liquidity, and reasonable alternatives for each board's choice.
 
-The Pension Investment Integrity Act answers that procedural problem without directing an investment result. {{ inv.legislation.cfc_status }}
+The **Pension Investment Integrity Act** would fill that procedural gap. It is prospective, issuer-neutral, and limited to covered pension purchases. It would not direct a trustee vote or govern the separately managed State Treasury.
 
-## Proposal status
+Citizens First Congress selected pension investment integrity as a short-term priority for the 2027 legislative session on June 27, 2026.
 
-<div class="proposal-status-grid">
-  <div><span>Campaign stage</span><strong>{{ inv.legislation.stage }}</strong></div>
-  <div><span>Bill number</span><strong>{{ inv.legislation.bill_number }}</strong></div>
-  <div><span>Sponsor status</span><strong>{{ inv.legislation.sponsor_status }}</strong></div>
-  <div><span>Coalition status</span><strong>{{ inv.legislation.cfc_status_short }}</strong></div>
-</div>
+## Key facts
 
-Status verified {{ inv.legislation.status_verified | date: "%B %-d, %Y" }}. The policy core is public here; legislative language, fiscal review, and a bill number will be linked when available. [Open the printable one-page brief](/legislators/one-page/) or [download the dated PDF]({{ inv.legislation.brief_pdf_url }}). The coalition-selection status is attributed to the campaign's convention record; Citizens First Congress describes the delegate process that creates its priority platform on its [official process page]({{ inv.legislation.cfc_process_url }}).
+<div class="issue-agency-table issue-agency-table--fact-detail" markdown="1">
 
-{% include legislative-window.html %}
-
-{% include evidence-ledger.html %}
-
-## What Arkansas law already provides
-
-[Act 498 of 2023]({{ inv.legislation.act_498_url }}) requires covered pension fiduciaries to evaluate investments based on pecuniary factors—material financial effects on risk and return. The proposed Act gives that principle a consistent written procedure for acquisitions of non-tradable sovereign debt.
-
-This proposal does not declare that an agency violated Act 498. It makes the future record clear enough for trustees, beneficiaries, and legislators to assess compliance without reconstructing it through FOIA.
-
-## The five safeguards
-
-<ol class="policy-steps">
-{% for provision in inv.legislation.provisions %}
-  <li><span>{{ forloop.index }}</span><p>{{ provision }}</p></li>
-{% endfor %}
-</ol>
-
-The safeguards are **issuer-neutral**. They apply to the asset characteristics and the public fiduciary process, not to a particular country, seller, political position, or desired vote.
-
-{{ inv.legislation.full_summary }}
-
-### Publication without pre-trade disclosure
-
-{{ inv.legislation.publication_boundary }} The intended public record would retain:
-
-{% for field in inv.legislation.publication_public_fields %}
-- {{ field }}.
-{% endfor %}
-
-## The record before legislators
-
-<div class="table-scroll" tabindex="0" role="region" aria-label="Arkansas investment measures and status">
-
-| Institution or measure | Current record | Evidentiary status |
-|---|---|---|
-| State Treasury | {{ treasury.measure }} | {{ treasury.status }} |
-| APERS | {{ apers.measure }} under {{ apers.authorization }} | {{ apers.status }} |
-| ATRS | {{ atrs.measure }}; underlying holdings not identified | {{ atrs.status }} |
-| Additional Treasury payment | {{ inv.metrics.treasury_conditional_payment.display }} at processing stage | {{ inv.metrics.treasury_conditional_payment.status }} |
-| Pension authorization ceiling | {{ inv.metrics.pension_authorization_ceiling.display }} | Authorization, not holdings |
+| Fact | Current public account |
+|---|---|
+| **Completed purchases** | {{ inv.metrics.confirmed_security_floor.display }} total: {{ treasury.measure_display }} at Treasury and {{ apers.measure_display }} at APERS. |
+| **ATRS manager funding** | {{ atrs.measure_display }} moved to the Reams account created for the strategy. The released account documents do not list individual bonds. |
+| **Combined scale** | {{ inv.metrics.combined_tied_or_funded.display }} across completed purchases and manager funding—two different transaction types. |
+| **Later Treasury payment** | {{ inv.metrics.treasury_conditional_payment.display }} shown as still processing by the bank; excluded from the completed total. |
+| **Pension authorization ceiling** | {{ inv.metrics.pension_authorization_ceiling.display }} combined: ATRS up to $50M and APERS up to $50M. A ceiling is not a holdings figure. |
+| **ATRS advice** | Aon compared implementation options, recommended Reams, and noted limited marketability. Aon did not advise whether ATRS should invest or which bond to buy. |
+| **APERS Board material** | The chief investment officer wrote that he prepared no Board material on the topic and believed the consultants had not either. |
+| **Treasury credit record** | An October 2024 internal overview recommended holding existing positions; a later {{ inv.transaction_figures.treasury_may_settled.display }} purchase settled in May 2025. |
 
 </div>
 
-## What the Act does not do
+## Why existing law needs a usable procedure
 
-- It does not order a pension system to buy, hold, or sell a security.
-- It does not apply a political loyalty test.
-- It does not convert an authorization ceiling or manager funding into a holdings number.
-- It does not replace trustees, staff, or independent advisers.
-- It does not reach the separately governed State Treasury; Treasury records provide context for the public-investment problem.
+Arkansas law already requires pension trustees to act for members and beneficiaries and to evaluate investments on pecuniary factors—financial considerations expected to affect risk or return. The prudent-investor framework likewise requires care, skill, and attention to the portfolio as a whole.
 
-## What legislative drafting must settle
+Those standards state the duty. The Integrity Act would make the work behind a covered decision visible and consistent.
 
-The prefiling process must translate the policy core into administrable bill text. Drafting should make these points explicit without weakening the five safeguards:
+Non-tradable sovereign debt presents a specific governance challenge: the investment cannot be readily sold, so the fund gives up normal market liquidity and price discovery. A short written analysis is a reasonable safeguard before public retirement money is tied up until maturity.
 
-- the covered-plan and covered-transaction definitions;
-- any materiality threshold and narrowly stated operational exceptions;
-- who receives, posts, and retains the required record;
-- the covered-acquisition event that starts the 30-day publication clock and the treatment of staged transactions;
-- narrow redaction standards that protect legally confidential operational details without hiding the required conclusions;
-- the implementation date and treatment of transactions already in progress; and
-- the fiscal and administrative note for affected systems.
+## The Pension Investment Integrity Act
 
-For staff review, the campaign can provide exact source locators, the proposed process map, and a fund-by-fund evidence briefing. It will not ask a sponsor to rely on an authorization ceiling as if it were a holdings number.
+Before a covered acquisition, the proposal would require pension staff or an independent adviser to prepare:
+
+1. **A written credit analysis** addressing repayment risk and material credit developments.
+2. **An alternatives comparison** covering expected return, risk, and liquidity against reasonable fixed-income choices.
+3. **A liquidity disclosure** explaining transfer restrictions and the absence of a secondary market.
+4. **A fiduciary determination** connecting the decision to members' financial interests and the portfolio as a whole.
+5. **Public posting after the purchase** within 30 days, with a written reason for any lawful redaction.
+
+## Scope and guardrails
+
+The proposal would apply to covered acquisitions by Arkansas pension benefit plans, including ATRS, APERS, ASHERS, ASPRS, AJRS, and LOPFI.
+
+It would not:
+
+- prescribe an investment outcome;
+- name or disfavor a particular issuer;
+- substitute the legislature's judgment for a trustee vote;
+- apply retroactively to past transactions; or
+- extend to the separately governed State Treasury.
+
+## Why the Arkansas transactions make the case
+
+**ATRS shows an implementation-versus-merits gap.** Aon helped choose the manager and structure the account. Its own scope statement left the invest-or-not decision with trustees. The Integrity Act would require the trustees' financial case to be written down.
+
+**APERS shows why a decision memo matters.** The signed motion authorized a $25&ndash;$50 million range; the later purchase was {{ apers.measure_display }}. A concise memo would explain both the investment case and how the completed amount fit the authorization.
+
+**Treasury shows the value of reconciling advice and action.** Treasury's internal overview recommended holding while maturities rolled off, followed months later by a new purchase. Treasury sits outside the bill, but the sequence illustrates why public financial reasoning matters.
+
+## Suggested questions for agencies
+
+- What written analysis did the decision-maker rely on?
+- Who prepared it, and what was that person's role?
+- Which alternatives were compared on return, credit, and liquidity?
+- How were transfer restrictions valued?
+- Where can members read the final fiduciary determination?
 
 ## Legislative ask
 
-1. **Potential sponsor:** request a bill-drafting meeting and carry the proposal in the 2027 regular session.
-2. **Committee or caucus staff:** request a source briefing on the analytical and transaction record.
-3. **All legislators:** preserve the five issuer-neutral safeguards through bill drafting and fiscal review.
+Sponsor and support the Pension Investment Integrity Act in the 2027 regular session, and request an interim review by the Joint Committee on Public Retirement and Social Security Programs.
 
-For a briefing or source package, contact **Arkansans for Pension Integrity** at [info@arpensions.org](mailto:info@arpensions.org?subject=Pension%20Investment%20Integrity%20Act%20briefing).
+[Read the source documents &rarr;](/documents/)
 
----
-
-[Review the evidence](/evidence/) · [Browse selected primary records](/documents/) · [Download the one-page PDF]({{ inv.legislation.brief_pdf_url }}) · [Download current facts](/assets/data/current-facts.csv)
+[See the public explainer &rarr;](/evidence/)
+[Contact Arkansans for Pension Integrity](mailto:info@arpensions.org)

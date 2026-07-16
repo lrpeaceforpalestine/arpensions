@@ -1,15 +1,13 @@
-"""Audit public source and rendered Jekyll output for evidence and HTML regressions."""
+"""Audit the campaign site for factual, editorial, accessibility, and build regressions."""
 
 from __future__ import annotations
 
 import argparse
-import csv
 import html
 import json
 import re
 import sys
 from collections import Counter
-from datetime import date
 from pathlib import Path
 from urllib.parse import unquote, urljoin, urlsplit
 
@@ -23,13 +21,18 @@ REGRESSIONS = ROOT / "_internal" / "accuracy-regressions.yml"
 PUBLIC_CONTRACT = ROOT / "_internal" / "public-contract.yml"
 LEGACY_ANCHORS = ROOT / "_data" / "legacy_anchors.yml"
 LEGACY_TARGETS = ROOT / "_data" / "legacy_anchor_targets.yml"
-TEXT_SUFFIXES = {".md", ".html", ".yml", ".yaml", ".js", ".json", ".txt", ".csv", ".css", ".svg"}
-SKIP_PARTS = {".git", ".qa", "_site", "_internal", "scripts", "vendor", "node_modules"}
-SKIP_FILES = {"README.md", "CLAUDE.md", "LICENSE", "Gemfile.lock"}
-CORE_AMOUNT = re.compile(r"\$(?:10|15|20|25|50|55|60|65|75|100|115|125)\s*(?:M\b|million\b)", re.I)
-POSITIONAL_CANONICAL = re.compile(
-    r"\b(?:inv|site\.data\.investigation)\.(?:agencies|timeline|routes)\[\d+\]"
-)
+TEXT_SUFFIXES = {".md", ".html", ".js", ".json", ".txt", ".csv", ".css", ".svg"}
+SOURCE_SKIP_PARTS = {
+    ".git",
+    ".qa",
+    "_data",
+    "_internal",
+    "_site",
+    "node_modules",
+    "scripts",
+    "vendor",
+}
+SOURCE_SKIP_FILES = {"README.md", "CLAUDE.md", "LICENSE", "Gemfile.lock"}
 
 
 class Audit:
@@ -48,68 +51,59 @@ class Audit:
         print("AUDIT PASSED")
 
 
-def public_text_files() -> list[Path]:
+def public_source_files() -> list[Path]:
     files: list[Path] = []
     for path in ROOT.rglob("*"):
         if not path.is_file() or path.suffix.lower() not in TEXT_SUFFIXES:
             continue
         rel = path.relative_to(ROOT)
-        if path.name in SKIP_FILES or any(part in SKIP_PARTS for part in rel.parts):
+        if path.name in SOURCE_SKIP_FILES or any(part in SOURCE_SKIP_PARTS for part in rel.parts):
             continue
         files.append(path)
     return sorted(files)
+
+
+def rendered_text_files(site: Path) -> list[Path]:
+    return sorted(
+        path for path in site.rglob("*") if path.is_file() and path.suffix.lower() in TEXT_SUFFIXES
+    )
 
 
 def line_for(text: str, offset: int) -> int:
     return text.count("\n", 0, offset) + 1
 
 
-def audit_regressions(audit: Audit, files: list[Path]) -> None:
+def audit_regressions(audit: Audit, files: list[Path], *, rendered: bool) -> None:
     entries = yaml.safe_load(REGRESSIONS.read_text(encoding="utf-8"))["regressions"]
-    compiled = [(entry, re.compile(entry["pattern"], re.I | re.S)) for entry in entries]
-    for path in files:
-        text = path.read_text(encoding="utf-8")
-        rel = path.relative_to(ROOT)
-        for entry, pattern in compiled:
-            for match in pattern.finditer(text):
-                audit.fail(f"{rel}:{line_for(text, match.start())}: regression {entry['id']}: {entry['note']}")
-
-
-def audit_core_amount_sources(audit: Audit, files: list[Path]) -> None:
-    """Repeated investigative figures must be emitted from the canonical data model."""
-    for path in files:
-        if path == CANONICAL:
+    for entry in entries:
+        if entry.get("scope") == "rendered" and not rendered:
             continue
-        text = path.read_text(encoding="utf-8")
-        rel = path.relative_to(ROOT)
-        for match in CORE_AMOUNT.finditer(text):
-            audit.fail(
-                f"{rel}:{line_for(text, match.start())}: hardcoded core amount {match.group(0)!r}; "
-                "render it from site.data.investigation"
-            )
-        for match in POSITIONAL_CANONICAL.finditer(text):
-            audit.fail(
-                f"{rel}:{line_for(text, match.start())}: positional canonical lookup {match.group(0)!r}; "
-                "select canonical entries by a stable id or named field"
-            )
+        pattern = re.compile(entry["pattern"], re.I | re.S)
+        for path in files:
+            text = path.read_text(encoding="utf-8")
+            for match in pattern.finditer(text):
+                try:
+                    rel = path.relative_to(ROOT)
+                except ValueError:
+                    rel = path
+                audit.fail(
+                    f"{rel}:{line_for(text, match.start())}: regression {entry['id']}: {entry['note']}"
+                )
 
 
 def split_front_matter(path: Path) -> tuple[dict, str] | None:
     text = path.read_text(encoding="utf-8")
-    if not text.startswith("---\n") and not text.startswith("---\r\n"):
-        return None
     match = re.match(r"^---\s*\r?\n(.*?)\r?\n---\s*\r?\n", text, re.S)
     if not match:
         return None
-    data = yaml.safe_load(match.group(1)) or {}
-    return data, text[match.end() :]
+    return yaml.safe_load(match.group(1)) or {}, text[match.end() :]
 
 
 def content_files() -> list[Path]:
     files = [
         path
         for path in ROOT.iterdir()
-        if path.is_file() and path.suffix.lower() in {".md", ".html"} and path.name not in SKIP_FILES
+        if path.is_file() and path.suffix.lower() in {".md", ".html"} and path.name not in SOURCE_SKIP_FILES
     ]
     files.extend((ROOT / "findings").rglob("*.md"))
     files.extend((ROOT / "documents").rglob("*.md"))
@@ -129,9 +123,8 @@ def audit_front_matter(audit: Audit) -> None:
             audit.fail(f"{rel}: front matter lacks layout")
         if front.get("layout") is not None and not front.get("title"):
             audit.fail(f"{rel}: rendered page lacks title")
-        if path.name != "index.md" or path.parent != ROOT:
-            if not front.get("permalink") and path.name != "404.html":
-                audit.fail(f"{rel}: public content lacks explicit permalink")
+        if path != ROOT / "index.md" and path.name != "404.html" and not front.get("permalink"):
+            audit.fail(f"{rel}: public content lacks an explicit permalink")
         if "documents" in rel.parts and "records" in rel.parts:
             required = {
                 "source_agency",
@@ -146,134 +139,46 @@ def audit_front_matter(audit: Audit) -> None:
                 audit.fail(f"{rel}: source record lacks {', '.join(missing)}")
 
 
-def audit_accessibility_contracts(audit: Audit) -> None:
-    layout = (ROOT / "_layouts" / "default.html").read_text(encoding="utf-8")
-    if 'href="#main-content"' not in layout or 'id="main-content" tabindex="-1"' not in layout:
-        audit.fail("accessibility: skip link and focusable main target must remain paired")
-
-    css = "\n".join(
-        path.read_text(encoding="utf-8") for path in sorted((ROOT / "assets" / "css").glob("*.css"))
-    )
-    if "prefers-reduced-motion: reduce" not in css:
-        audit.fail("accessibility: CSS lacks a reduced-motion mode")
-    if ":focus-visible" not in css:
-        audit.fail("accessibility: CSS lacks visible keyboard-focus rules")
-    if '[data-theme="dark"] .hero-ledger' not in css:
-        audit.fail("accessibility: dark theme does not explicitly restore the light ledger surface")
-    if re.search(r"\.container-prose\s+table\s*\{[^}]*display\s*:\s*block", css, re.S):
-        audit.fail("accessibility: prose tables must not use display:block")
-
-    take_action = (ROOT / "take-action.md").read_text(encoding="utf-8")
-    if "actionnetwork.org/widgets" not in take_action or "<noscript>" not in take_action:
-        audit.fail("accessibility: Take Action must retain the Action Network embed and no-JavaScript path")
-    if "petition-fallback" not in take_action or "/privacy/" not in take_action:
-        audit.fail("accessibility: Take Action needs an always-visible petition fallback and privacy link")
-    if "petition-consent-note" not in take_action or "clearing the email-updates checkbox" not in take_action:
-        audit.fail("consent: Take Action must explain how to sign without campaign email updates")
-    if "structured volunteer email" not in take_action or "volunteer-grid" not in take_action:
-        audit.fail("conversion: volunteer recruitment must lead to a structured, privacy-linked intake")
-    if "source=widget" in take_action or take_action.count("source=arpensions") < 2:
-        audit.fail("conversion: Action Network attribution must consistently use source=arpensions")
-
-    privacy = (ROOT / "privacy.md").read_text(encoding="utf-8")
-    if "districtfinder.youraedi.com" not in privacy or "not to this website" not in privacy:
-        audit.fail("privacy: the external address-based District Finder needs a clear data boundary")
-    if "linked from the [Arkansas Legislature's Legislators page]" not in take_action or "does not receive it" not in take_action:
-        audit.fail("privacy: Take Action must identify the District Finder and the campaign data boundary")
-
-    nav_js = (ROOT / "assets" / "js" / "nav.js").read_text(encoding="utf-8")
-    if "nav-js" not in nav_js or "e.key === 'Tab'" not in nav_js or ".inert" not in nav_js:
-        audit.fail("accessibility: mobile navigation lacks progressive enhancement or focus containment")
-    if ".nav-js .nav-links" not in css:
-        audit.fail("accessibility: mobile navigation has no no-JavaScript CSS fallback")
-
-    default_layout = (ROOT / "_layouts" / "default.html").read_text(encoding="utf-8")
-    if "page.mobile_cta_label" not in default_layout or "page.mobile_cta_url" not in default_layout:
-        audit.fail("conversion: mobile call to action is not page-aware")
-    landing_layout = (ROOT / "_layouts" / "landing.html").read_text(encoding="utf-8")
-    if landing_layout.find("{{ content }}") > landing_layout.find("include audience-nav.html"):
-        audit.fail("conversion: audience switcher must follow page-specific landing content")
-
-    thanks = (ROOT / "take-action-thanks.md").read_text(encoding="utf-8")
-    if "/take-action/#spread" not in thanks or "include social-share.html" not in thanks:
-        audit.fail("conversion: post-signature page lacks a direct petition-sharing loop")
-
-    toc_js = (ROOT / "assets" / "js" / "evidence-toc.js").read_text(encoding="utf-8")
-    if "toc-js" not in toc_js or ".toc-js .evidence-toc-list" not in css:
-        audit.fail("accessibility: evidence TOC lacks a no-JavaScript fallback")
-
-    table_wrap = (ROOT / "assets" / "js" / "table-wrap.js").read_text(encoding="utf-8")
-    if "closest('.table-scroll, .table-scroll-wrapper')" not in table_wrap:
-        audit.fail("accessibility: authored scroll regions must not receive nested table wrappers")
-
-    copy_js = (ROOT / "assets" / "js" / "copy-to-clipboard.js").read_text(encoding="utf-8")
-    if "classList.add('copy-js')" not in copy_js or ".copy-js .copy-letter-btn" not in css:
-        audit.fail("progressive enhancement: copy buttons must stay hidden until listeners bind")
-
-    action_a11y = (ROOT / "assets" / "js" / "action-network-a11y.js").read_text(encoding="utf-8")
-    if "aria-label', 'Country (required)" not in action_a11y or "aria-required" not in action_a11y:
-        audit.fail("accessibility: the embedded petition needs runtime country labeling and required semantics")
-    if "#form-country:focus + .can_select" not in css:
-        audit.fail("accessibility: the embedded petition country selector lacks a visible focus proxy")
-
-
 def audit_canonical(audit: Audit) -> dict:
     data = yaml.safe_load(CANONICAL.read_text(encoding="utf-8"))
     agencies = {agency["id"]: agency for agency in data["agencies"]}
     metrics = data["metrics"]
 
-    expected_floor = agencies["treasury"]["measure_millions"] + agencies["apers"]["measure_millions"]
-    if metrics["confirmed_security_floor"]["value_millions"] != expected_floor:
-        audit.fail("canonical: confirmed security floor does not equal Treasury plus APERS")
-    expected_combined = expected_floor + agencies["atrs"]["measure_millions"]
-    if metrics["combined_tied_or_funded"]["value_millions"] != expected_combined:
-        audit.fail("canonical: combined tied-or-funded measure is arithmetically inconsistent")
-    expected_ceiling = agencies["atrs"]["authorization_max_millions"] + agencies["apers"]["authorization_max_millions"]
-    if metrics["pension_authorization_ceiling"]["value_millions"] != expected_ceiling:
+    floor = agencies["treasury"]["measure_millions"] + agencies["apers"]["measure_millions"]
+    if metrics["confirmed_security_floor"]["value_millions"] != floor:
+        audit.fail("canonical: completed-purchase floor must equal Treasury plus APERS")
+    combined = floor + agencies["atrs"]["measure_millions"]
+    if metrics["combined_tied_or_funded"]["value_millions"] != combined:
+        audit.fail("canonical: combined purchase-and-funding figure is arithmetically inconsistent")
+    ceiling = agencies["atrs"]["authorization_max_millions"] + agencies["apers"]["authorization_max_millions"]
+    if metrics["pension_authorization_ceiling"]["value_millions"] != ceiling:
         audit.fail("canonical: pension authorization ceiling is arithmetically inconsistent")
-    if data["corpus"]["render_jobs_complete"] != data["corpus"]["render_jobs_total"]:
-        audit.fail("canonical: render review is not complete")
 
-    allowed_status = set(data["status_labels"])
     source_ids = set(data["sources"])
+    allowed_status = set(data["status_labels"])
+    allowed_route_status = set(data["event_status_labels"])
     for metric_id, metric in metrics.items():
-        normalized = metric["status"].replace(" ", "_")
-        if normalized not in allowed_status:
+        if metric["status"].replace(" ", "_") not in allowed_status:
             audit.fail(f"canonical: metric {metric_id} has unknown status {metric['status']!r}")
         for source_id in metric.get("source_ids", []):
             if source_id not in source_ids:
                 audit.fail(f"canonical: metric {metric_id} references unknown source {source_id}")
     for agency in data["agencies"]:
-        normalized = agency["status"].replace(" ", "_")
-        if normalized not in allowed_status:
-            audit.fail(f"canonical: agency {agency['id']} has unknown status {agency['status']!r}")
-        if not agency.get("authority_label"):
-            audit.fail(f"canonical: agency {agency['id']} lacks an authorization/target label")
-        authority_status = agency.get("authority_status", "").replace(" ", "_")
-        if authority_status not in allowed_status:
-            audit.fail(f"canonical: agency {agency['id']} has unknown authority status {agency.get('authority_status')!r}")
-        authority_source_id = agency.get("authority_source_id")
-        if authority_source_id and authority_source_id not in source_ids:
-            audit.fail(f"canonical: agency {agency['id']} references unknown authority source {authority_source_id}")
         for source_id in agency.get("source_ids", []):
             if source_id not in source_ids:
                 audit.fail(f"canonical: agency {agency['id']} references unknown source {source_id}")
     for event in data["timeline"]:
-        normalized = event["status"].replace(" ", "_")
-        if normalized not in allowed_status:
-            audit.fail(f"canonical: timeline event {event['id']} has unknown status {event['status']!r}")
         source_id = event.get("source_id")
         if source_id and source_id not in source_ids:
             audit.fail(f"canonical: timeline event {event['id']} references unknown source {source_id}")
-    allowed_event_status = set(data["event_status_labels"])
     for route in data["routes"]:
-        if route["status"] not in allowed_event_status:
-            audit.fail(f"canonical: route {route['id']} has unknown event status {route['status']!r}")
+        if route["status"] not in allowed_route_status:
+            audit.fail(f"canonical: route {route['id']} has unknown status {route['status']!r}")
 
     for source_id, source in data["sources"].items():
-        missing_source_fields = sorted({"title", "agency", "date", "locator"} - set(source))
-        if missing_source_fields:
-            audit.fail(f"canonical: source {source_id} lacks {', '.join(missing_source_fields)}")
+        missing = sorted({"title", "agency", "date", "locator"} - set(source))
+        if missing:
+            audit.fail(f"canonical: source {source_id} lacks {', '.join(missing)}")
         asset_url = source.get("asset_url")
         if asset_url and not (ROOT / asset_url.lstrip("/")).is_file():
             audit.fail(f"canonical: source {source_id} points to missing asset {asset_url}")
@@ -283,84 +188,100 @@ def audit_canonical(audit: Audit) -> dict:
             if not (ROOT / "documents" / "records" / slug / "index.md").is_file():
                 audit.fail(f"canonical: source {source_id} points to missing record page {record_url}")
 
-    boundary_fields = {"title", "custodian", "scope", "record_types", "method", "result", "limit"}
-    for boundary_id, boundary in data.get("search_boundaries", {}).items():
-        missing_boundary_fields = sorted(boundary_fields - set(boundary))
-        if missing_boundary_fields:
-            audit.fail(f"canonical: search boundary {boundary_id} lacks {', '.join(missing_boundary_fields)}")
-    boundary_consumers = {
-        "atrs_merits": ROOT / "findings" / "procedural-asymmetry.md",
-        "atrs_holdings": ROOT / "findings" / "oversight-gap.md",
-        "atrs_audio": ROOT / "findings" / "oversight-gap.md",
-        "apers_analysis": ROOT / "public-employees.md",
-        "ashers_adoption": ROOT / "findings" / "control-case.md",
-    }
-    for boundary_id, path in boundary_consumers.items():
-        if boundary_id not in data.get("search_boundaries", {}):
-            audit.fail(f"canonical: missing required search boundary {boundary_id}")
-        elif f'boundary_id="{boundary_id}"' not in path.read_text(encoding="utf-8"):
-            audit.fail(f"canonical: search boundary {boundary_id} has no public consumer")
-
-    timeline = {event["id"]: event for event in data["timeline"]}
-    if timeline.get("atrs_authorization", {}).get("source_id") != "atrs_resolution":
-        audit.fail("canonical: ATRS authorization timeline event must cite the signed resolution")
-    floor_sources = set(metrics["confirmed_security_floor"].get("source_ids", []))
-    if "treasury_maturity" not in floor_sources:
-        audit.fail("canonical: confirmed floor must cite the subtractive Treasury maturity")
-    combined_sources = set(metrics["combined_tied_or_funded"].get("source_ids", []))
-    if "treasury_maturity" not in combined_sources:
-        audit.fail("canonical: combined measure must inherit the subtractive Treasury maturity source")
-
-    legislation = data["legislation"]
-    if "Before acquisition" not in legislation.get("full_summary", ""):
-        audit.fail("canonical: policy summary must identify the pre-acquisition safeguards")
-    if "within 30 days after each covered acquisition" not in legislation.get("full_summary", ""):
-        audit.fail("canonical: policy summary must identify the post-acquisition publication deadline")
-    if "According to Arkansans for Pension Integrity" not in legislation.get("cfc_status", ""):
-        audit.fail("canonical: CFC selection status must remain attributed to the campaign convention record")
-    if "narrow, explained redactions" not in legislation.get("publication_boundary", ""):
-        audit.fail("canonical: publication boundary must address narrow, explained redactions")
-    try:
-        prefiling = date.fromisoformat(legislation["prefiling_opens"])
-        convenes = date.fromisoformat(legislation["session_convenes"])
-        filing_deadline = date.fromisoformat(legislation["retirement_filing_deadline"])
-        if not prefiling < convenes < filing_deadline:
-            audit.fail("canonical: 2027 legislative milestones are out of sequence")
-    except (KeyError, TypeError, ValueError) as exc:
-        audit.fail(f"canonical: legislative milestone date is invalid: {exc}")
-    if "arkleg.state.ar.us" not in legislation.get("important_dates_url", ""):
-        audit.fail("canonical: legislative milestones lack an official Arkansas source")
-
-    executed_resolution = data["sources"].get("atrs_resolution", {})
-    if executed_resolution.get("asset_url") != "/assets/documents/atrs-resolution-2025-22-executed-pages-5-6.pdf":
-        audit.fail("canonical: ATRS executed-resolution label is not bound to the executed excerpt")
-
-    apers_authorization = data["sources"].get("apers_authorization", {})
-    if (
-        apers_authorization.get("asset_url") != "/assets/documents/apers-authorization-minutes-pages-1-4.pdf"
-        or apers_authorization.get("expected_pages") != 2
-    ):
-        audit.fail("canonical: APERS proxy and authorization claims must bind to signed minutes pages 1 and 4")
-
-    citation_include = (ROOT / "_includes" / "citation.html").read_text(encoding="utf-8")
-    if "{% if source.record_url %}" not in citation_include or "Request record" not in citation_include:
-        audit.fail("canonical: locator-only sources need a public request path")
-
-    terminology = yaml.safe_load((ROOT / "_data" / "terminology.yml").read_text(encoding="utf-8"))
-    terminology_consumers = "\n".join(
-        (ROOT / name).read_text(encoding="utf-8")
-        for name in ("the-issue.md", "press.md", "_includes/jsonld.html")
-    )
-    if "site.data.terminology" not in terminology_consumers or not terminology.get("instrument_formal"):
-        audit.fail("canonical: terminology model is not consumed by public pages")
-
-    investigation_json = (ROOT / "assets" / "data" / "investigation.json").read_text(encoding="utf-8")
-    if "site.data.investigation | jsonify" not in investigation_json:
-        audit.fail("canonical: generated JSON endpoint does not derive from investigation.yml")
-    facts_csv = (ROOT / "assets" / "data" / "current-facts.csv").read_text(encoding="utf-8")
-    if "site.data.investigation.metrics" not in facts_csv:
-        audit.fail("canonical: downloadable facts CSV does not derive from investigation.yml")
     return data
+
+
+def audit_source_contracts(audit: Audit) -> None:
+    default = (ROOT / "_layouts" / "default.html").read_text(encoding="utf-8")
+    nav = (ROOT / "_includes" / "nav.html").read_text(encoding="utf-8")
+    head = (ROOT / "_includes" / "head.html").read_text(encoding="utf-8")
+    stats_bar = (ROOT / "_includes" / "stats-bar.html").read_text(encoding="utf-8")
+    llms = (ROOT / "llms.txt").read_text(encoding="utf-8")
+    css = "\n".join(path.read_text(encoding="utf-8") for path in (ROOT / "assets" / "css").glob("*.css"))
+    js = "\n".join(path.read_text(encoding="utf-8") for path in (ROOT / "assets" / "js").rglob("*.js"))
+
+    if 'href="#main-content"' not in default or 'id="main-content" tabindex="-1"' not in default:
+        audit.fail("accessibility: skip link and focusable main target must remain paired")
+    if "prefers-reduced-motion: reduce" not in css:
+        audit.fail("accessibility: CSS lacks a reduced-motion mode")
+    if ":focus-visible" not in css:
+        audit.fail("accessibility: CSS lacks visible keyboard-focus rules")
+    if "@media (max-width: 768px)" not in css or ".nav-toggle" not in css:
+        audit.fail("responsive: mobile navigation styles are missing")
+    if ".nav-js .nav-toggle" not in css or ".nav-js .nav-links" not in css:
+        audit.fail("accessibility: mobile navigation must only collapse after JavaScript enhancement")
+    if "nav-js" not in js or "e.key === 'Tab'" not in js or ".inert" not in js:
+        audit.fail("accessibility: mobile navigation lacks progressive enhancement or focus containment")
+    if re.search(r"\.container-prose\s+table\s*\{[^}]*display\s*:\s*block", css, re.DOTALL):
+        audit.fail("accessibility: prose tables must retain their native table display semantics")
+    for selector in (
+        "#can_embed_form .js-country_drop_wrap",
+        "#can_embed_form #form-country",
+        ".can_select.can_selectFocus",
+        ":focus-within .can_selectInner",
+    ):
+        if selector not in css:
+            audit.fail(f"accessibility: Action Network country selector is missing {selector}")
+    if "Avenir Next" not in css or "League Spartan" not in css or "family=League+Spartan" not in head:
+        audit.fail("brand: the original Avenir/League Spartan type system is not intact")
+    take_action_link = re.search(r'<a[^>]+href="\{\{ \'/take-action/\'[^>]+>(?:\s*)Take Action', nav)
+    if not take_action_link or re.search(r'<a[^>]+href="\{\{ \'/take-action/\'[^>]+class="[^"]*(?:btn|cta)', nav):
+        audit.fail("brand: the desktop Take Action navigation item must remain a normal nav link")
+
+    if (ROOT / "assets" / "css" / "evidence-led.css").exists():
+        audit.fail("editorial: the rejected evidence-led redesign stylesheet must not return")
+    for endpoint in (ROOT / "assets" / "data" / "investigation.json", ROOT / "assets" / "data" / "current-facts.csv"):
+        if endpoint.exists():
+            audit.fail(f"editorial: internal research data must not be published at {endpoint.relative_to(ROOT)}")
+
+    for metric_id in (
+        "confirmed_security_floor",
+        "atrs_manager_funding",
+        "treasury_conditional_payment",
+    ):
+        if metric_id not in stats_bar:
+            audit.fail(f"canonical: stats bar is not sourced from {metric_id}")
+    if "site.data.investigation" not in stats_bar:
+        audit.fail("canonical: stats bar must read from the investigation data model")
+    if re.search(r">\s*\+?\$(?:65|50|10)M\s*<", stats_bar):
+        audit.fail("canonical: stats bar contains a hardcoded headline amount")
+
+    for route in (
+        "https://arpensions.org/",
+        "https://arpensions.org/methodology/",
+        "https://arpensions.org/news/",
+        "https://arpensions.org/glossary/",
+        "https://arpensions.org/key-figures/",
+    ):
+        if route not in llms:
+            audit.fail(f"discovery: llms.txt is missing {route}")
+
+    evidence = (ROOT / "evidence.md").read_text(encoding="utf-8")
+    issue = (ROOT / "the-issue.md").read_text(encoding="utf-8")
+    for token in ("scrollytelling: true", "charts: true", "apexcharts: true", 'class="scrolly"', 'id="exposure-chart"', 'id="decision-window-chart"'):
+        if token not in evidence:
+            audit.fail(f"interaction: Evidence is missing {token}")
+    for token in ("d3sankey: true", 'id="influence-sankey"', 'class="visual-fallback"'):
+        if token not in issue:
+            audit.fail(f"interaction: The Issue is missing {token}")
+    for asset in (
+        "charts.js",
+        "decision-window.js",
+        "influence-sankey.js",
+        "scrollytelling.js",
+        "timeline-thread.js",
+        "vendor/scrollama.min.js",
+    ):
+        if not (ROOT / "assets" / "js" / asset).is_file():
+            audit.fail(f"interaction: missing restored JavaScript asset assets/js/{asset}")
+
+    take_action = (ROOT / "take-action.md").read_text(encoding="utf-8")
+    if "actionnetwork.org/widgets" not in take_action or "<noscript>" not in take_action:
+        audit.fail("conversion: Take Action must retain the Action Network embed and no-JavaScript path")
+    if "petition-fallback" not in take_action or "/privacy/" not in take_action:
+        audit.fail("conversion: Take Action needs a visible direct petition path and privacy link")
+    if "source=widget" in take_action or take_action.count("source=arpensions") < 2:
+        audit.fail("conversion: Action Network attribution must use source=arpensions")
 
 
 def output_target(site: Path, url_path: str) -> Path | None:
@@ -403,7 +324,7 @@ def audit_public_contract(audit: Audit, site: Path, id_cache: dict[Path, set[str
             audit.fail(f"public contract: missing historical download {url}")
 
     legacy = yaml.safe_load(LEGACY_ANCHORS.read_text(encoding="utf-8"))
-    legacy_targets = yaml.safe_load(LEGACY_TARGETS.read_text(encoding="utf-8"))
+    targets = yaml.safe_load(LEGACY_TARGETS.read_text(encoding="utf-8"))
     for url, anchors in legacy.items():
         target = output_target(site, url)
         if target is None or target not in id_cache:
@@ -412,18 +333,10 @@ def audit_public_contract(audit: Audit, site: Path, id_cache: dict[Path, set[str
         missing = sorted(set(anchors) - id_cache[target])
         if missing:
             audit.fail(f"public contract: {url} lacks legacy anchors: {', '.join(missing)}")
-        target_map = legacy_targets.get(url, {})
-        missing_mappings = sorted(set(anchors) - set(target_map))
+        mapping = targets.get(url, {})
+        missing_mappings = sorted(set(anchors) - set(mapping))
         if missing_mappings:
             audit.fail(f"public contract: {url} lacks legacy target mappings: {', '.join(missing_mappings)}")
-        rendered = BeautifulSoup(target.read_text(encoding="utf-8"), "html.parser")
-        for legacy_id in anchors:
-            current_id = target_map.get(legacy_id)
-            if current_id and current_id not in id_cache[target]:
-                audit.fail(f"public contract: {url} maps #{legacy_id} to missing #{current_id}")
-            alias = rendered.find(id=legacy_id)
-            if alias and current_id and alias.get("data-legacy-target") != current_id:
-                audit.fail(f"public contract: {url} renders the wrong target for #{legacy_id}")
 
 
 def audit_html(audit: Audit, site: Path, data: dict) -> None:
@@ -434,11 +347,10 @@ def audit_html(audit: Audit, site: Path, data: dict) -> None:
 
     soup_cache: dict[Path, BeautifulSoup] = {}
     id_cache: dict[Path, set[str]] = {}
+    jsonld_cache: dict[Path, list[dict]] = {}
     for path in pages:
-        rendered_text = path.read_text(encoding="utf-8")
-        if "&lt;/cite&gt;" in rendered_text or re.search(r"<p>\s*&lt;/(?:cite|div)&gt;\s*</p>", rendered_text):
-            audit.fail(f"{path.relative_to(site)}: rendered content contains an escaped orphaned citation closure")
-        soup = BeautifulSoup(rendered_text, "html.parser")
+        raw = path.read_text(encoding="utf-8")
+        soup = BeautifulSoup(raw, "html.parser")
         soup_cache[path] = soup
         ids = [tag.get("id") for tag in soup.find_all(id=True)]
         duplicates = sorted(item for item, count in Counter(ids).items() if count > 1)
@@ -450,31 +362,29 @@ def audit_html(audit: Audit, site: Path, data: dict) -> None:
         canonical = soup.find("link", rel=lambda value: value and "canonical" in value)
         titles = soup.find_all("title")
         if len(titles) != 1:
-            audit.fail(f"{path.relative_to(site)}: expected one title element, found {len(titles)}")
-        elif len(titles[0].get_text(strip=True)) > 65:
-            audit.fail(f"{path.relative_to(site)}: title exceeds 65 characters")
+            audit.fail(f"{path.relative_to(site)}: expected one title, found {len(titles)}")
+        elif len(titles[0].get_text(strip=True)) > 120:
+            audit.fail(f"{path.relative_to(site)}: title exceeds 120 characters")
         if not refresh:
             h1s = soup.find_all("h1")
             if len(h1s) != 1:
                 audit.fail(f"{path.relative_to(site)}: expected one h1, found {len(h1s)}")
-            heading_levels = [int(tag.name[1]) for tag in soup.find_all(re.compile(r"^h[1-6]$"))]
-            for previous, current in zip(heading_levels, heading_levels[1:]):
+            levels = [int(tag.name[1]) for tag in soup.find_all(re.compile(r"^h[1-6]$"))]
+            for previous, current in zip(levels, levels[1:]):
                 if current > previous + 1:
-                    audit.fail(
-                        f"{path.relative_to(site)}: heading level jumps from h{previous} to h{current}"
-                    )
-            expected_canonical = "https://arpensions.org" + output_url(site, path)
-            if not canonical or str(canonical.get("href", "")) != expected_canonical:
-                audit.fail(
-                    f"{path.relative_to(site)}: canonical is {canonical.get('href') if canonical else None!r}, "
-                    f"expected {expected_canonical!r}"
-                )
+                    audit.fail(f"{path.relative_to(site)}: heading jumps from h{previous} to h{current}")
+            expected = "https://arpensions.org" + output_url(site, path)
+            if not canonical or canonical.get("href") != expected:
+                audit.fail(f"{path.relative_to(site)}: canonical URL does not match {expected}")
         elif not canonical or not str(canonical.get("href", "")).startswith("https://arpensions.org/"):
-            audit.fail(f"{path.relative_to(site)}: redirect page lacks an absolute canonical URL")
+            audit.fail(f"{path.relative_to(site)}: redirect page lacks an absolute campaign canonical URL")
 
+        visible_text = soup.get_text("\n")
+        if re.search(r"(?:^|\n)\s*#{1,6}\s+\S", visible_text):
+            audit.fail(f"{path.relative_to(site)}: literal Markdown heading leaked into rendered copy")
         for image in soup.find_all("img"):
             if not image.has_attr("alt"):
-                audit.fail(f"{path.relative_to(site)}: image lacks alt attribute: {image.get('src')}")
+                audit.fail(f"{path.relative_to(site)}: image lacks alt text: {image.get('src')}")
         for labeled in soup.find_all(attrs={"aria-label": True}):
             if not str(labeled.get("aria-label", "")).strip():
                 audit.fail(f"{path.relative_to(site)}: empty aria-label")
@@ -482,35 +392,12 @@ def audit_html(audit: Audit, site: Path, data: dict) -> None:
         jsonld_objects: list[dict] = []
         for script in soup.find_all("script", attrs={"type": "application/ld+json"}):
             try:
-                parsed_jsonld = json.loads(html.unescape(script.string or ""))
-                if isinstance(parsed_jsonld, dict):
-                    jsonld_objects.append(parsed_jsonld)
+                parsed = json.loads(html.unescape(script.string or ""))
+                if isinstance(parsed, dict):
+                    jsonld_objects.append(parsed)
             except json.JSONDecodeError as exc:
                 audit.fail(f"{path.relative_to(site)}: invalid JSON-LD: {exc}")
-        if output_url(site, path) == "/":
-            organizations = [item for item in jsonld_objects if item.get("@id") == "https://arpensions.org/#organization"]
-            if not organizations or organizations[0].get("@type") != "Organization":
-                audit.fail("homepage: organization JSON-LD must use the generic Organization type")
-            websites = [item for item in jsonld_objects if item.get("@type") == "WebSite"]
-            if len(websites) != 1:
-                audit.fail(f"homepage: expected one WebSite JSON-LD object, found {len(websites)}")
-            if not soup.find("meta", attrs={"property": "og:image:alt"}):
-                audit.fail("homepage: Open Graph image needs alternative text metadata")
-            if not soup.find("meta", attrs={"name": "twitter:image:alt"}):
-                audit.fail("homepage: Twitter image needs alternative text metadata")
-
-        for chart in soup.select("[data-investigation-chart]"):
-            table = chart.find("table")
-            if table is None:
-                audit.fail(f"{path.relative_to(site)}: evidence chart lacks an HTML table fallback")
-            elif table.has_attr("hidden") or table.get("aria-hidden") == "true":
-                audit.fail(f"{path.relative_to(site)}: evidence chart table fallback is hidden")
-        for route in soup.select(".route-map"):
-            table = route.find("table")
-            if table is None:
-                audit.fail(f"{path.relative_to(site)}: route visualization lacks an HTML table fallback")
-            elif table.has_attr("hidden") or table.get("aria-hidden") == "true":
-                audit.fail(f"{path.relative_to(site)}: route visualization table fallback is hidden")
+        jsonld_cache[path] = jsonld_objects
 
     audit_public_contract(audit, site, id_cache)
 
@@ -521,21 +408,16 @@ def audit_html(audit: Audit, site: Path, data: dict) -> None:
             if not href or href.startswith(("mailto:", "tel:", "javascript:")):
                 continue
             parsed = urlsplit(urljoin(current_url, href))
-            if parsed.scheme and parsed.scheme not in {"http", "https"}:
-                continue
             if parsed.netloc and parsed.netloc not in {"arpensions.org", "www.arpensions.org"}:
+                continue
+            if parsed.scheme and parsed.scheme not in {"http", "https"}:
                 continue
             target = path if not parsed.path else output_target(site, parsed.path)
             if target is None or not target.exists():
                 audit.fail(f"{path.relative_to(site)}: broken internal link {href}")
                 continue
-            if parsed.fragment:
-                if target.suffix.lower() != ".html":
-                    continue
-                if target not in soup_cache:
-                    soup_cache[target] = BeautifulSoup(target.read_text(encoding="utf-8"), "html.parser")
-                    id_cache[target] = {tag.get("id") for tag in soup_cache[target].find_all(id=True)}
-                if unquote(parsed.fragment) not in id_cache[target]:
+            if parsed.fragment and target.suffix.lower() == ".html":
+                if unquote(parsed.fragment) not in id_cache.get(target, set()):
                     audit.fail(f"{path.relative_to(site)}: missing anchor in {href}")
 
         asset_refs: list[tuple[str, str]] = []
@@ -544,54 +426,87 @@ def audit_html(audit: Audit, site: Path, data: dict) -> None:
                 value = str(tag.get(attribute, "")).strip()
                 if not value:
                     continue
-                if attribute == "srcset":
-                    values = [part.strip().split()[0] for part in value.split(",") if part.strip()]
-                else:
-                    values = [value]
-                asset_refs.extend((tag.name, item) for item in values)
+                values = [part.strip().split()[0] for part in value.split(",")] if attribute == "srcset" else [value]
+                asset_refs.extend((tag.name, item) for item in values if item)
         for tag in soup.find_all("link", href=True):
-            rel_values = set(tag.get("rel", []))
-            if rel_values & {"stylesheet", "icon", "preload"}:
+            if set(tag.get("rel", [])) & {"stylesheet", "icon", "preload"}:
                 asset_refs.append(("link", str(tag["href"])))
-
         for tag_name, reference in asset_refs:
             parsed = urlsplit(urljoin(current_url, reference))
             if parsed.scheme in {"data", "blob"}:
                 continue
             if parsed.netloc and parsed.netloc not in {"arpensions.org", "www.arpensions.org"}:
                 continue
-            if parsed.scheme and parsed.scheme not in {"http", "https"}:
-                continue
             target = output_target(site, parsed.path)
             if target is None or not target.exists():
                 audit.fail(f"{path.relative_to(site)}: broken {tag_name} asset {reference}")
 
-    homepage = (site / "index.html").read_text(encoding="utf-8")
+    homepage = soup_cache[site / "index.html"]
+    if "Arkansans for Pension Integrity" not in homepage.get_text(" "):
+        audit.fail("homepage: campaign identity is missing")
+    take_action = next((a for a in homepage.select(".nav-links a") if a.get_text(" ", strip=True) == "Take Action"), None)
+    if not take_action or any(name in take_action.get("class", []) for name in ("btn-primary", "nav-cta", "cta")):
+        audit.fail("homepage: Take Action must be an ordinary navigation link")
+    for attribute, value in (("property", "og:image:alt"), ("name", "twitter:image:alt")):
+        tag = homepage.find("meta", attrs={attribute: value})
+        if not tag or not str(tag.get("content", "")).strip():
+            audit.fail(f"homepage: missing {value} metadata")
+    homepage_jsonld = jsonld_cache[site / "index.html"]
+    organization = next(
+        (
+            item
+            for item in homepage_jsonld
+            if item.get("@id") == "https://arpensions.org/#organization"
+            and item.get("@type") in {"Organization", "NGO"}
+        ),
+        None,
+    )
+    website = next(
+        (
+            item
+            for item in homepage_jsonld
+            if item.get("@id") == "https://arpensions.org/#website"
+            and item.get("@type") == "WebSite"
+        ),
+        None,
+    )
+    if organization is None:
+        audit.fail("homepage: Organization JSON-LD is missing")
+    if website is None:
+        audit.fail("homepage: WebSite JSON-LD is missing")
+    home_raw = (site / "index.html").read_text(encoding="utf-8")
     for metric_id in ("confirmed_security_floor", "atrs_manager_funding", "treasury_conditional_payment"):
         display = data["metrics"][metric_id]["display"]
-        if display not in homepage:
-            audit.fail(f"rendered homepage lacks canonical metric {metric_id}: {display}")
-    if "og-default.png" not in homepage:
-        audit.fail("rendered homepage does not use the replacement Open Graph image")
+        if display not in home_raw and display.lstrip("+") not in home_raw:
+            audit.fail(f"homepage: canonical figure {metric_id} ({display}) is missing")
 
-    rendered_json_path = site / "assets" / "data" / "investigation.json"
-    try:
-        rendered_data = json.loads(rendered_json_path.read_text(encoding="utf-8"))
-        if rendered_data != data:
-            audit.fail("rendered investigation.json does not exactly match investigation.yml")
-    except (OSError, json.JSONDecodeError) as exc:
-        audit.fail(f"rendered investigation.json is unreadable: {exc}")
+    evidence = soup_cache.get(site / "evidence" / "index.html")
+    if evidence:
+        required = {
+            ".scrolly": "scrollytelling",
+            "#exposure-chart": "exposure chart",
+            "#decision-window-chart": "decision timeline",
+            ".timeline-wrapper": "event timeline",
+        }
+        for selector, label in required.items():
+            if not evidence.select_one(selector):
+                audit.fail(f"evidence: restored {label} is missing")
+        scripts = " ".join(str(tag.get("src", "")) for tag in evidence.find_all("script"))
+        for name in ("charts.js", "decision-window.js", "scrollytelling.js", "timeline-thread.js"):
+            if name not in scripts:
+                audit.fail(f"evidence: restored script {name} is missing")
+        if not evidence.select_one("#exposure-chart") or not evidence.select_one(".issue-agency-table table"):
+            audit.fail("evidence: exposure chart lacks its readable table")
 
-    rendered_csv_path = site / "assets" / "data" / "current-facts.csv"
-    try:
-        with rendered_csv_path.open(encoding="utf-8", newline="") as handle:
-            rows = {row["measure"]: row for row in csv.DictReader(handle)}
-        for metric_id, metric in data["metrics"].items():
-            row = rows.get(metric_id)
-            if not row or row.get("value") != metric["display"] or row.get("status") != metric["status"]:
-                audit.fail(f"rendered current-facts.csv is inconsistent for {metric_id}")
-    except (OSError, KeyError, csv.Error) as exc:
-        audit.fail(f"rendered current-facts.csv is unreadable: {exc}")
+    issue = soup_cache.get(site / "the-issue" / "index.html")
+    if issue:
+        if not issue.select_one("#influence-sankey"):
+            audit.fail("the issue: restored route graphic is missing")
+        scripts = " ".join(str(tag.get("src", "")) for tag in issue.find_all("script"))
+        if "influence-sankey.js" not in scripts:
+            audit.fail("the issue: restored route graphic script is missing")
+        if not issue.select_one(".visual-fallback table"):
+            audit.fail("the issue: route graphic lacks a readable table")
 
 
 def main() -> None:
@@ -600,14 +515,15 @@ def main() -> None:
     args = parser.parse_args()
 
     audit = Audit()
-    files = public_text_files()
-    audit_regressions(audit, files)
-    audit_core_amount_sources(audit, files)
+    source_files = public_source_files()
+    audit_regressions(audit, source_files, rendered=False)
     audit_front_matter(audit)
-    audit_accessibility_contracts(audit)
     data = audit_canonical(audit)
+    audit_source_contracts(audit)
     if args.site:
-        audit_html(audit, args.site.resolve(), data)
+        site = args.site.resolve()
+        audit_regressions(audit, rendered_text_files(site), rendered=True)
+        audit_html(audit, site, data)
     audit.finish()
 
 

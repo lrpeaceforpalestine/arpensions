@@ -1,56 +1,68 @@
 ---
 layout: page
-title: "Glossary — Reading the Public Investment Record"
-description: "Plain-language definitions for authorizations, manager funding, holdings, transaction states, marketability, and evidence labels."
+title: "Plain-Language Guide to the Investment Terms"
+description: "What Israel Bonds are, why liquidity matters, and how to read the dollar figures used across the site."
 permalink: /glossary/
 ---
 
-{% assign inv = site.data.investigation %}
-{% assign treasury = inv.agencies | where: "id", "treasury" | first %}
-{% assign apers = inv.agencies | where: "id", "apers" | first %}
+## Israel Bonds
 
-## Investment and transaction terms
+Israel Bonds are debt issued by the State of Israel and sold through a specialized broker-dealer. Buying a bond means lending money to the issuer in exchange for interest and repayment at maturity.
 
-**Authorization ceiling.** The maximum amount a board permits under a motion or resolution. It is not evidence that the amount was purchased, funded, or held.
+The Arkansas transactions discussed on this site involve bonds that do not trade on a secondary market. That feature is central to the pension-governance question.
 
-**Manager mandate.** An account or assignment under which an external investment manager may implement a strategy within agreed guidelines.
+## Why the financial terms matter
 
-**Manager funding.** Cash transferred into a manager account. It establishes funding of the mandate, not the account's underlying security holdings.
+**Sovereign debt** is money borrowed by a national government.
 
-**Purchase.** A transaction for a specified security and amount. A purchase record should be distinguished from an order or payment instruction that remains in process.
+**Non-tradable** means the holder cannot readily sell the bond to another investor before maturity.
 
-**Settlement.** Completion of the transaction's cash-and-security exchange.
+**Secondary market** is the market where investors buy and sell securities after they are first issued. A functioning secondary market provides liquidity and ongoing price information.
 
-**Holdings statement.** A record of securities owned as of a stated date. It is a dated snapshot, not necessarily a complete transaction history.
+**Liquidity** describes how easily an investment can be converted to cash without a significant loss. A bond that must be held to maturity is less flexible than a bond that can be sold.
 
-**Processing-stage payment.** A payment instruction whose record does not show completed bank processing or resulting ownership. The site's additional Treasury {{ inv.metrics.treasury_conditional_payment.display }} is in this category.
+**Credit risk** is the risk that an issuer may not make interest or principal payments as promised.
 
-## Security and portfolio terms
+**Expected return** is the gain an investor reasonably expects after considering interest, price, fees, and risk.
 
-**Israel Bonds.** Securities issued by the State of Israel and offered in the United States through Development Corporation for Israel. The campaign names the instrument while applying issuer-neutral standards to the public fiduciary process.
+**Portfolio fit** asks how an investment contributes to the fund as a whole, including diversification, cash needs, risk limits, and investment goals.
 
-**Sovereign debt.** Debt issued by a national government.
+## How to read the site's dollar figures
 
-**Limited marketability.** Constraints on ordinary resale or exit. Aon's ATRS memorandum uses this concept, and the campaign treats the transfer and secondary-market terms as information trustees should receive in plain language.
+<div class="issue-agency-table issue-agency-table--fact-detail" markdown="1">
 
-**Credit risk.** The risk that an issuer's financial capacity or willingness to meet its obligations changes.
-
-**Portfolio fit.** How an investment's expected risk, return, duration, liquidity, currency exposure, concentration, and role compare with the rest of a portfolio and available alternatives.
-
-**Pecuniary factor.** Under Arkansas's Act 498 framework, a factor expected to have a material financial effect on risk or return.
-
-## Evidence labels
-
-| Label | Meaning |
+| Term | Meaning on this site |
 |---|---|
-{% for status in inv.status_labels %}| **{{ status[0] | replace: '_', ' ' }}** | {{ status[1] }} |
-{% endfor %}
+| **Completed purchase** | A transaction supported by a completed security or cash-flow record. |
+| **Authorization ceiling** | The maximum amount a board allowed. It does not mean the full amount was spent. |
+| **Manager account** | An account controlled by an outside investment manager under an agreed mandate. |
+| **Manager funding** | Money moved into that account. It does not identify every security later bought or held. |
+| **Payment in process** | A payment instruction that the bank record did not yet show as completed. |
 
-## Current amount vocabulary
+</div>
 
-- **{{ inv.metrics.confirmed_security_floor.display }} security-level floor:** Treasury {{ treasury.measure }} plus APERS {{ apers.measure }}.
-- **{{ inv.metrics.atrs_manager_funding.display }} funded mandate:** ATRS funding to Reams; underlying holdings unproduced.
-- **{{ inv.metrics.combined_tied_or_funded.display }} securities plus funded mandate:** a transparent combination of different measures, not holdings.
-- **{{ inv.metrics.pension_authorization_ceiling.display }} authorization ceiling:** ATRS plus APERS maximum authorizations, not holdings.
+That is why **$65 million**, **$50 million**, and **$10 million** are shown separately:
 
-[See the ledger in context](/evidence/) · [Review selected records](/documents/)
+- **$65 million** is the completed-purchase total supported for Treasury and APERS.
+- **$50 million** is ATRS funding to the Reams manager account.
+- **$10 million** is a later Treasury payment the bank report still showed as processing.
+
+Adding the first two produces **$115 million across completed purchases and manager funding**. It should not be described as a single holdings total.
+
+## Pension-governance terms
+
+**Fiduciary duty** is the legal obligation to act for pension members and beneficiaries rather than for an outside interest.
+
+**Pecuniary factors** are financial considerations expected to have a material effect on risk or return. Arkansas Act 498 of 2023 requires covered pension decisions to rest on those factors.
+
+**Prudent investor rule** is the framework requiring trustees to use care, skill, caution, and a portfolio-wide view when managing pension assets.
+
+**Decision memo** is a plain term for the written financial work that explains why a proposed investment serves the fund. The Pension Investment Integrity Act would require this work for covered purchases of non-tradable sovereign debt.
+
+**Issuer-neutral** means the same rule applies regardless of which national government issues the debt.
+
+## The practical question
+
+Non-tradable sovereign debt may or may not be appropriate for a particular pension portfolio. The public should be able to see how trustees answered the financial questions before committing members' money.
+
+[See how Arkansas agencies handled the decisions &rarr;](/evidence/)
