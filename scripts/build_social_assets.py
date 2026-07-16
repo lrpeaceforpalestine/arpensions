@@ -76,7 +76,7 @@ def main() -> None:
     draw.rounded_rectangle((720, 50, 1150, 580), radius=16, fill=MINT, outline=JADE, width=2)
     text(draw, (752, 80), "ARKANSAS PUBLIC", 18, PINE_2, bold=True)
     text(draw, (752, 108), "INVESTMENT LEDGER", 26, PINE, bold=True)
-    text(draw, (752, 145), f"Evidence baseline · {data['updated_at']}", 15, PINE_2)
+    text(draw, (752, 145), f"ISRAEL BONDS · Evidence baseline {data['updated_at']}", 14, PINE_2, bold=True)
 
     ledger_row(
         draw,

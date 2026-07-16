@@ -508,11 +508,26 @@ hr {
   margin-block: 3rem;
 }
 
-/* === Table Overflow — Fallback for JS wrapper === */
+/* === Table Overflow — preserve the table accessibility tree === */
 .container-prose table {
+  width: 100%;
+  max-width: 100%;
+  table-layout: fixed;
+}
+
+body > header {
+  padding: 0;
+}
+
+.container-prose th,
+.container-prose td {
+  overflow-wrap: anywhere;
+}
+
+.table-scroll,
+.table-scroll-wrapper {
   max-width: 100%;
   overflow-x: auto;
-  display: block;
 }
 
 /* === Breakout classes — escape the prose column within the grid ===
@@ -626,6 +641,7 @@ hr {
 .nav-links > li {
   display: flex;
   align-items: center;
+  padding: 0;
 }
 
 .nav-links a {
@@ -689,12 +705,43 @@ hr {
 
 /* Mobile — full-screen overlay nav */
 @media (max-width: 768px) {
-  .nav-toggle {
+  .site-nav .container {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .nav-logo { order: 1; }
+  .nav-end { order: 2; margin-left: auto; }
+
+  .nav-links {
+    display: flex;
+    position: static;
+    flex: 1 0 100%;
+    order: 3;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.1rem 0.35rem;
+    margin: 0;
+    padding: 0.35rem 0 0;
+    background: transparent;
+  }
+
+  .nav-links a {
+    padding: 0.35rem 0.5rem;
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+  }
+
+  .nav-js .site-nav .container { flex-wrap: nowrap; gap: 1.5rem; }
+
+  .nav-js .nav-toggle {
     display: inline-flex;
     align-items: center;
   }
 
-  .nav-links {
+  .nav-js .nav-links {
     display: none;
     position: fixed;
     inset: 0;
@@ -709,12 +756,12 @@ hr {
     overflow-y: auto;
   }
 
-  .nav-links.nav-open {
+  .nav-js .nav-links.nav-open {
     display: flex;
   }
 
   @media (prefers-reduced-motion: no-preference) {
-    .nav-links.nav-open {
+    .nav-js .nav-links.nav-open {
       animation: navFadeIn 0.25s ease-out;
     }
   }
@@ -724,7 +771,7 @@ hr {
     to { opacity: 1; }
   }
 
-  .nav-links a {
+  .nav-js .nav-links a {
     font-family: var(--font-display);
     font-size: 1.5rem;
     font-weight: 500;
@@ -733,8 +780,8 @@ hr {
     padding: 0.5rem 0.75rem;
   }
 
-  .nav-links a:hover,
-  .nav-links a[aria-current="page"] {
+  .nav-js .nav-links a:hover,
+  .nav-js .nav-links a[aria-current="page"] {
     color: var(--api-jade-bright);
     border-bottom-color: var(--api-jade-bright);
   }
@@ -1407,6 +1454,7 @@ hr {
 }
 
 /* --- Responsive Tables --- */
+.table-scroll,
 .table-scroll-wrapper {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -2561,6 +2609,10 @@ blockquote footer {
   }
 }
 
+.nav-end .theme-toggle-btn {
+  margin: 0;
+}
+
 /* === Directional Page Flow === */
 .page-flow {
   margin-top: 3rem;
@@ -2593,7 +2645,7 @@ blockquote footer {
 }
 
 .theme-toggle-btn {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   width: 40px;
@@ -2605,6 +2657,10 @@ blockquote footer {
   color: var(--text-secondary);
   cursor: pointer;
   transition: color 0.15s, background-color 0.15s, border-color 0.15s;
+}
+
+.nav-js .theme-toggle-btn {
+  display: flex;
 }
 
 .theme-toggle-btn:hover {

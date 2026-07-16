@@ -12,9 +12,9 @@
      every other page keeps the strict hash-based policy. No reCAPTCHA/Google.
      This trusts AN's whole origin — the inherent third-party-embed trade-off;
      do not widen further without cause. -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://actionnetwork.org; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://actionnetwork.org; font-src https://fonts.gstatic.com; img-src 'self' data: https://actionnetwork.org; connect-src 'self' https://actionnetwork.org; form-action 'self' https://actionnetwork.org; object-src 'none';">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://actionnetwork.org; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://actionnetwork.org; font-src https://fonts.gstatic.com; img-src 'self' data: https://actionnetwork.org; connect-src 'self' https://actionnetwork.org; form-action 'self' https://actionnetwork.org; object-src 'none';">
 {% else %}
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-A2OjEGCbS6qImIS66ELxAVHhQOxctdwT3zDdCpT2g/M=' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com; img-src 'self' data:; object-src 'none';">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-A2OjEGCbS6qImIS66ELxAVHhQOxctdwT3zDdCpT2g/M='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src https://fonts.gstatic.com; img-src 'self' data:; object-src 'none';">
 {% endif %}
 
 <!-- Anti-FOUC: set theme + color-scheme + background/color before any rendering.
