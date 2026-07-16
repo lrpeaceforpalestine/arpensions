@@ -1,0 +1,8 @@
+{% assign source = site.data.investigation.sources[include.source_id] %}
+{% if source %}
+<cite class="record-citation">
+  <span class="record-citation__title">{{ source.title }}</span>
+  <span class="record-citation__locator">{{ source.agency }} · {{ source.date | date: "%B %-d, %Y" }} · {{ source.locator }}</span>
+  <a href="{{ source.record_url | relative_url }}">View record</a>
+</cite>
+{% endif %}

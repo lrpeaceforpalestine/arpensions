@@ -1,4 +1,4 @@
-<!-- Organization (every page) -->
+{% assign inv = site.data.investigation %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -9,30 +9,17 @@
   "email": "info@arpensions.org",
   "logo": {
     "@type": "ImageObject",
-    "@id": "https://arpensions.org/#logo",
     "url": "https://arpensions.org/assets/images/api-badge-512.png",
-    "contentUrl": "https://arpensions.org/assets/images/api-badge-512.png",
     "width": 512,
-    "height": 512,
-    "caption": "Arkansans for Pension Integrity logo"
+    "height": 512
   },
-  "description": "Grassroots Arkansas campaign advocating for pension integrity and fiduciary accountability regarding state retirement system investments in non-marketable foreign sovereign debt.",
-  "areaServed": {
-    "@type": "AdministrativeArea",
-    "name": "Arkansas"
-  },
-  "knowsAbout": ["pension integrity", "public records (FOIA)", "fiduciary duty", "state pension funds", "non-marketable sovereign debt", "pension fiduciary duty", "public finance oversight"],
-  "contactPoint": [{
-    "@type": "ContactPoint",
-    "contactType": "media inquiries",
-    "email": "info@arpensions.org",
-    "availableLanguage": ["en-US"]
-  }]
+  "description": "Arkansas campaign for documented, issuer-neutral pension investment safeguards and fiduciary accountability.",
+  "areaServed": {"@type": "AdministrativeArea", "name": "Arkansas"},
+  "knowsAbout": ["pension integrity", "Arkansas public records", "fiduciary duty", "state pension funds", "non-marketable sovereign debt"]
 }
 </script>
 
 {% if page.url == "/" %}
-<!-- WebSite (homepage only) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -40,153 +27,35 @@
   "@id": "https://arpensions.org/#website",
   "url": "https://arpensions.org",
   "name": "Arkansans for Pension Integrity",
+  "description": {{ inv.thesis.summary | jsonify }},
   "inLanguage": "en-US",
-  "publisher": {
-    "@id": "https://arpensions.org/#organization"
-  }
+  "publisher": {"@id": "https://arpensions.org/#organization"}
 }
 </script>
-{% endif %}
-
-{% unless page.url == "/" %}
-<!-- BreadcrumbList (every page except homepage) -->
+{% else %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://arpensions.org/"
-    }{% if page.layout == "post" %},
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "News",
-      "item": "https://arpensions.org/news/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "{{ page.title | escape }}"
-    }{% else %},
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "{{ page.title | escape }}"
-    }{% endif %}
-  ]
-}
-</script>
-{% endunless %}
-
-{% if page.layout == "post" %}
-<!-- NewsArticle (posts only) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "{{ page.title | escape }}",
-  "description": "{{ page.description | default: page.excerpt | strip_html | strip_newlines | escape }}",
-  "datePublished": "{{ page.date | date_to_xmlschema }}",
-  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
-  "author": {
-    "@id": "https://arpensions.org/#organization"
-  },
-  "publisher": {
-    "@id": "https://arpensions.org/#organization"
-  },
-  "image": "https://arpensions.org/assets/images/og-default.png",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "{{ page.url | absolute_url }}"
-  }
-}
-</script>
-{% endif %}
-
-{% if page.url == "/about/" %}
-<!-- FAQPage (about page only) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Isn't this about politics?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. This is about fiduciary duty and financial risk. Arkansas law requires that pension investments be made based on pecuniary factors — financial merit. When internal staff recommend against purchases and officials celebrate the investment as a political statement, there are legitimate questions about whether the fiduciary standard was met."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What investment are we investigating?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Our investigation focuses on non-marketable foreign sovereign debt — bonds issued by a foreign government that cannot be sold on any secondary market. Pension funds that purchase these instruments are locked in until maturity. All three major credit rating agencies (Moody's, S&amp;P, and Fitch) have downgraded the issuing country's credit since 2024. See the glossary for the full financial profile."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Why does this matter for my pension?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Even though the sovereign bond allocations are a small percentage of each fund's total assets, the process concerns are significant. If investment decisions can be made through political channels — bypassing independent analysis and overriding staff recommendations — it sets a precedent that could affect larger decisions in the future."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Are you calling for a boycott?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. We are not asking pension boards to buy or sell any specific investment. We are asking the Arkansas legislature to require independent credit analysis before pension funds commit to non-tradable sovereign debt. The Pension Investment Integrity Act would establish the same documented due diligence standard for sovereign debt that already applies to other investment classes."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is it legal to file FOIA requests and question state investment decisions?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Absolutely. Freedom of Information Act requests are a fundamental right under Arkansas law. Asking elected officials and appointed trustees to account for their investment decisions is exactly what pension oversight laws are designed to enable."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How is this campaign funded?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Arkansans for Pension Integrity operates on a shoestring budget through small donations. We have no institutional funding and no paid staff. This is a volunteer-driven campaign."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How can I help?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Visit the Take Action page to sign on in support, contact your legislators about the Pension Investment Integrity Act, attend a board meeting, or volunteer with the campaign."
-      }
-    }
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://arpensions.org/"},
+    {"@type": "ListItem", "position": 2, "name": {{ page.title | jsonify }}, "item": {{ page.url | absolute_url | jsonify }}}
   ]
 }
 </script>
 {% endif %}
 
 {% if page.url == "/evidence/" %}
-<!-- Report (evidence page only) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Report",
   "@id": "https://arpensions.org/evidence/#report",
-  "name": "FOIA Evidence: Arkansas Pension Investments in Non-Tradable Sovereign Debt",
+  "name": "Arkansas Public Investment Record",
   "url": "https://arpensions.org/evidence/",
-  "description": "Key findings from more than 1,200 public records obtained through FOIA requests to Arkansas state agencies.",
-  "publisher": { "@id": "https://arpensions.org/#organization" },
-  "about": ["Arkansas pension funds", "FOIA public records", "fiduciary duty", "non-marketable sovereign debt"],
+  "dateModified": {{ inv.updated_at | jsonify }},
+  "description": {{ inv.analysis_record.lead | jsonify }},
+  "publisher": {"@id": "https://arpensions.org/#organization"},
   "inLanguage": "en-US"
 }
 </script>

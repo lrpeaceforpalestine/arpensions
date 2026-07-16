@@ -1,26 +1,27 @@
+{% assign inv = site.data.investigation %}
 <section class="audience-cards" aria-label="Resources by audience">
   <div class="container">
-    <h2 class="audience-cards-heading">Find the resources for your role</h2>
+    <h2 class="audience-cards-heading">Start with the record that affects you</h2>
     <div class="audience-grid">
       <a href="{{ '/educators/' | relative_url }}" class="audience-card">
         <span class="audience-card-label">Teachers &amp; Educators</span>
-        <span class="audience-card-desc">Your pension fund authorized $50M without independent credit analysis. See what the public record shows.</span>
-        <span class="audience-card-link">Get informed &rarr;</span>
+        <span class="audience-card-desc">ATRS authorized {{ inv.agencies[2].authorization_display | replace: 'Up to', 'up to' }} and documented {{ inv.agencies[2].measure_display }} in manager funding. See the record on advice, authority, and holdings.</span>
+        <span class="audience-card-link">Read the ATRS record &rarr;</span>
       </a>
       <a href="{{ '/public-employees/' | relative_url }}" class="audience-card">
         <span class="audience-card-label">Public Employees</span>
-        <span class="audience-card-desc">$25–50M authorized with no independent analysis presented to the board. See what we found.</span>
-        <span class="audience-card-link">See the evidence &rarr;</span>
+        <span class="audience-card-desc">APERS approved a {{ inv.agencies[1].authorization_display }} range and later recorded a {{ inv.agencies[1].measure_display }} purchase. See the decision record and open implementation question.</span>
+        <span class="audience-card-link">Read the APERS record &rarr;</span>
       </a>
       <a href="{{ '/legislators/' | relative_url }}" class="audience-card">
         <span class="audience-card-label">Legislators &amp; Staff</span>
-        <span class="audience-card-desc">Review our policy brief on pension integrity and the case for 2027 legislation.</span>
-        <span class="audience-card-link">Read the brief &rarr;</span>
+        <span class="audience-card-desc">Review the issuer-neutral safeguards proposed for the 2027 legislative session.</span>
+        <span class="audience-card-link">Read the policy brief &rarr;</span>
       </a>
       <a href="{{ '/press/' | relative_url }}" class="audience-card">
         <span class="audience-card-label">Journalists &amp; Media</span>
-        <span class="audience-card-desc">Key findings, source documents, and contact information for your reporting.</span>
-        <span class="audience-card-link">Press resources &rarr;</span>
+        <span class="audience-card-desc">Use the current figures, status vocabulary, source trail, and campaign contact information.</span>
+        <span class="audience-card-link">Open press resources &rarr;</span>
       </a>
     </div>
   </div>

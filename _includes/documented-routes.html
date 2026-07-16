@@ -1,0 +1,31 @@
+{% assign inv = site.data.investigation %}
+<figure class="route-map">
+  <figcaption>
+    <span class="section-label">Documented routes</span>
+    <strong>Access and occurrence, without causal weighting</strong>
+  </figcaption>
+  <div class="route-sequence" aria-label="Meeting and outreach evidence by occurrence status">
+    <div class="route-origin"><strong>Issuer representatives</strong><small>April 2025 Arkansas outreach</small></div>
+    <div class="route-sequence-line" aria-hidden="true"></div>
+    <div class="route-event-grid">
+    {% for route in inv.routes %}
+      <article class="route-event route-event--{{ route.status }}">
+        <span class="route-event-status">{{ route.status }}</span>
+        <strong>{{ route.label }}</strong>
+        <p>{{ route.detail }}</p>
+      </article>
+    {% endfor %}
+    </div>
+  </div>
+  <div class="table-scroll" tabindex="0" role="region" aria-label="Accessible meeting occurrence status table">
+    <table class="route-table">
+      <thead><tr><th>Record item</th><th>Status</th><th>Meaning</th></tr></thead>
+      <tbody>
+      {% for route in inv.routes %}
+        <tr><th scope="row">{{ route.label }}</th><td>{{ route.status }}</td><td>{{ route.detail }}</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <p class="figure-note">The itinerary spans distinct venues. A scheduled or reported meeting is not treated as proof of attendance, substance, influence, or a later investment decision.</p>
+</figure>

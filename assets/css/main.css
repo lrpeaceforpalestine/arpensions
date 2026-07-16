@@ -2544,8 +2544,20 @@ blockquote footer {
 }
 
 @media (max-width: 600px) {
+  .audience-nav .container {
+    overflow-x: visible;
+  }
+
   .audience-nav-list {
-    justify-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .audience-nav-list a {
+    padding: 0.65rem 0.7rem;
+    text-align: center;
+    white-space: normal;
   }
 }
 
@@ -3415,6 +3427,35 @@ html.theme-transition *::after {
 #can_embed_form input::placeholder {
   color: var(--text-muted);
 }
+
+/* Action Network replaces the country selector with a custom control and
+   writes page-relative coordinates onto the transparent native select.
+   Anchor that hit target to its own responsive wrapper so it cannot widen
+   a narrow viewport after the embed initializes. */
+#can_embed_form .js-country_drop_wrap,
+#can_embed_form .js-country_drop_wrap .relative {
+  display: block !important;
+  width: 100%;
+  max-width: 100%;
+}
+
+#can_embed_form .js-country_drop_wrap .relative {
+  position: relative !important;
+}
+
+#can_embed_form #form-country {
+  top: 0 !important;
+  right: auto !important;
+  left: 0 !important;
+  max-width: 100% !important;
+}
+
+#can_embed_form .js-country_drop_wrap .can_select,
+#can_embed_form .js-country_drop_wrap .can_selectInner {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
 #can_embed_form input:focus,
 #can_embed_form select:focus,
 #can_embed_form textarea:focus {
