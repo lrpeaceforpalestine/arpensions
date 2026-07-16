@@ -1,75 +1,66 @@
 ---
 layout: landing
-title: "For Public Employees — The APERS Investment Record"
-description: "What Arkansas public employees and retirees should know about the confirmed APERS purchase and the Board's stated authorization range."
+title: "Your APERS Pension — What Public Employees Should Know"
+description: "A plain-language guide to APERS's $15 million Israel Bonds purchase and the safeguards Arkansas public employees can support."
 permalink: /public-employees/
 audience_nav: true
 breadcrumb: "For Public Employees"
 hero_band: pine
-mobile_cta_label: "Contact your legislators"
-mobile_cta_url: "/take-action/#contact-legislators"
+charts: true
 ---
 
 {% assign inv = site.data.investigation %}
 {% assign apers = inv.agencies | where: "id", "apers" | first %}
 
-## Your pension, your record
+## What happened with APERS money
 
-APERS's Investment Finance Subcommittee authorized a **{{ apers.authorization_display }}** range in May 2025. The reviewed transaction file documents a **{{ apers.measure_display }} purchase** on October 15, 2025.
+On May 15, 2025, the APERS Investment Finance Subcommittee authorized an Israel Bonds purchase in a **$25&ndash;$50 million range**. On October 15, APERS bought a two-year institutional bond for **{{ apers.measure_display }}**.
 
-The purchase is **{{ inv.transaction_figures.apers_below_minimum_difference.display }} below** the motion's stated minimum. The produced record does not resolve the operational or legal effect of that discrepancy, set an implementation deadline, or document an additional purchase through the record cutoff.
+The completed purchase was **{{ inv.transaction_figures.apers_below_minimum_difference.display }} below the minimum named in the motion**. The signed minutes and transaction record do not explain how APERS treated that difference.
 
-These records concern investment process and portfolio reporting. They do not show a change to earned-benefit formulas, payment schedules, or the legal obligation to pay benefits.
+<div class="callout" markdown="1">
 
-<div class="audience-fact-grid">
-  <article><span class="evidence-status evidence-status--established">{{ apers.status }}</span><strong>{{ apers.measure_display }}</strong><p>APERS security purchase confirmed by the October 15 transaction record.</p></article>
-  <article><span class="evidence-status evidence-status--authorization">authorization</span><strong>{{ apers.authorization_display }}</strong><p>The IFSC-authorized range is not the amount purchased.</p></article>
-  <article><span class="evidence-status evidence-status--interpretive">open question</span><strong>{{ inv.transaction_figures.apers_below_minimum_difference.display }}</strong><p>Difference below the motion's stated minimum; effect unresolved.</p></article>
-</div>
-
-## What APERS's analytical file contains
-
-The May 15 minutes document Jason Brady, acting as the Auditor's proxy on the APERS Board and Investment Finance Subcommittee, presenting the proposal and moving the authorization. Jim Hudson seconded it, and the motion carried without dissent.
-
-In the reviewed authorization file, we identified no Callan sovereign-credit memorandum tied to the decision. APERS's chief investment officer later represented internally that he prepared nothing for the Board on the topic and believed the consultants had not either. That is a bounded finding about the selected written record, not proof that no oral discussion or unproduced work occurred.
-
-{% include citation.html source_id="apers_authorization" %}
-{% include citation.html source_id="apers_analysis_email" %}
-{% include citation.html source_id="apers_purchase" %}
-
-{% include evidence-boundary.html
-  established="APERS approved the stated range and made the documented security purchase."
-  unresolved="The effect of the below-minimum purchase and any later transaction outside the cutoff remain open."
-  not_claimed="The site does not equate the authorization ceiling with holdings or infer a legal violation from the discrepancy alone."
-%}
-
-{% include search-boundary.html boundary_id="apers_analysis" %}
-
-## What the Integrity Act would protect
-
-{{ inv.legislation.full_summary }} It would leave the ultimate investment decision with APERS trustees.
-
-## What public employees can do
-
-1. **Read the primary pages.** Review the [signed authorization minutes](/documents/records/apers-authorization/) and [privacy-reviewed purchase record](/documents/records/apers-purchase/).
-2. **Contact your legislators.** Use the external [District Finder](https://districtfinder.youraedi.com/) linked from the [Arkansas Legislature's Legislators page](https://www.arkleg.state.ar.us/Legislators) and the fund-specific letter below. The address you enter goes to that service; the campaign does not receive it.
-3. **Follow APERS meetings.** Use [apers.org](https://apers.org/) for current meeting information and ask for fund-specific holdings and analytical records.
-
-<div class="letter-template letter-template--compact" markdown="1">
-<button class="copy-letter-btn" type="button" aria-label="Copy public employee letter to clipboard">Copy</button>
-
-Dear [Representative/Senator],
-
-I am an Arkansas public employee or APERS member asking you to support the Pension Investment Integrity Act in the 2027 session. APERS records document a purchase of {{ apers.measure_display }} under a {{ apers.authorization_display }} authorization, while the reviewed authorization file contains no Callan sovereign-credit memorandum tied to the decision.
-
-{{ inv.legislation.full_summary }} It is issuer-neutral and would not tell trustees what to buy or sell.
-
-Please support a public investment record for public retirement money.
-
-Sincerely,
-
-[Name, city]
+**Why public employees should care:** APERS chose a bond that cannot be sold on a secondary market. Members deserve to know how the expected return, credit risk, and loss of liquidity compared with other investments available to the system.
 
 </div>
 
-[Take action](/take-action/) · [Read the full evidence](/evidence/) · [Email Arkansans for Pension Integrity](mailto:info@arpensions.org)
+## What APERS put before the Board
+
+APERS's chief investment officer later wrote that he had not prepared Board material on the investment and believed the system's consultants had not prepared any either.
+
+The available files show the authorization, operational follow-up, and the later purchase. They do not include a decision memo from APERS staff or Callan that brings together the sovereign-credit case, expected return, liquidity, and comparison with alternatives.
+
+That does not mean APERS did no work. It means members should not have to reconstruct the financial case from scattered records after the fact.
+
+[Read the signed APERS minutes &rarr;]({{ inv.sources.apers_authorization.record_url }})
+
+[Read the staff email &rarr;]({{ inv.sources.apers_analysis_email.record_url }})
+[Read the {{ apers.measure_display }} purchase record &rarr;]({{ inv.sources.apers_purchase.record_url }})
+
+## The questions APERS members can ask
+
+- What analysis supported the $25&ndash;$50 million authorization?
+- Why was the completed {{ apers.measure_display }} purchase below the motion's stated minimum?
+- How did APERS compare the bond's yield and liquidity with other fixed-income options?
+- What role did Callan have before the vote, if any?
+- What policy will APERS use for the next non-tradable sovereign-debt purchase?
+
+## APERS in context
+
+<div style="max-width: 280px; margin: 0 auto 1.5rem;" data-aos="fade-up">
+  <canvas id="apers-funded-gauge" data-ratio="83" data-label="APERS funded ratio" aria-label="APERS funded ratio gauge showing approximately 83 percent, based on the fiscal year 2024 actuarial valuation" role="img"></canvas>
+</div>
+
+APERS reported an overall funded ratio of roughly **83%** in its fiscal year 2024 actuarial valuation. A {{ apers.measure_display }} purchase is a small share of the system's portfolio, but the same governance standard should apply throughout: show the financial work, explain the trade-offs, and put members first.
+
+## What the Integrity Act would change
+
+The Pension Investment Integrity Act would require a written credit analysis, alternatives comparison, liquidity explanation, and fiduciary determination for a covered purchase. APERS would post that material within 30 days after the transaction.
+
+Trustees would keep their authority. Members would gain a usable public explanation.
+
+## A message you can send
+
+> I am an Arkansas public employee and an APERS member. Please support the Pension Investment Integrity Act in the 2027 session. APERS authorized a $25&ndash;$50 million range and later purchased $15 million in Israel Bonds. Members deserve a clear written account of the credit, return, liquidity, and alternatives analysis behind covered pension investments. The Integrity Act would create that issuer-neutral process while leaving investment decisions with the trustees.
+
+[Contact your legislators &rarr;](/take-action/) or [read the APERS source documents &rarr;](/documents/).

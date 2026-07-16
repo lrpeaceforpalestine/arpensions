@@ -1,71 +1,69 @@
 ---
 layout: page
-title: "Methodology — Render-Aware Public-Records Review"
-description: "How Arkansans for Pension Integrity reviews source files, rendered PDF pages, transaction states, and bounded absence findings."
+title: "How We Work"
+description: "How Arkansans for Pension Integrity reviews public records, verifies claims, handles missing material, and prepares documents for publication."
 permalink: /methodology/
-breadcrumb: "Methodology"
-mobile_cta_label: "Question a finding"
-mobile_cta_url: "mailto:info@arpensions.org?subject=Methodology%20or%20source%20question"
 ---
 
-{% assign inv = site.data.investigation %}
+Good advocacy depends on getting the facts right and making them understandable. This is how Arkansans for Pension Integrity handles the records behind the site.
 
-## Research baseline
+<span class="section-label">Collection</span>
 
-The current investigation baseline covers **{{ inv.corpus.raw_files_display }} raw files** and **{{ inv.corpus.pdf_pages_display }} PDF pages**. All {{ inv.corpus.render_jobs_total }} PDF render jobs are complete. The transaction-record cutoff used for the site's amount ledger is {{ inv.record_cutoff | date: "%B %-d, %Y" }}; the PDF render gate was completed {{ inv.review_completed | date: "%B %-d, %Y" }}.
+## We request the decision records
 
-## Source preservation
+We use the Arkansas Freedom of Information Act to ask state agencies for board packets, minutes, contracts, correspondence, financial memoranda, transaction records, account statements, and other material related to the investment decisions.
 
-Agency productions are retained as received. File hashes, paths, page counts, duplicates, variants, and extraction outputs are tracked separately. Publication excerpts are derivative copies; privacy masking never changes the preserved source.
+Agency files stay in their original form. Published excerpts are linked back to the source file and exact page whenever possible.
 
-## Text and visual review
+<span class="section-label">Review</span>
 
-PDF text extraction is a locator aid, not a substitute for seeing the page. The review process combines:
+## We read the page, not just the text layer
 
-1. file inventory, hashing, and duplicate or variant reconciliation;
-2. native text extraction and OCR where useful;
-3. full-page rendering at readable resolution;
-4. visual inspection of pages classified as blank, empty, image-only, low-text, or relevant to an absence finding;
-5. comparison of cited page numbers with the rendered original; and
-6. propagation of supported facts and boundaries into the site's evidence model.
+Many government PDFs are scans, image-only pages, spreadsheets converted to PDF, or compiled files with unreliable text extraction. A computer search can miss a page that is fully readable on screen.
 
-This method is essential for pages whose substantive content is carried as vectors, images, overlays, or other elements ordinary extraction does not recover.
+We therefore use text search to find likely locations, then open and inspect the rendered pages. Pages that appear empty in extracted text receive visual review before we describe them as blank or lacking substantive content. The ATRS Aon memo on Board packet pages 149&ndash;150 is a good example: the rendered pages contain substantive advice that a text-only workflow can fail to represent accurately.
 
-## Transaction states
+<span class="section-label">Verification</span>
 
-The site distinguishes authorization, manager funding, payment processing, settlement, and security ownership. One state does not automatically prove the next.
+## We tie important claims to a specific record
 
-- A board authorization is a ceiling or permission.
-- Manager funding documents cash transferred to an investment account.
-- A payment marked processing documents an operational step.
-- Settlement evidence documents a completed transaction.
-- A holdings statement documents a position as of its stated date.
+For each central claim, we record:
 
-Amounts on the site are assigned to these states in [`_data/investigation.yml`](https://github.com/divestforARfuture/arpensions/blob/main/_data/investigation.yml), the canonical public evidence model.
+- the agency that supplied the file;
+- the file title and date;
+- the exact page, row, or message location;
+- what the document directly shows; and
+- what conclusion, if any, we draw from it.
 
-## Bounded absence findings
+Signed minutes and completed transaction records carry more weight than a proposal, itinerary, sales report, or authorization ceiling. We use the strongest available record and describe the document for what it is.
 
-Each principal absence finding identifies its searched corpus, record type, custodian, date range, and method. “Not identified in the reviewed production” does not mean a record never existed, an oral discussion never occurred, or no responsive material exists elsewhere.
+## We keep unlike dollar figures separate
 
-Audio transcripts and OCR are treated as search indices. A no-match result is reported as no identified topic match, not proof of exhaustive silence.
+The site distinguishes among:
 
-The principal absence findings publish those dimensions in a **Search boundary** box so readers can see the exact corpus, record types, method, result, and limiting statement beside the claim.
+- a board's authority to spend up to a certain amount;
+- a completed security purchase;
+- money transferred to an investment manager's account; and
+- a payment instruction still moving through a bank.
 
-## Evidence labels
+That is why the homepage shows {{ site.data.investigation.metrics.confirmed_security_floor.display }} in completed purchases separately from {{ site.data.investigation.metrics.atrs_manager_funding.display }} in ATRS manager funding and the later {{ site.data.investigation.metrics.treasury_conditional_payment.display }} Treasury payment.
 
-| Label | Use |
-|---|---|
-{% for status in inv.status_labels %}| **{{ status[0] | replace: '_', ' ' }}** | {{ status[1] }} |
-{% endfor %}
+<span class="section-label">Missing material</span>
 
-## Privacy and publication
+## We say what the released files do—and do not—show
 
-Before an excerpt is hosted, it is checked for account data, transaction and user identifiers, direct contact information, signatures where unnecessary, and operational details. Campaign masks are disclosed on the record page. Page crops preserve enough context to verify the finding while omitting unrelated sensitive material.
+When a page says that a document was not included, it refers to the files supplied for a particular public-records request and time period. It does not mean the document could not exist elsewhere, that no oral discussion occurred, or that every possible custodian was searched.
 
-## Interpretation
+That distinction is especially important when discussing financial analysis. The agency files contain meaningful implementation, credit, marketability, and manager-selection material. The public question is whether members can see a decision-specific written comparison of credit, return, liquidity, and alternatives tied to the board's choice.
 
-The project separates chronology from causation, organizational context from investment authority, and legal questions from adjudicated conclusions. Political advocacy and institutional relationships are reported when documented; claims about motive, control, statutory application, or investment merit are made only when the record supports them and are otherwise labeled interpretive or unresolved.
+<span class="section-label">Publication</span>
 
-## Reproduce or question a finding
+## We protect private and operational information
 
-Use the [selected document trail](/documents/) and exact locators on each record page. For a source question, alternate reading, or accessibility request, contact [info@arpensions.org](mailto:info@arpensions.org?subject=Methodology%20or%20source%20question).
+Before publishing an excerpt, we check it for bank account numbers, personal contact information, security credentials, and other details that do not belong on a public campaign site. If Arkansans for Pension Integrity applies masking, the document page identifies it.
+
+We do not change the words, dates, amounts, votes, or other substantive fields in an excerpt.
+
+## We make the sources easy to check
+
+The [Documents page](/documents/) provides a short reading path through the signed minutes, memoranda, transaction records, and manager-funding notice behind the main story. Readers who spot a problem or have additional records can contact [info@arpensions.org](mailto:info@arpensions.org).

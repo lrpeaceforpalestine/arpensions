@@ -1,76 +1,70 @@
 ---
 layout: page
 title: "Key Findings"
-description: "Six evidence-bounded findings on Arkansas public investment decisions, implementation, access, and disclosure."
+description: "Six clear takeaways about the advice, transactions, public-office roles, and financial questions behind Arkansas's Israel Bonds decisions."
 permalink: /findings/
 breadcrumb: "Key Findings"
 ---
 
-{% assign inv = site.data.investigation %}
-{% assign atrs = inv.agencies | where: "id", "atrs" | first %}
-
-These findings connect the transaction record to the procedures Arkansas public fiduciaries used. Each page separates what the files establish from what remains unresolved.
+The dollar figures tell only part of the story. These six findings explain how the strategy reached Arkansas agencies, what professional advice was provided, what the agencies later did, and why a written financial process would protect pension members.
 
 <div class="findings-grid" markdown="1">
 
 <article class="finding-card" markdown="1">
 
-## [ATRS: Advice, Authorization, and the Decision Record](/findings/procedural-asymmetry/)
+## [What Aon Advised ATRS](/findings/procedural-asymmetry/)
 
-Aon's page 149 memorandum gives substantive implementation and manager-selection advice and recommends Reams. Page 150 withholds an invest-or-not and individual-security recommendation. The distinction defines the ATRS analytical record.
-
-</article>
-
-<article class="finding-card" markdown="1">
-
-## [ATRS Mandate Funding and the Holdings Record](/findings/oversight-gap/)
-
-ATRS documented **{{ atrs.measure_display }} in funding to Reams**. The produced files do not identify its security-level purchases, holdings, settlement dates, or deployment pace.
+Aon helped ATRS choose an implementation structure and recommended Reams. It did not advise trustees whether to make the investment or which bond to buy. The distinction separates manager selection from the Board's financial case for the strategy.
 
 </article>
 
 <article class="finding-card" markdown="1">
 
-## [The Auditor's Office in the Investment Record](/findings/auditor-channel/)
+## [What ATRS's $50 Million Funding Means](/findings/oversight-gap/)
 
-The Auditor held a formal ATRS board role, and Chief Deputy Auditor Jason Brady acted as designee or proxy in ATRS and APERS settings. Separate records document scheduling, presentation, correspondence, and promotion.
-
-</article>
-
-<article class="finding-card" markdown="1">
-
-## [ASHERS: A Documented Pitch Without Identified Adoption](/findings/control-case/)
-
-The sellers' pitch reached ASHERS through DFA. The selected records contain no identified reply, authorization, or holding and do not establish the reason for the different outcome.
+ATRS reported moving $50 million into the Reams manager account. The released account records do not list the individual bonds, settlement dates, or later holdings, so manager funding should not be described as a security-level total.
 
 </article>
 
 <article class="finding-card" markdown="1">
 
-## [National-Network and Political Context](/findings/sfof-pipeline/)
+## [The Auditor's Office and the Pension Boards](/findings/auditor-channel/)
 
-SFOF-linked records document event participation, model-case circulation, speech preparation, and post-action contact facilitation. Allocation direction and decision causation remain unproved.
+The Auditor holds a formal ATRS board role, and Chief Deputy Auditor Jason Brady participated as a designee or proxy in ATRS and APERS settings. Other records show scheduling, presentation, correspondence, and public promotion.
 
 </article>
 
 <article class="finding-card" markdown="1">
 
-## [The Broker-Dealer and Marketability Record](/findings/regulatory-record/)
+## [The ASHERS Comparison](/findings/control-case/)
 
-The specialized distribution channel, Aon's marketability note, and historical regulatory disclosures are relevant to due diligence. The application of Arkansas's exclusive-agency provision remains a legal question.
+DFA introduced Israel Bonds representatives to ASHERS, which received a sales presentation. Later agency messages said ASHERS had no holding or purchase. The available records do not say why its path differed from ATRS and APERS.
+
+</article>
+
+<article class="finding-card" markdown="1">
+
+## [The National Political Network](/findings/sfof-pipeline/)
+
+State Financial Officers Foundation records show event participation, a seller sponsor listing, circulation of another state's purchase, speech preparation, and later offers to connect member states. That context matters without proving that the network dictated a pension vote.
+
+</article>
+
+<article class="finding-card" markdown="1">
+
+## [The Seller and the Liquidity Question](/findings/regulatory-record/)
+
+Israel Bonds use a specialized U.S. sales channel and have limited marketability. Those features make liquidity, execution, regulatory history, and comparison with other fixed-income choices part of a prudent review.
 
 </article>
 
 </div>
 
-## One policy response
+## One practical response
 
-{{ inv.legislation.full_summary }} The same issuer-neutral procedure would apply to every covered acquisition.
+The Pension Investment Integrity Act would require the financial case for a covered purchase to be written down and published after the transaction. The same process would apply regardless of issuer, and trustees would retain the final investment decision.
 
-That procedure does not dictate an outcome. It gives beneficiaries, trustees, legislators, and journalists a common record with which to evaluate one.
+[Read the full explainer &rarr;](/evidence/)
 
----
-
-- [See the evidence ledger](/evidence/)
-- [Review the key figures](/key-figures/)
-- [Read the Integrity Act proposal](/legislators/)
+[Review the primary documents &rarr;](/documents/)
+[Read the Integrity Act brief &rarr;](/legislators/)

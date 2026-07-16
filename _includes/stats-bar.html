@@ -1,21 +1,17 @@
-{% assign inv = site.data.investigation %}
-<section class="stats-bar" aria-label="Evidence status summary">
+<section class="stats-bar" aria-label="Key amounts">
   <div class="container">
     <div class="stats-grid">
       <div class="stat">
-        <span class="evidence-status evidence-status--established">established</span>
-        <span class="stat-number" aria-label="{{ inv.metrics.confirmed_security_floor.aria_label }}">{{ inv.metrics.confirmed_security_floor.display }}</span>
-        <span class="stat-label">{{ inv.metrics.confirmed_security_floor.detail }}</span>
+        <span class="stat-number" aria-label="65 million dollars" data-countup="65" data-countup-prefix="$" data-countup-suffix="M" data-countup-duration="1.2">$65M</span>
+        <span class="stat-label">in completed purchases documented at the State Treasury and APERS</span>
       </div>
       <div class="stat">
-        <span class="evidence-status evidence-status--funded">funded mandate</span>
-        <span class="stat-number" aria-label="{{ inv.metrics.atrs_manager_funding.aria_label }}">{{ inv.metrics.atrs_manager_funding.display }}</span>
-        <span class="stat-label">{{ inv.metrics.atrs_manager_funding.detail }}</span>
+        <span class="stat-number" aria-label="50 million dollars" data-countup="50" data-countup-prefix="$" data-countup-suffix="M" data-countup-duration="1.2">$50M</span>
+        <span class="stat-label">ATRS moved into a manager account created for its Israel Bonds strategy</span>
       </div>
       <div class="stat">
-        <span class="evidence-status evidence-status--conditional">conditional</span>
-        <span class="stat-number" aria-label="{{ inv.metrics.treasury_conditional_payment.aria_label }}">{{ inv.metrics.treasury_conditional_payment.display }}</span>
-        <span class="stat-label">{{ inv.metrics.treasury_conditional_payment.detail }}</span>
+        <span class="stat-number" aria-label="10 million dollars" data-countup="10" data-countup-prefix="$" data-countup-suffix="M" data-countup-duration="1">$10M</span>
+        <span class="stat-label">in a later Treasury payment record that still showed the bank processing it</span>
       </div>
     </div>
   </div>

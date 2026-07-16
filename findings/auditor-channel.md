@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "The Auditor's Office in the Investment Record"
-description: "Formal board roles, proxy participation, scheduling, presentation, and promotion documented in the Arkansas investment record."
+title: "The Auditor's Office and the Pension Boards"
+description: "Formal board roles, proxy participation, scheduling, presentation, correspondence, and public promotion in the Arkansas Israel Bonds story."
 permalink: /findings/auditor-channel/
 breadcrumb: "Key Findings"
 ---
@@ -9,52 +9,35 @@ breadcrumb: "Key Findings"
 {% assign inv = site.data.investigation %}
 {% assign apers = inv.agencies | where: "id", "apers" | first %}
 
-The Auditor of State does not manage ATRS or APERS assets and is not either system's investment staff. The office nevertheless appears in the record through formal board roles and through documented scheduling, presentation, correspondence, and promotional activity.
+The Auditor of State does not manage ATRS or APERS assets. But the office was not simply an outside observer. Arkansas law gives the Auditor a formal ATRS board role, and the office participated in both pension systems through designees or proxies.
 
-Those roles should be described separately.
+## Formal roles
 
-## Formal governance roles
+The Auditor is an ex-officio ATRS trustee. ATRS records identify Chief Deputy Auditor Jason Brady as Dennis Milligan's designee in Board settings.
 
-The Auditor is an ex-officio ATRS trustee. ATRS records list Chief Deputy Auditor Jason Brady as Dennis Milligan's designee at Board proceedings. At APERS, signed minutes identify Brady as the Auditor's proxy on the Board and Investment Finance Subcommittee. In that formal capacity, Brady presented the proposal and made the May 15, 2025 motion authorizing **{{ apers.authorization_display }}**; the motion carried without dissent.
+At APERS, signed minutes identify Brady as the Auditor's proxy. In that role, he presented the Israel Bonds proposal and moved to authorize a **{{ apers.authorization_display }}** range on May 15, 2025. The motion carried.
 
-This is more precise than treating the Auditor's office as an outsider to pension governance. The officeholder and proxy had formal seats in the decision setting, while asset management and investment analysis remained the responsibility of the systems and their advisers.
+These were formal governance roles. Investment analysis and asset management remained the responsibility of the systems and their advisers.
 
-{% include citation.html source_id="atrs_auditor_designee" %}
-{% include citation.html source_id="apers_authorization" %}
+## Scheduling and outreach
 
-## Scheduling and presentation
+Auditor-office records show staff helping coordinate an April 14&ndash;15 itinerary for Israel Bonds representatives. The itinerary listed eight stops across pension, executive, legislative, Treasury, and cabinet offices or settings—not one block of meetings in a single room.
 
-Auditor-office records document coordination of an April 2025 Capitol itinerary for the issuer's representatives. The itinerary lists **eight scheduled stops across pension, legislative, Treasury, and cabinet offices**, including meetings involving pension and Treasury officials.
-
-The encounter evidence also has different strengths:
-
-- **Confirmed:** the meeting involving DFA Secretary Jim Hudson and DFA official Andy Babbitt is supported by records from the participating office.
-- **Reported:** encounters involving APERS Executive Director Amy Fecher and members of the Treasury team appear in participant or seller reporting but lack the same independent confirmation in the reviewed files.
-- **Scheduled:** calendar entries establish intended meetings, not necessarily attendance or substance.
-- **Unconfirmed:** the scheduled encounter with ATRS Executive Director Mark White was not independently confirmed in the reviewed corpus.
-
-Chronology shows access and sequence. It does not establish that any encounter caused a later authorization or purchase.
-
-{% include citation.html source_id="capitol_itinerary" %}
-{% include citation.html source_id="hudson_babbitt_confirmation" %}
-{% include citation.html source_id="seller_reported_meetings" %}
+Records from DFA show that a meeting involving Jim Hudson and Andy Babbitt took place. Other messages describe encounters with APERS Executive Director Amy Fecher and members of the Treasury team. The itinerary itself shows where meetings were planned; it does not prove that every listed appointment occurred.
 
 ## Correspondence and promotion
 
-The productions also document Brady drafting Milligan correspondence, preparing material for a State Financial Officers Foundation meeting, sharing pension-related communications within the Auditor's office, and participating in post-vote promotion. These records establish activity and institutional relationships. They do not establish editorial control by an outside organization, payment terms, or a single causal chain from advocacy to investment.
+The office's records also show Brady drafting correspondence, preparing material for a State Financial Officers Foundation appearance, sharing pension-related messages inside the office, and participating in public promotion after the pension actions.
 
-{% include evidence-boundary.html
-  established="The Auditor held a formal ATRS board role; Brady acted as designee or proxy, participated in APERS committee proceedings, and the office coordinated and promoted activity documented in the record."
-  unresolved="The record does not isolate the influence of any one office, meeting, or participant on the independent legal decisions of the boards."
-  not_claimed="The Auditor is not described as managing pension assets, serving as pension investment staff, or solely causing an investment decision."
-%}
+This activity is relevant context. It does not, by itself, tell us why an independent board member voted a particular way.
 
 ## Why the roles matter
 
-When elected officials, board representatives, sellers, staff, and advisers occupy overlapping parts of a decision record, trustees should be able to point to a clear written investment analysis that stands apart from political sponsorship. The Integrity Act would create that issuer-neutral record without restricting who may request a meeting or advocate for an investment.
+When elected officials, proxies, sellers, staff, and advisers all take part in the same story, a written financial case gives trustees and members a common point of reference. The Integrity Act would create that record without restricting who may request a meeting or advocate for an investment.
+
+[Read the APERS signed minutes &rarr;]({{ inv.sources.apers_authorization.record_url }})
+[See the interactive route map &rarr;](/the-issue/#how-the-proposal-moved)
 
 ---
 
-- [Back to Key Findings](/findings/)
-- [See the documented routes](/evidence/#events-and-routes)
-- [Read the national-network context](/findings/sfof-pipeline/)
+[Back to Key Findings &rarr;](/findings/)

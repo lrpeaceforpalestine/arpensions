@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "ATRS: Advice, Authorization, and the Decision Record"
-description: "What Aon's June 2, 2025 memorandum advised, what it expressly did not recommend, and what remains unresolved in the ATRS decision file."
+title: "What Aon Advised ATRS"
+description: "Aon's two-page memo explains how ATRS could carry out the strategy while leaving the invest-or-not decision with trustees."
 permalink: /findings/procedural-asymmetry/
 breadcrumb: "Key Findings"
 ---
@@ -9,51 +9,29 @@ breadcrumb: "Key Findings"
 {% assign inv = site.data.investigation %}
 {% assign atrs = inv.agencies | where: "id", "atrs" | first %}
 
-ATRS authorized **{{ atrs.authorization_display | replace: 'Up to', 'up to' }}** for an Israel Bonds-associated mandate on June 2, 2025. The Board packet contains substantive advice from Aon about implementation and manager selection. It does not contain an Aon recommendation on whether ATRS should invest in the asset class or buy a particular security.
+ATRS authorized **{{ atrs.authorization_display | replace: 'Up to', 'up to' }}** for an Israel Bonds strategy on June 2, 2025. Aon's two-page memo in the Board packet deserves to be read as a whole.
 
-That division is visible across the two rendered pages of Aon's memorandum.
+## Page 149: how to carry out the strategy
 
-## What page 149 addresses
+Page 149 contains substantive professional advice. Aon discusses using a separate account, compares BlackRock and Reams, recommends Reams, and notes that the bonds have limited marketability.
 
-Page 149 is substantive. Aon:
+That advice helped ATRS decide **how** to implement the strategy and **which manager** to hire.
 
-- discusses using a separate account rather than attempting direct implementation;
-- compares BlackRock and Reams as possible managers;
-- recommends Reams for the mandate; and
-- notes that the securities have limited marketability.
+## Page 150: the decision Aon left to trustees
 
-This was meaningful professional advice about *how* ATRS could implement the proposed mandate and *which manager* it should use.
+The next page defines Aon's role. It says Aon is not recommending whether ATRS should invest in Israel Bonds and is not recommending the purchase of a particular bond.
 
-[Read the privacy-reviewed two-page excerpt](/documents/records/atrs-aon-memo/).
+That left the central decision with the Board: whether the strategy served ATRS members and how its credit risk, return, liquidity, and portfolio fit compared with other options.
 
-## What page 150 limits
+## Why the distinction matters
 
-Page 150 defines the boundary of that advice. Aon states that it is not recommending whether ATRS should invest in Israel Bonds and is not recommending the purchase of a particular bond.
+The ATRS files also contain credit-related material, including an S&amp;P downgrade report. But members still need a concise explanation of what trustees relied on and how they connected that material to the June 2 authorization.
 
-The combined record therefore supports a precise description: **substantive implementation and manager-selection advice, bounded by an express invest-or-not and individual-security disclaimer.**
+The Integrity Act would require that merits analysis for a future covered purchase. It would not diminish the value of manager-selection advice or tell trustees what conclusion to reach.
 
-## The merits question
-
-The ATRS production includes credit-related material elsewhere, including an S&P downgrade report. The produced files do not establish that trustees received or relied on that report when adopting Resolution 2025-22. They also do not identify a consultant or staff memorandum that connects sovereign-credit risk, expected return, liquidity, and portfolio fit to the affirmative authorization.
-
-ATRS Executive Director Mark White's May 2025 correspondence about Westrock Coffee provides a useful but bounded comparison. In that exchange, he described a consultant-recommendation-driven process and cited outside analyst ratings. The comparison shows a difference in merits-review framing, recommendation authorship, and communication to a member. It does not by itself prove a universal ATRS procedure or a violation of law.
-
-Questions about Board Policy 4 also remain open. The record establishes written manager advice and an executed Board resolution. Whether every requirement of BP4 Section A.5 applied to this mandate, and whether the available documents satisfied each applicable requirement, requires legal and policy interpretation beyond what the produced record alone establishes.
-
-{% include evidence-boundary.html
-  established="Aon gave substantive implementation and manager-selection advice and recommended Reams."
-  unresolved="The produced files do not connect a sovereign-credit and portfolio-fit merits analysis to the Board's affirmative authorization."
-  not_claimed="This finding does not declare the investment imprudent, establish a statutory violation, or attribute motive."
-%}
-
-{% include search-boundary.html boundary_id="atrs_merits" %}
-
-## What the Integrity Act would add
-
-{{ inv.legislation.full_summary }} Those requirements are issuer-neutral and leave the investment decision with the trustees.
+[Read Aon's pages 149&ndash;150 &rarr;]({{ inv.sources.atrs_aon.record_url }})
+[Read Resolution 2025-22 &rarr;]({{ inv.sources.atrs_resolution.record_url }})
 
 ---
 
-- [Back to Key Findings](/findings/)
-- [See the full evidence structure](/evidence/)
-- [Read the Integrity Act proposal](/legislators/)
+[Back to Key Findings &rarr;](/findings/)

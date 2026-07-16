@@ -1,49 +1,35 @@
----
-layout: null
----
-{% assign inv = site.data.investigation %}
 # Arkansans for Pension Integrity
 
-Public money deserves a public investment record.
+Arkansans for Pension Integrity is a statewide campaign for transparent, financially sound stewardship of Arkansas public retirement money.
 
-Arkansans for Pension Integrity is an Arkansas public-records and legislative campaign advancing issuer-neutral safeguards for public pension investment decisions.
+## Current public account
 
-## Current evidence baseline
+- Arkansas agencies completed at least $65 million in Israel Bonds purchases: $50 million at the State Treasury and $15 million at APERS.
+- ATRS separately moved $50 million into a Reams manager account created for an Israel Bonds strategy. The released account documents do not list the individual bonds held in that account.
+- The $115 million combined figure means completed purchases plus manager funding. It is not a single holdings total.
+- A later $10 million Treasury payment record showed the bank still processing the transaction, so the amount is not included in the completed-purchase total.
+- ATRS and APERS authorized a combined ceiling of up to $100 million. An authorization ceiling is not a purchase total.
+- Aon advised ATRS on implementation and manager selection and recommended Reams. Aon did not advise whether ATRS should invest or which bond to buy.
+- APERS's chief investment officer wrote that he prepared no Board material on the investment and believed the consultants had not either.
+- Treasury's October 2024 internal overview recommended holding existing positions; Treasury later settled $20 million in new positions in May 2025.
 
-- {{ inv.metrics.confirmed_security_floor.display }} confirmed security-level floor: {{ inv.metrics.confirmed_security_floor.detail }}
-- {{ inv.metrics.atrs_manager_funding.display }} ATRS manager funding: {{ inv.metrics.atrs_manager_funding.detail }}
-- {{ inv.metrics.combined_tied_or_funded.display }} is a combination of those different measures, not a holdings total
-- {{ inv.metrics.treasury_conditional_payment.display }} additional Treasury payment remains {{ inv.metrics.treasury_conditional_payment.status }} because its report was marked Processing By Bank
-- {{ inv.metrics.pension_authorization_ceiling.display }} is a pension authorization ceiling, not holdings
-- Record cutoff: {{ inv.record_cutoff }}
-- PDF render gate: {{ inv.corpus.render_jobs_complete }}/{{ inv.corpus.render_jobs_total }} jobs covering {{ inv.corpus.pdf_pages_display }} pages across {{ inv.corpus.raw_files_display }} raw files; completed {{ inv.review_completed }}
+## Policy proposal
 
-## Analytical record
+The Pension Investment Integrity Act would require a written credit analysis, alternatives comparison, liquidity disclosure, and fiduciary determination for future covered pension purchases of non-tradable sovereign debt. It is issuer-neutral, prospective, and leaves investment outcomes with pension trustees. Citizens First Congress selected pension investment integrity as a short-term priority for the 2027 Arkansas legislative session.
 
-{{ inv.analysis_record.lead }}
+## Main pages
 
-ATRS: {{ inv.analysis_record.atrs }}
-
-APERS: {{ inv.analysis_record.apers }}
-
-Treasury: {{ inv.analysis_record.treasury }}
-
-## Policy
-
-{{ inv.legislation.full_summary }} The proposal is issuer-neutral and does not direct a board to buy, hold, or sell a security. {{ inv.legislation.cfc_status }}
-
-## Preferred pages
-
-- Evidence: https://arpensions.org/evidence/
-- Selected primary records: https://arpensions.org/documents/
-- Detailed findings: https://arpensions.org/findings/
-- Integrity Act policy brief: https://arpensions.org/legislators/
-- Methodology: https://arpensions.org/methodology/
-- Press facts and cutoffs: https://arpensions.org/press/
-- Take action: https://arpensions.org/take-action/
+- The Issue: https://arpensions.org/the-issue/
+- What the Public Record Shows: https://arpensions.org/evidence/
+- Primary Documents: https://arpensions.org/documents/
+- Key Findings: https://arpensions.org/findings/
+- For Educators: https://arpensions.org/educators/
+- For Public Employees: https://arpensions.org/public-employees/
+- Legislative Brief: https://arpensions.org/legislators/
+- Take Action: https://arpensions.org/take-action/
+- Press Kit: https://arpensions.org/press/
+- About: https://arpensions.org/about/
 
 ## Contact
 
-Arkansans for Pension Integrity: info@arpensions.org
-
-This is an advocacy site. Factual claims are tied to public records; evidence states and open questions are labeled explicitly.
+info@arpensions.org

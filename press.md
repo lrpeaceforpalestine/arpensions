@@ -1,105 +1,106 @@
 ---
 layout: landing
-title: "Press — Current Facts and Primary Records"
-description: "Copy-ready facts, terminology, evidence cutoffs, and primary records for reporting on Arkansas public investment decisions and the Pension Investment Integrity Act."
+title: "Press Kit — Arkansas Pension Investment Integrity"
+description: "Current facts, dates, terminology, source documents, and contact information for reporting on Arkansas's Israel Bonds decisions."
 permalink: /press/
 audience_nav: true
-breadcrumb: "Press"
+breadcrumb: "For Media"
 hero_band: pine
-mobile_cta_label: "Media inquiry"
-mobile_cta_url: "mailto:info@arpensions.org?subject=Media%20inquiry"
 ---
 
 {% assign inv = site.data.investigation %}
-{% assign terms = site.data.terminology %}
 {% assign treasury = inv.agencies | where: "id", "treasury" | first %}
 {% assign apers = inv.agencies | where: "id", "apers" | first %}
+{% assign atrs = inv.agencies | where: "id", "atrs" | first %}
 
 ## Campaign summary
 
-**Arkansans for Pension Integrity** is an Arkansas public-records and legislative campaign advancing issuer-neutral safeguards for public pension investment decisions. The campaign's principle is simple: **public money deserves a public investment record.**
+Arkansans for Pension Integrity is a statewide campaign for transparent, financially sound stewardship of public retirement money. The campaign is advancing the **Pension Investment Integrity Act**, an issuer-neutral proposal that would require written credit, alternatives, liquidity, and fiduciary analysis for covered pension purchases of non-tradable sovereign debt.
 
-The campaign supports the Pension Investment Integrity Act for the 2027 Arkansas legislative session. {{ inv.legislation.cfc_status }} {{ inv.legislation.full_summary }} It would not direct a board to buy, hold, or sell a security. The proposal is at the **{{ inv.legislation.stage | downcase }}** stage; no bill number has been assigned.
+The campaign can be reached at [info@arpensions.org](mailto:info@arpensions.org).
 
-## Copy-ready current facts
+## Copy-ready overview
 
-- **{{ inv.metrics.confirmed_security_floor.display }} is the confirmed security-level floor.** It combines a {{ treasury.measure }} and an {{ apers.measure }}. [Treasury statement](/documents/records/treasury-holdings/) · [maturity](/documents/records/treasury-maturity/) · [APERS purchase](/documents/records/apers-purchase/)
-- **{{ inv.metrics.atrs_manager_funding.display }} is ATRS manager funding.** ATRS documented that amount funded to the Reams mandate; the reviewed files do not identify the mandate's security-level holdings. [Funding record](/documents/records/atrs-manager-funding/)
-- **{{ inv.metrics.combined_tied_or_funded.display }} combines different measures.** It means {{ inv.metrics.confirmed_security_floor.display }} in confirmed securities plus {{ inv.metrics.atrs_manager_funding.display }} in manager funding. It is not a holdings total. [Evidence ledger](/evidence/)
-- **The additional Treasury {{ inv.metrics.treasury_conditional_payment.display }} is conditional.** The payment report was marked “Processing By Bank”; the production does not document settlement or resulting ownership. [Payment-stage record](/documents/records/treasury-processing-payment/)
-- **{{ inv.metrics.pension_authorization_ceiling.display }} is an authorization ceiling.** It combines ATRS's and APERS's maximum authorizations and is not a purchased or held amount. [ATRS resolution](/documents/records/atrs-resolution/) · [APERS minutes](/documents/records/apers-authorization/)
+> Arkansas agencies put at least {{ inv.metrics.confirmed_security_floor.display }} into completed Israel Bonds purchases: {{ treasury.measure_display }} at the State Treasury and {{ apers.measure_display }} at APERS. ATRS separately moved {{ atrs.measure_display }} into a manager account created for the same strategy. Arkansans for Pension Integrity is asking the General Assembly to require a written, issuer-neutral financial analysis for future covered pension purchases of non-tradable sovereign debt. Citizens First Congress selected pension investment integrity as a short-term priority for the 2027 session.
 
-{% include exposure-chart.html %}
+## Figures to use
 
-## Agency status
+<div class="issue-agency-table issue-agency-table--fact-detail" markdown="1">
 
-{% include agency-status.html %}
+| Figure | Meaning |
+|---:|---|
+| **{{ inv.metrics.confirmed_security_floor.display }}** | Completed security purchases: {{ treasury.measure_display }} at Treasury plus {{ apers.measure_display }} at APERS. |
+| **{{ atrs.measure_display }}** | Money funded to the ATRS Reams manager account for the strategy. This is manager funding, not a published list of individual holdings. |
+| **{{ inv.metrics.combined_tied_or_funded.display }}** | Completed purchases plus ATRS manager funding. Use only with both transaction types stated. |
+| **{{ inv.metrics.treasury_conditional_payment.display }}** | A later Treasury payment shown as still processing by the bank. It is not included in the completed total. |
+| **{{ inv.metrics.pension_authorization_ceiling.display }}** | Combined pension authorization ceiling: ATRS up to $50M and APERS up to $50M. It is not a purchase or holdings total. |
 
-## The analytical record
+</div>
 
-{{ inv.analysis_record.lead }}
+## Agency-by-agency
 
-At ATRS, Aon's June 2, 2025 memorandum is substantive on implementation and manager selection. Page 149 recommends Reams and notes limited marketability. Page 150 says Aon is not recommending whether ATRS should invest or purchase an individual security.
+### Arkansas State Treasury
 
-At APERS, the reviewed authorization file contains no Callan sovereign-credit memorandum tied to the decision. At Treasury, an internal October 2024 overview recommends holding existing positions and continuing surveillance; the settled May 2025 purchase is not accompanied by an identified written reconciliation with that recommendation.
+- Treasury records support **{{ treasury.measure_display }} in completed purchases** after accounting for a {{ inv.transaction_figures.treasury_february_maturity.display }} maturity in February 2026.
+- A **{{ inv.transaction_figures.treasury_may_settled.display }} purchase** settled in May 2025.
+- An internal overview dated October 8, 2024 summarized rating downgrades and recommended holding existing positions while maturities rolled off.
+- A later **{{ inv.metrics.treasury_conditional_payment.display }} payment** remained marked as processing by the bank.
 
-## Evidence terms
+### APERS
 
-**Instrument:** {{ terms.instrument_name }}, issued by {{ terms.issuer_formal }} and offered in the United States through {{ terms.broker_dealer }}. The site's formal asset-class phrase is **{{ terms.instrument_formal }}**; its plain-language phrase is **{{ terms.instrument_accessible }}**. “Limited marketability” describes the practical liquidity constraint without implying an ordinary secondary market.
+- The Investment Finance Subcommittee authorized a **$25&ndash;$50 million range** on May 15, 2025.
+- APERS completed a **{{ apers.measure_display }} two-year bond purchase** on October 15, 2025.
+- The purchase was **{{ inv.transaction_figures.apers_below_minimum_difference.display }} below the motion's stated minimum**.
+- APERS's chief investment officer wrote that he prepared no Board material on the topic and believed the consultants had not either.
 
-| Label | Meaning in this project |
-|---|---|
-{% for status in inv.status_labels %}| **{{ status[0] | replace: '_', ' ' }}** | {{ status[1] }} |
-{% endfor %}
+### ATRS
 
-## Dates and scope
+- ATRS authorized **{{ atrs.authorization_display | replace: 'Up to', 'up to' }}** through Resolution 2025-22 on June 2, 2025.
+- Aon compared implementation options, recommended Reams, and noted limited marketability.
+- Aon separately stated that it was not advising whether ATRS should invest or which bond to buy.
+- ATRS reported **{{ atrs.measure_display }} funded to the Reams account** on December 29, 2025.
+- The account records released by ATRS do not list individual security purchases or holdings.
 
-- **Transaction-record cutoff:** {{ inv.record_cutoff | date: "%B %-d, %Y" }}
-- **PDF render gate completed:** {{ inv.review_completed | date: "%B %-d, %Y" }}
-- **Render-gate scope:** {{ inv.corpus.raw_files_display }} raw files and {{ inv.corpus.pdf_pages_display }} PDF pages; {{ inv.corpus.render_jobs_complete }} of {{ inv.corpus.render_jobs_total }} render jobs complete
-- **Hosted documents:** selected, privacy-reviewed anchor records supporting the site's principal findings; not a complete production mirror
-- **Bill prefiling opens:** {{ inv.legislation.prefiling_opens_display }}
-- **Regular session convenes:** {{ inv.legislation.session_convenes_display }}
-- **Ordinary retirement-legislation filing deadline:** {{ inv.legislation.retirement_filing_deadline_display }} ([official calendar]({{ inv.legislation.important_dates_url }}))
+## Short timeline
 
-## Primary links
+<div class="press-timeline" role="list" aria-label="Key dates">
+  <div class="press-timeline-item" role="listitem"><time datetime="2024-10-08">Oct. 8, 2024</time><p>Treasury internal overview recommends holding existing positions and continued monitoring.</p></div>
+  <div class="press-timeline-item" role="listitem"><time datetime="2025-04-14">Apr. 14&ndash;15, 2025</time><p>An eight-stop itinerary lists outreach across pension, executive, legislative, Treasury, and cabinet offices or settings.</p></div>
+  <div class="press-timeline-item" role="listitem"><time datetime="2025-05">May 2025</time><p>{{ inv.transaction_figures.treasury_may_settled.display }} in Treasury positions settles.</p></div>
+  <div class="press-timeline-item" role="listitem"><time datetime="2025-05-15">May 15, 2025</time><p>APERS authorizes a $25&ndash;$50 million range.</p></div>
+  <div class="press-timeline-item" role="listitem"><time datetime="2025-06-02">June 2, 2025</time><p>ATRS authorizes {{ atrs.authorization_display | replace: 'Up to', 'up to' }} and receives Aon's implementation memo.</p></div>
+  <div class="press-timeline-item" role="listitem"><time datetime="2025-10-15">Oct. 15, 2025</time><p>APERS completes its {{ apers.measure_display }} purchase.</p></div>
+  <div class="press-timeline-item" role="listitem"><time datetime="2025-12-29">Dec. 29, 2025</time><p>ATRS reports {{ atrs.measure_display }} funded to the Reams account.</p></div>
+  <div class="press-timeline-item" role="listitem"><time datetime="2026-06-27">June 27, 2026</time><p>Citizens First Congress selects pension investment integrity as a 2027 short-term priority.</p></div>
+</div>
 
-- [Aon memorandum, ATRS packet pages 149–150](/documents/records/atrs-aon-memo/)
-- [ATRS manager-funding record](/documents/records/atrs-manager-funding/)
-- [APERS signed authorization minutes](/documents/records/apers-authorization/)
-- [APERS analytical-record search email](/documents/records/apers-analysis-email/)
-- [APERS confirmed purchase record](/documents/records/apers-purchase/)
-- [Treasury internal credit overview](/documents/records/treasury-hold-overview/)
-- [Treasury settled-position record](/documents/records/treasury-holdings/)
-- [Treasury final-maturity record](/documents/records/treasury-maturity/)
-- [Treasury processing-stage payment](/documents/records/treasury-processing-payment/)
-- [Act 498 of 2023]({{ inv.legislation.act_498_url }})
+## Terminology
 
-## Attribution and boundaries
+**Completed purchase:** A transaction supported by a completed security or cash-flow record.
 
-The Auditor of State is an ex-officio ATRS trustee, and records identify Chief Deputy Auditor Jason Brady as a designee or proxy in ATRS and APERS proceedings. The Auditor's office also appears in scheduling, correspondence, presentation, and promotional records. The Auditor does not manage ATRS or APERS assets and is not their investment staff.
+**Manager funding:** Money moved into an investment manager's account. It does not, by itself, identify every security held in that account.
 
-The April 2025 itinerary contains eight scheduled stops across pension, legislative, Treasury, and cabinet offices. The Hudson–Babbitt meeting is independently confirmed; Fecher and Treasury-team encounters are participant- or seller-reported; and the scheduled White encounter remains unconfirmed. Sequence and access do not establish decision causation.
+**Authorization ceiling:** The maximum amount a board allowed. It is not proof that the full amount was spent.
 
-ASHERS records document a pitch through DFA and no identified reply, authorization, or holding. They do not establish an affirmative decline or explain the different outcome.
+**Non-tradable sovereign debt:** Debt issued by a national government that does not trade on a secondary market and is generally held to maturity.
 
-## Downloads and brand assets
+**Pension Investment Integrity Act:** A prospective, issuer-neutral proposal for covered pension acquisitions. It leaves investment outcomes with trustees and requires them to publish the financial work behind the decision.
 
-- [Pension Investment Integrity Act one-page brief, dated PDF]({{ inv.legislation.brief_pdf_url }})
-- [Printable HTML version of the brief](/legislators/one-page/)
-- [Current facts as CSV](/assets/data/current-facts.csv)
-- [Campaign logo, SVG](/assets/images/api-badge.svg)
-- [Campaign logo, 512-pixel PNG](/assets/images/api-badge-512.png)
-- [Current social-preview image](/assets/images/og-default.png)
+## Primary documents
 
-## Organization boilerplate
-
-**Arkansans for Pension Integrity** is an Arkansas public-records and legislative campaign advancing documented, issuer-neutral safeguards for public pension decisions. Its research separates authorizations, manager funding, processing-stage payments, settled transactions, and holdings, and publishes selected privacy-reviewed primary records with exact locators. Its principle is: **Public money deserves a public investment record.**
+- [Aon implementation and manager-selection memo, ATRS packet pages 149&ndash;150]({{ inv.sources.atrs_aon.record_url }})
+- [Executed ATRS Resolution 2025-22]({{ inv.sources.atrs_resolution.record_url }})
+- [ATRS manager-funding notice]({{ inv.sources.atrs_funding.record_url }})
+- [APERS signed authorization minutes]({{ inv.sources.apers_authorization.record_url }})
+- [APERS chief investment officer email]({{ inv.sources.apers_analysis_email.record_url }})
+- [APERS {{ apers.measure_display }} purchase record]({{ inv.sources.apers_purchase.record_url }})
+- [Treasury internal credit overview]({{ inv.sources.treasury_hold.record_url }})
+- [Treasury bondholder statement]({{ inv.sources.treasury_holdings.record_url }})
+- [Treasury maturity record]({{ inv.sources.treasury_maturity.record_url }})
+- [Treasury payment report]({{ inv.sources.treasury_processing.record_url }})
 
 ## Media contact
 
 **Arkansans for Pension Integrity**<br>
-[info@arpensions.org](mailto:info@arpensions.org?subject=Media%20inquiry)<br>
-[arpensions.org](https://arpensions.org)
-
-Please include a deadline, outlet, and the records or claim you want to verify. The organization can provide source locators and privacy-reviewed excerpts.
+[info@arpensions.org](mailto:info@arpensions.org)
+[arpensions.org](https://arpensions.org/)

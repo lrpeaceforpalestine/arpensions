@@ -1,68 +1,170 @@
 ---
 layout: page
-title: "Key Participants and Institutions"
-description: "The public offices, pension systems, advisers, managers, sellers, and officials documented in the Arkansas investment record."
+title: "Key People and Institutions"
+description: "A plain-language guide to the public officials, pension staff, advisers, managers, and sellers in Arkansas's Israel Bonds story."
 permalink: /key-figures/
 breadcrumb: "Key Figures"
 ---
 
-{% assign inv = site.data.investigation %}
-{% assign treasury = inv.agencies | where: "id", "treasury" | first %}
-{% assign apers = inv.agencies | where: "id", "apers" | first %}
-{% assign atrs = inv.agencies | where: "id", "atrs" | first %}
+This page explains each person's documented role. It does not treat a job title, meeting, or relationship as proof that one person caused an independent board decision.
 
-This page describes roles shown in the public record. Appearance in a chronology or correspondence network does not establish control, motive, or decision causation.
+---
 
-## Pension systems and advisers
+## Public officials and board representatives
 
-<div class="findings-grid" markdown="1">
+<div class="figure-card figure-card--central" markdown="1">
 
-<article class="finding-card" markdown="1">
+### Dennis Milligan
 
-### Arkansas Teacher Retirement System
+<p class="figure-subtitle">Arkansas Auditor of State · former State Treasurer</p>
 
-ATRS authorized {{ atrs.authorization_display | replace: 'Up to', 'up to' }}, selected Reams as manager, and documented {{ atrs.measure_display }} in manager funding. Executive Director **Mark White** administered the proposal; **Aon Hewitt Investment Consulting** advised on implementation and manager selection; **Reams Asset Management** received the mandate. Security-level holdings were not identified in the reviewed production.
+Milligan served as State Treasurer when Arkansas's Treasury program involving Israel Bonds began. As Auditor, he holds an ex-officio ATRS board role and publicly promoted Israel Bonds. His office's records also show scheduling, correspondence, speech preparation, and other promotional activity.
 
-</article>
+The pension-board record should distinguish Milligan's officeholder role from the actions of his designee. The signed APERS minutes identify Jason Brady—not Milligan personally—as the Auditor's proxy who presented and moved the authorization.
 
-<article class="finding-card" markdown="1">
-
-### Arkansas Public Employees Retirement System
-
-APERS's Investment Finance Subcommittee adopted a {{ apers.authorization_display }} range, and APERS later recorded a {{ apers.measure_display }} purchase. Executive Director **Amy Fecher** and Chief Investment Officer **Carlos Borromeo** appear in the governance and implementation record. The reviewed authorization file contains no Callan sovereign-credit memorandum tied to the decision.
-
-</article>
-
-<article class="finding-card" markdown="1">
-
-### Arkansas State Treasury
-
-Treasury records establish a security-level floor of {{ treasury.measure_display }} after a documented maturity. An **unattributed internal Treasury overview** dated October 8, 2024 recommends HOLD and surveillance. Senior Investment Officer **Steve Pulley** placed the later {{ inv.transaction_figures.treasury_may_settled.display }} order; the reviewed files contain no identified written reconciliation with the recommendation.
-
-</article>
+[Read about the Auditor's office &rarr;](/findings/auditor-channel/)
 
 </div>
 
-## Public-office and governance roles
+<div class="figure-card figure-card--central" markdown="1">
 
-**Dennis Milligan, Auditor of State.** The Auditor is an ex-officio ATRS trustee. Records document Milligan's advocacy and his office's role in scheduling, correspondence, and promotion. The Auditor does not manage pension assets or serve as pension investment staff.
+### Jason Brady
 
-**Jason Brady, Chief Deputy Auditor.** ATRS records identify Brady as Milligan's designee; APERS minutes identify him as the Auditor's proxy on the Board and Investment Finance Subcommittee. He presented and moved the APERS authorization and appears in scheduling, correspondence, and promotion records.
+<p class="figure-subtitle">Chief Deputy Auditor</p>
 
-**Jim Hudson and Andy Babbitt, Department of Finance and Administration.** DFA records support a confirmed encounter in the April 2025 itinerary and an introduction of the sellers to ASHERS. The selected ASHERS records show the pitch and no identified adoption.
+Brady acted as the Auditor's designee or proxy in ATRS and APERS settings. At the APERS Investment Finance Subcommittee meeting, he presented the Israel Bonds proposal and moved to authorize a $25&ndash;$50 million range. ATRS records also identify him in the Auditor's board role.
 
-## Seller, manager, and network
+Other records show Brady assisting with correspondence, scheduling, speech material, internal information-sharing, and public promotion.
 
-**Development Corporation for Israel.** The registered broker-dealer through which Israel Bonds are offered in the United States. Its representatives, including **Lawrence Berman** and **Brad Young**, appear in Treasury, pension, DFA, and Auditor-office records.
+[Read the APERS signed minutes &rarr;]({{ site.data.investigation.sources.apers_authorization.record_url }})
 
-**Reams Asset Management.** The manager selected by ATRS to implement the mandate. The production documents the management structure and funding, but not the account's security-level holdings.
+</div>
 
-**State Financial Officers Foundation.** A national network appearing in event, newsletter, speech, and contact-facilitation records. Those records establish context and relationships, not direction of a pension allocation or control over Arkansas decision-makers.
+---
 
-{% include evidence-boundary.html
-  established="The records identify formal roles, communications, scheduled or reported encounters, and institution-specific decisions."
-  unresolved="The influence of any one person, office, meeting, or network on a board's independent decision remains open unless a record expressly establishes it."
-  not_claimed="Frequency of appearance and chronological proximity are not treated as causal measures."
-%}
+## Pension systems and advisers {#pension-systems-and-advisers}
 
-[See the agency ledger](/evidence/#agency-by-agency) · [Read the detailed findings](/findings/) · [Review the documented routes](/evidence/#events-and-routes)
+<div class="figure-card" markdown="1">
+
+### Aon
+
+<p class="figure-subtitle">ATRS investment consultant</p>
+
+Aon compared implementation options, recommended Reams, and noted limited marketability. Its two-page memo also states that Aon was not advising whether ATRS should invest or which individual bond to buy.
+
+[Read Aon's memo &rarr;]({{ site.data.investigation.sources.atrs_aon.record_url }})
+
+</div>
+
+<div class="figure-card" markdown="1">
+
+### Reams Asset Management
+
+<p class="figure-subtitle">ATRS investment manager</p>
+
+ATRS selected Reams to carry out the Israel Bonds strategy through a separate manager account. A December 2025 Board update reports $50 million funded to that account. The released account records do not list the individual bonds later bought or held.
+
+</div>
+
+<div class="figure-card" markdown="1">
+
+### Mark White
+
+<p class="figure-subtitle">ATRS Executive Director</p>
+
+White led ATRS during the June 2025 authorization and later manager implementation. An April itinerary listed a proposed encounter involving White, but the itinerary itself does not establish attendance or substance.
+
+</div>
+
+<div class="figure-card" markdown="1">
+
+### Rod Graves
+
+<p class="figure-subtitle">ATRS Deputy Director</p>
+
+Graves sent the December 29 Board update that reported $50 million funded to the Reams account. The notice is the clearest public document for the manager-funding amount.
+
+</div>
+
+<div class="figure-card" markdown="1">
+
+### Amy Fecher
+
+<p class="figure-subtitle">APERS Executive Director</p>
+
+Fecher led APERS during the 2025 authorization and later purchase. A seller report describes an April encounter, and later correspondence documents operational follow-up as APERS moved toward a transaction.
+
+</div>
+
+<div class="figure-card" markdown="1">
+
+### Carlos Borromeo
+
+<p class="figure-subtitle">APERS Chief Investment Officer</p>
+
+Borromeo handled investment operations for APERS. In a February 2026 email about the records search, he wrote that he had prepared no Board material on the Israel Bonds investment and believed the consultants had not either.
+
+[Read the APERS email &rarr;]({{ site.data.investigation.sources.apers_analysis_email.record_url }})
+
+</div>
+
+<div class="figure-card" markdown="1">
+
+### Danny Knight
+
+<p class="figure-subtitle">ATRS Board Chair in 2025</p>
+
+Knight raised concern about the procedure during the June 2 ATRS meeting. The campaign cites the concern as part of the Board discussion without using it to infer the views of every trustee.
+
+</div>
+
+---
+
+## Seller and outreach
+
+<div class="figure-card figure-card--org" markdown="1">
+
+### Development Corporation for Israel
+
+<p class="figure-subtitle">U.S. broker-dealer for Israel Bonds</p>
+
+The company underwrites and sells Israel Bonds in the United States. Its representatives conducted outreach to Arkansas officials and pension personnel. The specialized sales channel and limited marketability are part of the financial due-diligence question.
+
+</div>
+
+<div class="figure-card" markdown="1">
+
+### Lawrence Berman
+
+<p class="figure-subtitle">Israel Bonds sales executive</p>
+
+Berman appears in correspondence, itinerary material, presentations, and follow-up messages involving Arkansas agencies. Seller-authored accounts are useful for understanding outreach and should be distinguished from completed agency records.
+
+</div>
+
+<div class="figure-card" markdown="1">
+
+### Brad Young
+
+<p class="figure-subtitle">Israel Bonds regional representative</p>
+
+Young participated in Arkansas outreach with Berman and appears on the April 2025 itinerary and related communications.
+
+</div>
+
+<div class="figure-card figure-card--org" markdown="1">
+
+### State Financial Officers Foundation
+
+<p class="figure-subtitle">National network of public financial officers</p>
+
+Arkansas agency files show event participation, a 2020 seller sponsor listing, circulation of another state's purchase, speech preparation, and later offers to connect member states. The records establish network context, not direction of a particular pension vote.
+
+[Read the network finding &rarr;](/findings/sfof-pipeline/)
+
+</div>
+
+---
+
+[See how the decisions unfolded &rarr;](/evidence/#how-the-decisions-unfolded)
+[Browse the primary documents &rarr;](/documents/)

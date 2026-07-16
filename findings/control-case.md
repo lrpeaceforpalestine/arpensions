@@ -1,45 +1,34 @@
 ---
 layout: page
-title: "ASHERS: A Documented Pitch Without Identified Adoption"
-description: "The selected ASHERS records document a pitch through DFA and no identified reply, authorization, or holding."
+title: "The ASHERS Comparison"
+description: "ASHERS received an Israel Bonds presentation through DFA, while later agency messages reported no holding or purchase."
 permalink: /findings/control-case/
 breadcrumb: "Key Findings"
 ---
 
-{% assign inv = site.data.investigation %}
+The Arkansas State Highway Employees Retirement System offers a useful comparison with ATRS and APERS.
 
-The Arkansas State Highway Employees Retirement System (ASHERS) provides a useful cross-agency comparison because the reviewed production shows the same sellers reaching another public retirement system during the 2025 outreach period.
+## The pitch reached ASHERS
 
-## What the records show
+On April 16, 2025, a Department of Finance and Administration official introduced Israel Bonds representatives to ASHERS Executive Secretary Robyn Smith. The seller replied with a presentation and proposed a follow-up conversation.
 
-On April 16, 2025, a DFA official introduced the sellers to ASHERS Executive Secretary Robyn Smith. The seller replied with a presentation and proposed a follow-up conversation. In the selected ASHERS production, we identified no reply from ASHERS, no authorization, and no Israel Bonds holding.
+That establishes a documented sales approach through DFA.
 
-That is a **documented pitch with no identified adoption**.
+## What happened afterward
 
-{% include citation.html source_id="ashers_route" %}
-{% include citation.html source_id="ashers_no_holding" %}
-{% include citation.html source_id="ashers_no_purchase" %}
+An ASHERS message dated May 15 said the system did not hold Israel Bonds. Another message dated July 14 said it had not purchased them.
 
-## What the comparison cannot establish
+The available messages do not show a Board authorization or later purchase. They also do not record an affirmative rejection or explain why ASHERS's path differed from ATRS and APERS.
 
-The available files do not document an affirmative decline. They do not establish that no oral response occurred. They also do not isolate the reason ASHERS's observed outcome differs from ATRS and APERS.
-
-Possible explanations include fund structure, portfolio needs, recipient posture, routing, timing, and records outside the selected production. The intermediary channel is one relevant difference, but the current record does not identify it as the dispositive cause.
-
-{% include evidence-boundary.html
-  established="The sellers' pitch reached ASHERS through a DFA introduction, and no adoption or holding was identified in the reviewed production."
-  unresolved="The reason for the different observed outcome remains open."
-  not_claimed="The site does not characterize ASHERS as affirmatively declining, prove oral silence, or treat this comparison as a causal experiment."
-%}
-
-{% include search-boundary.html boundary_id="ashers_adoption" %}
+The reason could involve portfolio needs, timing, governance, recipient interest, or other communications. The documents do not choose among those explanations.
 
 ## Why the comparison matters
 
-The comparison shows why a consistent written procedure is more reliable than inference from outcomes. {{ inv.legislation.full_summary }}
+The same investment proposal can reach public institutions and produce different outcomes. A consistent written process would make each institution's financial reasoning visible rather than forcing members to infer it from the outcome.
+
+[Browse the primary documents &rarr;](/documents/)
+[Read the Integrity Act brief &rarr;](/legislators/)
 
 ---
 
-- [Back to Key Findings](/findings/)
-- [See agency-by-agency status](/evidence/#agency-by-agency)
-- [Read the Integrity Act proposal](/legislators/)
+[Back to Key Findings &rarr;](/findings/)

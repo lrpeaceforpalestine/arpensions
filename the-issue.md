@@ -1,93 +1,184 @@
 ---
 layout: page
-title: "The Issue — Public Money Deserves a Public Investment Record"
-description: "What Arkansas records establish about non-tradable sovereign debt, the different measures across Treasury and pension systems, and the case for documented fiduciary safeguards."
+title: "The Issue — Public Money, Private Reasoning"
+description: "Arkansas committed public money to Israel Bonds without giving pension members one clear, written account of the financial case."
 permalink: /the-issue/
+d3sankey: true
 ---
 
 {% assign inv = site.data.investigation %}
-{% assign terms = site.data.terminology %}
+{% assign treasury = inv.agencies | where: "id", "treasury" | first %}
 {% assign apers = inv.agencies | where: "id", "apers" | first %}
 {% assign atrs = inv.agencies | where: "id", "atrs" | first %}
 
 <div class="issue-page" markdown="1">
 
-<span class="section-label">The instrument</span>
+<span class="section-label">The basic problem</span>
 
-## A long-term promise with limited exit options
+## Your retirement money should never run on trust alone
 
-The investment under review is **{{ terms.instrument_formal }}**—in plain language, {{ terms.instrument_accessible }}. {{ terms.instrument_name }} are direct obligations of {{ terms.issuer_formal }} sold in the United States through {{ terms.broker_dealer_short }}. They are generally held to maturity because they do not trade on an ordinary secondary market.
+Arkansas agencies put **{{ inv.metrics.confirmed_security_floor.display }} into completed Israel Bonds purchases** and moved another **{{ inv.metrics.atrs_manager_funding.display }} into an ATRS manager account** created for the same strategy. That is {{ inv.metrics.combined_tied_or_funded.display }} across completed purchases and manager funding.
 
-That structure matters to a public fiduciary for three practical reasons:
+The public record shows pieces of the financial discussion. It does not give pension members one clear, written explanation of how trustees weighed sovereign-credit risk, expected return, limited marketability, and reasonable alternatives before approving the strategy.
 
-1. **Liquidity.** A pension plan cannot rely on an ordinary secondary-market sale if its cash needs, risk assessment, or opportunity set changes.
-2. **Credit judgment.** Repayment depends on the issuing government. Sovereign credit, fiscal conditions, security risks, maturity, coupon, and portfolio concentration all belong in the decision file.
-3. **Price comparison.** Without continuous secondary-market trading, trustees need a documented comparison with reasonably available fixed-income alternatives to understand the price of the lockup.
+That is the issue Arkansans for Pension Integrity is working to fix.
 
-The question is not whether a public fund may ever own such an instrument. The question is whether the public record lets beneficiaries see how financial risk, return, liquidity, and portfolio fit were evaluated before public money was committed.
+<div class="callout" markdown="1">
 
-<span class="section-label">Arkansas record</span>
+**Public money deserves a public investment record.** If a board believes an investment is financially sound, it should be able to show the analysis, the alternatives it considered, and the reason the decision serves pension members.
 
-## Four institutions, different transaction states
+</div>
 
-{% include agency-status.html %}
+---
 
-{% include exposure-chart.html %}
+<span class="section-label">The investment</span>
 
-The combined pension authorization ceiling is **{{ inv.metrics.pension_authorization_ceiling.display }}**: {{ atrs.authorization_display }} at ATRS and {{ apers.authorization_display }} at APERS. Authorization describes legal or board permission. It does not establish the amount of securities purchased or held.
+## What makes Israel Bonds different?
 
-The current security-level floor is **{{ inv.metrics.confirmed_security_floor.display }}**. Another **{{ inv.metrics.atrs_manager_funding.display }}** was funded to the ATRS Reams mandate, whose security-level holdings were not included in the reviewed production. These measures can be discussed together only when their different meanings remain visible.
+Israel Bonds are sovereign debt issued by the State of Israel and sold directly through a specialized broker-dealer. The Arkansas investments at issue are not traded on a secondary market. A pension plan generally cannot sell them before maturity if conditions change or a better opportunity appears.
 
-<span class="section-label">Decision record</span>
+That does not make the bonds automatically prudent or imprudent. It makes the financial homework especially important.
 
-## What the analytical files address
+A sound decision should answer four ordinary questions:
 
-{{ inv.analysis_record.lead }}
+1. **Credit:** What could affect the issuer's ability to repay, and how was that risk priced?
+2. **Return:** How does the expected return compare with other fixed-income choices available at the same time?
+3. **Liquidity:** What does the plan give up by holding an investment that cannot be readily sold?
+4. **Portfolio fit:** Why does this particular commitment serve the fund's overall strategy and the interests of its members?
 
-### ATRS
+The agency files address parts of those questions, but not in a single decision memo tied to each pension board's vote.
 
-Aon’s June 2 memorandum advises ATRS to use an investment manager, compares BlackRock and Reams, recommends Reams on fees, and notes the bonds’ limited marketability. Its appendix states that Aon was not recommending whether ATRS should invest or which individual security it should purchase. An S&amp;P downgrade report also appears elsewhere in the ATRS production; the produced record does not establish its presentation to or use by trustees for Resolution 2025-22.
+---
 
-[Read the Aon memorandum and page locators](/documents/records/atrs-aon-memo/).
+<span class="section-label">What Arkansas did</span>
 
-### APERS
+## Three agencies, three different transactions
 
-The APERS record documents the May authorization, seller materials, implementation correspondence, and an October 15, 2025 purchase. The reviewed authorization file contains no Callan sovereign-credit memorandum tied to the decision. APERS’s documented {{ apers.measure }} is below the motion’s stated range, leaving the motion’s operational effect unresolved.
+<div class="issue-agency-table issue-agency-table--fact-detail" markdown="1">
 
-[Read the authorization](/documents/records/apers-authorization/) and [purchase record](/documents/records/apers-purchase/).
+| Agency | Public money involved | What happened |
+|---|---:|---|
+| **State Treasury** | **{{ treasury.measure_display }}** | Completed purchases after accounting for a later maturity. Treasury is not a pension system and would not be covered by the proposed Integrity Act. |
+| **APERS** | **{{ apers.measure_display }} purchased** | Its Investment Finance Subcommittee authorized a $25&ndash;$50 million range; APERS later bought a two-year bond for {{ apers.measure_display }}. |
+| **ATRS** | **{{ atrs.measure_display }} funded** | ATRS authorized {{ atrs.authorization_display | replace: 'Up to', 'up to' }}, hired Reams, and later moved {{ atrs.measure_display }} into the manager account. |
 
-### State Treasury
+</div>
 
-An October 8, 2024 internal overview summarizes S&amp;P and Moody’s downgrade concerns and recommends holding existing positions while scheduled maturities roll off. A {{ inv.transaction_figures.treasury_may_settled.display }} May 2025 purchase later settled. The reviewed production contains no identified written reconciliation of those two records. A separate February 2026 payment instruction remained at the processing stage.
+Treasury also initiated another **{{ inv.metrics.treasury_conditional_payment.display }} payment**. The bank report still showed the payment being processed, so it is not part of the {{ inv.metrics.confirmed_security_floor.display }} completed-purchase figure.
 
-[Read the internal overview](/documents/records/treasury-hold-overview/), [maturity record](/documents/records/treasury-maturity/), and [processing-stage payment report](/documents/records/treasury-processing-payment/).
+The combined pension authorization ceiling was **{{ inv.metrics.pension_authorization_ceiling.display }}**. A ceiling tells us how much a board allowed; it is not the same thing as a purchase or a current holding.
 
-{% include evidence-boundary.html text="The records support questions about process and documentation. They do not adjudicate a statutory or fiduciary violation, establish unproduced oral briefings, or prove why any official made a decision." %}
+---
 
-<span class="section-label">Access and sequence</span>
+<span class="section-label">The financial questions</span>
 
-## The documented routes
+## What members were entitled to see
 
-{% include documented-routes.html %}
+### Treasury: a hold recommendation, followed by another purchase
 
-The April 14–15, 2025 itinerary scheduled eight stops across pension, executive, legislative, Treasury, and cabinet offices. The Hudson–Babbitt meeting is independently confirmed. A Treasury-team encounter and the APERS executive-director encounter are participant- or seller-reported. The ATRS executive-director meeting remains unconfirmed in the reviewed record. The scheduled stops spanned several distinct offices; the chronology does not establish attendance, substance, or that any stop caused a later authorization or purchase.
+An internal Treasury overview dated October 8, 2024 summarized rating-agency downgrades and recommended holding the existing positions while scheduled maturities rolled off. Treasury later settled a new {{ inv.transaction_figures.treasury_may_settled.display }} purchase in May 2025. The released transaction files do not include a written explanation of how the later purchase fit with the earlier recommendation.
 
-<span class="section-label">Fiduciary baseline</span>
+### APERS: an authorization without Board material from staff or Callan
 
-## Existing law and the proposed safeguard
+APERS authorized a $25&ndash;$50 million range in May 2025 and later bought {{ apers.measure_display }}. When the agency searched for responsive material, its chief investment officer wrote that he had prepared nothing for the Board on the topic and believed APERS's consultants had not either.
 
-[Arkansas Act 498 of 2023]({{ inv.legislation.act_498_url }}) requires covered pension fiduciaries to act on pecuniary factors—material financial risk and return—and establishes duties for pension-plan governance. Arkansas’s prudent-investor framework separately addresses care, skill, caution, diversification, and reasonable verification of relevant facts.
+### ATRS: advice on how to proceed, not whether to proceed
 
-Those statutes supply substantive duties. They do not spell out the Integrity Act’s five-step procedure for acquisitions of non-tradable sovereign debt.
+Aon's June 2 memo compared managers, recommended Reams, and discussed the bonds' limited marketability. Aon separately stated that it was not advising ATRS whether to make the investment or which bond to buy. The memo explains implementation. It does not supply the trustees' sovereign-credit and portfolio case for making the investment.
 
-The proposed **Pension Investment Integrity Act** would add that procedure:
+[Read the full, plain-language account and source documents &rarr;](/evidence/)
 
-{% for provision in inv.legislation.provisions %}
-{{ forloop.index }}. {{ provision }}.
-{% endfor %}
+---
 
-The proposal is issuer-neutral and prospective. It does not direct a fund to buy or sell a particular investment. It requires the decision record before acquisition and makes its core conclusions public afterward.
+<div class="influence-flow-section" data-aos="fade-up" markdown="1">
 
-<p><a class="btn-primary" href="/legislators/">Read the 2027 policy brief</a> <a class="btn-secondary" href="/take-action/">Support the Integrity Act</a></p>
+<span class="section-label">The route through state government</span>
+
+## How the proposal moved
+
+Seller outreach, public-office coordination, board roles, and later agency actions appear across the same chain of events. The interactive map brings those connections together. Hover a line, or tap a node on a touch screen, to see the relationship.
+
+<div class="influence-sankey-container">
+  <div id="influence-sankey"></div>
+</div>
+
+<div class="sankey-legend" aria-hidden="true">
+  <span class="sankey-legend-item"><span class="sankey-legend-dot" data-category="seller"></span>Seller</span>
+  <span class="sankey-legend-item"><span class="sankey-legend-dot" data-category="office"></span>Public office</span>
+  <span class="sankey-legend-item"><span class="sankey-legend-dot" data-category="route"></span>Outreach route</span>
+  <span class="sankey-legend-item"><span class="sankey-legend-dot" data-category="agency"></span>Agency</span>
+  <span class="sankey-legend-item"><span class="sankey-legend-dot" data-category="action"></span>Later action</span>
+</div>
+
+<details class="visual-fallback" markdown="1">
+  <summary>Read the connections as a table</summary>
+
+| From | To | What the documents show |
+|---|---|---|
+| Israel Bonds representatives | April 2025 itinerary | Seller representatives appear on the April 14&ndash;15 itinerary. |
+| Auditor of State office | DFA and pension contacts | The office helped coordinate introductions and scheduling. |
+| Auditor or proxy | APERS and ATRS | The Auditor held ex-officio board seats and used a proxy in board settings. |
+| Jason Brady | APERS proposal | Brady presented the proposal and moved for the APERS authorization. |
+| Agency decisions | Later transactions | Treasury and APERS completed purchases; ATRS later funded the Reams manager account. |
+| ASHERS introduction | ASHERS | The records show a pitch; no later authorization or purchase appears in the selected ASHERS records. |
+
+</details>
+
+<p class="influence-flow-note">Every line has the same weight. This is a map of documented contacts, roles, and later agency actions—not a claim that any one contact caused an investment decision.</p>
+
+</div>
+
+---
+
+<div class="issue-red-flags" markdown="1">
+
+<span class="section-label">The standard</span>
+
+## Arkansas law already puts pension members first
+
+Arkansas pension trustees must act solely in the interest of members and beneficiaries. State law also requires investment evaluations to rest on pecuniary factors—factors expected to have a material effect on financial risk or return.
+
+Those duties are the right starting point. The problem is that the public cannot reliably see how they were applied to a covered sovereign-debt purchase.
+
+The surrounding record makes transparency especially important:
+
+**The investment was promoted through political channels.** Public officials celebrated Israel Bonds as an expression of support for Israel. The Auditor of State's office coordinated outreach, participated through board designees, and promoted the strategy publicly. Those facts are relevant context; they make a written financial case more necessary, not less.
+
+**The agencies took different paths.** APERS made a direct purchase. ATRS hired a manager. ASHERS received a pitch, but the available agency records show no later authorization or purchase. Different outcomes are possible when each institution uses its own process.
+
+**The documents answer implementation questions better than the central merits question.** ATRS shows how a manager was chosen. APERS shows the motion and later purchase. Treasury shows both a credit warning and later transactions. Pension members still deserve a concise, decision-specific financial explanation.
+
+</div>
+
+<div class="issue-principle" markdown="1">
+
+<span class="section-label">The solution</span>
+
+## The Pension Investment Integrity Act
+
+The Integrity Act would establish the same basic process for any covered purchase of non-tradable sovereign debt, regardless of issuer. It would require pension staff or an independent adviser to put the financial case in writing, compare reasonable alternatives, explain liquidity limits, and connect the decision to members' financial interests.
+
+The proposal would not:
+
+- direct a pension plan's investment outcome;
+- single out a country, company, religion, or political cause;
+- govern the separately managed State Treasury; or
+- replace trustees' judgment with a legislative investment decision.
+
+It would make trustees' financial reasoning visible after a covered purchase, when pension members can evaluate it for themselves.
+
+</div>
+
+<div class="issue-demands" markdown="1">
+
+## What we're asking for
+
+1. **Pass the Pension Investment Integrity Act in 2027.** Require written credit, alternatives, liquidity, and fiduciary analysis for covered pension purchases.
+2. **Use legislative oversight now.** Ask the Joint Committee on Public Retirement and Social Security Programs to examine how current procedures apply Arkansas's pecuniary-factors standard.
+3. **Publish the work.** Pension boards can make decision-specific financial analysis public even before legislation requires it.
+
+[Read the legislative brief &rarr;](/legislators/) or [take action &rarr;](/take-action/).
+
+</div>
 
 </div>

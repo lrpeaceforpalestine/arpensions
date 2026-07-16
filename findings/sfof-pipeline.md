@@ -1,48 +1,38 @@
 ---
 layout: page
-title: "National-Network and Political Context"
-description: "Documented State Financial Officers Foundation relationships and advocacy provide context for the Arkansas record without resolving investment causation."
+title: "The National Political Network"
+description: "State Financial Officers Foundation records show how investment examples, contacts, and promotional material circulated among public financial officers."
 permalink: /findings/sfof-pipeline/
 breadcrumb: "Key Findings"
 ---
 
-The Arkansas records place the investment story within a national network of public financial officers, political advocacy, issuer outreach, and state-to-state promotion. That context is relevant. Its causal effect on any fiduciary decision remains a separate question.
+The Arkansas story sits inside a national network of public financial officers, political advocacy, issuer outreach, and state-to-state promotion.
 
-## What is documented
+## What the records show
 
-The productions include:
+State Financial Officers Foundation material in Arkansas agency files includes:
 
-- a 2020 State Financial Officers Foundation event sponsor listing that includes the bond seller;
-- Arkansas officials' attendance and participation in SFOF events;
-- a November 2024 SFOF newsletter circulating another state's purchase as a case study;
-- material prepared for a scheduled April 2025 SFOF appearance; and
-- a June 2025 Auditor-office message offering to facilitate contact with other member states after the Arkansas pension actions.
+- a 2020 event sponsor list naming the Israel Bonds seller;
+- participation by Arkansas officials in SFOF events;
+- a November 2024 newsletter circulating another state's purchase as an example;
+- material prepared for an April 2025 appearance; and
+- a June 2025 Auditor-office offer to connect people with officials in other member states.
 
-Together, those records establish a network through which policy positions, examples, contacts, and promotional material moved among state financial officers.
+These records show a network through which examples, contacts, policy messages, and promotional material moved.
 
-{% include citation.html source_id="sfof_sponsor_listing" %}
-{% include citation.html source_id="sfof_model_case" %}
-{% include citation.html source_id="sfof_speech_preparation" %}
-{% include citation.html source_id="sfof_post_action_facilitation" %}
+## What the network does not prove
 
-## What remains bounded
+The documents do not show that SFOF directed an Arkansas pension allocation or determined a trustee's vote. They also do not establish the terms of a sponsorship payment or a continuing financial relationship.
 
-The reviewed records do not establish the terms of any 2020 sponsorship payment, a continuing sponsor relationship, control over Arkansas officials' words, or direction of a pension allocation. Nor does circulation of another state's purchase prove that it determined an Arkansas vote.
+Political context is part of the story, especially when public officials celebrated the investments as expressions of support for Israel. But it is not a substitute for agency-specific financial evidence.
 
-The sound inference is institutional context: Arkansas participants operated within a network that circulated the asset as a model and later circulated Arkansas developments outward. The stronger causal proposition—that the network caused a particular authorization or purchase—is not established by chronology and correspondence alone.
+## Why a written investment case matters
 
-{% include evidence-boundary.html
-  established="SFOF-linked records document event participation, a 2020 sponsor listing, model-case circulation, speech preparation for a scheduled slot, and post-action contact facilitation."
-  unresolved="Payment terms, relationship continuity, editorial control, allocation direction, and decision causation are not established."
-  not_claimed="Political and network context is not presented as a substitute for agency-specific investment evidence."
-%}
+Officials and organizations may advocate for an investment. Pension trustees still owe members a decision grounded in financial risk and return. A written credit, alternatives, liquidity, and fiduciary analysis lets that case stand on its own.
 
-## Why independent analysis matters
-
-Political advocacy is permitted; public fiduciaries still need a financial record. The Integrity Act would require each covered board to state its credit, risk, return, liquidity, and fiduciary reasoning in writing, making the investment case assessable on its own terms.
+[Read about the Auditor's formal roles &rarr;](/findings/auditor-channel/)
+[Read the Integrity Act brief &rarr;](/legislators/)
 
 ---
 
-- [Back to Key Findings](/findings/)
-- [Read about formal Auditor roles](/findings/auditor-channel/)
-- [Read the Integrity Act proposal](/legislators/)
+[Back to Key Findings &rarr;](/findings/)

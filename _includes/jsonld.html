@@ -1,23 +1,45 @@
-{% assign inv = site.data.investigation %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "NGO",
   "@id": "https://arpensions.org/#organization",
   "name": "Arkansans for Pension Integrity",
-  "url": "https://arpensions.org",
+  "url": "https://arpensions.org/",
   "email": "info@arpensions.org",
   "logo": {
     "@type": "ImageObject",
+    "@id": "https://arpensions.org/#logo",
     "url": "https://arpensions.org/assets/images/api-badge-512.png",
     "width": 512,
-    "height": 512
+    "height": 512,
+    "caption": "Arkansans for Pension Integrity logo"
   },
-  "description": "Arkansas campaign for documented, issuer-neutral pension investment safeguards and fiduciary accountability.",
-  "areaServed": {"@type": "AdministrativeArea", "name": "Arkansas"},
-  "knowsAbout": ["pension integrity", "Arkansas public records", "fiduciary duty", "state pension funds", {{ site.data.terminology.instrument_formal | jsonify }}]
+  "description": "A statewide campaign for transparent, financially sound stewardship of Arkansas public retirement money.",
+  "areaServed": { "@type": "AdministrativeArea", "name": "Arkansas" },
+  "knowsAbout": ["pension governance", "fiduciary duty", "public retirement systems", "non-tradable sovereign debt", "public finance"],
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "contactType": "media and public inquiries",
+    "email": "info@arpensions.org",
+    "availableLanguage": ["en-US"]
+  }]
 }
 </script>
+
+{% if page.url == "/" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://arpensions.org/#website",
+  "url": "https://arpensions.org/",
+  "name": "Arkansans for Pension Integrity",
+  "description": "Public money deserves a public investment record.",
+  "inLanguage": "en-US",
+  "publisher": { "@id": "https://arpensions.org/#organization" }
+}
+</script>
+{% endif %}
 
 {% unless page.url == "/" %}
 <script type="application/ld+json">
@@ -25,12 +47,100 @@
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://arpensions.org/"},
-    {"@type": "ListItem", "position": 2, "name": {{ page.title | jsonify }}, "item": {{ page.url | absolute_url | jsonify }}}
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arpensions.org/"
+    }{% if page.layout == "post" %},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Campaign Updates",
+      "item": "https://arpensions.org/news/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ page.title | jsonify }}
+    }{% else %},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ page.title | jsonify }}
+    }{% endif %}
   ]
 }
 </script>
 {% endunless %}
+
+{% if page.layout == "post" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.description | default: page.excerpt | strip_html | strip_newlines | jsonify }},
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+  "author": { "@id": "https://arpensions.org/#organization" },
+  "publisher": { "@id": "https://arpensions.org/#organization" },
+  "image": "https://arpensions.org/assets/images/og-default.png",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ page.url | absolute_url }}" }
+}
+</script>
+{% endif %}
+
+{% if page.url == "/about/" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What prompted Arkansans for Pension Integrity?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Arkansas agencies put public money into completed Israel Bonds purchases or an ATRS manager account created for the strategy. Pension members should be able to see a clear financial explanation tied to each covered decision."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Would the Pension Investment Integrity Act tell pension boards what to buy or sell?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Trustees would retain their investment authority. The proposal would require written financial analysis for a covered purchase and public posting after the transaction."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the proposal single out Israel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The same process would apply to any covered purchase of non-tradable sovereign debt, regardless of issuer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does process matter if the amounts are a small part of each portfolio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A consistent written process protects members across every investment decision, builds confidence, and makes it possible to evaluate the financial trade-offs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I help?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Visit the Take Action page to support the Integrity Act, contact Arkansas legislators, attend a pension board meeting, or volunteer."
+      }
+    }
+  ]
+}
+</script>
+{% endif %}
 
 {% if page.url == "/evidence/" %}
 <script type="application/ld+json">
@@ -38,11 +148,11 @@
   "@context": "https://schema.org",
   "@type": "Report",
   "@id": "https://arpensions.org/evidence/#report",
-  "name": "Arkansas Public Investment Record",
+  "name": "What the Public Record Shows About Arkansas Israel Bonds Decisions",
   "url": "https://arpensions.org/evidence/",
-  "dateModified": {{ inv.updated_at | jsonify }},
-  "description": {{ inv.analysis_record.lead | jsonify }},
-  "publisher": {"@id": "https://arpensions.org/#organization"},
+  "description": "A plain-language account of the money involved, the agency decisions, the financial questions, and the proposed safeguards.",
+  "publisher": { "@id": "https://arpensions.org/#organization" },
+  "about": ["Arkansas pension systems", "Israel Bonds", "fiduciary duty", "non-tradable sovereign debt"],
   "inLanguage": "en-US"
 }
 </script>

@@ -1,64 +1,72 @@
 ---
 layout: page
 title: "Campaign Updates"
-description: "Dated milestones in the Arkansas public-investment investigation and the Pension Investment Integrity Act campaign."
+description: "Major developments in the campaign for transparent, financially sound Arkansas pension decisions."
 permalink: /news/
 ---
 
-{% assign inv = site.data.investigation %}
-{% assign apers = inv.agencies | where: "id", "apers" | first %}
-{% assign atrs = inv.agencies | where: "id", "atrs" | first %}
-
-Each entry is a standalone account of the record or campaign milestone known at that date.
-
 ## 2026
 
-### July 16 — PDF render gate completed
+### June 27 — Pension investment integrity becomes a 2027 priority
 
-The investigation completed {{ inv.corpus.render_jobs_complete }} of {{ inv.corpus.render_jobs_total }} PDF render jobs covering {{ inv.corpus.pdf_pages_display }} pages in a {{ inv.corpus.raw_files_display }}-file raw corpus. The current evidence model distinguishes confirmed securities, manager funding, authorization ceilings, and processing-stage payments and supplies exact locators for the site's principal claims. [Read the methodology.](/methodology/)
+Citizens First Congress selected pension investment integrity as one of its short-term legislative priorities for the 2027 Arkansas legislative session. The Pension Investment Integrity Act would require a written, issuer-neutral financial analysis for covered pension purchases of non-tradable sovereign debt.
 
-### June 27 — 2027 coalition priority
+[Read the legislative brief &rarr;](/legislators/)
 
-{{ inv.legislation.cfc_status }} {{ inv.legislation.full_summary }} The proposal is issuer-neutral. [Read the policy brief.](/legislators/)
+### February 17 — Treasury payment report shows another $10 million in process
 
-### May 18 — Six-system response record completed
+An outgoing-payment report shows a $10 million Treasury instruction marked as still processing by the bank. Arkansans for Pension Integrity does not include that amount in the $65 million completed-purchase total.
 
-The Arkansas Judicial Retirement System reported no records responsive to the request. With that response, the project had received responses from each of the six pension systems within the Act 498 definition used by the investigation. A no-records response is reported as a bounded agency response, not proof that no related record could exist in another custodian's files.
+[Open the Treasury payment record &rarr;]({{ site.data.investigation.sources.treasury_processing.record_url }})
 
-### April 20 — Broker-dealer records received
+### February 13 — APERS describes the Board material prepared for the decision
 
-The Arkansas Securities Department supplied registration and historical regulatory records for the broker-dealer through which the securities are offered. The records inform questions about marketability, due diligence, and Arkansas's exclusive-agency language; they do not by themselves establish present disqualification, a statutory violation, or investment unsuitability. [Read the finding.](/findings/regulatory-record/)
+In an email produced by APERS, the chief investment officer wrote that he had not prepared material for the Board on the Israel Bonds investment and believed the system's consultants had not either. The email sharpens the case for a consistent written decision memo.
 
-### March 28 — ASHERS outreach record received
-
-Selected ASHERS records document a DFA introduction and the sellers' pitch. No reply, authorization, or holding was identified in the reviewed production. The files do not establish an affirmative decline or the cause of the different observed outcome. [Read the ASHERS finding.](/findings/control-case/)
-
-### February 27 — APERS transaction and governance production
-
-The APERS production included meeting records and a large correspondence package. The reviewed file documents a {{ apers.measure_display }} purchase and signed minutes for a {{ apers.authorization_display }} authorization. [See APERS records.](/documents/#a-curated-source-trail)
-
-### February 19 — Treasury payment-stage production
-
-Treasury records document an additional {{ inv.metrics.treasury_conditional_payment.display }} payment instruction marked “Processing By Bank.” Without a completed bank status or resulting holdings record in the production, the amount remains conditional. [Read the record.](/documents/records/treasury-processing-payment/)
+[Open the APERS email &rarr;]({{ site.data.investigation.sources.apers_analysis_email.record_url }})
 
 ## 2025
 
-### December 29 — ATRS mandate funding documented
+### December 29 — ATRS reports $50 million funded to the Reams account
 
-An ATRS Board liquidity update documented {{ inv.metrics.atrs_manager_funding.display }} funded to the Scout/Reams mandate. The email does not identify the manager's security-level purchases or holdings. [Read the record.](/documents/records/atrs-manager-funding/)
+An ATRS Board update reports that $50 million was moved into the manager account created for the Israel Bonds strategy. The available account documents do not list the individual securities held in the account.
 
-### October 15 — APERS purchase documented
+[Open the ATRS funding notice &rarr;]({{ site.data.investigation.sources.atrs_funding.record_url }})
 
-APERS's transaction file documents a {{ apers.measure }}. The purchase is below the authorization motion's stated minimum; the operational and legal effect remains unresolved. [Read the privacy-reviewed record.](/documents/records/apers-purchase/)
+### October 15 — APERS completes a $15 million purchase
 
-### June 2 — ATRS authorization adopted
+The transaction record identifies a $15 million two-year institutional bond purchase. The amount is $10 million below the minimum named in the Investment Finance Subcommittee's May motion.
 
-ATRS adopted Resolution 2025-22, authorizing **{{ atrs.authorization_display | replace: 'Up to', 'up to' }}** and naming Reams as manager. Aon's packet memorandum provides implementation and manager-selection advice while expressly withholding an invest-or-not or individual-security recommendation. [Read pages 149–150.](/documents/records/atrs-aon-memo/)
+[Open the APERS purchase record &rarr;]({{ site.data.investigation.sources.apers_purchase.record_url }})
 
-### May 15 — APERS committee authorization adopted
+### June 2 — ATRS authorizes up to $50 million
 
-Signed minutes document an APERS Investment Finance Subcommittee motion for **{{ apers.authorization_display }}**. Jason Brady presented and moved the proposal, Jim Hudson seconded it, and the motion carried without dissent. [Read the minutes.](/documents/records/apers-authorization/)
+ATRS adopted Resolution 2025-22 and chose a manager-based structure. Aon's two-page packet memo compared implementation options, recommended Reams, and discussed limited marketability. Aon did not advise trustees whether to make the investment or which bond to buy.
 
-### Spring — Investigation launched
+[Read Aon's memo &rarr;]({{ site.data.investigation.sources.atrs_aon.record_url }})
 
-Arkansans for Pension Integrity began assembling agency records on public investments, governance, and fiduciary process. The project publishes selected privacy-reviewed anchors and keeps its legislative proposal focused on issuer-neutral procedure.
+### May 15 — APERS authorizes a $25–$50 million range
+
+The APERS Investment Finance Subcommittee approved the range reflected in its signed minutes. The motion was presented and moved by Jason Brady while serving as the Auditor of State's proxy.
+
+[Open the signed minutes &rarr;]({{ site.data.investigation.sources.apers_authorization.record_url }})
+
+### May — Treasury settles $20 million in new positions
+
+Two Treasury positions totaling $20 million settled in May and later appeared on the June 30 bondholder statement. The purchase followed an October 2024 internal overview that recommended holding existing positions while maturities rolled off.
+
+[Open the Treasury documents &rarr;](/documents/#treasury-documents)
+
+### April 14–15 — Israel Bonds outreach reaches Arkansas offices
+
+An eight-stop itinerary lists pension, executive, legislative, Treasury, and cabinet offices or settings. A separate DFA introduction led to a documented presentation to ASHERS. The later agency actions differed: Treasury and APERS completed purchases, ATRS funded a manager account, and the available ASHERS records show no authorization or purchase.
+
+[See the interactive route map &rarr;](/the-issue/#how-the-proposal-moved)
+
+## 2024
+
+### October 8 — Treasury overview recommends holding existing positions
+
+The two-page internal overview summarizes rating pressure and recommends holding the existing Israel Bonds positions, allowing scheduled maturities to roll off, and continuing surveillance.
+
+[Open the Treasury credit overview &rarr;]({{ site.data.investigation.sources.treasury_hold.record_url }})
