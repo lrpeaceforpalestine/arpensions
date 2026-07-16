@@ -19,20 +19,7 @@
 }
 </script>
 
-{% if page.url == "/" %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": "https://arpensions.org/#website",
-  "url": "https://arpensions.org",
-  "name": "Arkansans for Pension Integrity",
-  "description": {{ inv.thesis.summary | jsonify }},
-  "inLanguage": "en-US",
-  "publisher": {"@id": "https://arpensions.org/#organization"}
-}
-</script>
-{% else %}
+{% unless page.url == "/" %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -43,7 +30,7 @@
   ]
 }
 </script>
-{% endif %}
+{% endunless %}
 
 {% if page.url == "/evidence/" %}
 <script type="application/ld+json">

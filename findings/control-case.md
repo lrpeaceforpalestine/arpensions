@@ -16,6 +16,10 @@ On April 16, 2025, a DFA official introduced the sellers to ASHERS Executive Sec
 
 That is a **documented pitch with no identified adoption**.
 
+{% include citation.html source_id="ashers_route" %}
+{% include citation.html source_id="ashers_no_holding" %}
+{% include citation.html source_id="ashers_no_purchase" %}
+
 ## What the comparison cannot establish
 
 The available files do not document an affirmative decline. They do not establish that no oral response occurred. They also do not isolate the reason ASHERS's observed outcome differs from ATRS and APERS.
@@ -27,6 +31,8 @@ Possible explanations include fund structure, portfolio needs, recipient posture
   unresolved="The reason for the different observed outcome remains open."
   not_claimed="The site does not characterize ASHERS as affirmatively declining, prove oral silence, or treat this comparison as a causal experiment."
 %}
+
+{% include search-boundary.html boundary_id="ashers_adoption" %}
 
 ## Why the comparison matters
 

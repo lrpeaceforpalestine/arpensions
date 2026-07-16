@@ -1748,6 +1748,7 @@ blockquote footer {
   padding-top: 1rem;
   border-top: 1px solid var(--border-default);
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 0.75rem;
 }
@@ -2252,6 +2253,7 @@ blockquote footer {
 
 /* --- Copy to Clipboard Button --- */
 .copy-letter-btn {
+  display: none;
   position: absolute;
   top: 0.75rem;
   right: 0.75rem;
@@ -2269,6 +2271,8 @@ blockquote footer {
   line-height: 1;
   z-index: 1;
 }
+
+.copy-js .copy-letter-btn { display: inline-block; }
 
 .copy-letter-btn:hover {
   background: var(--accent-cta);
@@ -3518,6 +3522,18 @@ html.theme-transition *::after {
   outline: none;
   border-color: var(--accent);
   box-shadow: 0 0 0 2px var(--accent);
+}
+
+/* The Action Network country control visually replaces a transparent native
+   select. Carry the native select's focus state onto the visible control. */
+#can_embed_form #form-country:focus + .can_select .can_selectInner,
+#can_embed_form #form-country:focus-visible + .can_select .can_selectInner,
+#can_embed_form .js-country_drop_wrap:focus-within .can_selectInner,
+#can_embed_form .can_select.can_selectFocus .can_selectInner {
+  border-color: var(--accent) !important;
+  outline: 3px solid var(--accent) !important;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--bg-primary) !important;
 }
 /* Submit — matches .btn-primary (brand CTA) */
 #can_embed_form input[type="submit"],

@@ -6,6 +6,8 @@ permalink: /legislators/
 audience_nav: true
 breadcrumb: "Integrity Act"
 hero_band: pine
+mobile_cta_label: "Request a briefing"
+mobile_cta_url: "mailto:info@arpensions.org?subject=Pension%20Investment%20Integrity%20Act%20briefing"
 ---
 
 {% assign inv = site.data.investigation %}
@@ -19,7 +21,7 @@ Arkansas records establish a **{{ inv.metrics.confirmed_security_floor.display }
 
 The files contain manager-selection, implementation, marketability, and credit-related materials. They leave material questions about how sovereign-credit risk and portfolio fit were evaluated and connected to each affirmative investment decision.
 
-The Pension Investment Integrity Act answers that procedural problem without directing an investment result. Citizens First Congress selected the proposal as a short-term priority for the 2027 Arkansas legislative session.
+The Pension Investment Integrity Act answers that procedural problem without directing an investment result. {{ inv.legislation.cfc_status }}
 
 ## Proposal status
 
@@ -27,10 +29,12 @@ The Pension Investment Integrity Act answers that procedural problem without dir
   <div><span>Campaign stage</span><strong>{{ inv.legislation.stage }}</strong></div>
   <div><span>Bill number</span><strong>{{ inv.legislation.bill_number }}</strong></div>
   <div><span>Sponsor status</span><strong>{{ inv.legislation.sponsor_status }}</strong></div>
-  <div><span>Coalition status</span><strong>Citizens First Congress short-term priority</strong></div>
+  <div><span>Coalition status</span><strong>{{ inv.legislation.cfc_status_short }}</strong></div>
 </div>
 
-Status verified {{ inv.legislation.status_verified | date: "%B %-d, %Y" }}. The policy core is public here; legislative language, fiscal review, and a bill number will be linked when available. [Open the printable one-page brief](/legislators/one-page/). Citizens First Congress describes its member priority process on its [official process page]({{ inv.legislation.cfc_process_url }}).
+Status verified {{ inv.legislation.status_verified | date: "%B %-d, %Y" }}. The policy core is public here; legislative language, fiscal review, and a bill number will be linked when available. [Open the printable one-page brief](/legislators/one-page/) or [download the dated PDF]({{ inv.legislation.brief_pdf_url }}). The coalition-selection status is attributed to the campaign's convention record; Citizens First Congress describes the delegate process that creates its priority platform on its [official process page]({{ inv.legislation.cfc_process_url }}).
+
+{% include legislative-window.html %}
 
 {% include evidence-ledger.html %}
 
@@ -51,6 +55,14 @@ This proposal does not declare that an agency violated Act 498. It makes the fut
 The safeguards are **issuer-neutral**. They apply to the asset characteristics and the public fiduciary process, not to a particular country, seller, political position, or desired vote.
 
 {{ inv.legislation.full_summary }}
+
+### Publication without pre-trade disclosure
+
+{{ inv.legislation.publication_boundary }} The intended public record would retain:
+
+{% for field in inv.legislation.publication_public_fields %}
+- {{ field }}.
+{% endfor %}
 
 ## The record before legislators
 
@@ -81,6 +93,8 @@ The prefiling process must translate the policy core into administrable bill tex
 - the covered-plan and covered-transaction definitions;
 - any materiality threshold and narrowly stated operational exceptions;
 - who receives, posts, and retains the required record;
+- the covered-acquisition event that starts the 30-day publication clock and the treatment of staged transactions;
+- narrow redaction standards that protect legally confidential operational details without hiding the required conclusions;
 - the implementation date and treatment of transactions already in progress; and
 - the fiscal and administrative note for affected systems.
 
@@ -96,4 +110,4 @@ For a briefing or source package, contact **Arkansans for Pension Integrity** at
 
 ---
 
-[Review the evidence](/evidence/) · [Browse selected primary records](/documents/) · [Open the one-page brief](/legislators/one-page/) · [Download current facts](/assets/data/current-facts.csv)
+[Review the evidence](/evidence/) · [Browse selected primary records](/documents/) · [Download the one-page PDF]({{ inv.legislation.brief_pdf_url }}) · [Download current facts](/assets/data/current-facts.csv)

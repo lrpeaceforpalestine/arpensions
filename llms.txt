@@ -16,7 +16,7 @@ Arkansans for Pension Integrity is an Arkansas public-records and legislative ca
 - {{ inv.metrics.treasury_conditional_payment.display }} additional Treasury payment remains {{ inv.metrics.treasury_conditional_payment.status }} because its report was marked Processing By Bank
 - {{ inv.metrics.pension_authorization_ceiling.display }} is a pension authorization ceiling, not holdings
 - Record cutoff: {{ inv.record_cutoff }}
-- Render-aware review: {{ inv.corpus.pdf_pages_display }} PDF pages across {{ inv.corpus.raw_files_display }} raw files; completed {{ inv.review_completed }}
+- PDF render gate: {{ inv.corpus.render_jobs_complete }}/{{ inv.corpus.render_jobs_total }} jobs covering {{ inv.corpus.pdf_pages_display }} pages across {{ inv.corpus.raw_files_display }} raw files; completed {{ inv.review_completed }}
 
 ## Analytical record
 

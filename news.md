@@ -13,9 +13,9 @@ Each entry is a standalone account of the record or campaign milestone known at 
 
 ## 2026
 
-### July 16 — Render-aware corpus review completed
+### July 16 — PDF render gate completed
 
-The investigation completed visual review across {{ inv.corpus.pdf_pages_display }} PDF pages in a {{ inv.corpus.raw_files_display }}-file raw corpus. The current evidence model distinguishes confirmed securities, manager funding, authorization ceilings, and processing-stage payments and supplies exact locators for the site's principal claims. [Read the methodology.](/methodology/)
+The investigation completed {{ inv.corpus.render_jobs_complete }} of {{ inv.corpus.render_jobs_total }} PDF render jobs covering {{ inv.corpus.pdf_pages_display }} pages in a {{ inv.corpus.raw_files_display }}-file raw corpus. The current evidence model distinguishes confirmed securities, manager funding, authorization ceilings, and processing-stage payments and supplies exact locators for the site's principal claims. [Read the methodology.](/methodology/)
 
 ### June 27 — 2027 coalition priority
 

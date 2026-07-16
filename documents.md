@@ -4,6 +4,8 @@ title: "Documents — Selected Primary Records"
 description: "Privacy-reviewed anchor records supporting the principal findings on Arkansas public investment decisions."
 permalink: /documents/
 breadcrumb: "Documents"
+mobile_cta_label: "Request a source locator"
+mobile_cta_url: "mailto:info@arpensions.org?subject=Source%20locator%20request"
 ---
 
 {% assign inv = site.data.investigation %}
@@ -13,6 +15,8 @@ breadcrumb: "Documents"
 This collection contains selected anchor records supporting the site's principal findings. Each record page identifies the agency source, date, exact page or locator, and any campaign-applied masking. The collection is not a complete mirror of every FOIA production.
 
 Masking protects account numbers, transaction identifiers, user identifiers, direct contact information, and operational data that are not necessary to understand the public-interest finding. The underlying government records are not altered in the investigation corpus; the hosted excerpt is a separate publication copy.
+
+Hosted PDFs include a searchable text layer, native or OCR, for accessibility. The visible page image remains the controlling publication excerpt, including every campaign-applied mask disclosed on its record page.
 
 <div class="source-record-grid">
 {% for pair in inv.sources %}

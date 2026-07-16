@@ -15,10 +15,15 @@ The productions include:
 - a 2020 State Financial Officers Foundation event sponsor listing that includes the bond seller;
 - Arkansas officials' attendance and participation in SFOF events;
 - a November 2024 SFOF newsletter circulating another state's purchase as a case study;
-- material prepared for Dennis Milligan's April 2025 SFOF appearance; and
+- material prepared for a scheduled April 2025 SFOF appearance; and
 - a June 2025 Auditor-office message offering to facilitate contact with other member states after the Arkansas pension actions.
 
 Together, those records establish a network through which policy positions, examples, contacts, and promotional material moved among state financial officers.
+
+{% include citation.html source_id="sfof_sponsor_listing" %}
+{% include citation.html source_id="sfof_model_case" %}
+{% include citation.html source_id="sfof_speech_preparation" %}
+{% include citation.html source_id="sfof_post_action_facilitation" %}
 
 ## What remains bounded
 
@@ -27,7 +32,7 @@ The reviewed records do not establish the terms of any 2020 sponsorship payment,
 The sound inference is institutional context: Arkansas participants operated within a network that circulated the asset as a model and later circulated Arkansas developments outward. The stronger causal proposition—that the network caused a particular authorization or purchase—is not established by chronology and correspondence alone.
 
 {% include evidence-boundary.html
-  established="SFOF-linked records document event participation, a 2020 sponsor listing, model-case circulation, speech preparation, and post-action contact facilitation."
+  established="SFOF-linked records document event participation, a 2020 sponsor listing, model-case circulation, speech preparation for a scheduled slot, and post-action contact facilitation."
   unresolved="Payment terms, relationship continuity, editorial control, allocation direction, and decision causation are not established."
   not_claimed="Political and network context is not presented as a substitute for agency-specific investment evidence."
 %}

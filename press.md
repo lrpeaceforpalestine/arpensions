@@ -6,6 +6,8 @@ permalink: /press/
 audience_nav: true
 breadcrumb: "Press"
 hero_band: pine
+mobile_cta_label: "Media inquiry"
+mobile_cta_url: "mailto:info@arpensions.org?subject=Media%20inquiry"
 ---
 
 {% assign inv = site.data.investigation %}
@@ -53,9 +55,12 @@ At APERS, the reviewed authorization file contains no Callan sovereign-credit me
 ## Dates and scope
 
 - **Transaction-record cutoff:** {{ inv.record_cutoff | date: "%B %-d, %Y" }}
-- **Render-aware research review completed:** {{ inv.review_completed | date: "%B %-d, %Y" }}
-- **Reviewed corpus:** {{ inv.corpus.raw_files_display }} raw files and {{ inv.corpus.pdf_pages_display }} PDF pages; {{ inv.corpus.render_jobs_complete }} of {{ inv.corpus.render_jobs_total }} render jobs complete
+- **PDF render gate completed:** {{ inv.review_completed | date: "%B %-d, %Y" }}
+- **Render-gate scope:** {{ inv.corpus.raw_files_display }} raw files and {{ inv.corpus.pdf_pages_display }} PDF pages; {{ inv.corpus.render_jobs_complete }} of {{ inv.corpus.render_jobs_total }} render jobs complete
 - **Hosted documents:** selected, privacy-reviewed anchor records supporting the site's principal findings; not a complete production mirror
+- **Bill prefiling opens:** {{ inv.legislation.prefiling_opens_display }}
+- **Regular session convenes:** {{ inv.legislation.session_convenes_display }}
+- **Ordinary retirement-legislation filing deadline:** {{ inv.legislation.retirement_filing_deadline_display }} ([official calendar]({{ inv.legislation.important_dates_url }}))
 
 ## Primary links
 
@@ -74,13 +79,14 @@ At APERS, the reviewed authorization file contains no Callan sovereign-credit me
 
 The Auditor of State is an ex-officio ATRS trustee, and records identify Chief Deputy Auditor Jason Brady as a designee or proxy in ATRS and APERS proceedings. The Auditor's office also appears in scheduling, correspondence, presentation, and promotional records. The Auditor does not manage ATRS or APERS assets and is not their investment staff.
 
-The April 2025 itinerary contains eight scheduled stops across distinct venues. The Hudson–Babbitt meeting is independently confirmed; Fecher and Treasury-team encounters are participant- or seller-reported; and the scheduled White encounter remains unconfirmed. Sequence and access do not establish decision causation.
+The April 2025 itinerary contains eight scheduled stops across pension, legislative, Treasury, and cabinet offices. The Hudson–Babbitt meeting is independently confirmed; Fecher and Treasury-team encounters are participant- or seller-reported; and the scheduled White encounter remains unconfirmed. Sequence and access do not establish decision causation.
 
 ASHERS records document a pitch through DFA and no identified reply, authorization, or holding. They do not establish an affirmative decline or explain the different outcome.
 
 ## Downloads and brand assets
 
-- [Printable Pension Investment Integrity Act one-page brief](/legislators/one-page/)
+- [Pension Investment Integrity Act one-page brief, dated PDF]({{ inv.legislation.brief_pdf_url }})
+- [Printable HTML version of the brief](/legislators/one-page/)
 - [Current facts as CSV](/assets/data/current-facts.csv)
 - [Campaign logo, SVG](/assets/images/api-badge.svg)
 - [Campaign logo, 512-pixel PNG](/assets/images/api-badge-512.png)

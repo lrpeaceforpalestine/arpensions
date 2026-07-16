@@ -19,9 +19,12 @@ The Auditor is an ex-officio ATRS trustee. ATRS records list Chief Deputy Audito
 
 This is more precise than treating the Auditor's office as an outsider to pension governance. The officeholder and proxy had formal seats in the decision setting, while asset management and investment analysis remained the responsibility of the systems and their advisers.
 
+{% include citation.html source_id="atrs_auditor_designee" %}
+{% include citation.html source_id="apers_authorization" %}
+
 ## Scheduling and presentation
 
-Auditor-office records document coordination of an April 2025 Capitol itinerary for the issuer's representatives. The itinerary lists **eight scheduled stops across distinct venues**, including meetings involving pension and Treasury officials.
+Auditor-office records document coordination of an April 2025 Capitol itinerary for the issuer's representatives. The itinerary lists **eight scheduled stops across pension, legislative, Treasury, and cabinet offices**, including meetings involving pension and Treasury officials.
 
 The encounter evidence also has different strengths:
 
@@ -31,6 +34,10 @@ The encounter evidence also has different strengths:
 - **Unconfirmed:** the scheduled encounter with ATRS Executive Director Mark White was not independently confirmed in the reviewed corpus.
 
 Chronology shows access and sequence. It does not establish that any encounter caused a later authorization or purchase.
+
+{% include citation.html source_id="capitol_itinerary" %}
+{% include citation.html source_id="hudson_babbitt_confirmation" %}
+{% include citation.html source_id="seller_reported_meetings" %}
 
 ## Correspondence and promotion
 

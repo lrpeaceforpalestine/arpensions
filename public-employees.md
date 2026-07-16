@@ -6,6 +6,8 @@ permalink: /public-employees/
 audience_nav: true
 breadcrumb: "For Public Employees"
 hero_band: pine
+mobile_cta_label: "Contact your legislators"
+mobile_cta_url: "/take-action/#contact-legislators"
 ---
 
 {% assign inv = site.data.investigation %}
@@ -20,9 +22,9 @@ The purchase is **{{ inv.transaction_figures.apers_below_minimum_difference.disp
 These records concern investment process and portfolio reporting. They do not show a change to earned-benefit formulas, payment schedules, or the legal obligation to pay benefits.
 
 <div class="audience-fact-grid">
-  <article><span class="evidence-status evidence-status--established">{{ apers.status }}</span><strong>{{ inv.metrics.confirmed_security_floor.display }}</strong><p>Statewide security floor, including APERS and Treasury.</p></article>
-  <article><span class="evidence-status evidence-status--established">established</span><strong>{{ apers.measure }}</strong><p>Confirmed by the October 15 transaction record.</p></article>
+  <article><span class="evidence-status evidence-status--established">{{ apers.status }}</span><strong>{{ apers.measure_display }}</strong><p>APERS security purchase confirmed by the October 15 transaction record.</p></article>
   <article><span class="evidence-status evidence-status--authorization">authorization</span><strong>{{ apers.authorization_display }}</strong><p>The IFSC-authorized range is not the amount purchased.</p></article>
+  <article><span class="evidence-status evidence-status--interpretive">open question</span><strong>{{ inv.transaction_figures.apers_below_minimum_difference.display }}</strong><p>Difference below the motion's stated minimum; effect unresolved.</p></article>
 </div>
 
 ## What APERS's analytical file contains
@@ -40,6 +42,8 @@ In the reviewed authorization file, we identified no Callan sovereign-credit mem
   unresolved="The effect of the below-minimum purchase and any later transaction outside the cutoff remain open."
   not_claimed="The site does not equate the authorization ceiling with holdings or infer a legal violation from the discrepancy alone."
 %}
+
+{% include search-boundary.html boundary_id="apers_analysis" %}
 
 ## What the Integrity Act would protect
 

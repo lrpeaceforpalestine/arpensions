@@ -3,6 +3,8 @@
   var buttons = document.querySelectorAll('.copy-letter-btn');
   if (!buttons.length) return;
 
+  document.documentElement.classList.add('copy-js');
+
   buttons.forEach(function(btn) {
     btn.addEventListener('click', function() {
       var template = btn.closest('.letter-template');

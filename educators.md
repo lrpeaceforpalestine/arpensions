@@ -6,6 +6,8 @@ permalink: /educators/
 audience_nav: true
 breadcrumb: "For Educators"
 hero_band: pine
+mobile_cta_label: "Contact your legislators"
+mobile_cta_url: "/take-action/#contact-legislators"
 ---
 
 {% assign inv = site.data.investigation %}
@@ -22,7 +24,7 @@ These records concern investment process and portfolio reporting. They do not sh
 <div class="audience-fact-grid">
   <article><span class="evidence-status evidence-status--funded-mandate">{{ atrs.status }}</span><strong>{{ inv.metrics.atrs_manager_funding.display }}</strong><p>Transferred to the Reams mandate.</p></article>
   <article><span class="evidence-status evidence-status--unproduced">unproduced</span><strong>Holdings detail</strong><p>No security-level inventory was identified in the reviewed ATRS production.</p></article>
-  <article><span class="evidence-status evidence-status--authorization">authorization</span><strong>{{ inv.metrics.pension_authorization_ceiling.display }}</strong><p>Combined ATRS and APERS ceiling; not a holdings total.</p></article>
+  <article><span class="evidence-status evidence-status--authorization">authorization</span><strong>{{ atrs.authorization_display }}</strong><p>ATRS authorization ceiling; not a holdings total.</p></article>
 </div>
 
 ## What ATRS's analytical file contains

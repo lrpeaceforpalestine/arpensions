@@ -30,11 +30,15 @@ Within the reviewed ATRS production, we did not identify:
 
 “Unproduced” is a boundary on this corpus. It does not establish the account's cash balance or immediate security deployment.
 
+{% include search-boundary.html boundary_id="atrs_holdings" %}
+
 ## The December meeting record
 
 Searches of locally generated transcripts for the December 1, 2025 ATRS Investment Committee and Board meetings found no topic match for Israel Bonds, Reams, Scout, Jubilee, or Resolution 2025-22. The same meetings included substantive discussion of private credit.
 
 Transcript search is useful as a locator method, but it is not proof of exhaustive oral silence. The audio finding therefore remains a bounded absence finding: **no identified topic match in the reviewed transcripts**, not a claim that no relevant words were spoken or no oversight occurred elsewhere.
+
+{% include search-boundary.html boundary_id="atrs_audio" %}
 
 {% include evidence-boundary.html
   established="The documented amount was funded to the Reams manager mandate."

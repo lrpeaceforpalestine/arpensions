@@ -47,6 +47,7 @@ html[data-theme="light"] .mobile-cta-bar{background:#FFFFFF}
 [data-theme="dark"] .logo-light,[data-theme="light"] .logo-dark,:root:not([data-theme]) .logo-dark{opacity:0}
 [data-theme="dark"] .logo-dark,[data-theme="light"] .logo-light{opacity:1}
 html[data-theme="dark"] :where(main,footer,aside,section,article,div){background-color:transparent}
+html[data-theme="dark"] .hero-ledger{color:#013237;background:repeating-radial-gradient(ellipse at 0 50%,transparent 0 8px,rgba(1,50,55,.045) 9px 10px,transparent 11px 18px),linear-gradient(135deg,rgba(72,164,109,.11),transparent 42%),#E6F9E4}
 /* ADD NEW THEMED COMPONENTS IN ALL THREE LOCATIONS: base pairs above, @media dark block, and @media light block */
 html[data-theme="light"] .hero{background-color:#013237}
 html[data-theme="dark"] .hero{background-color:#001E22}
@@ -105,7 +106,10 @@ html[data-theme="dark"] .about-section{background:#074750}
 </style>
 
 {% if page.unlisted %}<meta name="robots" content="noindex, nofollow">{% endif %}
-{% seo %}
+<title>{{ page.title | default: site.title | escape }}</title>
+{% seo title=false %}
+<meta property="og:image:alt" content="Arkansans for Pension Integrity evidence ledger: confirmed securities, manager funding, and a conditional payment shown as distinct measures">
+<meta name="twitter:image:alt" content="Arkansans for Pension Integrity evidence ledger with distinct investment-status measures">
 {% include jsonld.html %}
 
 <!-- Fonts -->

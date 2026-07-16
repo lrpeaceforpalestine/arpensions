@@ -33,9 +33,9 @@
 
     {% assign inv = site.data.investigation %}
     <div class="footer-evidence-stamp" aria-label="Research baseline">
-      <span>Public record reviewed</span>
+      <span>PDF render gate</span>
       <strong>{{ inv.corpus.pdf_pages_display }} PDF pages</strong>
-      <span>{{ inv.corpus.raw_files_display }} raw files · completed {{ inv.review_completed | date: "%B %-d, %Y" }}</span>
+      <span>{{ inv.corpus.render_jobs_complete }}/{{ inv.corpus.render_jobs_total }} render jobs · completed {{ inv.review_completed | date: "%B %-d, %Y" }}</span>
     </div>
 
     <hr class="footer-rule" aria-hidden="true">

@@ -67,6 +67,18 @@ def main() -> None:
     if unknown_manifest:
         errors.append(f"source-asset manifest contains unknown entries: {', '.join(unknown_manifest)}")
 
+    for path in sorted((ROOT / "assets" / "documents").glob("*.pdf")):
+        try:
+            document = fitz.open(path)
+            image_only_pages = [index + 1 for index, page in enumerate(document) if not page.get_text().strip()]
+            if image_only_pages:
+                errors.append(
+                    f"{path.name} lacks a searchable text layer on page(s) "
+                    + ", ".join(str(page) for page in image_only_pages)
+                )
+        except Exception as exc:  # pragma: no cover - diagnostic path
+            errors.append(f"{path.name} could not be checked for searchable text: {exc}")
+
     if args.live:
         try:
             request = Request(

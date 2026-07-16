@@ -30,8 +30,10 @@ description: "The evidence-led Arkansas Israel Bonds record: confirmed securitie
   <div class="container container-prose">
     <span class="section-label">A 2027 legislative priority</span>
     <h2>The Pension Investment Integrity Act</h2>
+    <p class="proposal-kicker"><strong>{{ inv.legislation.stage }}</strong> · {{ inv.legislation.sponsor_status }} · {{ inv.legislation.bill_number | prepend: "Bill number: " }}</p>
     <p>{{ inv.legislation.full_summary }}</p>
     <p>{{ inv.legislation.cfc_status }} The proposal is issuer-neutral: it governs the process used for this asset class, not the identity of a country or issuer.</p>
+    <p class="campaign-clock-note"><strong>Next milestone:</strong> bill prefiling opens <time datetime="{{ inv.legislation.prefiling_opens }}">{{ inv.legislation.prefiling_opens_display }}</time>. Sponsor and drafting work must come first. <a href="{{ inv.legislation.important_dates_url }}">See the official 2027 calendar</a>.</p>
     <p><a href="{{ '/legislators/' | relative_url }}" class="about-link">Read the policy brief &rarr;</a></p>
   </div>
 </section>

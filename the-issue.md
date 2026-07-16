@@ -70,7 +70,7 @@ An October 8, 2024 internal overview summarizes S&amp;P and Moody’s downgrade 
 
 {% include documented-routes.html %}
 
-The April 14–15, 2025 itinerary scheduled eight stops across pension, executive, legislative, Treasury, and cabinet offices. The Hudson–Babbitt meeting is independently confirmed. A Treasury-team encounter and the APERS executive-director encounter are participant- or seller-reported. The ATRS executive-director meeting remains unconfirmed in the reviewed record. The meetings occurred in several distinct offices; the chronology does not establish that any stop caused a later authorization or purchase.
+The April 14–15, 2025 itinerary scheduled eight stops across pension, executive, legislative, Treasury, and cabinet offices. The Hudson–Babbitt meeting is independently confirmed. A Treasury-team encounter and the APERS executive-director encounter are participant- or seller-reported. The ATRS executive-director meeting remains unconfirmed in the reviewed record. The scheduled stops spanned several distinct offices; the chronology does not establish attendance, substance, or that any stop caused a later authorization or purchase.
 
 <span class="section-label">Fiduciary baseline</span>
 
@@ -86,7 +86,7 @@ The proposed **Pension Investment Integrity Act** would add that procedure:
 {{ forloop.index }}. {{ provision }}.
 {% endfor %}
 
-The proposal is issuer-neutral and prospective. It does not direct a fund to buy or sell a particular investment. It makes the decision record legible before beneficiaries bear a long-term, non-tradable exposure.
+The proposal is issuer-neutral and prospective. It does not direct a fund to buy or sell a particular investment. It requires the decision record before acquisition and makes its core conclusions public afterward.
 
 <p><a class="btn-primary" href="/legislators/">Read the 2027 policy brief</a> <a class="btn-secondary" href="/take-action/">Support the Integrity Act</a></p>
 

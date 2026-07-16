@@ -9,6 +9,7 @@ import json
 import re
 import sys
 from collections import Counter
+from datetime import date
 from pathlib import Path
 from urllib.parse import unquote, urljoin, urlsplit
 
@@ -21,6 +22,7 @@ CANONICAL = ROOT / "_data" / "investigation.yml"
 REGRESSIONS = ROOT / "_internal" / "accuracy-regressions.yml"
 PUBLIC_CONTRACT = ROOT / "_internal" / "public-contract.yml"
 LEGACY_ANCHORS = ROOT / "_data" / "legacy_anchors.yml"
+LEGACY_TARGETS = ROOT / "_data" / "legacy_anchor_targets.yml"
 TEXT_SUFFIXES = {".md", ".html", ".yml", ".yaml", ".js", ".json", ".txt", ".csv", ".css", ".svg"}
 SKIP_PARTS = {".git", ".qa", "_site", "_internal", "scripts", "vendor", "node_modules"}
 SKIP_FILES = {"README.md", "CLAUDE.md", "LICENSE", "Gemfile.lock"}
@@ -156,6 +158,8 @@ def audit_accessibility_contracts(audit: Audit) -> None:
         audit.fail("accessibility: CSS lacks a reduced-motion mode")
     if ":focus-visible" not in css:
         audit.fail("accessibility: CSS lacks visible keyboard-focus rules")
+    if '[data-theme="dark"] .hero-ledger' not in css:
+        audit.fail("accessibility: dark theme does not explicitly restore the light ledger surface")
     if re.search(r"\.container-prose\s+table\s*\{[^}]*display\s*:\s*block", css, re.S):
         audit.fail("accessibility: prose tables must not use display:block")
 
@@ -164,6 +168,10 @@ def audit_accessibility_contracts(audit: Audit) -> None:
         audit.fail("accessibility: Take Action must retain the Action Network embed and no-JavaScript path")
     if "petition-fallback" not in take_action or "/privacy/" not in take_action:
         audit.fail("accessibility: Take Action needs an always-visible petition fallback and privacy link")
+    if "petition-consent-note" not in take_action or "clearing the email-updates checkbox" not in take_action:
+        audit.fail("consent: Take Action must explain how to sign without campaign email updates")
+    if "structured volunteer email" not in take_action or "volunteer-grid" not in take_action:
+        audit.fail("conversion: volunteer recruitment must lead to a structured, privacy-linked intake")
     if "source=widget" in take_action or take_action.count("source=arpensions") < 2:
         audit.fail("conversion: Action Network attribution must consistently use source=arpensions")
 
@@ -179,9 +187,34 @@ def audit_accessibility_contracts(audit: Audit) -> None:
     if ".nav-js .nav-links" not in css:
         audit.fail("accessibility: mobile navigation has no no-JavaScript CSS fallback")
 
+    default_layout = (ROOT / "_layouts" / "default.html").read_text(encoding="utf-8")
+    if "page.mobile_cta_label" not in default_layout or "page.mobile_cta_url" not in default_layout:
+        audit.fail("conversion: mobile call to action is not page-aware")
+    landing_layout = (ROOT / "_layouts" / "landing.html").read_text(encoding="utf-8")
+    if landing_layout.find("{{ content }}") > landing_layout.find("include audience-nav.html"):
+        audit.fail("conversion: audience switcher must follow page-specific landing content")
+
+    thanks = (ROOT / "take-action-thanks.md").read_text(encoding="utf-8")
+    if "/take-action/#spread" not in thanks or "include social-share.html" not in thanks:
+        audit.fail("conversion: post-signature page lacks a direct petition-sharing loop")
+
     toc_js = (ROOT / "assets" / "js" / "evidence-toc.js").read_text(encoding="utf-8")
     if "toc-js" not in toc_js or ".toc-js .evidence-toc-list" not in css:
         audit.fail("accessibility: evidence TOC lacks a no-JavaScript fallback")
+
+    table_wrap = (ROOT / "assets" / "js" / "table-wrap.js").read_text(encoding="utf-8")
+    if "closest('.table-scroll, .table-scroll-wrapper')" not in table_wrap:
+        audit.fail("accessibility: authored scroll regions must not receive nested table wrappers")
+
+    copy_js = (ROOT / "assets" / "js" / "copy-to-clipboard.js").read_text(encoding="utf-8")
+    if "classList.add('copy-js')" not in copy_js or ".copy-js .copy-letter-btn" not in css:
+        audit.fail("progressive enhancement: copy buttons must stay hidden until listeners bind")
+
+    action_a11y = (ROOT / "assets" / "js" / "action-network-a11y.js").read_text(encoding="utf-8")
+    if "aria-label', 'Country (required)" not in action_a11y or "aria-required" not in action_a11y:
+        audit.fail("accessibility: the embedded petition needs runtime country labeling and required semantics")
+    if "#form-country:focus + .can_select" not in css:
+        audit.fail("accessibility: the embedded petition country selector lacks a visible focus proxy")
 
 
 def audit_canonical(audit: Audit) -> dict:
@@ -216,6 +249,12 @@ def audit_canonical(audit: Audit) -> dict:
             audit.fail(f"canonical: agency {agency['id']} has unknown status {agency['status']!r}")
         if not agency.get("authority_label"):
             audit.fail(f"canonical: agency {agency['id']} lacks an authorization/target label")
+        authority_status = agency.get("authority_status", "").replace(" ", "_")
+        if authority_status not in allowed_status:
+            audit.fail(f"canonical: agency {agency['id']} has unknown authority status {agency.get('authority_status')!r}")
+        authority_source_id = agency.get("authority_source_id")
+        if authority_source_id and authority_source_id not in source_ids:
+            audit.fail(f"canonical: agency {agency['id']} references unknown authority source {authority_source_id}")
         for source_id in agency.get("source_ids", []):
             if source_id not in source_ids:
                 audit.fail(f"canonical: agency {agency['id']} references unknown source {source_id}")
@@ -232,6 +271,9 @@ def audit_canonical(audit: Audit) -> dict:
             audit.fail(f"canonical: route {route['id']} has unknown event status {route['status']!r}")
 
     for source_id, source in data["sources"].items():
+        missing_source_fields = sorted({"title", "agency", "date", "locator"} - set(source))
+        if missing_source_fields:
+            audit.fail(f"canonical: source {source_id} lacks {', '.join(missing_source_fields)}")
         asset_url = source.get("asset_url")
         if asset_url and not (ROOT / asset_url.lstrip("/")).is_file():
             audit.fail(f"canonical: source {source_id} points to missing asset {asset_url}")
@@ -241,18 +283,68 @@ def audit_canonical(audit: Audit) -> dict:
             if not (ROOT / "documents" / "records" / slug / "index.md").is_file():
                 audit.fail(f"canonical: source {source_id} points to missing record page {record_url}")
 
+    boundary_fields = {"title", "custodian", "scope", "record_types", "method", "result", "limit"}
+    for boundary_id, boundary in data.get("search_boundaries", {}).items():
+        missing_boundary_fields = sorted(boundary_fields - set(boundary))
+        if missing_boundary_fields:
+            audit.fail(f"canonical: search boundary {boundary_id} lacks {', '.join(missing_boundary_fields)}")
+    boundary_consumers = {
+        "atrs_merits": ROOT / "findings" / "procedural-asymmetry.md",
+        "atrs_holdings": ROOT / "findings" / "oversight-gap.md",
+        "atrs_audio": ROOT / "findings" / "oversight-gap.md",
+        "apers_analysis": ROOT / "public-employees.md",
+        "ashers_adoption": ROOT / "findings" / "control-case.md",
+    }
+    for boundary_id, path in boundary_consumers.items():
+        if boundary_id not in data.get("search_boundaries", {}):
+            audit.fail(f"canonical: missing required search boundary {boundary_id}")
+        elif f'boundary_id="{boundary_id}"' not in path.read_text(encoding="utf-8"):
+            audit.fail(f"canonical: search boundary {boundary_id} has no public consumer")
+
     timeline = {event["id"]: event for event in data["timeline"]}
     if timeline.get("atrs_authorization", {}).get("source_id") != "atrs_resolution":
         audit.fail("canonical: ATRS authorization timeline event must cite the signed resolution")
     floor_sources = set(metrics["confirmed_security_floor"].get("source_ids", []))
     if "treasury_maturity" not in floor_sources:
         audit.fail("canonical: confirmed floor must cite the subtractive Treasury maturity")
+    combined_sources = set(metrics["combined_tied_or_funded"].get("source_ids", []))
+    if "treasury_maturity" not in combined_sources:
+        audit.fail("canonical: combined measure must inherit the subtractive Treasury maturity source")
 
     legislation = data["legislation"]
     if "Before acquisition" not in legislation.get("full_summary", ""):
         audit.fail("canonical: policy summary must identify the pre-acquisition safeguards")
-    if "within 30 days" not in legislation.get("full_summary", ""):
+    if "within 30 days after each covered acquisition" not in legislation.get("full_summary", ""):
         audit.fail("canonical: policy summary must identify the post-acquisition publication deadline")
+    if "According to Arkansans for Pension Integrity" not in legislation.get("cfc_status", ""):
+        audit.fail("canonical: CFC selection status must remain attributed to the campaign convention record")
+    if "narrow, explained redactions" not in legislation.get("publication_boundary", ""):
+        audit.fail("canonical: publication boundary must address narrow, explained redactions")
+    try:
+        prefiling = date.fromisoformat(legislation["prefiling_opens"])
+        convenes = date.fromisoformat(legislation["session_convenes"])
+        filing_deadline = date.fromisoformat(legislation["retirement_filing_deadline"])
+        if not prefiling < convenes < filing_deadline:
+            audit.fail("canonical: 2027 legislative milestones are out of sequence")
+    except (KeyError, TypeError, ValueError) as exc:
+        audit.fail(f"canonical: legislative milestone date is invalid: {exc}")
+    if "arkleg.state.ar.us" not in legislation.get("important_dates_url", ""):
+        audit.fail("canonical: legislative milestones lack an official Arkansas source")
+
+    executed_resolution = data["sources"].get("atrs_resolution", {})
+    if executed_resolution.get("asset_url") != "/assets/documents/atrs-resolution-2025-22-executed-pages-5-6.pdf":
+        audit.fail("canonical: ATRS executed-resolution label is not bound to the executed excerpt")
+
+    apers_authorization = data["sources"].get("apers_authorization", {})
+    if (
+        apers_authorization.get("asset_url") != "/assets/documents/apers-authorization-minutes-pages-1-4.pdf"
+        or apers_authorization.get("expected_pages") != 2
+    ):
+        audit.fail("canonical: APERS proxy and authorization claims must bind to signed minutes pages 1 and 4")
+
+    citation_include = (ROOT / "_includes" / "citation.html").read_text(encoding="utf-8")
+    if "{% if source.record_url %}" not in citation_include or "Request record" not in citation_include:
+        audit.fail("canonical: locator-only sources need a public request path")
 
     terminology = yaml.safe_load((ROOT / "_data" / "terminology.yml").read_text(encoding="utf-8"))
     terminology_consumers = "\n".join(
@@ -311,6 +403,7 @@ def audit_public_contract(audit: Audit, site: Path, id_cache: dict[Path, set[str
             audit.fail(f"public contract: missing historical download {url}")
 
     legacy = yaml.safe_load(LEGACY_ANCHORS.read_text(encoding="utf-8"))
+    legacy_targets = yaml.safe_load(LEGACY_TARGETS.read_text(encoding="utf-8"))
     for url, anchors in legacy.items():
         target = output_target(site, url)
         if target is None or target not in id_cache:
@@ -319,6 +412,18 @@ def audit_public_contract(audit: Audit, site: Path, id_cache: dict[Path, set[str
         missing = sorted(set(anchors) - id_cache[target])
         if missing:
             audit.fail(f"public contract: {url} lacks legacy anchors: {', '.join(missing)}")
+        target_map = legacy_targets.get(url, {})
+        missing_mappings = sorted(set(anchors) - set(target_map))
+        if missing_mappings:
+            audit.fail(f"public contract: {url} lacks legacy target mappings: {', '.join(missing_mappings)}")
+        rendered = BeautifulSoup(target.read_text(encoding="utf-8"), "html.parser")
+        for legacy_id in anchors:
+            current_id = target_map.get(legacy_id)
+            if current_id and current_id not in id_cache[target]:
+                audit.fail(f"public contract: {url} maps #{legacy_id} to missing #{current_id}")
+            alias = rendered.find(id=legacy_id)
+            if alias and current_id and alias.get("data-legacy-target") != current_id:
+                audit.fail(f"public contract: {url} renders the wrong target for #{legacy_id}")
 
 
 def audit_html(audit: Audit, site: Path, data: dict) -> None:
@@ -330,7 +435,10 @@ def audit_html(audit: Audit, site: Path, data: dict) -> None:
     soup_cache: dict[Path, BeautifulSoup] = {}
     id_cache: dict[Path, set[str]] = {}
     for path in pages:
-        soup = BeautifulSoup(path.read_text(encoding="utf-8"), "html.parser")
+        rendered_text = path.read_text(encoding="utf-8")
+        if "&lt;/cite&gt;" in rendered_text or re.search(r"<p>\s*&lt;/(?:cite|div)&gt;\s*</p>", rendered_text):
+            audit.fail(f"{path.relative_to(site)}: rendered content contains an escaped orphaned citation closure")
+        soup = BeautifulSoup(rendered_text, "html.parser")
         soup_cache[path] = soup
         ids = [tag.get("id") for tag in soup.find_all(id=True)]
         duplicates = sorted(item for item, count in Counter(ids).items() if count > 1)
@@ -340,6 +448,11 @@ def audit_html(audit: Audit, site: Path, data: dict) -> None:
 
         refresh = soup.find("meta", attrs={"http-equiv": re.compile("refresh", re.I)})
         canonical = soup.find("link", rel=lambda value: value and "canonical" in value)
+        titles = soup.find_all("title")
+        if len(titles) != 1:
+            audit.fail(f"{path.relative_to(site)}: expected one title element, found {len(titles)}")
+        elif len(titles[0].get_text(strip=True)) > 65:
+            audit.fail(f"{path.relative_to(site)}: title exceeds 65 characters")
         if not refresh:
             h1s = soup.find_all("h1")
             if len(h1s) != 1:
@@ -378,6 +491,13 @@ def audit_html(audit: Audit, site: Path, data: dict) -> None:
             organizations = [item for item in jsonld_objects if item.get("@id") == "https://arpensions.org/#organization"]
             if not organizations or organizations[0].get("@type") != "Organization":
                 audit.fail("homepage: organization JSON-LD must use the generic Organization type")
+            websites = [item for item in jsonld_objects if item.get("@type") == "WebSite"]
+            if len(websites) != 1:
+                audit.fail(f"homepage: expected one WebSite JSON-LD object, found {len(websites)}")
+            if not soup.find("meta", attrs={"property": "og:image:alt"}):
+                audit.fail("homepage: Open Graph image needs alternative text metadata")
+            if not soup.find("meta", attrs={"name": "twitter:image:alt"}):
+                audit.fail("homepage: Twitter image needs alternative text metadata")
 
         for chart in soup.select("[data-investigation-chart]"):
             table = chart.find("table")

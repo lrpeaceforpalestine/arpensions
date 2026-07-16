@@ -10,6 +10,8 @@ hide_rule: true
 
 {{ inv.legislation.full_summary }} The Act would not tell trustees what to buy or sell.
 
+<p class="proposal-kicker"><strong>{{ inv.legislation.stage }}</strong> · {{ inv.legislation.sponsor_status }} · Bill number: {{ inv.legislation.bill_number }}</p>
+
 <nav class="step-ladder" aria-label="Action steps">
   <a href="#sign-on" class="step-ladder-item"><span class="step-ladder-node">1</span><span class="step-ladder-label">Sign on</span></a>
   <a href="#contact-legislators" class="step-ladder-item"><span class="step-ladder-node">2</span><span class="step-ladder-label">Contact legislators</span></a>
@@ -29,11 +31,15 @@ The petition supports the five issuer-neutral safeguards in the proposal. {{ inv
 <script defer src="https://actionnetwork.org/widgets/v6/petition/stand-for-pension-integrity?format=js&source=arpensions"></script>
 </div>
 
+<p class="petition-consent-note"><strong>Email updates are optional.</strong> You can sign the petition without joining the campaign email list by clearing the email-updates checkbox before submitting.</p>
+
 <p class="petition-fallback"><strong>Prefer the full petition page, or do not see the form?</strong> <a href="https://actionnetwork.org/petitions/stand-for-pension-integrity?source=arpensions" target="_blank" rel="noopener">Add your name directly on Action Network</a> or email <a href="mailto:info@arpensions.org?subject=I%20support%20pension%20integrity">info@arpensions.org</a>.</p>
 
 <noscript><p>The embedded form requires JavaScript; the direct Action Network petition link above remains available.</p></noscript>
 
 Petition submissions are processed by Action Network and made available to Arkansans for Pension Integrity for petition administration and any communications you choose to receive. Read the campaign's [privacy notice](/privacy/) and [Action Network's privacy policy](https://actionnetwork.org/privacy).
+
+{% include legislative-window.html %}
 
 ## Contact your legislators {#contact-legislators}
 
@@ -62,7 +68,7 @@ Sincerely,
 
 ### 30-second call script
 
-> Hello, my name is [name], and I live in [city]. I am your constituent. Please support the Pension Investment Integrity Act for the 2027 session. It would require covered pension systems to document credit, alternatives, liquidity, and pecuniary-factor analysis before an acquisition and publish the record within 30 days. It is issuer-neutral and leaves the investment decision with trustees. May I ask where the legislator stands, and may your office follow up with me?
+> Hello, my name is [name], and I live in [city]. I am your constituent. Please support the Pension Investment Integrity Act for the 2027 session. It would require covered pension systems to document credit, alternatives, liquidity, and pecuniary-factor analysis before an acquisition and publish the record within 30 days after each covered acquisition. It is issuer-neutral and leaves the investment decision with trustees. May I ask where the legislator stands, and may your office follow up with me?
 
 ## Follow a pension meeting {#attend-meeting}
 
@@ -84,7 +90,25 @@ Questions you can ask:
 
 ## Volunteer {#volunteer}
 
-Arkansans for Pension Integrity welcomes help with public-record review, educator and employee outreach, communications, accessibility, and legislative advocacy. Email [info@arpensions.org](mailto:info@arpensions.org?subject=Volunteer%20with%20Arkansans%20for%20Pension%20Integrity) with your city and interests.
+Choose a concrete first lane. No prior campaign experience is required.
+
+<div class="volunteer-grid" markdown="1">
+
+**Review records.** Take a bounded source-checking assignment with a document, question, and citation format.
+
+**Reach pension members.** Help arrange an educator, public-employee, retiree, union, or community briefing.
+
+**Build legislative support.** Make constituent calls, request a district meeting, or help prepare a source packet.
+
+**Make the work usable.** Support writing, design, accessibility, translation, research, or meeting notes.
+
+</div>
+
+When you write, include your city or county, any ATRS/APERS/retiree connection you want to share, the lane that fits, and whether you want a one-time task or recurring role. The campaign will reply with a discrete next step based on current needs; mention any accessibility needs or time limit.
+
+<p><a class="btn-primary" href="mailto:info@arpensions.org?subject=Volunteer%20with%20Arkansans%20for%20Pension%20Integrity&amp;body=City%20or%20county%3A%0APension%20or%20community%20connection%20%28optional%29%3A%0APreferred%20lane%3A%0AOne-time%20or%20recurring%3A%0AAccessibility%20needs%20or%20time%20limits%3A%0A">Open a structured volunteer email</a></p>
+
+Volunteer emails are handled under the campaign's [privacy notice](/privacy/). Do not include retirement-account numbers, government identification, or other sensitive records.
 
 ## Share the campaign {#spread}
 

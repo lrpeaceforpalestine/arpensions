@@ -5,6 +5,8 @@ description: "An organization-led Arkansas campaign for public investment record
 permalink: /about/
 header_image: /assets/images/about-highsmith-capitol-duotone-wide.jpg
 header_image_alt: "Arkansas State Capitol in Little Rock, rendered in pine and mint tones."
+mobile_cta_label: "Volunteer with the campaign"
+mobile_cta_url: "/take-action/#volunteer"
 ---
 
 {% assign inv = site.data.investigation %}
@@ -41,6 +43,16 @@ Research, publication, legislative advocacy, and public contact are conducted un
 To challenge a locator, submit an alternate reading, request an accessible record, or provide a source, email [info@arpensions.org](mailto:info@arpensions.org?subject=Source%20or%20editorial%20question). Include the page, claim, and supporting record when possible. The site presents the strongest verified account supported by the current evidence model.
 
 Petition and contact-data practices are described in the [privacy notice](/privacy/).
+
+## Campaign structure and coalition relationship
+
+**Public responsibility.** Research, editorial decisions, legislative advocacy, and responses from this site are issued under the Arkansans for Pension Integrity name through its co-chair structure and organization-level contact. The campaign is not a pension system, broker-dealer, investment adviser, or government office.
+
+**Coalition route.** Little Rock Peace for Palestine, a Citizens First Congress member organization, brought the Pension Investment Integrity Act into the coalition process with Arkansans for Pension Integrity leading the campaign work. {{ inv.legislation.cfc_status }} Priority status does not make Citizens First Congress responsible for this website's research or wording.
+
+**Publication independence.** The site carries no advertising or paid placements. Claims are accepted, revised, or rejected according to the cited record and stated evidence boundaries, not a participant's office, affiliation, or political relationship.
+
+**Name and strategy.** Divest for AR Future began the campaign work. Arkansans for Pension Integrity names the current organization and its issuer-neutral legislative program: a reviewable fiduciary procedure rather than a direction to buy, hold, sell, or divest from a particular security.
 
 ## Current evidence in one paragraph
 

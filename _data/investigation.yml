@@ -24,8 +24,8 @@ corpus:
   render_jobs_complete: 31
   render_jobs_total: 31
   summary: >-
-    The current research baseline reflects a render-aware review of 36,636 PDF
-    pages across a 1,945-file raw corpus, completed July 16, 2026.
+    The completed PDF render gate covers 36,636 pages across a 1,945-file raw
+    corpus and 31 of 31 render jobs as of July 16, 2026.
 
 metrics:
   confirmed_security_floor:
@@ -51,7 +51,7 @@ metrics:
     status: "mixed measure"
     aria_label: "115 million dollars"
     detail: "$65M in confirmed securities plus $50M in manager funding"
-    source_ids: [treasury_holdings, apers_purchase, atrs_funding]
+    source_ids: [treasury_holdings, treasury_maturity, apers_purchase, atrs_funding]
   treasury_conditional_payment:
     value_millions: 10
     display: "+$10M"
@@ -89,9 +89,14 @@ agencies:
     short_name: "State Treasury"
     name: "Arkansas State Treasury"
     status: "established"
-    authority_label: "Portfolio target"
-    authorization: "Portfolio target documented at $55M in 2025"
-    authorization_display: "$55M portfolio target"
+    authority_label: "Seller-reported target"
+    authority_status: "reported"
+    authority_source_id: treasury_target_report
+    authorization: >-
+      Berman reported that Huffman described a $55M portfolio target before
+      the later order; the reviewed record does not independently establish
+      Huffman's instruction.
+    authorization_display: "Reported $55M target"
     authorization_min_millions:
     authorization_max_millions:
     measure: "$50M derived security-level floor"
@@ -114,6 +119,8 @@ agencies:
     name: "Arkansas Public Employees Retirement System"
     status: "established"
     authority_label: "IFSC authorization"
+    authority_status: "established"
+    authority_source_id: apers_authorization
     authorization: "$25M–$50M range authorized by the Investment Finance Subcommittee"
     authorization_display: "$25M–$50M"
     authorization_min_millions: 25
@@ -139,6 +146,8 @@ agencies:
     name: "Arkansas Teacher Retirement System"
     status: "funded mandate"
     authority_label: "Authorization"
+    authority_status: "established"
+    authority_source_id: atrs_resolution
     authorization: "Up to $50M authorized"
     authorization_display: "Up to $50M"
     authorization_min_millions: 0
@@ -162,6 +171,7 @@ agencies:
     name: "Arkansas State Highway Employees Retirement System"
     status: "unproduced"
     authority_label: "Authorization"
+    authority_status: "unproduced"
     authorization: "No authorization identified"
     authorization_display: "None identified"
     authorization_min_millions: 0
@@ -229,6 +239,106 @@ status_labels:
   unproduced: "Not identified in the reviewed production; not a claim of universal absence"
   reported: "Described by a participant or seller without independent confirmation"
   interpretive: "An inference drawn from documented facts and labeled as such"
+
+search_boundaries:
+  atrs_merits:
+    title: "ATRS decision-merits search"
+    custodian: "Arkansas Teacher Retirement System"
+    scope: >-
+      The 517-page June 2, 2025 Board packet; the 402-page Investment Committee
+      packet; BoardDocument.pdf; Reports.pdf; and Staff Emails1-5, covering
+      October 23, 2024 through June 5, 2025, with later-produced variants
+      reconciled.
+    record_types: >-
+      Board and committee packets, staff emails, consultant memoranda, the
+      resolution, and a credit-rating report.
+    method: >-
+      Native-text and OCR search, full-page rendering, visual review of Aon
+      packet pages 149-150 and the surrounding corpus, and duplicate
+      reconciliation across investment, credit, rating, risk, return,
+      liquidity, geopolitical-risk, and portfolio-fit terms.
+    result: >-
+      The files contain substantive manager advice and a separate S&P report.
+      No identified consultant or staff memorandum connects sovereign-credit
+      risk, expected return, liquidity, and portfolio fit to the affirmative
+      authorization.
+    limit: >-
+      The production does not establish whether trustees received or relied on
+      the S&P report and does not exclude oral or unproduced analysis.
+  atrs_holdings:
+    title: "ATRS mandate-holdings search"
+    custodian: "Arkansas Teacher Retirement System; selected funding notice also produced by the Auditor of State"
+    scope: >-
+      Resolution 2025-22, the original and amended Reams agreement, Aon and
+      Investment Guidelines, the December 29 funding notice, and related
+      mandate records through the February 27, 2026 cutoff.
+    record_types: >-
+      Resolution, manager agreement and amendment, investment guidelines,
+      funding email, and produced transaction or holdings records.
+    method: >-
+      Full inventory, text and OCR search, page rendering, and targeted review
+      for CUSIP, purchase, settlement, holdings, valuation, monthly statement,
+      transaction report, reconciliation, and deployment terms.
+    result: >-
+      No produced CUSIP-level purchase, holding, settlement, deployment, or
+      reconciliation record was identified for the funded mandate.
+    limit: >-
+      This finding does not establish the account's cash balance, that no
+      security was purchased, or that responsive records do not exist elsewhere.
+  atrs_audio:
+    title: "December 1 ATRS audio search"
+    custodian: "Arkansas Teacher Retirement System"
+    scope: >-
+      20251201B_IC_Audio.m4a and 20251201D_BOT_Audio.m4a, approximately 188
+      minutes represented by 2,966 locally generated transcript segments.
+    record_types: "Original meeting audio and campaign-generated search transcripts."
+    method: >-
+      Transcript search for Israel Bonds, Reams, Scout, Jubilee, Resolution
+      2025-22, and related variants, followed by targeted review against the
+      original recordings.
+    result: "No substantive topic match was identified in the reviewed transcripts and targeted audio passages."
+    limit: >-
+      Automated speech recognition is a locator aid. The result is not proof
+      that every word was captured or that no relevant oral discussion occurred.
+  apers_analysis:
+    title: "APERS and Callan decision-analysis search"
+    custodian: "Arkansas Public Employees Retirement System"
+    scope: >-
+      The 68-page May 15, 2025 IFSC packet; selected fourth-quarter 2024 and
+      first-quarter 2025 Callan attachments totaling 836 pages, including 758
+      APERS pages; selected post-vote packets and minutes through February 3,
+      2026; and the February 13, 2026 chief investment officer FOIA-search email.
+    record_types: >-
+      Agenda, packet, signed minutes, quarterly consultant reports, post-vote
+      packets and minutes, and the chief investment officer's search email.
+    method: >-
+      Full-render review and native-text or OCR searches that distinguished
+      country and equity references to Israel from Israel Bonds and
+      sovereign-credit analysis, followed by targeted review of the decision
+      documents and search email.
+    result: >-
+      No Callan Israel Bonds or sovereign-credit memorandum tied to the May 15
+      authorization was identified. The chief investment officer wrote that he
+      prepared nothing for the Board and believed the consultants had not either.
+    limit: "The reviewed files do not exclude oral, off-thread, or unproduced work."
+  ashers_adoption:
+    title: "ASHERS adoption search"
+    custodian: "Arkansas State Highway Employees Retirement System"
+    scope: >-
+      All five files in the March 27, 2026 production, covering the April 16
+      introduction and pitch through July 14, 2025 follow-up reporting.
+    record_types: "Native email files and the attached eight-page seller presentation."
+    method: >-
+      Header, body, reply-chain, and attachment review; rendering of all deck
+      pages; and searches for the participants, issuer, authorization,
+      purchase, holding, meeting, call, and follow-up terms.
+    result: >-
+      No ASHERS reply, follow-up, Board action, or authorization was identified.
+      Separate May 15 and July 14 messages affirmatively reported no holding or
+      purchase at those dates.
+    limit: >-
+      The production does not prove oral silence, an affirmative decline, or
+      the absence of records outside the selected release.
 
 timeline:
   - id: treasury_hold
@@ -311,7 +421,7 @@ routes:
   - id: itinerary
     status: "scheduled"
     label: "Eight-stop itinerary"
-    detail: "Distinct pension, executive, legislative, Treasury, and cabinet venues"
+    detail: "Distinct pension, executive, legislative, Treasury, and cabinet offices or settings"
   - id: hudson_babbitt
     status: "confirmed"
     label: "Hudson–Babbitt encounter"
@@ -336,21 +446,51 @@ legislation:
   bill_number: "Not assigned"
   sponsor_status: "No legislative sponsor announced"
   status_verified: "2026-07-16"
+  brief_version_date: "2026-07-16"
+  brief_pdf_url: "/assets/documents/pension-investment-integrity-act-brief-2026-07-16.pdf"
   cfc_status: >-
-    Selected by the Citizens First Congress as a short-term priority for the
-    2027 legislative session.
+    According to Arkansans for Pension Integrity's June 27, 2026 convention
+    record, Citizens First Congress delegates selected the proposal for the
+    coalition's short-term 2027 priority platform.
+  cfc_status_short: "Campaign-recorded CFC short-term priority"
+  cfc_decision_date: "2026-06-27"
   cfc_url: "https://www.citizensfirst.org/"
   cfc_process_url: "https://www.citizensfirst.org/process"
+  important_dates_url: >-
+    https://www.arkleg.state.ar.us/Home/FTPDocument?path=%2Fassembly%2F2027%2FDocuments%2FSession_Important_Dates_2027.pdf
+  prefiling_opens: "2026-11-16"
+  prefiling_opens_display: "November 16, 2026"
+  session_convenes: "2027-01-11"
+  session_convenes_display: "January 11, 2027"
+  retirement_filing_deadline: "2027-01-25"
+  retirement_filing_deadline_display: "January 25, 2027"
+  late_filing_rule: >-
+    After the ordinary retirement-legislation filing deadline, introduction
+    requires a three-fourths vote of the full membership of each chamber.
   pre_acquisition_summary: >-
     Before acquisition, covered pension systems would prepare a written credit
     analysis, compare reasonably available alternatives, disclose liquidity and
     transfer limits, and make a written pecuniary-factor fiduciary determination.
   publication_summary: >-
-    The analysis and fiduciary determination would be posted publicly within 30 days.
+    The core analysis and fiduciary determination would be posted publicly
+    within 30 days after each covered acquisition.
   full_summary: >-
     Before acquisition, covered pension systems would prepare the analysis,
     comparison, liquidity disclosure, and fiduciary determination; the analysis
-    and determination would be posted publicly within 30 days.
+    and determination would be posted publicly within 30 days after each
+    covered acquisition.
+  publication_boundary: >-
+    Publication would occur after the covered acquisition, not before trade
+    execution. Bill text should allow only narrow, explained redactions for
+    legally protected account, security, operational, or proprietary details;
+    the required risk, return, liquidity, alternatives, and fiduciary
+    conclusions should remain public.
+  publication_public_fields:
+    - "The covered asset class, amount, and acquisition date"
+    - "The credit conclusion and material risks"
+    - "The alternatives, expected-return, and liquidity comparison"
+    - "The pecuniary-factor fiduciary determination"
+    - "A written reason for each redaction"
   scope_note: >-
     The proposal is prospective and issuer-neutral. It would apply to covered
     Arkansas pension acquisitions of non-tradable sovereign debt and would not
@@ -361,7 +501,7 @@ legislation:
     - "A written comparison of risk, return, and liquidity against reasonably available fixed-income alternatives"
     - "A plain-language disclosure of transfer restrictions and the absence of a secondary market"
     - "A written fiduciary determination connecting the decision to material financial risk and return"
-    - "Public posting of the analysis and determination within 30 days"
+    - "Public posting of the analysis and determination within 30 days after each covered acquisition"
 
 sources:
   atrs_aon:
@@ -373,12 +513,12 @@ sources:
     asset_url: "/assets/documents/atrs-aon-memo-pages-149-150.pdf"
     expected_pages: 2
   atrs_resolution:
-    title: "ATRS Resolution 2025-22"
+    title: "Executed ATRS Resolution 2025-22"
     agency: "ATRS"
     date: "2025-06-02"
-    locator: "June 2, 2025 Board packet, Resolution 2025-22"
+    locator: "Emails5, physical pages 5–6; signature on physical page 6"
     record_url: "/documents/records/atrs-resolution/"
-    asset_url: "/assets/documents/atrs-resolution-2025-22-pages-151-152.pdf"
+    asset_url: "/assets/documents/atrs-resolution-2025-22-executed-pages-5-6.pdf"
     expected_pages: 2
   atrs_funding:
     title: "ATRS Board Update—Liquidity"
@@ -392,10 +532,10 @@ sources:
     title: "APERS Investment Finance Subcommittee signed minutes"
     agency: "APERS"
     date: "2025-05-15"
-    locator: "Signed minutes, physical page 4"
+    locator: "Signed minutes, physical pages 1 and 4; proxy role on page 1 and motion on page 4"
     record_url: "/documents/records/apers-authorization/"
-    asset_url: "/assets/documents/apers-authorization-minutes-page-4.pdf"
-    expected_pages: 1
+    asset_url: "/assets/documents/apers-authorization-minutes-pages-1-4.pdf"
+    expected_pages: 2
   apers_analysis_email:
     title: "APERS chief investment officer FOIA-search email"
     agency: "APERS"
@@ -444,9 +584,87 @@ sources:
     record_url: "/documents/records/treasury-processing-payment/"
     asset_url: "/assets/documents/treasury-processing-payment-masked.pdf"
     expected_pages: 1
+  treasury_target_report:
+    title: "Seller report of Treasury portfolio target"
+    agency: "State Treasury"
+    date: "2025-04-16"
+    locator: >-
+      FOIA Response 7-7-25 / Dunlap FOIA 7.,2.25.pdf,
+      physical pages 7-8; seller email to Treasury investment staff
+  capitol_itinerary:
+    title: "April 2025 Capitol itinerary"
+    agency: "Auditor of State records produced by ATRS"
+    date: "2025-04-11"
+    locator: >-
+      FOIA Response 6-18-25 / State Auditors Emails / Spadoni /
+      April 11, 2025 - 4.pdf, physical page 2
+  hudson_babbitt_confirmation:
+    title: "Hudson-Babbitt meeting confirmation"
+    agency: "DFA / ASHERS"
+    date: "2025-04-16"
+    locator: >-
+      FOIA Response 3-27-26 / RE_ Virtual Introductions.eml,
+      Andy Babbitt message at 9:25 a.m. CDT
+  seller_reported_meetings:
+    title: "Seller-authored report of Fecher and Treasury-team encounters"
+    agency: "APERS"
+    date: "2025-04-17"
+    locator: >-
+      FOIA Response 7-7-25 / IB_FOIA_MAY_25_Reviewed.pdf,
+      physical page 589
+  atrs_auditor_designee:
+    title: "ATRS Auditor designee record"
+    agency: "ATRS"
+    date: "2025-04-07"
+    locator: >-
+      FOIA Response 7-3-25 / 06-02-25_BOT_Packet.pdf, physical page 6
+      (embedded signed minutes); cross-check: Sign-In Sheets 6-2-2025.pdf,
+      physical page 1
+  sfof_sponsor_listing:
+    title: "2020 SFOF event sponsor listing"
+    agency: "State Treasury"
+    date: "2020-12-17"
+    locator: "End of Year Letter from Treasurer Milligan.pdf, physical page 1"
+  sfof_model_case:
+    title: "SFOF newsletter circulating a state purchase"
+    agency: "Auditor of State records produced by ATRS"
+    date: "2024-11-04"
+    locator: >-
+      FOIA Response 6-18-25 / State Auditors Emails / Milligan /
+      🗳️ Pre-Election Update from the States - 4 nov 24.pdf, physical pages 4-6
+  sfof_speech_preparation:
+    title: "SFOF speech preparation and scheduled presentation"
+    agency: "Auditor of State"
+    date: "2025-04-03"
+    locator: >-
+      FOIA Response 6-25-25 / Jason Brady mailbox / Sent Items /
+      update sfof speech.pdf, physical page 1; schedule cross-check dated
+      April 14 for an April 24 slot in Jason Brady mailbox / Inbox /
+      FW Auditor Milligan - Presentation Time.pdf, physical page 1
+  sfof_post_action_facilitation:
+    title: "Post-action member-state contact facilitation"
+    agency: "Auditor of State"
+    date: "2025-06-04"
+    locator: >-
+      FOIA Response 6-25-25 / Stacy Peterson mailbox / Sent Items /
+      Re Policy Zoom_1.pdf, physical page 1
   ashers_route:
-    title: "DFA introduction to ASHERS"
+    title: "DFA introduction and seller pitch to ASHERS"
     agency: "ASHERS / DFA"
     date: "2025-04-16"
-    locator: "Andy Babbitt email to Robyn Smith and seller reply"
-    record_url: "/findings/control-case/"
+    locator: >-
+      FOIA Response 3-27-26 / RE_ Virtual Introductions.eml,
+      Andy Babbitt message at 9:25 a.m. CDT and seller reply dated April 17,
+      2025 at 1:02 p.m., with attached eight-page presentation
+  ashers_no_holding:
+    title: "ASHERS no-holding statement"
+    agency: "ASHERS"
+    date: "2025-05-15"
+    locator: "FW_ wickline's questions.eml, Robyn Smith message at 8:32 a.m. CDT"
+  ashers_no_purchase:
+    title: "ASHERS no-purchase statement"
+    agency: "ASHERS"
+    date: "2025-07-14"
+    locator: >-
+      RE_ Arkansas Times article about state retirement systems purchasing
+      Israeli bonds.eml, Robyn Smith message at 10:35 a.m. CDT

@@ -4,13 +4,15 @@ title: "Methodology — Render-Aware Public-Records Review"
 description: "How Arkansans for Pension Integrity reviews source files, rendered PDF pages, transaction states, and bounded absence findings."
 permalink: /methodology/
 breadcrumb: "Methodology"
+mobile_cta_label: "Question a finding"
+mobile_cta_url: "mailto:info@arpensions.org?subject=Methodology%20or%20source%20question"
 ---
 
 {% assign inv = site.data.investigation %}
 
 ## Research baseline
 
-The current investigation baseline covers **{{ inv.corpus.raw_files_display }} raw files** and **{{ inv.corpus.pdf_pages_display }} PDF pages**. All {{ inv.corpus.render_jobs_total }} corpus render jobs are complete. The transaction-record cutoff used for the site's amount ledger is {{ inv.record_cutoff | date: "%B %-d, %Y" }}; the render-aware review was completed {{ inv.review_completed | date: "%B %-d, %Y" }}.
+The current investigation baseline covers **{{ inv.corpus.raw_files_display }} raw files** and **{{ inv.corpus.pdf_pages_display }} PDF pages**. All {{ inv.corpus.render_jobs_total }} PDF render jobs are complete. The transaction-record cutoff used for the site's amount ledger is {{ inv.record_cutoff | date: "%B %-d, %Y" }}; the PDF render gate was completed {{ inv.review_completed | date: "%B %-d, %Y" }}.
 
 ## Source preservation
 
@@ -43,9 +45,11 @@ Amounts on the site are assigned to these states in [`_data/investigation.yml`](
 
 ## Bounded absence findings
 
-An absence claim identifies its searched corpus, record type, custodian, date range, and method. “Not identified in the reviewed production” does not mean a record never existed, an oral discussion never occurred, or no responsive material exists elsewhere.
+Each principal absence finding identifies its searched corpus, record type, custodian, date range, and method. “Not identified in the reviewed production” does not mean a record never existed, an oral discussion never occurred, or no responsive material exists elsewhere.
 
 Audio transcripts and OCR are treated as search indices. A no-match result is reported as no identified topic match, not proof of exhaustive silence.
+
+The principal absence findings publish those dimensions in a **Search boundary** box so readers can see the exact corpus, record types, method, result, and limiting statement beside the claim.
 
 ## Evidence labels
 

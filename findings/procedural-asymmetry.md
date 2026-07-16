@@ -38,13 +38,15 @@ The ATRS production includes credit-related material elsewhere, including an S&P
 
 ATRS Executive Director Mark White's May 2025 correspondence about Westrock Coffee provides a useful but bounded comparison. In that exchange, he described a consultant-recommendation-driven process and cited outside analyst ratings. The comparison shows a difference in merits-review framing, recommendation authorship, and communication to a member. It does not by itself prove a universal ATRS procedure or a violation of law.
 
-Questions about Board Policy 4 also remain open. The record establishes written manager advice and a signed Board action. Whether every requirement of BP4 Section A.5 applied to this mandate, and whether the available documents satisfied each applicable requirement, requires legal and policy interpretation beyond what the produced record alone establishes.
+Questions about Board Policy 4 also remain open. The record establishes written manager advice and an executed Board resolution. Whether every requirement of BP4 Section A.5 applied to this mandate, and whether the available documents satisfied each applicable requirement, requires legal and policy interpretation beyond what the produced record alone establishes.
 
 {% include evidence-boundary.html
   established="Aon gave substantive implementation and manager-selection advice and recommended Reams."
   unresolved="The produced files do not connect a sovereign-credit and portfolio-fit merits analysis to the Board's affirmative authorization."
   not_claimed="This finding does not declare the investment imprudent, establish a statutory violation, or attribute motive."
 %}
+
+{% include search-boundary.html boundary_id="atrs_merits" %}
 
 ## What the Integrity Act would add
 

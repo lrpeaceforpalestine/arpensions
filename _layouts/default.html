@@ -3,7 +3,7 @@
 <head>
   {% include head.html %}
 </head>
-<body>
+<body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
   <a href="#main-content" class="skip-link">Skip to main content</a>
   <header>
     {% include nav.html %}
@@ -12,9 +12,11 @@
     {{ content }}
   </main>
   {% include footer.html %}
-  {% unless page.url contains '/take-action/' %}
-  <aside class="mobile-cta-bar" aria-label="Take action">
-    <a href="{{ '/take-action/' | relative_url }}" class="btn-primary">Take Action for Your Pension</a>
+  {% unless page.hide_mobile_cta or page.url contains '/take-action/' %}
+  {% assign mobile_cta_label = page.mobile_cta_label | default: "Support the Integrity Act" %}
+  {% assign mobile_cta_url = page.mobile_cta_url | default: "/take-action/" %}
+  <aside class="mobile-cta-bar" aria-label="{{ mobile_cta_label }}">
+    <a href="{{ mobile_cta_url | relative_url }}" class="btn-primary">{{ mobile_cta_label }}</a>
   </aside>
   {% endunless %}
   <script src="{{ '/assets/js/nav.js' | relative_url }}"></script>
@@ -22,6 +24,8 @@
   <script src="{{ '/assets/js/copy-to-clipboard.js' | relative_url }}"></script>
   <script src="{{ '/assets/js/share.js' | relative_url }}"></script>
   <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/legacy-fragments.js' | relative_url }}"></script>
+  {% if page.url == "/take-action/" %}<script src="{{ '/assets/js/action-network-a11y.js' | relative_url }}"></script>{% endif %}
   {% if page.evidence_toc %}<script src="{{ '/assets/js/evidence-toc.js' | relative_url }}"></script>{% endif %}
   <script src="{{ '/assets/js/responsive-tables.js' | relative_url }}"></script>
   <script src="{{ '/assets/js/scroll-progress.js' | relative_url }}"></script>

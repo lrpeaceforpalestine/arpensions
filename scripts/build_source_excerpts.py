@@ -7,8 +7,13 @@ Run locally with PyMuPDF, Pillow, and BeautifulSoup installed.
 from __future__ import annotations
 
 import argparse
+import csv
 import email
+import io
 import os
+import shutil
+import subprocess
+import tempfile
 from email import policy
 from email.utils import getaddresses, parseaddr
 from pathlib import Path
@@ -75,9 +80,33 @@ def add_provenance(image: Image.Image, source_label: str, masking: str) -> Image
 
 
 def save_pdf(images: list[Image.Image], destination: Path) -> None:
+    """Save image-faithful pages with a searchable, invisible OCR text layer."""
     destination.parent.mkdir(parents=True, exist_ok=True)
-    first, *rest = [image.convert("RGB") for image in images]
-    first.save(destination, "PDF", resolution=180, save_all=True, append_images=rest)
+    tesseract = shutil.which("tesseract") or r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+    if not Path(tesseract).is_file():
+        raise FileNotFoundError("Tesseract is required to build accessible source excerpts")
+
+    merged = fitz.open()
+    with tempfile.TemporaryDirectory(prefix="arpensions-ocr-") as temporary:
+        temp = Path(temporary)
+        for index, image in enumerate(images, start=1):
+            image_path = temp / f"page-{index}.png"
+            output_base = temp / f"page-{index}"
+            image.convert("RGB").save(image_path, "PNG", dpi=(180, 180))
+            subprocess.run(
+                [tesseract, str(image_path), str(output_base), "--dpi", "180", "-l", "eng", "pdf"],
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+            page_pdf = fitz.open(output_base.with_suffix(".pdf"))
+            merged.insert_pdf(page_pdf)
+            page_pdf.close()
+
+    if destination.exists():
+        destination.unlink()
+    merged.save(destination, garbage=4, deflate=True)
+    merged.close()
 
 
 def source_excerpt(
@@ -107,6 +136,65 @@ def source_excerpt(
             )
         )
     save_pdf(rendered, destination)
+
+
+def add_searchable_text_layer(source: Path) -> None:
+    """Add invisible OCR to an image-only PDF without replacing its page images."""
+    document = fitz.open(source)
+    if all(page.get_text().strip() for page in document):
+        document.close()
+        return
+
+    tesseract = shutil.which("tesseract") or r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+    if not Path(tesseract).is_file():
+        document.close()
+        raise FileNotFoundError("Tesseract is required to build accessible source excerpts")
+
+    with tempfile.TemporaryDirectory(prefix="arpensions-overlay-") as temporary:
+        temp = Path(temporary)
+        for index, page in enumerate(document, start=1):
+            pixmap = page.get_pixmap(matrix=fitz.Matrix(2.5, 2.5), alpha=False)
+            image_path = temp / f"page-{index}.png"
+            pixmap.save(image_path)
+            result = subprocess.run(
+                [tesseract, str(image_path), "stdout", "--dpi", "180", "-l", "eng", "tsv"],
+                check=True,
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+                errors="replace",
+            )
+            scale_x = page.rect.width / pixmap.width
+            scale_y = page.rect.height / pixmap.height
+            for row in csv.DictReader(io.StringIO(result.stdout), delimiter="\t"):
+                word = (row.get("text") or "").strip()
+                try:
+                    confidence = float(row.get("conf") or -1)
+                    left = float(row.get("left") or 0)
+                    top = float(row.get("top") or 0)
+                    height = float(row.get("height") or 0)
+                except ValueError:
+                    continue
+                if not word or confidence < 15 or height <= 0:
+                    continue
+                safe_word = word.encode("latin-1", "ignore").decode("latin-1")
+                if not safe_word:
+                    continue
+                page.insert_text(
+                    (left * scale_x, (top + height * 0.82) * scale_y),
+                    safe_word,
+                    fontsize=max(3, height * scale_y * 0.78),
+                    fontname="helv",
+                    render_mode=3,
+                    overlay=True,
+                )
+
+    temporary_pdf = source.with_name(source.stem + ".ocr-tmp.pdf")
+    if temporary_pdf.exists():
+        temporary_pdf.unlink()
+    document.save(temporary_pdf, garbage=4, deflate=True, clean=True)
+    document.close()
+    os.replace(temporary_pdf, source)
 
 
 def funding_email_excerpt(source: Path, destination: Path) -> None:
@@ -244,6 +332,7 @@ def treasury_maturity_excerpt(source: Path, destination: Path) -> None:
 
 def build(corpus: Path, output: Path) -> None:
     atrs_packet = corpus / "raw/atrs/FOIA Response 7-3-25/06-02-25_BOT_Packet.pdf"
+    atrs_executed_resolution = corpus / "raw/atrs/FOIA Response 6-18-25/ATRS Staff Emails/Emails5.pdf"
     apers_minutes = corpus / "raw/apers/FOIA Response 2-27-26/Minutes_IFC_05.15.25.pdf"
     apers_package = corpus / "raw/apers/FOIA Response 2-27-26/IB_FOIA_FINAL. 2.27.2026 Redacted.LMG.pdf"
     treasury_hold = corpus / "raw/treasury/FOIA Response 9-23-25/Israel Internal Credit overview 10-8-24.pdf"
@@ -260,6 +349,7 @@ def build(corpus: Path, output: Path) -> None:
 
     for path in (
         atrs_packet,
+        atrs_executed_resolution,
         apers_minutes,
         apers_package,
         treasury_hold,
@@ -273,7 +363,19 @@ def build(corpus: Path, output: Path) -> None:
 
     source_excerpt(atrs_packet, [149, 150], output / "atrs-aon-memo-pages-149-150.pdf")
     source_excerpt(atrs_packet, [151, 152], output / "atrs-resolution-2025-22-pages-151-152.pdf")
+    source_excerpt(
+        atrs_executed_resolution,
+        [5, 6],
+        output / "atrs-resolution-2025-22-executed-pages-5-6.pdf",
+        masking_note="Campaign excerpt of executed resolution; no campaign masking applied.",
+    )
     source_excerpt(apers_minutes, [4], output / "apers-authorization-minutes-page-4.pdf")
+    source_excerpt(
+        apers_minutes,
+        [1, 4],
+        output / "apers-authorization-minutes-pages-1-4.pdf",
+        masking_note="Campaign excerpt of signed minutes; no campaign masking applied.",
+    )
     source_excerpt(
         apers_package,
         [6925],
@@ -314,6 +416,11 @@ def build(corpus: Path, output: Path) -> None:
     )
     treasury_maturity_excerpt(treasury_maturity, output / "treasury-final-maturity-excerpt.pdf")
     funding_email_excerpt(funding_email, output / "atrs-manager-funding-email-excerpt.pdf")
+    for filename in (
+        "sovereign-bond-purchase-confirmation-may2025.pdf",
+        "sovereign-bond-purchase-confirmation-nov2023.pdf",
+    ):
+        add_searchable_text_layer(output / filename)
 
 
 def main() -> None:

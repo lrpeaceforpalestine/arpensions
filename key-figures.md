@@ -53,7 +53,7 @@ Treasury records establish a security-level floor of {{ treasury.measure_display
 
 ## Seller, manager, and network
 
-**Development Corporation for Israel.** The registered broker-dealer through which Israel Bonds are offered in the United States. Its representatives, including **Lawrence Berman** and **Gail Young**, appear in Treasury, pension, DFA, and Auditor-office records.
+**Development Corporation for Israel.** The registered broker-dealer through which Israel Bonds are offered in the United States. Its representatives, including **Lawrence Berman** and **Brad Young**, appear in Treasury, pension, DFA, and Auditor-office records.
 
 **Reams Asset Management.** The manager selected by ATRS to implement the mandate. The production documents the management structure and funding, but not the account's security-level holdings.
 

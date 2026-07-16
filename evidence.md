@@ -12,8 +12,6 @@ evidence_toc: true
 
 <div class="evidence-page" markdown="1">
 
-## What the records establish
-
 {% include evidence-ledger.html %}
 
 {% include exposure-chart.html %}
@@ -70,11 +68,15 @@ The October 8, 2024 internal overview recommends holding the existing positions,
 
 {% include documented-routes.html %}
 
+{% include citation.html source_id="capitol_itinerary" %}
+{% include citation.html source_id="hudson_babbitt_confirmation" %}
+{% include citation.html source_id="seller_reported_meetings" %}
+
 ## Primary records and findings
 
 <div class="source-card-grid">
   <a class="source-card" href="{{ inv.sources.atrs_aon.record_url }}"><span class="source-card-label">{{ inv.sources.atrs_aon.agency }} · pages 149–150</span><strong>{{ inv.sources.atrs_aon.title }}</strong><p>Implementation advice, manager comparison, Reams recommendation, and scope boundary.</p><span class="source-card-action">Open record →</span></a>
-  <a class="source-card" href="{{ inv.sources.atrs_resolution.record_url }}"><span class="source-card-label">{{ inv.sources.atrs_resolution.agency }} · signed resolution</span><strong>{{ inv.sources.atrs_resolution.title }}</strong><p>The authorization ceiling, manager selection, and delegated implementation authority.</p><span class="source-card-action">Open record →</span></a>
+  <a class="source-card" href="{{ inv.sources.atrs_resolution.record_url }}"><span class="source-card-label">{{ inv.sources.atrs_resolution.agency }} · executed resolution</span><strong>{{ inv.sources.atrs_resolution.title }}</strong><p>Adoption, signature, authorization ceiling, manager selection, and delegated implementation authority.</p><span class="source-card-action">Open record →</span></a>
   <a class="source-card" href="{{ inv.sources.atrs_funding.record_url }}"><span class="source-card-label">{{ inv.sources.atrs_funding.agency }} · Board update</span><strong>{{ inv.sources.atrs_funding.title }}</strong><p>The distinct manager-account funding event documented in December 2025.</p><span class="source-card-action">Open record →</span></a>
   <a class="source-card" href="{{ inv.sources.apers_authorization.record_url }}"><span class="source-card-label">{{ inv.sources.apers_authorization.agency }} · signed minutes</span><strong>{{ inv.sources.apers_authorization.title }}</strong><p>The final motion, seconder, and recorded outcome.</p><span class="source-card-action">Open record →</span></a>
   <a class="source-card" href="{{ inv.sources.apers_analysis_email.record_url }}"><span class="source-card-label">{{ inv.sources.apers_analysis_email.agency }} · FOIA-search email</span><strong>{{ inv.sources.apers_analysis_email.title }}</strong><p>The chief investment officer's account of Board and consultant materials responsive to the request.</p><span class="source-card-action">Open record →</span></a>
