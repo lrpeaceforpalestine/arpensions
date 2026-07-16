@@ -170,7 +170,7 @@ def audit_accessibility_contracts(audit: Audit) -> None:
     privacy = (ROOT / "privacy.md").read_text(encoding="utf-8")
     if "districtfinder.youraedi.com" not in privacy or "not to this website" not in privacy:
         audit.fail("privacy: the external address-based District Finder needs a clear data boundary")
-    if "linked from the [Arkansas Legislature website]" not in take_action or "does not receive it" not in take_action:
+    if "linked from the [Arkansas Legislature's Legislators page]" not in take_action or "does not receive it" not in take_action:
         audit.fail("privacy: Take Action must identify the District Finder and the campaign data boundary")
 
     nav_js = (ROOT / "assets" / "js" / "nav.js").read_text(encoding="utf-8")
