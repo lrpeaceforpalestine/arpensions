@@ -48,7 +48,7 @@ In the reviewed authorization file, we identified no Callan sovereign-credit mem
 ## What public employees can do
 
 1. **Read the primary pages.** Review the [signed authorization minutes](/documents/records/apers-authorization/) and [privacy-reviewed purchase record](/documents/records/apers-purchase/).
-2. **Contact your legislators.** Use the [Arkansas Legislature's external District Finder](https://districtfinder.youraedi.com/) and the fund-specific letter below. The address you enter goes to that service; the campaign does not receive it.
+2. **Contact your legislators.** Use the external [District Finder](https://districtfinder.youraedi.com/) linked from the [Arkansas Legislature website](https://www.arkleg.state.ar.us/) and the fund-specific letter below. The address you enter goes to that service; the campaign does not receive it.
 3. **Follow APERS meetings.** Use [apers.org](https://apers.org/) for current meeting information and ask for fund-specific holdings and analytical records.
 
 <div class="letter-template letter-template--compact" markdown="1">

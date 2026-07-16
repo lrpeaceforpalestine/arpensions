@@ -37,7 +37,7 @@ Petition submissions are processed by Action Network and made available to Arkan
 
 ## Contact your legislators {#contact-legislators}
 
-Use the [Arkansas Legislature's external District Finder](https://districtfinder.youraedi.com/) to find your state senator and representative by address, then use the official contact information returned for your districts. The address you enter goes to that service; Arkansans for Pension Integrity does not receive it. Ask your legislators to support the Pension Investment Integrity Act in the 2027 regular session.
+Use the external [District Finder](https://districtfinder.youraedi.com/) linked from the [Arkansas Legislature website](https://www.arkleg.state.ar.us/) to find your state senator and representative by address, then use the official contact information returned for your districts. The address you enter goes to that service; Arkansans for Pension Integrity does not receive it. Ask your legislators to support the Pension Investment Integrity Act in the 2027 regular session.
 
 **Suggested email subject:** Support the Pension Investment Integrity Act
 
