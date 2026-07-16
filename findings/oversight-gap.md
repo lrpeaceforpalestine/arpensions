@@ -1,52 +1,52 @@
 ---
 layout: page
-title: "The Post-Vote Oversight Gap"
-description: "Six months after authorization, the ATRS Board's December 2025 meetings contain zero substantive references to the new investment across approximately 2,966 audio segments — while substantive treatment of other portfolio matters continued."
+title: "ATRS Mandate Funding and the Holdings Record"
+description: "ATRS documented funding to the Reams manager mandate; the produced files do not identify the mandate's security-level holdings."
 permalink: /findings/oversight-gap/
 breadcrumb: "Key Findings"
 ---
 
-A persistent question across this investigation is whether the analytical absence documented before the June 2, 2025 ATRS vote was a one-time procedural shortcut or a structural feature of how this investment is governed at ATRS. The Round 2 audio response from ATRS, delivered February 28, 2026, provides a partial answer: the analytical absence visible at authorization persists at the routine post-authorization oversight points.
+{% assign inv = site.data.investigation %}
 
-## The deployment
+ATRS's public record distinguishes two events that should not be collapsed into one number: authorization and funding of a managed account on one hand, and the manager's security-level transactions on the other.
 
-ATRS's authorization of up to $50 million on June 2, 2025 (Resolution 2025-22) initially contemplated a laddered deployment. Executive Director Mark White's May 22, 2025 Board preview proposed deploying the authorized amount over time, in alignment with the Reams investment guidelines that ATRS would establish.
+## Authorization and implementation
 
-What happened in practice diverged from the preview. The 9/25/2025 Reams Asset Management contract was followed by **Amendment 1 on November 20, 2025**, which introduced a $10 million per calendar year private placement target and an explicit illiquidity acknowledgment. Aon's approval of the Reams investment guidelines came in a **five-word email** — the entirety of the documented consultant sign-off on the operative document.
+Resolution 2025-22 authorized **{{ inv.agencies[2].authorization_display | replace: 'Up to', 'up to' }}** for an Israel Bonds-associated mandate and selected Reams as manager. The September 2025 management agreement and November amendment describe a separate-account structure, a private-placement target, and an acknowledgement of illiquidity.
 
-On December 29, 2025, ATRS Deputy Director Rod Graves sent a routine "Board Update-Liquidity" email confirming that the full $50 million authorized had been deployed as a single capital call through Reams in the December accounting cycle — not the laddered deployment the May 22 Board preview had proposed.
+On December 29, 2025, an ATRS Board update documented **{{ inv.agencies[2].measure_display }} in funding to the Scout/Reams mandate**. This establishes that ATRS transferred the authorized capital to the manager account. It does not, by itself, identify which securities Reams acquired, in what amounts, or on what dates.
 
-## The 12/1/2025 meeting
+[Read the ATRS funding record](/documents/records/atrs-manager-funding/).
 
-The locally transcribed audio of the December 1, 2025 ATRS Investment Committee and Board of Trustees meetings contains approximately **2,966 segments** between them. Across those segments — covering routine investment governance six months after the Resolution 2025-22 authorization — the audio captures **zero substantive references to the new investment**.
+## What the production does not identify
 
-The same meeting included substantive treatment of other portfolio matters. Aon partners PJ Kelly and Katie Comstock — the same external consultants whose memo on the proposed sovereign bond authorization at Attachment 17 of the June 2, 2025 Board packet contained header and disclaimer text only — substantively presented at the December 1 meeting on a proposed **new 5% private credit target allocation**. That treatment included quantitative discussion, comparative framing, and a clear identification of decision criteria.
+Within the reviewed ATRS production, we did not identify:
 
-The 12/1/2025 record establishes that ATRS's investment governance retains substantive analytical depth on routine portfolio matters. The absence of comparable treatment of the new sovereign bond position six months after authorization is not a capability limitation. It is, on the record, a selection.
+- security-level purchase confirmations for the mandate;
+- an inventory of securities held in the account;
+- settlement dates or a deployment schedule; or
+- a reconciliation between the account's funding and its underlying positions.
 
-## What this means for trustee fiduciary review
+“Unproduced” is a boundary on this corpus. It does not establish the account's cash balance or immediate security deployment.
 
-A pension benefit plan's fiduciary obligations do not end at authorization. A.C.A. § 24-2-611(a) requires trustees to "invest and manage trust assets as a prudent investor would, by considering the purposes, terms, distribution requirements, and other circumstances of the trust" — language that does not limit the obligation to the pre-authorization window. Section 24-2-611(d) requires trustees to "make a reasonable effort to verify facts relevant to the investment and management of trust assets" — again, an ongoing obligation.
+## The December meeting record
 
-The December 2025 record at ATRS does not document the post-authorization reasonable-effort verification that § 24-2-611(d) requires. Specifically, it does not document:
+Searches of locally generated transcripts for the December 1, 2025 ATRS Investment Committee and Board meetings found no topic match for Israel Bonds, Reams, Scout, Jubilee, or Resolution 2025-22. The same meetings included substantive discussion of private credit.
 
-- A review of the issuer's intervening credit posture (relevant in light of credit downgrades during 2024 and 2025).
-- A review of comparative fixed-income alternatives available to the fund during the deployment window.
-- A review of the liquidity consequences of the single-capital-call deployment versus the laddered alternative proposed in the May 22 preview.
-- A consultant-level review of the actual deployment versus the deployment originally contemplated.
+Transcript search is useful as a locator method, but it is not proof of exhaustive oral silence. The audio finding therefore remains a bounded absence finding: **no identified topic match in the reviewed transcripts**, not a claim that no relevant words were spoken or no oversight occurred elsewhere.
 
-## The pre-vote / post-vote symmetry
+{% include evidence-boundary.html
+  established="The documented amount was funded to the Reams manager mandate."
+  unresolved="The produced files do not identify the mandate's security-level purchases, holdings, settlement dates, or deployment pace."
+  not_claimed="Manager funding is not presented as a security holding or as proof of a single capital purchase."
+%}
 
-The pre-vote analytical record on this investment (June 2, 2025): an Attachment 17 memo with header and disclaimer text only, no body content; an explicit framing by the Executive Director that Aon was not making "a formal recommendation"; a verbal pitch from Auditor's deputy Brady citing Treasury holdings as precedent; one dissenting vote (Board Chair Danny Knight, "I do have a problem with the procedure").
+## What the Integrity Act would add
 
-The post-vote record at the routine six-month checkpoint (December 1, 2025): zero substantive references across approximately 2,966 audio segments.
-
-The pattern is consistent. The Pension Investment Integrity Act would establish a contemporaneous record at the pre-vote stage; it would also produce the documented analysis on the record that subsequent fiduciary review under § 24-2-611(d) requires.
-
-The procedural asymmetry between this investment and other ATRS investments is itself documented in [the Westrock procedural asymmetry finding](/findings/procedural-asymmetry/).
+The Integrity Act would create a public pre-acquisition record. Continuing holdings transparency may require separate reporting rules, but the Act's written analysis and disclosure requirements would let beneficiaries see the financial basis and liquidity terms before pension money entered the mandate.
 
 ---
 
 - [Back to Key Findings](/findings/)
-- [The procedural asymmetry](/findings/procedural-asymmetry/) — same Executive Director, same month, two different procedural standards
-- [Read the policy brief](/legislators/) — A.C.A. §§ 24-2-611(a), (d) and the Pension Investment Integrity Act
+- [See the amount ledger](/key-figures/)
+- [Read the Integrity Act proposal](/legislators/)

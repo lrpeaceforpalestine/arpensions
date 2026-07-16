@@ -12,7 +12,7 @@ Thank you for adding your name. You just told Arkansas's pension boards and the 
 
 <div class="callout" markdown="1">
 
-### Three more ways to move this forward
+## Three more ways to move this forward
 
 - **See what we found.** Every figure traces back to public records obtained through Arkansas's Freedom of Information Act. [Read the evidence &rarr;](/evidence/)
 - **Tell your legislators.** A short, fiduciary-focused message to your state senator and representative carries real weight heading into 2027. [How to contact them &rarr;](/take-action/#contact-legislators)

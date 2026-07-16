@@ -1,5 +1,5 @@
 title: Arkansans for Pension Integrity
-description: "Arkansas pension funds authorized up to $100 million in non-tradable foreign sovereign debt without independent analysis. We're pushing for pension integrity legislation in 2027."
+description: "Public records document Arkansas pension and Treasury decisions involving non-tradable sovereign debt. Arkansans for Pension Integrity is advancing issuer-neutral safeguards for public pension decisions."
 url: "https://arpensions.org"
 baseurl: ""
 permalink: /:title/
@@ -42,6 +42,7 @@ defaults:
 
 # Exclude from build
 exclude:
+  - _internal
   - README.md
   - CLAUDE.md
   - LICENSE

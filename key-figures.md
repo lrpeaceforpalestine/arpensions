@@ -1,236 +1,65 @@
 ---
 layout: page
-title: "Key Figures — Who Drove These Investments"
-description: "Profiles of the officials, organizations, and bond representatives documented across 1,200+ FOIA records from Arkansas state agencies."
+title: "Key Participants and Institutions"
+description: "The public offices, pension systems, advisers, managers, sellers, and officials documented in the Arkansas investment record."
 permalink: /key-figures/
-breadcrumb: Key Figures
+breadcrumb: "Key Figures"
 ---
 
-This page profiles the key individuals and organizations whose actions shaped Arkansas's non-tradable sovereign bond investments. Every fact below is drawn from public records obtained through FOIA requests to Arkansas state agencies. Names link to related profiles on this page; for the underlying documents, see the [evidence page](/evidence/) and [document archive](/documents/).
+{% assign inv = site.data.investigation %}
 
----
+This page describes roles shown in the public record. Appearance in a chronology or correspondence network does not establish control, motive, or decision causation.
 
-## The Central Figures
+## Pension systems and advisers
 
-These two individuals appear most frequently across the entire 1,200+ document corpus. Their influence reached the two pension boards under investigation — ATRS and APERS — through a chain that began at the State Treasury, where the Arkansas position originated.
+<div class="findings-grid" markdown="1">
 
-{% assign central = site.data.key-figures | where: "relevance", "central" %}
-{% for figure in central %}
-<div class="figure-card figure-card--central" id="{{ figure.id }}" markdown="1">
+<article class="finding-card" markdown="1">
 
-### {{ figure.name }}
+### Arkansas Teacher Retirement System
 
-<p class="figure-subtitle">{{ figure.title }}{% if figure.agency %} · {{ figure.agency }}{% endif %}</p>
+ATRS authorized {{ inv.agencies[2].authorization_display | replace: 'Up to', 'up to' }}, selected Reams as manager, and documented {{ inv.agencies[2].measure_display }} in manager funding. Executive Director **Mark White** administered the proposal; **Aon Hewitt Investment Consulting** advised on implementation and manager selection; **Reams Asset Management** received the mandate. Security-level holdings were not identified in the reviewed production.
 
-<p class="figure-summary">{{ figure.summary }}</p>
+</article>
 
-<ul class="figure-facts">
-{% for fact in figure.key_facts %}<li>{{ fact }}</li>
-{% endfor %}
-</ul>
+<article class="finding-card" markdown="1">
 
-<div class="figure-connections">
-<strong>Connections:</strong>
-<ul class="connections-list">
-{% for conn in figure.connections %}<li><a href="#{{ conn.target }}">{{ conn.label }}</a> — {{ conn.relationship }}</li>
-{% endfor %}
-</ul>
-</div>
+### Arkansas Public Employees Retirement System
 
-</div>
-{% endfor %}
+APERS approved a {{ inv.agencies[1].authorization_display }} range and later recorded a {{ inv.agencies[1].measure_display }} purchase. Executive Director **Amy Fecher** and Chief Investment Officer **Carlos Borromeo** appear in the governance and implementation record. The reviewed authorization file contains no Callan sovereign-credit memorandum tied to the decision.
 
----
+</article>
 
-## The Bond Issuer's Representatives
+<article class="finding-card" markdown="1">
 
-The sales representatives who met with every agency head during the April 2025 pitch tour and were cc'd on purchase communications.
+### Arkansas State Treasury
 
-{% assign reps = site.data.key-figures | where: "type", "bonds_representative" %}
-{% for figure in reps %}
-<div class="figure-card" id="{{ figure.id }}" markdown="1">
+Treasury records establish a security-level floor of {{ inv.agencies[0].measure_display }} after a documented maturity. Senior Investment Officer **Steve Pulley** authored the October 2024 internal overview recommending HOLD and surveillance. A later {{ inv.transaction_figures.treasury_may_settled.display }} purchase settled; the reviewed files contain no identified written reconciliation with the recommendation.
 
-### {{ figure.name }}
-
-<p class="figure-subtitle">{{ figure.title }}{% if figure.agency %} · {{ figure.agency }}{% endif %}</p>
-
-<p class="figure-summary">{{ figure.summary }}</p>
-
-<ul class="figure-facts">
-{% for fact in figure.key_facts %}<li>{{ fact }}</li>
-{% endfor %}
-</ul>
-
-<div class="figure-connections">
-<strong>Connections:</strong>
-<ul class="connections-list">
-{% for conn in figure.connections %}<li><a href="#{{ conn.target }}">{{ conn.label }}</a> — {{ conn.relationship }}</li>
-{% endfor %}
-</ul>
-</div>
-
-</div>
-{% endfor %}
-
----
-
-## Agency Decision-Makers
-
-The people inside the agencies who received, approved, or resisted these investments.
-
-{% assign decision_makers = "" | split: "" %}
-{% for fig in site.data.key-figures %}{% if fig.relevance == "key" and fig.type == "official" %}{% assign decision_makers = decision_makers | push: fig %}{% endif %}{% endfor %}
-{% for figure in decision_makers %}
-<div class="figure-card" id="{{ figure.id }}" markdown="1">
-
-### {{ figure.name }}
-
-<p class="figure-subtitle">{{ figure.title }}{% if figure.agency %} · {{ figure.agency }}{% endif %}</p>
-
-<p class="figure-summary">{{ figure.summary }}</p>
-
-<ul class="figure-facts">
-{% for fact in figure.key_facts %}<li>{{ fact }}</li>
-{% endfor %}
-</ul>
-
-<div class="figure-connections">
-<strong>Connections:</strong>
-<ul class="connections-list">
-{% for conn in figure.connections %}<li><a href="#{{ conn.target }}">{{ conn.label }}</a> — {{ conn.relationship }}</li>
-{% endfor %}
-</ul>
-</div>
-
-</div>
-{% endfor %}
-
----
-
-## Supporting Roles
-
-People who played significant documented roles in the process.
-
-{% assign supporting = site.data.key-figures | where: "relevance", "supporting" %}
-{% for figure in supporting %}
-<div class="figure-card" id="{{ figure.id }}" markdown="1">
-
-### {{ figure.name }}
-
-<p class="figure-subtitle">{{ figure.title }}{% if figure.agency %} · {{ figure.agency }}{% endif %}</p>
-
-<p class="figure-summary">{{ figure.summary }}</p>
-
-<ul class="figure-facts">
-{% for fact in figure.key_facts %}<li>{{ fact }}</li>
-{% endfor %}
-</ul>
-
-<div class="figure-connections">
-<strong>Connections:</strong>
-<ul class="connections-list">
-{% for conn in figure.connections %}<li><a href="#{{ conn.target }}">{{ conn.label }}</a> — {{ conn.relationship }}</li>
-{% endfor %}
-</ul>
-</div>
-
-</div>
-{% endfor %}
-
----
-
-## Organizations
-
-Institutional actors documented across the FOIA record.
-
-{% assign orgs = site.data.key-figures | where: "type", "organization" %}
-{% for figure in orgs %}
-<div class="figure-card figure-card--org" id="{{ figure.id }}" markdown="1">
-
-### {{ figure.name }}
-
-<p class="figure-subtitle">{{ figure.title }}</p>
-
-<p class="figure-summary">{{ figure.summary }}</p>
-
-<ul class="figure-facts">
-{% for fact in figure.key_facts %}<li>{{ fact }}</li>
-{% endfor %}
-</ul>
-
-<div class="figure-connections">
-<strong>Connections:</strong>
-<ul class="connections-list">
-{% for conn in figure.connections %}<li><a href="#{{ conn.target }}">{{ conn.label }}</a> — {{ conn.relationship }}</li>
-{% endfor %}
-</ul>
-</div>
-
-</div>
-{% endfor %}
-
----
-
-## How They Connect — Four Key Patterns
-{: .patterns-heading }
-
-The profiles above describe individual roles. The patterns below describe how those roles produced up to $100 million in pension fund authorizations — with no independent credit analysis anywhere in the record — and how the Arkansas position originated at the State Treasury years earlier.
-
-<div class="pattern-section" markdown="1">
-
-### The Milligan Chain
-
-**How one official drove sovereign bond purchases from the State Treasury into two pension boards.**
-
-Dennis Milligan initiated the sovereign bond program as State Treasurer circa 2017. When he moved to the Auditor's office — a position with no investment authority over pension funds — he continued promoting the bonds through a chain of intermediaries. His Chief Deputy Jason Brady introduced the bonds at the APERS board (where Brady also sits as a member) and sent the initial request to ATRS Executive Director Mark White. Milligan personally arranged the April 2025 pitch tour that brought bond issuer representatives to all three agency heads within days. The April 11, 2025 scheduling blitz — 18 minutes to set meetings across three agencies — illustrates the coordination.
-
-Milligan sits on both the ATRS and APERS boards, meaning he had a vote on the very purchases he orchestrated. His dual board membership and the Auditor's office coordination created a single point of influence across Arkansas's entire sovereign bond exposure.
+</article>
 
 </div>
 
-<div class="pattern-section" markdown="1">
+## Public-office and governance roles
 
-### Seller as Analyst
+**Dennis Milligan, Auditor of State.** The Auditor is an ex-officio ATRS trustee. Records document Milligan's advocacy and his office's role in scheduling, correspondence, and promotion. The Auditor does not manage pension assets or serve as pension investment staff.
 
-**The bond issuer's representatives provided the only "analysis."**
+**Jason Brady, Chief Deputy Auditor.** ATRS records identify Brady as Milligan's designee; APERS minutes identify him as the Auditor's proxy on the Board and Investment Finance Subcommittee. He presented and moved the APERS authorization and appears in scheduling, correspondence, and promotion records.
 
-Across 1,200+ FOIA documents from Arkansas state agencies, there is zero independent credit analysis of the bonds under investigation. The only document resembling internal analysis — a two-page Treasury memo (TREAS-SEP25-0006, October 2024) — was created years after tens of millions had already been invested.
+**Jim Hudson and Andy Babbitt, Department of Finance and Administration.** DFA records support a confirmed encounter in the April 2025 itinerary and an introduction of the sellers to ASHERS. The selected ASHERS records show the pitch and no identified adoption.
 
-ATRS's investment consultant Aon conducted full due diligence for other investments brought before the board. For the sovereign bonds, Mark White knew Aon would not formally recommend them: "I know they will not be making a formal recommendation." The board proceeded anyway. At the same APERS meetings where sovereign bonds were authorized, Callan provided 37 pages of analysis for other investments. The sovereign bonds received no comparable review.
+## Seller, manager, and network
 
-The result: the issuer's own sales representatives — whose job is to sell bonds — provided the only materials the boards reviewed before committing $100 million in pension funds.
+**Development Corporation for Israel.** The registered broker-dealer through which Israel Bonds are offered in the United States. Its representatives, including **Lawrence Berman** and **Gail Young**, appear in Treasury, pension, DFA, and Auditor-office records.
 
-</div>
+**Reams Asset Management.** The manager selected by ATRS to implement the mandate. The production documents the management structure and funding, but not the account's security-level holdings.
 
-<div class="pattern-section" markdown="1">
+**State Financial Officers Foundation.** A national network appearing in event, newsletter, speech, and contact-facilitation records. Those records establish context and relationships, not direction of a pension allocation or control over Arkansas decision-makers.
 
-### The SFOF Pipeline
+{% include evidence-boundary.html
+  established="The records identify formal roles, communications, scheduled or reported encounters, and institution-specific decisions."
+  unresolved="The influence of any one person, office, meeting, or network on a board's independent decision remains open unless a record expressly establishes it."
+  not_claimed="Frequency of appearance and chronological proximity are not treated as causal measures."
+%}
 
-**How success was promoted for interstate replication.**
-
-The State Financial Officers Foundation connected the Arkansas purchases to a broader network. Milligan served as SFOF National Chair circa 2019–2020. After Arkansas pension boards voted to authorize sovereign bond purchases, the Auditor's office communications director Stacy Peterson distributed the results through SFOF channels with the message: "Feel free to pass along to any member states."
-
-The sequence: Milligan as SFOF National Chair builds relationships → the Auditor's office arranges pension board votes → Peterson distributes vote results through SFOF → other states receive a template for replication. SFOF conferences included "Corporate Partner Spotlight Meetings," and the bond issuer's representatives maintained an ongoing presence in the network.
-
-</div>
-
-<div class="pattern-section" markdown="1">
-
-### The Authorization Gap
-
-**What's missing from the fiduciary record.**
-
-For up to $100 million in pension fund authorizations ($50M ATRS + $25–50M APERS), the FOIA record contains:
-
-- **Zero** independent credit analysis
-- **Zero** risk assessments
-- **Zero** yield comparisons against benchmark alternatives
-- **Zero** consultant recommendations
-
-The State Treasury's parallel position ($60M as of February 2026, including the May 2025 purchase of $20M and the February 2026 purchase of $10M in new bonds, net of intervening bond maturities) shows the same absence of investment committee deliberation in the FOIA record.
-
-Both the ATRS and APERS 2025 authorizations were first-ever direct purchases of these bonds. Steve Pulley, Senior Investment Officer at Treasury, authored an internal memo recommending against new purchases, citing credit downgrades by S&P (October 1, 2024) and Moody's (September 27, 2024). The Treasury then made a $20 million new purchase, and neither pension board produced its own independent credit analysis before authorizing further purchases. Danny Knight, ATRS Board Chair, cast the sole dissenting vote, objecting to the process on the record: "I do have a problem with the procedure."
-
-The gap is not just what was absent — it's what was present for every other investment. The same boards that authorized sovereign bonds without independent analysis routinely received dozens of pages of consultant review for comparable commitments.
-
-</div>
+[See the agency ledger](/evidence/#agency-by-agency) · [Read the detailed findings](/findings/) · [Review the documented routes](/evidence/#events-and-routes)

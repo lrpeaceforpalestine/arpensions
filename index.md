@@ -1,25 +1,60 @@
 ---
 layout: default
-title: "Arkansans for Pension Integrity — Arkansas Pension Integrity Campaign"
-description: "Arkansas pension funds authorized up to $100 million in non-tradable foreign sovereign debt with no independent credit analysis — even as the State Treasury's own staff warned of the credit downgrades. We're fighting for pension integrity and fiduciary accountability."
+title: "Arkansans for Pension Integrity — Arkansas Pension Accountability"
+description: "The current Arkansas public investment record, with confirmed securities, manager funding, and conditional transactions kept distinct."
 ---
 
+{% assign inv = site.data.investigation %}
 {% include hero.html %}
 
 {% include stats-bar.html %}
 
-{% include pathway-cards.html %}
+<section class="home-record-section">
+  <div class="container container-prose">
+    <span class="section-label">The decision record</span>
+    <h2>What the decision files address—and what they leave open</h2>
+    <p class="record-lead">{{ inv.analysis_record.lead }}</p>
+
+    <div class="analysis-matrix breakout">
+      <div class="analysis-matrix-row analysis-matrix-head"><strong>Institution</strong><span>What the file contains</span><span>What remains open</span></div>
+      <div class="analysis-matrix-row"><strong>ATRS</strong><p>Aon implementation and manager-selection advice, a Reams recommendation, marketability language, and an S&amp;P downgrade report elsewhere in the production.</p><p>The produced vote file does not connect a developed sovereign-credit and portfolio-fit evaluation to the invest-or-not decision.</p></div>
+      <div class="analysis-matrix-row"><strong>APERS</strong><p>Authorization records, seller materials, operational correspondence, and the later {{ inv.agencies[1].measure }}.</p><p>The reviewed authorization file contains no Callan sovereign-credit memorandum tied to the decision.</p></div>
+      <div class="analysis-matrix-row"><strong>Treasury</strong><p>An internal credit overview recommending HOLD and continued surveillance.</p><p>The settled May 2025 purchase is not accompanied by an identified written reconciliation with that recommendation.</p></div>
+    </div>
+
+    <p><a class="btn-primary" href="{{ '/evidence/' | relative_url }}">Follow the evidence trail</a></p>
+  </div>
+</section>
 
 <hr class="section-divider section-divider--guilloche" aria-hidden="true">
 
 {% include role-ctas.html %}
 
 <section class="about-section">
-  <div class="container-prose">
-    <h2>What we&rsquo;re about</h2>
-    <p>Arkansans for Pension Integrity (API) is a grassroots campaign using public records and Arkansas law to hold pension decision-makers accountable to the fiduciary standards they are required to follow. When investment decisions bypass independent analysis and override internal staff recommendations, pension beneficiaries deserve answers.</p>
-    <p>Our research has analyzed <strong>more than 1,200 public records</strong> obtained through FOIA requests to Arkansas state agencies. What we&rsquo;ve found raises serious questions about whether pension fund investments are being made based on sound financial analysis &mdash; or something else entirely.</p>
-    <p>Heading into 2027, that case now carries broad backing: in June 2026 the <a href="https://www.citizensfirst.org/">Citizens First Congress</a>, a coalition of roughly 50 Arkansas civic and good-government organizations, named pension investment integrity one of its short-term legislative priorities for the session ahead.</p>
-    <a href="{{ '/about/' | relative_url }}" class="about-link">Learn more about us &rarr;</a>
+  <div class="container container-prose">
+    <span class="section-label">A 2027 legislative priority</span>
+    <h2>The Pension Investment Integrity Act</h2>
+    <p>The Integrity Act would require a written credit analysis, a comparison with available alternatives, plain-language liquidity disclosure, a documented fiduciary determination, and public posting before or shortly after an Arkansas pension plan acquires non-tradable sovereign debt.</p>
+    <p>{{ inv.legislation.cfc_status }} The proposal is issuer-neutral: it governs the process used for this asset class, not the identity of a country or issuer.</p>
+    <p><a href="{{ '/legislators/' | relative_url }}" class="about-link">Read the policy brief &rarr;</a></p>
+  </div>
+</section>
+
+<section class="pathways" aria-label="Campaign actions">
+  <div class="pathway-list">
+    <a href="{{ '/documents/' | relative_url }}" class="pathway-row">
+      <div class="container pathway-row-inner">
+        <span class="pathway-title">Read the primary records</span>
+        <span class="pathway-desc">Open the curated source trail and exact page locators</span>
+        <span class="pathway-arrow" aria-hidden="true">&rarr;</span>
+      </div>
+    </a>
+    <a href="{{ '/take-action/' | relative_url }}" class="pathway-row">
+      <div class="container pathway-row-inner">
+        <span class="pathway-title">Back the Integrity Act</span>
+        <span class="pathway-desc">Sign on, contact legislators, and share the campaign</span>
+        <span class="pathway-arrow" aria-hidden="true">&rarr;</span>
+      </div>
+    </a>
   </div>
 </section>

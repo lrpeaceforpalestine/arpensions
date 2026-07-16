@@ -1,48 +1,62 @@
 ---
 layout: page
 title: "Campaign Updates"
-description: "Milestones and progress in the Arkansans for Pension Integrity investigation."
+description: "Dated milestones in the Arkansas public-investment investigation and the Pension Investment Integrity Act campaign."
 permalink: /news/
 ---
 
-Follow the progress of our investigation and campaign.
+{% assign inv = site.data.investigation %}
+
+Each entry is a standalone account of the record or campaign milestone known at that date.
 
 ## 2026
 
-**June 27** — A statewide coalition adopts pension investment integrity as a 2027 priority. The [Citizens First Congress](https://www.citizensfirst.org/) — a coalition of roughly 50 Arkansas civic and good-government organizations — named pension investment integrity one of its short-term legislative priorities for the 2027 session, endorsing the issuer-neutral, fiduciary-first procedural standards the Pension Investment Integrity Act would establish.
+### July 16 — Render-aware corpus review completed
 
-**May 18** — AJRS confirms a complete null result. APERS/AJRS Staff Attorney Richmond Giles confirmed no responsive records to any paragraph of the Round 4 request — no holdings or board records (May 15) and no responsive communications (May 18). AJRS commingles its investments with APERS under Act 1242 (the same structure under which ASPRS confirmed null); the only communications from the bond issuer reaching the shared APERS/AJRS staff had already been produced in the APERS February 2026 response. With AJRS, all six Act 498 pension systems have now responded.
+The investigation completed visual review across {{ inv.corpus.pdf_pages_display }} PDF pages in a {{ inv.corpus.raw_files_display }}-file raw corpus. The current evidence model distinguishes confirmed securities, manager funding, authorization ceilings, and processing-stage payments and supplies exact locators for the site's principal claims. [Read the methodology.](/methodology/)
 
-**May 8** — AJRS (Arkansas Judicial Retirement System) identified as the sixth Arkansas public pension system covered by Act 498 of 2023. FOIA request filed (Round 4) and acknowledged same-day by Richmond Giles, APERS Staff Attorney — operationally confirming that the same legal staff handles correspondence for both APERS and AJRS. AJRS is administered by APERS staff and shares investment infrastructure, but operates as a separate benefit plan with its own Board of Trustees and approximately $309 million in trust assets (~89% funded). Production deadline extended to May 15, 2026 by mutual agreement; response pending.
+### June 27 — 2027 coalition priority
 
-**April 20** — Arkansas Securities Department delivers FOIA response on the for-profit broker-dealer that exclusively sells the bonds under investigation (FINRA CRD# 11148). The Web CRD records document the broker-dealer's Arkansas registration history including a registration scope restricted by its terms to "BONDS FOR THE STATE OF ISRAEL" (effective June 25, 1984 — a scope shared in only two other states), the 1986 Arkansas suspension under Securities Order 86-27-S (vacated July 22, 1986), four FINRA disclosure events spanning 1983–2014, and three Arkansas-registered agents on file. The findings establish the regulatory record relevant to A.C.A. § 24-2-618(e)'s exclusive-agency provision and the Pension Investment Integrity Act's procedural standards. Investigation corpus now spans six respondent agencies (Treasury, ATRS, APERS, Auditor of State, ASHERS, Arkansas Securities Department) plus three confirmed-null responses (ASPRS, LOPFI, AJRS pending).
+Citizens First Congress selected pension investment integrity as a short-term priority for the 2027 Arkansas legislative session. The proposal is issuer-neutral and focuses on written financial analysis and public disclosure before covered pension acquisitions. [Read the policy brief.](/legislators/)
 
-**April 9** — LOPFI (Local Police and Fire Retirement System) confirmed no responsive records and no current holdings of the bonds under investigation. LOPFI manages its own investments independently with approximately $3.15 billion under management. With LOPFI's response, five of six Arkansas pension systems had responded. Total corpus: 1,227 documents across three FOIA rounds.
+### May 18 — Six-system response record completed
 
-**March 28** — ASHERS (Arkansas State Highway Employees' Retirement System) delivered FOIA Round 3 response — 5 documents including email correspondence revealing that the bond issuer's national sales leadership was introduced to ASHERS staff through the same April 2025 pitch tour — via the Department of Finance and Administration, not the Auditor's office — but ASHERS declined to invest. ASPRS (Arkansas State Police Retirement System) confirmed no responsive documents — assets commingled with APERS under Act 1242 of 2009. Investigation corpus reaches 1,227 total documents (1,044 active after deduplication).
+The Arkansas Judicial Retirement System reported no records responsive to the request. With that response, the project had received responses from each of the six pension systems within the Act 498 definition used by the investigation. A no-records response is reported as a bounded agency response, not proof that no related record could exist in another custodian's files.
 
-**March 25** — Analyzed publicly-posted APERS Board Packet for June 11, 2025 (88 pages). Key finding: the same board meetings that produced 37 pages of Callan quarterly analysis and detailed institutional presentations for the board's other investments contained zero pages of analysis for the $25–50 million sovereign bond authorization. Filed FOIA Round 3 requests to ASHERS (Arkansas State Highway Employees' Retirement System) and LOPFI (Local Police and Fire Retirement System), expanding the investigation to two previously uninvestigated pension systems.
+### April 20 — Broker-dealer records received
 
-**March 24** — Completed Auditor Round 2 processing. All four agencies' FOIA responses now fully ingested. Round 2 corpus: 1,222 total documents across 4 agencies (1,039 active after deduplication). Registry passes validation with zero critical findings.
+The Arkansas Securities Department supplied registration and historical regulatory records for the broker-dealer through which the securities are offered. The records inform questions about marketability, due diligence, and Arkansas's exclusive-agency language; they do not by themselves establish present disqualification, a statutory violation, or investment unsuitability. [Read the finding.](/findings/regulatory-record/)
 
-**March 17** — Spotlight PA publishes investigation into Pennsylvania Treasurer's sovereign bond purchases and ethics concerns — independent journalists in another state asking the same fiduciary questions our FOIA investigation has documented in Arkansas. [Read the Spotlight PA report.](https://www.spotlightpa.org/news/2026/03/stacy-garrity-treasurer-governor-election-israel-bonds-ethics-elections/)
+### March 28 — ASHERS outreach record received
 
-**March 3** — Auditor of State delivers Round 2 FOIA response — 124 documents from three custodians (Dennis Milligan, Jason Brady, Wendy Spadoni) received via flash drive from General Counsel TJ Fowler. Documents cover the Auditor's coordination of the April 2025 bond issuer pitch tour, internal communications, and SFOF-related materials.
+Selected ASHERS records document a DFA introduction and the sellers' pitch. No reply, authorization, or holding was identified in the reviewed production. The files do not establish an affirmative decline or the cause of the different observed outcome. [Read the ASHERS finding.](/findings/control-case/)
 
-**March 1** — Completed assessment of APERS and ATRS Round 2 FOIA responses. Key findings: Brady-as-conduit confirmed with direct quotes; APERS purchase timeline reconstructed; ATRS investment management structure documented.
+### February 27 — APERS transaction and governance production
 
-**February 27** — APERS delivered Round 2 FOIA response — 16 documents including an 8,648-page comprehensive production containing the agency's sovereign bond records.
+The APERS production included meeting records and a large correspondence package. The reviewed file documents a {{ inv.agencies[1].measure_display }} purchase and signed minutes for a {{ inv.agencies[1].authorization_display }} authorization. [See APERS records.](/documents/#a-curated-source-trail)
 
-**February 20** — FOIA Round 2 Treasury response fully ingested — 118 new documents added to the investigation.
+### February 19 — Treasury payment-stage production
 
-**February 19** — Website launched; investigation corpus has grown to more than 1,100 public records across two FOIA rounds.
-
-**February 5** — FOIA Round 2 requests submitted to all four agencies: Treasury, ATRS, APERS, and Auditor of State.
+Treasury records document an additional {{ inv.metrics.treasury_conditional_payment.display }} payment instruction marked “Processing By Bank.” Without a completed bank status or resulting holdings record in the production, the amount remains conditional. [Read the record.](/documents/records/treasury-processing-payment/)
 
 ## 2025
 
-**October** — FOIA Round 1 responses received from all four Arkansas agencies. Initial analysis begins.
+### December 29 — ATRS mandate funding documented
 
-**August** — First round of FOIA requests filed with Arkansas Treasury, ATRS, APERS, and Auditor of State.
+An ATRS Board liquidity update documented {{ inv.metrics.atrs_manager_funding.display }} funded to the Scout/Reams mandate. The email does not identify the manager's security-level purchases or holdings. [Read the record.](/documents/records/atrs-manager-funding/)
 
-**Spring** — Investigation formally launched. Campaign infrastructure development begins.
+### October 15 — APERS purchase documented
+
+APERS's transaction file documents a {{ inv.agencies[1].measure }}. The purchase is below the authorization motion's stated minimum; the operational and legal effect remains unresolved. [Read the privacy-reviewed record.](/documents/records/apers-purchase/)
+
+### June 2 — ATRS authorization adopted
+
+ATRS adopted Resolution 2025-22, authorizing **{{ inv.agencies[2].authorization_display | replace: 'Up to', 'up to' }}** and naming Reams as manager. Aon's packet memorandum provides implementation and manager-selection advice while expressly withholding an invest-or-not or individual-security recommendation. [Read pages 149–150.](/documents/records/atrs-aon-memo/)
+
+### May 15 — APERS committee authorization adopted
+
+Signed minutes document an APERS Investment Finance Subcommittee motion for **{{ inv.agencies[1].authorization_display }}**. Jason Brady presented and moved the proposal, Jim Hudson seconded it, and the motion carried without dissent. [Read the minutes.](/documents/records/apers-authorization/)
+
+### Spring — Investigation launched
+
+Arkansans for Pension Integrity began assembling agency records on public investments, governance, and fiduciary process. The project publishes selected privacy-reviewed anchors and keeps its legislative proposal focused on issuer-neutral procedure.
