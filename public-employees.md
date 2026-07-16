@@ -13,14 +13,16 @@ hero_band: pine
 
 ## Your pension, your record
 
-APERS's Investment Finance Subcommittee approved a **{{ apers.authorization_display }}** range in May 2025. The reviewed transaction file documents a **{{ apers.measure_display }} purchase** on October 15, 2025.
+APERS's Investment Finance Subcommittee authorized a **{{ apers.authorization_display }}** range in May 2025. The reviewed transaction file documents a **{{ apers.measure_display }} purchase** on October 15, 2025.
 
 The purchase is **{{ inv.transaction_figures.apers_below_minimum_difference.display }} below** the motion's stated minimum. The produced record does not resolve the operational or legal effect of that discrepancy, set an implementation deadline, or document an additional purchase through the record cutoff.
+
+These records concern investment process and portfolio reporting. They do not show a change to earned-benefit formulas, payment schedules, or the legal obligation to pay benefits.
 
 <div class="audience-fact-grid">
   <article><span class="evidence-status evidence-status--established">{{ apers.status }}</span><strong>{{ inv.metrics.confirmed_security_floor.display }}</strong><p>Statewide security floor, including APERS and Treasury.</p></article>
   <article><span class="evidence-status evidence-status--established">established</span><strong>{{ apers.measure }}</strong><p>Confirmed by the October 15 transaction record.</p></article>
-  <article><span class="evidence-status evidence-status--authorization">authorization</span><strong>{{ apers.authorization_display }}</strong><p>The Board-approved range is not the amount purchased.</p></article>
+  <article><span class="evidence-status evidence-status--authorization">authorization</span><strong>{{ apers.authorization_display }}</strong><p>The IFSC-authorized range is not the amount purchased.</p></article>
 </div>
 
 ## What APERS's analytical file contains
@@ -30,6 +32,7 @@ The May 15 minutes document Jason Brady, acting as the Auditor's proxy on the AP
 In the reviewed authorization file, we identified no Callan sovereign-credit memorandum tied to the decision. APERS's chief investment officer later represented internally that he prepared nothing for the Board on the topic and believed the consultants had not either. That is a bounded finding about the selected written record, not proof that no oral discussion or unproduced work occurred.
 
 {% include citation.html source_id="apers_authorization" %}
+{% include citation.html source_id="apers_analysis_email" %}
 {% include citation.html source_id="apers_purchase" %}
 
 {% include evidence-boundary.html
@@ -40,12 +43,12 @@ In the reviewed authorization file, we identified no Callan sovereign-credit mem
 
 ## What the Integrity Act would protect
 
-The Pension Investment Integrity Act would require an issuer-neutral written record before a covered pension acquisition: credit analysis, comparison with alternatives, liquidity disclosure, fiduciary determination, and public posting. It would leave the ultimate investment decision with APERS trustees.
+{{ inv.legislation.full_summary }} It would leave the ultimate investment decision with APERS trustees.
 
 ## What public employees can do
 
 1. **Read the primary pages.** Review the [signed authorization minutes](/documents/records/apers-authorization/) and [privacy-reviewed purchase record](/documents/records/apers-purchase/).
-2. **Contact your legislators.** Ask them to support the Integrity Act as a 2027 Citizens First Congress short-term priority.
+2. **Contact your legislators.** [Find your state senator and representative](https://districtfinder.youraedi.com/) and use the fund-specific letter below.
 3. **Follow APERS meetings.** Use [apers.org](https://apers.org/) for current meeting information and ask for fund-specific holdings and analytical records.
 
 <div class="letter-template letter-template--compact" markdown="1">
@@ -55,7 +58,7 @@ Dear [Representative/Senator],
 
 I am an Arkansas public employee or APERS member asking you to support the Pension Investment Integrity Act in the 2027 session. APERS records document a purchase of {{ apers.measure_display }} under a {{ apers.authorization_display }} authorization, while the reviewed authorization file contains no Callan sovereign-credit memorandum tied to the decision.
 
-The Act would require credit analysis, comparison with alternatives, liquidity disclosure, a fiduciary determination, and public posting before covered acquisitions. It is issuer-neutral and would not tell trustees what to buy or sell.
+{{ inv.legislation.full_summary }} It is issuer-neutral and would not tell trustees what to buy or sell.
 
 Please support a public investment record for public retirement money.
 

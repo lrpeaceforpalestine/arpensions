@@ -6,6 +6,8 @@ permalink: /findings/control-case/
 breadcrumb: "Key Findings"
 ---
 
+{% assign inv = site.data.investigation %}
+
 The Arkansas State Highway Employees Retirement System (ASHERS) provides a useful cross-agency comparison because the reviewed production shows the same sellers reaching another public retirement system during the 2025 outreach period.
 
 ## What the records show
@@ -28,7 +30,7 @@ Possible explanations include fund structure, portfolio needs, recipient posture
 
 ## Why the comparison matters
 
-The comparison shows why a consistent written procedure is more reliable than inference from outcomes. Under the Integrity Act, every covered pension system considering the same asset class would create the same basic record: credit analysis, alternatives comparison, liquidity disclosure, fiduciary determination, and public posting.
+The comparison shows why a consistent written procedure is more reliable than inference from outcomes. {{ inv.legislation.full_summary }}
 
 ---
 

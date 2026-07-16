@@ -18,6 +18,8 @@ header_image_alt: "Arkansas State Capitol in Little Rock, rendered in pine and m
 
 Arkansans for Pension Integrity is a grassroots campaign using public records, financial analysis, and Arkansas law to make public pension decisions easier to examine. The campaign is organization-led and can be reached at [info@arpensions.org](mailto:info@arpensions.org).
 
+Arkansans for Pension Integrity continues campaign work begun under the name **Divest for AR Future**. The current legislative program is the issuer-neutral Pension Investment Integrity Act, which governs decision procedure rather than directing an investment outcome.
+
 ## What we do
 
 <div class="approach-pillars" markdown="1">
@@ -26,11 +28,19 @@ Arkansans for Pension Integrity is a grassroots campaign using public records, f
 
 **Separate evidence states.** Authorizations, manager funding, payments in process, settled purchases, and holdings are different facts. The site labels them separately and treats absence findings as bounded to a defined production.
 
-**Advance issuer-neutral procedure.** The Pension Investment Integrity Act would require credit analysis, comparison with alternatives, liquidity disclosure, a fiduciary determination, and public posting before covered pension acquisitions. It would not prescribe an investment outcome.
+**Advance issuer-neutral procedure.** {{ inv.legislation.full_summary }} It would not prescribe an investment outcome.
 
 **Build public participation.** Educators, public employees, retirees, legislators, journalists, and other Arkansans should be able to see and discuss the financial record governing public retirement money.
 
 </div>
+
+## Organizational accountability
+
+Research, publication, legislative advocacy, and public contact are conducted under the organization name **Arkansans for Pension Integrity**. The site's factual account is tied to cited public records; interpretive claims and unresolved questions are labeled. A participant's politics, office, or organizational relationship is context, not a substitute for evidence of authority or causation.
+
+To challenge a locator, submit an alternate reading, request an accessible record, or provide a source, email [info@arpensions.org](mailto:info@arpensions.org?subject=Source%20or%20editorial%20question). Include the page, claim, and supporting record when possible. The site presents the strongest verified account supported by the current evidence model.
+
+Petition and contact-data practices are described in the [privacy notice](/privacy/).
 
 ## Current evidence in one paragraph
 

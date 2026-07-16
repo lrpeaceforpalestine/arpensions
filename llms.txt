@@ -30,7 +30,7 @@ Treasury: {{ inv.analysis_record.treasury }}
 
 ## Policy
 
-The Pension Investment Integrity Act would require written credit analysis, comparison with alternatives, plain-language liquidity disclosure, a written fiduciary determination, and public posting before covered pension acquisitions. It is issuer-neutral and does not direct a board to buy, hold, or sell a security. Citizens First Congress selected pension investment integrity as a short-term priority for the 2027 Arkansas legislative session.
+{{ inv.legislation.full_summary }} The proposal is issuer-neutral and does not direct a board to buy, hold, or sell a security. {{ inv.legislation.cfc_status }}
 
 ## Preferred pages
 

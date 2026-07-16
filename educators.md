@@ -17,6 +17,8 @@ ATRS authorized **{{ atrs.authorization_display | replace: 'Up to', 'up to' }}**
 
 That distinction matters: money transferred to an investment manager is not the same measure as securities shown in a holdings statement.
 
+These records concern investment process and portfolio reporting. They do not show a change to earned-benefit formulas, payment schedules, or the legal obligation to pay benefits.
+
 <div class="audience-fact-grid">
   <article><span class="evidence-status evidence-status--funded-mandate">{{ atrs.status }}</span><strong>{{ inv.metrics.atrs_manager_funding.display }}</strong><p>Transferred to the Reams mandate.</p></article>
   <article><span class="evidence-status evidence-status--unproduced">unproduced</span><strong>Holdings detail</strong><p>No security-level inventory was identified in the reviewed ATRS production.</p></article>
@@ -39,12 +41,12 @@ The production also contains an S&P downgrade report elsewhere. The files do not
 
 ## What the Integrity Act would protect
 
-The Pension Investment Integrity Act would require five steps before a covered pension acquisition: written credit analysis, comparison with alternatives, plain-language liquidity disclosure, a fiduciary determination based on material financial risk and return, and public posting. It would not tell ATRS what to buy or sell.
+{{ inv.legislation.full_summary }} The proposal would not tell ATRS what to buy or sell.
 
 ## What educators can do
 
 1. **Read the primary pages.** Start with the [Aon memorandum](/documents/records/atrs-aon-memo/) and [ATRS funding record](/documents/records/atrs-manager-funding/).
-2. **Ask your legislators to support the Integrity Act.** The proposal has been selected as a Citizens First Congress short-term priority for the 2027 session.
+2. **Ask your legislators to support the Integrity Act.** [Find your state senator and representative](https://districtfinder.youraedi.com/) and use the fund-specific letter below.
 3. **Follow ATRS meetings.** Check the [ATRS calendar](https://www.artrs.gov/calendar) and ask how manager funding, underlying holdings, credit risk, and liquidity are reported to trustees and members.
 
 <div class="letter-template letter-template--compact" markdown="1">
@@ -54,7 +56,7 @@ Dear [Representative/Senator],
 
 I am an Arkansas educator or ATRS member asking you to support the Pension Investment Integrity Act in the 2027 session. ATRS records document {{ inv.metrics.atrs_manager_funding.display }} funded to a manager mandate, while the produced files do not identify the mandate's underlying security holdings or a written sovereign-credit and portfolio-fit analysis tied to the authorization.
 
-The Act would require the same issuer-neutral record before any covered pension acquisition: credit analysis, comparison with alternatives, liquidity disclosure, a fiduciary determination, and public posting. It would not direct trustees to buy or sell a particular investment.
+{{ inv.legislation.full_summary }} It would not direct trustees to buy or sell a particular investment.
 
 Please support a public investment record for public retirement money.
 

@@ -44,7 +44,7 @@ Transcript search is useful as a locator method, but it is not proof of exhausti
 
 ## What the Integrity Act would add
 
-The Integrity Act would create a public pre-acquisition record. Continuing holdings transparency may require separate reporting rules, but the Act's written analysis and disclosure requirements would let beneficiaries see the financial basis and liquidity terms before pension money entered the mandate.
+{{ inv.legislation.full_summary }} Continuing holdings transparency may require separate reporting rules, but the Act would make the pre-acquisition financial basis and liquidity terms available on a defined publication schedule.
 
 ---
 

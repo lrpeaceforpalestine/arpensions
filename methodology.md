@@ -39,7 +39,7 @@ The site distinguishes authorization, manager funding, payment processing, settl
 - Settlement evidence documents a completed transaction.
 - A holdings statement documents a position as of its stated date.
 
-Amounts on the site are assigned to these states in [`_data/investigation.yml`](https://github.com/divestforARfuture/arpensions.org/blob/main/_data/investigation.yml), the canonical public evidence model.
+Amounts on the site are assigned to these states in [`_data/investigation.yml`](https://github.com/divestforARfuture/arpensions/blob/main/_data/investigation.yml), the canonical public evidence model.
 
 ## Bounded absence findings
 

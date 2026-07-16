@@ -65,7 +65,7 @@ The specialized distribution channel, Aon's marketability note, and historical r
 
 ## One policy response
 
-The Pension Investment Integrity Act would apply the same five issuer-neutral steps to every covered acquisition: written credit analysis, comparison with alternatives, liquidity disclosure, a fiduciary determination based on material financial risk and return, and public posting.
+{{ inv.legislation.full_summary }} The same issuer-neutral procedure would apply to every covered acquisition.
 
 That procedure does not dictate an outcome. It gives beneficiaries, trustees, legislators, and journalists a common record with which to evaluate one.
 

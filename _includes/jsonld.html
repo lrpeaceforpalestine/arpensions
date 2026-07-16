@@ -2,7 +2,7 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "NGO",
+  "@type": "Organization",
   "@id": "https://arpensions.org/#organization",
   "name": "Arkansans for Pension Integrity",
   "url": "https://arpensions.org",
@@ -15,7 +15,7 @@
   },
   "description": "Arkansas campaign for documented, issuer-neutral pension investment safeguards and fiduciary accountability.",
   "areaServed": {"@type": "AdministrativeArea", "name": "Arkansas"},
-  "knowsAbout": ["pension integrity", "Arkansas public records", "fiduciary duty", "state pension funds", "non-marketable sovereign debt"]
+  "knowsAbout": ["pension integrity", "Arkansas public records", "fiduciary duty", "state pension funds", {{ site.data.terminology.instrument_formal | jsonify }}]
 }
 </script>
 

@@ -19,7 +19,7 @@ The investigation completed visual review across {{ inv.corpus.pdf_pages_display
 
 ### June 27 — 2027 coalition priority
 
-Citizens First Congress selected pension investment integrity as a short-term priority for the 2027 Arkansas legislative session. The proposal is issuer-neutral and focuses on written financial analysis and public disclosure before covered pension acquisitions. [Read the policy brief.](/legislators/)
+{{ inv.legislation.cfc_status }} {{ inv.legislation.full_summary }} The proposal is issuer-neutral. [Read the policy brief.](/legislators/)
 
 ### May 18 — Six-system response record completed
 

@@ -8,7 +8,7 @@
       <p class="agency-status-name">{{ agency.name }}</p>
     </header>
     <dl>
-      <div><dt>Authority</dt><dd>{{ agency.authorization }}</dd></div>
+      <div><dt>{{ agency.authority_label | default: "Authorization / target" }}</dt><dd>{{ agency.authorization }}</dd></div>
       <div><dt>Documented measure</dt><dd>{{ agency.measure }}</dd></div>
     </dl>
     <p>{{ agency.record }}</p>

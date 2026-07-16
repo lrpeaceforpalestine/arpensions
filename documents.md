@@ -34,7 +34,7 @@ Masking protects account numbers, transaction identifiers, user identifiers, dir
 
 ## Additional hosted records
 
-Existing document URLs remain available for source continuity, including Treasury purchase confirmations, investment policy, correspondence, and public news clippings. They are supplementary records and should be read with the current [evidence ledger](/evidence/), status labels, and dated cutoffs.
+Supplementary hosted records include Treasury purchase confirmations, investment policy, correspondence, and public news clippings. Read them with the [evidence ledger](/evidence/), status labels, and dated cutoffs.
 
 - [Treasury May 2025 purchase confirmation](/assets/documents/sovereign-bond-purchase-confirmation-may2025.pdf)
 - [Treasury November 2023 purchase confirmation](/assets/documents/sovereign-bond-purchase-confirmation-nov2023.pdf)

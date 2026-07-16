@@ -8,7 +8,7 @@ hide_rule: true
 
 {% assign inv = site.data.investigation %}
 
-The Pension Investment Integrity Act would require a clear written record before covered pension systems acquire non-tradable sovereign debt. It would not tell trustees what to buy or sell. It would make the financial case visible to beneficiaries and the public.
+{{ inv.legislation.full_summary }} The Act would not tell trustees what to buy or sell.
 
 <nav class="step-ladder" aria-label="Action steps">
   <a href="#sign-on" class="step-ladder-item"><span class="step-ladder-node">1</span><span class="step-ladder-label">Sign on</span></a>
@@ -22,18 +22,24 @@ The Pension Investment Integrity Act would require a clear written record before
 
 Add your name if you believe public pension decisions should be based on material financial risk and return, with the analysis available on the public record.
 
-The petition supports five issuer-neutral safeguards: written credit analysis, comparison with alternatives, liquidity disclosure, a fiduciary determination, and public posting. Citizens First Congress selected pension investment integrity as a short-term priority for the 2027 legislative session.
+The petition supports the five issuer-neutral safeguards in the proposal. {{ inv.legislation.cfc_status }}
 
 <div class="an-embed">
-<script src="https://actionnetwork.org/widgets/v6/petition/stand-for-pension-integrity?format=js&source=widget"></script>
 <div id="can-petition-area-stand-for-pension-integrity" style="width: 100%"></div>
+<script defer src="https://actionnetwork.org/widgets/v6/petition/stand-for-pension-integrity?format=js&source=arpensions"></script>
 </div>
 
-<noscript><p>JavaScript is required to add your name here. <a href="https://actionnetwork.org/petitions/stand-for-pension-integrity?source=arpensions" target="_blank" rel="noopener">Add your name on the petition page</a> or email <a href="mailto:info@arpensions.org?subject=I%20support%20pension%20integrity">info@arpensions.org</a>.</p></noscript>
+<p class="petition-fallback"><strong>Prefer the full petition page, or do not see the form?</strong> <a href="https://actionnetwork.org/petitions/stand-for-pension-integrity?source=arpensions" target="_blank" rel="noopener">Add your name directly on Action Network</a> or email <a href="mailto:info@arpensions.org?subject=I%20support%20pension%20integrity">info@arpensions.org</a>.</p>
+
+<noscript><p>The embedded form requires JavaScript; the direct Action Network petition link above remains available.</p></noscript>
+
+Petition submissions are processed by Action Network and made available to Arkansans for Pension Integrity for petition administration and any communications you choose to receive. Read the campaign's [privacy notice](/privacy/) and [Action Network's privacy policy](https://actionnetwork.org/privacy).
 
 ## Contact your legislators {#contact-legislators}
 
-Find your state senator and representative at [arkleg.state.ar.us](https://www.arkleg.state.ar.us/) or use your preferred constituent-contact tool. Ask them to support the Pension Investment Integrity Act in the 2027 regular session.
+[Find your state senator and representative by address](https://districtfinder.youraedi.com/), then use the official contact information returned for your districts. Ask them to support the Pension Investment Integrity Act in the 2027 regular session.
+
+**Suggested email subject:** Support the Pension Investment Integrity Act
 
 <div class="letter-template letter-template--compact" markdown="1">
 <button class="copy-letter-btn" type="button" aria-label="Copy letter to legislators">Copy</button>
@@ -44,7 +50,7 @@ I am writing to ask you to support the Pension Investment Integrity Act in the 2
 
 Public records document a {{ inv.metrics.confirmed_security_floor.display }} security-level floor across the State Treasury and APERS, plus {{ inv.metrics.atrs_manager_funding.display }} funded to an ATRS manager mandate whose underlying security holdings were not produced. The records contain meaningful implementation and credit-related materials, while leaving important questions about how sovereign-credit risk and portfolio fit were connected to each affirmative pension decision.
 
-The Act would require five issuer-neutral steps before covered pension acquisitions: written credit analysis, comparison with alternatives, liquidity disclosure, a fiduciary determination based on material financial risk and return, and public posting. It would not direct trustees to buy, hold, or sell a security.
+{{ inv.legislation.full_summary }} It would not direct trustees to buy, hold, or sell a security.
 
 Public money deserves a public investment record. Please support the Act.
 
@@ -53,6 +59,10 @@ Sincerely,
 [Name, city]
 
 </div>
+
+### 30-second call script
+
+> Hello, my name is [name], and I live in [city]. I am your constituent. Please support the Pension Investment Integrity Act for the 2027 session. It would require covered pension systems to document credit, alternatives, liquidity, and pecuniary-factor analysis before an acquisition and publish the record within 30 days. It is issuer-neutral and leaves the investment decision with trustees. May I ask where the legislator stands, and may your office follow up with me?
 
 ## Follow a pension meeting {#attend-meeting}
 
@@ -64,6 +74,13 @@ Questions you can ask:
 - What written credit and portfolio-fit analysis preceded the decision?
 - How were limited marketability and reasonably available alternatives evaluated?
 - Which document records the trustees' pecuniary-factor determination?
+
+### Attend, comment, report back
+
+1. Confirm the meeting date, agenda, location or stream, and any public-comment instructions on the fund's official site.
+2. Note the exact agenda item, speaker, motion, vote, and document title rather than relying on a general impression.
+3. If public comment is available, ask one concise process question and request the record by name.
+4. Email meeting notes or an agenda link to [info@arpensions.org](mailto:info@arpensions.org?subject=Pension%20meeting%20report) with the subject **Pension meeting report**. Distinguish what you observed from what you inferred.
 
 ## Volunteer {#volunteer}
 
@@ -80,3 +97,5 @@ Arkansans for Pension Integrity welcomes help with public-record review, educato
   </picture>
   <figcaption><a href="{{ '/assets/images/banknote-share.jpg' | relative_url }}" download>Save the share graphic</a></figcaption>
 </figure>
+
+{% include social-share.html %}

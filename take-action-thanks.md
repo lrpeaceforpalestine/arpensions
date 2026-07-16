@@ -8,7 +8,7 @@ sitemap: false
 hide_rule: true
 ---
 
-Thank you for adding your name. You just told Arkansas's pension boards and the General Assembly something simple and overdue: our public retirement savings should be invested on financial merit — with the analysis on the record, before the vote. That's the case behind the **[Pension Investment Integrity Act](/legislators/)**, headed to the 2027 session.
+Thank you for adding your name. You just told Arkansas's pension boards and the General Assembly something simple: our public retirement savings should be invested on financial merit, with a reviewable decision record. That's the case behind the **[Pension Investment Integrity Act](/legislators/)** being advanced for the 2027 session.
 
 <div class="callout" markdown="1">
 
@@ -20,4 +20,4 @@ Thank you for adding your name. You just told Arkansas's pension boards and the 
 
 </div>
 
-We'll keep you posted as the campaign moves toward the 2027 session. Thank you for standing up for the people whose retirement is on the line.
+If you chose to receive campaign communications, updates will follow the preferences submitted with your petition. Thank you for standing up for a public investment record.

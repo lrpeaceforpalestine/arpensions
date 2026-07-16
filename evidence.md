@@ -36,12 +36,7 @@ The **{{ inv.metrics.pension_authorization_ceiling.display }} pension authorizat
 
 <p class="record-lead">{{ inv.analysis_record.lead }}</p>
 
-<div class="analysis-matrix">
-  <div class="analysis-matrix-row analysis-matrix-head"><strong>Institution</strong><span>Produced analytical material</span><span>Decision-record question</span></div>
-  <div class="analysis-matrix-row"><strong>ATRS</strong><p>Aon implementation and manager comparison; Reams recommendation; marketability language; S&amp;P downgrade report elsewhere in the production.</p><p>How did trustees connect sovereign-credit and portfolio-fit evaluation to the invest-or-not decision, and what securities did Reams later acquire?</p></div>
-  <div class="analysis-matrix-row"><strong>APERS</strong><p>Authorization record, seller materials, operational correspondence, and the October purchase record.</p><p>What consultant or staff analysis supported the authorization, and how should the {{ apers.measure }} be understood against the stated authorization range?</p></div>
-  <div class="analysis-matrix-row"><strong>Treasury</strong><p>Internal overview summarizing downgrade concerns and recommending HOLD with continuing surveillance.</p><p>What written analysis or authority reconciled the later settled purchase with the identified recommendation?</p></div>
-</div>
+{% include analysis-record-matrix.html %}
 
 ### ATRS packet pages 149–150
 
@@ -51,7 +46,7 @@ The two pages document a division of responsibility between implementation advic
 
 ### Treasury recommendation and later transaction
 
-The October 8, 2024 internal overview recommends holding the existing positions, allowing scheduled maturities to roll off, and maintaining credit surveillance. The May 2025 transaction record documents a later {{ inv.timeline[2].amount_display }} settled purchase. The documentary issue is the absence of an identified written reconciliation in the reviewed production—not a conclusion about who had final authority or why the purchase occurred.
+The October 8, 2024 internal overview recommends holding the existing positions, allowing scheduled maturities to roll off, and maintaining credit surveillance. The May 2025 transaction record documents a later {{ inv.transaction_figures.treasury_may_settled.display }} settled purchase. The documentary issue is the absence of an identified written reconciliation in the reviewed production—not a conclusion about who had final authority or why the purchase occurred.
 
 ## Open record questions
 
@@ -79,10 +74,14 @@ The October 8, 2024 internal overview recommends holding the existing positions,
 
 <div class="source-card-grid">
   <a class="source-card" href="{{ inv.sources.atrs_aon.record_url }}"><span class="source-card-label">{{ inv.sources.atrs_aon.agency }} · pages 149–150</span><strong>{{ inv.sources.atrs_aon.title }}</strong><p>Implementation advice, manager comparison, Reams recommendation, and scope boundary.</p><span class="source-card-action">Open record →</span></a>
+  <a class="source-card" href="{{ inv.sources.atrs_resolution.record_url }}"><span class="source-card-label">{{ inv.sources.atrs_resolution.agency }} · signed resolution</span><strong>{{ inv.sources.atrs_resolution.title }}</strong><p>The authorization ceiling, manager selection, and delegated implementation authority.</p><span class="source-card-action">Open record →</span></a>
+  <a class="source-card" href="{{ inv.sources.atrs_funding.record_url }}"><span class="source-card-label">{{ inv.sources.atrs_funding.agency }} · Board update</span><strong>{{ inv.sources.atrs_funding.title }}</strong><p>The distinct manager-account funding event documented in December 2025.</p><span class="source-card-action">Open record →</span></a>
   <a class="source-card" href="{{ inv.sources.apers_authorization.record_url }}"><span class="source-card-label">{{ inv.sources.apers_authorization.agency }} · signed minutes</span><strong>{{ inv.sources.apers_authorization.title }}</strong><p>The final motion, seconder, and recorded outcome.</p><span class="source-card-action">Open record →</span></a>
+  <a class="source-card" href="{{ inv.sources.apers_analysis_email.record_url }}"><span class="source-card-label">{{ inv.sources.apers_analysis_email.agency }} · FOIA-search email</span><strong>{{ inv.sources.apers_analysis_email.title }}</strong><p>The chief investment officer's account of Board and consultant materials responsive to the request.</p><span class="source-card-action">Open record →</span></a>
   <a class="source-card" href="{{ inv.sources.apers_purchase.record_url }}"><span class="source-card-label">{{ inv.sources.apers_purchase.agency }} · purchase record</span><strong>{{ inv.sources.apers_purchase.title }}</strong><p>Transaction amount, date, beneficiary, and security identifier with operational fields masked.</p><span class="source-card-action">Open record →</span></a>
   <a class="source-card" href="{{ inv.sources.treasury_hold.record_url }}"><span class="source-card-label">{{ inv.sources.treasury_hold.agency }} · internal analysis</span><strong>{{ inv.sources.treasury_hold.title }}</strong><p>Credit summary, downgrade discussion, and portfolio recommendation.</p><span class="source-card-action">Open record →</span></a>
   <a class="source-card" href="{{ inv.sources.treasury_holdings.record_url }}"><span class="source-card-label">{{ inv.sources.treasury_holdings.agency }} · statement</span><strong>{{ inv.sources.treasury_holdings.title }}</strong><p>A dated security-level statement supporting the derived Treasury floor.</p><span class="source-card-action">Open record →</span></a>
+  <a class="source-card" href="{{ inv.sources.treasury_maturity.record_url }}"><span class="source-card-label">{{ inv.sources.treasury_maturity.agency }} · cash-flow record</span><strong>{{ inv.sources.treasury_maturity.title }}</strong><p>The final maturity subtracted from the June statement to derive the current floor.</p><span class="source-card-action">Open record →</span></a>
   <a class="source-card" href="{{ inv.sources.treasury_processing.record_url }}"><span class="source-card-label">{{ inv.sources.treasury_processing.agency }} · payment state</span><strong>{{ inv.sources.treasury_processing.title }}</strong><p>The transaction state that keeps the additional amount conditional.</p><span class="source-card-action">Open record →</span></a>
 </div>
 

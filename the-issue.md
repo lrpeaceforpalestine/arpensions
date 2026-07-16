@@ -6,6 +6,7 @@ permalink: /the-issue/
 ---
 
 {% assign inv = site.data.investigation %}
+{% assign terms = site.data.terminology %}
 {% assign apers = inv.agencies | where: "id", "apers" | first %}
 {% assign atrs = inv.agencies | where: "id", "atrs" | first %}
 
@@ -15,7 +16,7 @@ permalink: /the-issue/
 
 ## A long-term promise with limited exit options
 
-The investment under review is **non-marketable foreign sovereign debt**: a direct obligation of a foreign government sold through a single broker-dealer. The bonds are generally held to maturity because they do not trade on a secondary market.
+The investment under review is **{{ terms.instrument_formal }}**—in plain language, {{ terms.instrument_accessible }}. {{ terms.instrument_name }} are direct obligations of {{ terms.issuer_formal }} sold in the United States through {{ terms.broker_dealer_short }}. They are generally held to maturity because they do not trade on an ordinary secondary market.
 
 That structure matters to a public fiduciary for three practical reasons:
 
@@ -57,9 +58,9 @@ The APERS record documents the May authorization, seller materials, implementati
 
 ### State Treasury
 
-An October 8, 2024 internal overview summarizes S&amp;P and Moody’s downgrade concerns and recommends holding existing positions while scheduled maturities roll off. A {{ inv.timeline[2].amount_display }} May 2025 purchase later settled. The reviewed production contains no identified written reconciliation of those two records. A separate February 2026 payment instruction remained at the processing stage.
+An October 8, 2024 internal overview summarizes S&amp;P and Moody’s downgrade concerns and recommends holding existing positions while scheduled maturities roll off. A {{ inv.transaction_figures.treasury_may_settled.display }} May 2025 purchase later settled. The reviewed production contains no identified written reconciliation of those two records. A separate February 2026 payment instruction remained at the processing stage.
 
-[Read the internal overview](/documents/records/treasury-hold-overview/) and [processing-stage payment report](/documents/records/treasury-processing-payment/).
+[Read the internal overview](/documents/records/treasury-hold-overview/), [maturity record](/documents/records/treasury-maturity/), and [processing-stage payment report](/documents/records/treasury-processing-payment/).
 
 {% include evidence-boundary.html text="The records support questions about process and documentation. They do not adjudicate a statutory or fiduciary violation, establish unproduced oral briefings, or prove why any official made a decision." %}
 

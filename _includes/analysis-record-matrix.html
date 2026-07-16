@@ -1,0 +1,13 @@
+{% assign inv = site.data.investigation %}
+<div class="table-scroll analysis-matrix-wrap" tabindex="0" role="region" aria-label="Agency analysis record matrix">
+  <table class="analysis-matrix-table">
+    <thead>
+      <tr><th scope="col">Institution</th><th scope="col">Produced analytical material</th><th scope="col">Decision-record question</th></tr>
+    </thead>
+    <tbody>
+    {% for row in inv.analysis_record.matrix %}
+      <tr><th scope="row">{{ row.institution }}</th><td>{{ row.produced }}</td><td>{{ row.question }}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>

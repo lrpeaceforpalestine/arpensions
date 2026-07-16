@@ -48,7 +48,7 @@ Questions about Board Policy 4 also remain open. The record establishes written 
 
 ## What the Integrity Act would add
 
-The Pension Investment Integrity Act would require the merits record to exist before acquisition: written credit analysis, comparison against alternatives, liquidity disclosure, a fiduciary determination based on material financial risk and return, and public posting. Those requirements are issuer-neutral and leave the investment decision with the trustees.
+{{ inv.legislation.full_summary }} Those requirements are issuer-neutral and leave the investment decision with the trustees.
 
 ---
 

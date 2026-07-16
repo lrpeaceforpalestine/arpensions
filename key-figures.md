@@ -29,7 +29,7 @@ ATRS authorized {{ atrs.authorization_display | replace: 'Up to', 'up to' }}, se
 
 ### Arkansas Public Employees Retirement System
 
-APERS approved a {{ apers.authorization_display }} range and later recorded a {{ apers.measure_display }} purchase. Executive Director **Amy Fecher** and Chief Investment Officer **Carlos Borromeo** appear in the governance and implementation record. The reviewed authorization file contains no Callan sovereign-credit memorandum tied to the decision.
+APERS's Investment Finance Subcommittee adopted a {{ apers.authorization_display }} range, and APERS later recorded a {{ apers.measure_display }} purchase. Executive Director **Amy Fecher** and Chief Investment Officer **Carlos Borromeo** appear in the governance and implementation record. The reviewed authorization file contains no Callan sovereign-credit memorandum tied to the decision.
 
 </article>
 
@@ -37,7 +37,7 @@ APERS approved a {{ apers.authorization_display }} range and later recorded a {{
 
 ### Arkansas State Treasury
 
-Treasury records establish a security-level floor of {{ treasury.measure_display }} after a documented maturity. Senior Investment Officer **Steve Pulley** authored the October 2024 internal overview recommending HOLD and surveillance. A later {{ inv.transaction_figures.treasury_may_settled.display }} purchase settled; the reviewed files contain no identified written reconciliation with the recommendation.
+Treasury records establish a security-level floor of {{ treasury.measure_display }} after a documented maturity. An **unattributed internal Treasury overview** dated October 8, 2024 recommends HOLD and surveillance. Senior Investment Officer **Steve Pulley** placed the later {{ inv.transaction_figures.treasury_may_settled.display }} order; the reviewed files contain no identified written reconciliation with the recommendation.
 
 </article>
 

@@ -1,5 +1,5 @@
 title: Arkansans for Pension Integrity
-description: "Public records document Arkansas pension and Treasury decisions involving non-tradable sovereign debt. Arkansans for Pension Integrity is advancing issuer-neutral safeguards for public pension decisions."
+description: "Public records document Arkansas pension and Treasury decisions involving Israel Bonds, a form of non-tradable sovereign debt. Arkansans for Pension Integrity advances issuer-neutral safeguards for public pension decisions."
 url: "https://arpensions.org"
 baseurl: ""
 permalink: /:title/
@@ -51,3 +51,6 @@ exclude:
   - Gemfile.lock
   - node_modules
   - vendor
+  - scripts
+  - requirements-dev.txt
+  - .github

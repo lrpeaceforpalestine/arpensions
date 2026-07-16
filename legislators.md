@@ -21,6 +21,17 @@ The files contain manager-selection, implementation, marketability, and credit-r
 
 The Pension Investment Integrity Act answers that procedural problem without directing an investment result. Citizens First Congress selected the proposal as a short-term priority for the 2027 Arkansas legislative session.
 
+## Proposal status
+
+<div class="proposal-status-grid">
+  <div><span>Campaign stage</span><strong>{{ inv.legislation.stage }}</strong></div>
+  <div><span>Bill number</span><strong>{{ inv.legislation.bill_number }}</strong></div>
+  <div><span>Sponsor status</span><strong>{{ inv.legislation.sponsor_status }}</strong></div>
+  <div><span>Coalition status</span><strong>Citizens First Congress short-term priority</strong></div>
+</div>
+
+Status verified {{ inv.legislation.status_verified | date: "%B %-d, %Y" }}. The policy core is public here; legislative language, fiscal review, and a bill number will be linked when available. [Open the printable one-page brief](/legislators/one-page/). Citizens First Congress describes its member priority process on its [official process page]({{ inv.legislation.cfc_process_url }}).
+
 {% include evidence-ledger.html %}
 
 ## What Arkansas law already provides
@@ -38,6 +49,8 @@ This proposal does not declare that an agency violated Act 498. It makes the fut
 </ol>
 
 The safeguards are **issuer-neutral**. They apply to the asset characteristics and the public fiduciary process, not to a particular country, seller, political position, or desired vote.
+
+{{ inv.legislation.full_summary }}
 
 ## The record before legislators
 
@@ -61,14 +74,26 @@ The safeguards are **issuer-neutral**. They apply to the asset characteristics a
 - It does not replace trustees, staff, or independent advisers.
 - It does not reach the separately governed State Treasury; Treasury records provide context for the public-investment problem.
 
+## What legislative drafting must settle
+
+The prefiling process must translate the policy core into administrable bill text. Drafting should make these points explicit without weakening the five safeguards:
+
+- the covered-plan and covered-transaction definitions;
+- any materiality threshold and narrowly stated operational exceptions;
+- who receives, posts, and retains the required record;
+- the implementation date and treatment of transactions already in progress; and
+- the fiscal and administrative note for affected systems.
+
+For staff review, the campaign can provide exact source locators, the proposed process map, and a fund-by-fund evidence briefing. It will not ask a sponsor to rely on an authorization ceiling as if it were a holdings number.
+
 ## Legislative ask
 
-1. Sponsor and enact the Pension Investment Integrity Act in the 2027 regular session.
-2. Hold an interim briefing on the existing analytical and transaction record.
-3. Require the final bill and fiscal analysis to preserve the five issuer-neutral safeguards.
+1. **Potential sponsor:** request a bill-drafting meeting and carry the proposal in the 2027 regular session.
+2. **Committee or caucus staff:** request a source briefing on the analytical and transaction record.
+3. **All legislators:** preserve the five issuer-neutral safeguards through bill drafting and fiscal review.
 
 For a briefing or source package, contact **Arkansans for Pension Integrity** at [info@arpensions.org](mailto:info@arpensions.org?subject=Pension%20Investment%20Integrity%20Act%20briefing).
 
 ---
 
-[Review the evidence](/evidence/) · [Browse selected primary records](/documents/) · [Download current facts from the press page](/press/)
+[Review the evidence](/evidence/) · [Browse selected primary records](/documents/) · [Open the one-page brief](/legislators/one-page/) · [Download current facts](/assets/data/current-facts.csv)
