@@ -20,7 +20,7 @@ The accurate combined description is **substantive implementation and manager-se
 {% include evidence-boundary.html
   established="Aon provided substantive implementation advice, compared managers, recommended Reams, and noted marketability limits."
   unresolved="The pages do not supply a sovereign-credit and portfolio-fit merits recommendation for the affirmative authorization."
-  not_claimed="The memorandum is not characterized as blank, and the disclaimer is not used to erase the substantive advice on page 149."
+  not_claimed="The scope disclaimer does not convert the implementation advice into a merits recommendation."
 %}
 
 [Read the ATRS decision-record finding](/findings/procedural-asymmetry/) · [Open Resolution 2025-22](/documents/records/atrs-resolution/)

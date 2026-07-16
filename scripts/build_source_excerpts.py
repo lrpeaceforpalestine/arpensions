@@ -16,6 +16,7 @@ from textwrap import wrap
 
 import fitz
 from bs4 import BeautifulSoup
+from openpyxl import load_workbook
 from PIL import Image, ImageDraw, ImageFont
 
 
@@ -168,6 +169,79 @@ def funding_email_excerpt(source: Path, destination: Path) -> None:
     save_pdf([page], destination)
 
 
+def treasury_maturity_excerpt(source: Path, destination: Path) -> None:
+    """Typeset the publication-safe fields from the produced cash-flow workbook."""
+    workbook = load_workbook(source, data_only=True, read_only=True)
+    sheet = workbook["Sheet1"]
+    transaction_type = sheet["B14"].value
+    security_type = sheet["C14"].value
+    description = sheet["D14"].value
+    post_date = sheet["G14"].value
+    amount = sheet["H14"].value
+    report_period = sheet["B4"].value
+
+    if transaction_type != "Final Maturity" or amount != 5_000_000:
+        raise ValueError("Treasury maturity source no longer matches the reviewed row 14 record")
+
+    width, height = 1275, 1650
+    page = Image.new("RGB", (width, height), "white")
+    draw = ImageDraw.Draw(page)
+    draw.rectangle((0, 0, width, 20), fill=PINE)
+    draw.text((78, 72), "TREASURY FINAL-MATURITY RECORD", fill=PINE, font=font(34, bold=True))
+    draw.text((78, 142), "Publication excerpt from an agency-produced cash-flow workbook", fill=INK, font=font(22))
+
+    metadata = [
+        ("Report", "IA-Non-MBS Cash Flow"),
+        ("Projected cash-flow period", str(report_period)),
+        ("Source locator", "Sheet1 · row 14"),
+    ]
+    y = 240
+    for label, value in metadata:
+        draw.text((78, y), label.upper(), fill=PINE, font=font(16, bold=True))
+        draw.text((390, y - 4), value, fill=INK, font=font(23))
+        y += 64
+
+    y += 45
+    draw.rounded_rectangle((78, y, width - 78, y + 520), radius=18, fill="#F2FAF1", outline=PINE, width=3)
+    rows = [
+        ("Transaction type", transaction_type),
+        ("Security category", security_type),
+        ("Description", description.title()),
+        ("Post date", post_date.strftime("%B %-d, %Y") if os.name != "nt" else post_date.strftime("%B %#d, %Y")),
+        ("Amount", f"${amount:,.0f}"),
+    ]
+    row_y = y + 54
+    for label, value in rows:
+        draw.text((118, row_y), label.upper(), fill=PINE, font=font(17, bold=True))
+        value_font = font(30 if label == "Amount" else 25, bold=label == "Amount")
+        draw.text((440, row_y - 8), str(value), fill=INK, font=value_font)
+        row_y += 88
+
+    note_y = y + 600
+    draw.text((78, note_y), "PUBLICATION TREATMENT", fill=PINE, font=font(17, bold=True))
+    note = (
+        "Campaign-typeset excerpt. Account identifiers, the security identifier, "
+        "coupon details, and unrelated formula or adjustment rows are omitted."
+    )
+    for line in wrap(note, width=90):
+        note_y += 38
+        draw.text((78, note_y), line, fill=INK, font=font(22))
+
+    draw.rectangle((0, height - 170, width, height), fill=PINE)
+    source_lines = wrap(f"Source: {source.name}", width=105)
+    footer_y = height - 138
+    for line in source_lines:
+        draw.text((78, footer_y), line, fill="white", font=font(16, bold=True))
+        footer_y += 29
+    draw.text(
+        (78, height - 56),
+        "Exact locator: Sheet1, row 14 · produced by the Arkansas State Treasury",
+        fill=MINT,
+        font=font(17),
+    )
+    save_pdf([page], destination)
+
+
 def build(corpus: Path, output: Path) -> None:
     atrs_packet = corpus / "raw/atrs/FOIA Response 7-3-25/06-02-25_BOT_Packet.pdf"
     apers_minutes = corpus / "raw/apers/FOIA Response 2-27-26/Minutes_IFC_05.15.25.pdf"
@@ -175,12 +249,25 @@ def build(corpus: Path, output: Path) -> None:
     treasury_hold = corpus / "raw/treasury/FOIA Response 9-23-25/Israel Internal Credit overview 10-8-24.pdf"
     treasury_statement = corpus / "raw/treasury/FOIA Response 9-23-25/Israel Bondholder Statements_Redacted.pdf"
     treasury_wire = corpus / "raw/treasury/FOIA Response 2-19-26/Wire Confirm 2-17-26_Redacted.pdf"
+    treasury_maturity = corpus / (
+        "raw/treasury/FOIA Response 2-19-26/"
+        "2026 0202 IA- Non- MBS Cash Flow_Treasury Gen AGG- ISRAEL BONDS- PAR & MATURITY.xlsx"
+    )
     funding_email = corpus / (
         "raw/auditor/FOIA Response 3-3-26/Responsive Documents/"
         "Jason.Brady@auditor.ar.gov/Top-of-Information-Store/Inbox/ATRS Board Update-Liquidity.eml"
     )
 
-    for path in (atrs_packet, apers_minutes, apers_package, treasury_hold, treasury_statement, treasury_wire, funding_email):
+    for path in (
+        atrs_packet,
+        apers_minutes,
+        apers_package,
+        treasury_hold,
+        treasury_statement,
+        treasury_wire,
+        treasury_maturity,
+        funding_email,
+    ):
         if not path.exists():
             raise FileNotFoundError(path)
 
@@ -201,6 +288,14 @@ def build(corpus: Path, output: Path) -> None:
         },
         masking_note="Campaign crop; transaction and account identifiers masked.",
     )
+    source_excerpt(
+        apers_package,
+        [3081],
+        output / "apers-analysis-email-page-3081-masked.pdf",
+        clips={3081: (54, 54, 582, 326)},
+        masks={3081: ((326, 251, 580, 326),)},
+        masking_note="Campaign crop; direct contact information masked; quoted request omitted.",
+    )
     source_excerpt(treasury_hold, [1, 2], output / "treasury-internal-credit-overview.pdf")
     source_excerpt(
         treasury_statement,
@@ -217,6 +312,7 @@ def build(corpus: Path, output: Path) -> None:
         masks={1: ((62, 60, 148, 76), (152, 166, 238, 183))},
         masking_note="Campaign crop; requester and transaction identifiers masked; agency masks retained.",
     )
+    treasury_maturity_excerpt(treasury_maturity, output / "treasury-final-maturity-excerpt.pdf")
     funding_email_excerpt(funding_email, output / "atrs-manager-funding-email-excerpt.pdf")
 
 

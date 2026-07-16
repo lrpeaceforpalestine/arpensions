@@ -4,6 +4,11 @@ review_completed: "2026-07-16"
 
 thesis:
   headline: "Public money deserves a public investment record."
+  eyebrow: "Israel Bonds · Arkansas public investment record"
+  homepage_summary: >-
+    Arkansas records establish a $65 million Israel Bonds security-level floor
+    across Treasury and APERS, plus $50 million funded to an ATRS manager mandate
+    whose underlying holdings were not produced.
   summary: >-
     Arkansas records document $65 million in confirmed securities and another
     $50 million funded to an ATRS manager mandate. The decision files contain
@@ -28,13 +33,15 @@ metrics:
     display: "$65M"
     label: "Confirmed security-level floor"
     status: "established"
+    aria_label: "65 million dollars"
     detail: "Treasury $50M derived floor + APERS $15M confirmed purchase"
-    source_ids: [treasury_holdings, apers_purchase]
+    source_ids: [treasury_holdings, treasury_maturity, apers_purchase]
   atrs_manager_funding:
     value_millions: 50
     display: "$50M"
     label: "ATRS manager mandate funded"
     status: "funded mandate"
+    aria_label: "50 million dollars"
     detail: "ATRS-to-Reams funding; security-level holdings were not produced"
     source_ids: [atrs_funding]
   combined_tied_or_funded:
@@ -42,6 +49,7 @@ metrics:
     display: "$115M"
     label: "Securities plus funded mandate"
     status: "mixed measure"
+    aria_label: "115 million dollars"
     detail: "$65M in confirmed securities plus $50M in manager funding"
     source_ids: [treasury_holdings, apers_purchase, atrs_funding]
   treasury_conditional_payment:
@@ -49,6 +57,7 @@ metrics:
     display: "+$10M"
     label: "Treasury payment at processing stage"
     status: "conditional"
+    aria_label: "additional 10 million dollars"
     detail: "Would raise the security-level floor to $75M if settlement is documented"
     source_ids: [treasury_processing]
   pension_authorization_ceiling:
@@ -56,6 +65,7 @@ metrics:
     display: "Up to $100M"
     label: "Combined pension authorization ceiling"
     status: "authorization"
+    aria_label: "up to 100 million dollars"
     detail: "ATRS up to $50M + APERS up to $50M; not a holdings total"
     source_ids: [atrs_resolution, apers_authorization]
 
@@ -69,6 +79,7 @@ transaction_figures:
   treasury_february_maturity:
     value_millions: 5
     display: "$5M"
+    source_id: treasury_maturity
   apers_below_minimum_difference:
     value_millions: 10
     display: "$10M"
@@ -78,6 +89,7 @@ agencies:
     short_name: "State Treasury"
     name: "Arkansas State Treasury"
     status: "established"
+    authority_label: "Portfolio target"
     authorization: "Portfolio target documented at $55M in 2025"
     authorization_display: "$55M portfolio target"
     authorization_min_millions:
@@ -96,12 +108,13 @@ agencies:
     boundary: >-
       A February 2026 $10 million payment remained marked “Processing By Bank”
       and is treated as conditional.
-    source_ids: [treasury_hold, treasury_holdings, treasury_processing]
+    source_ids: [treasury_hold, treasury_holdings, treasury_maturity, treasury_processing]
   - id: apers
     short_name: "APERS"
     name: "Arkansas Public Employees Retirement System"
     status: "established"
-    authorization: "$25M–$50M stated authorization"
+    authority_label: "IFSC authorization"
+    authorization: "$25M–$50M range authorized by the Investment Finance Subcommittee"
     authorization_display: "$25M–$50M"
     authorization_min_millions: 25
     authorization_max_millions: 50
@@ -110,18 +123,22 @@ agencies:
     measure_millions: 15
     analysis: >-
       The reviewed authorization file contains no Callan sovereign-credit
-      memorandum tied to the decision.
+      memorandum tied to the decision. In a February 13, 2026 FOIA-search
+      email, APERS's chief investment officer stated that he had not prepared
+      Board material on the topic and that the investment consultants had not
+      either.
     record: >-
       APERS wired $15 million on October 15, 2025 for a two-year institutional
       bond.
     boundary: >-
       The purchase is $10 million below the motion’s stated minimum. The
       operational or legal effect of that discrepancy remains unresolved.
-    source_ids: [apers_authorization, apers_purchase]
+    source_ids: [apers_authorization, apers_analysis_email, apers_purchase]
   - id: atrs
     short_name: "ATRS"
     name: "Arkansas Teacher Retirement System"
     status: "funded mandate"
+    authority_label: "Authorization"
     authorization: "Up to $50M authorized"
     authorization_display: "Up to $50M"
     authorization_min_millions: 0
@@ -144,6 +161,7 @@ agencies:
     short_name: "ASHERS"
     name: "Arkansas State Highway Employees Retirement System"
     status: "unproduced"
+    authority_label: "Authorization"
     authorization: "No authorization identified"
     authorization_display: "None identified"
     authorization_min_millions: 0
@@ -176,13 +194,37 @@ analysis_record:
     The reviewed authorization file contains no Callan sovereign-credit
     memorandum tied to the decision.
   treasury: >-
-    Treasury’s internal overview recommends HOLD and continued surveillance.
+    Treasury's internal overview recommends HOLD and continued surveillance.
     The settled May 2025 purchase is not accompanied by an identified written
     reconciliation.
+  matrix:
+    - institution: "ATRS"
+      produced: >-
+        Aon implementation and manager comparison, a Reams recommendation,
+        marketability language, and an S&P downgrade report elsewhere in the production.
+      question: >-
+        How did trustees connect sovereign-credit and portfolio-fit evaluation
+        to the invest-or-not decision, and what securities did Reams later acquire?
+    - institution: "APERS"
+      produced: >-
+        Authorization records, seller materials, operational correspondence,
+        the chief investment officer's FOIA-search email, and the October purchase record.
+      question: >-
+        What consultant or staff analysis supported the authorization, and how
+        should the confirmed purchase be understood against the IFSC-authorized range?
+    - institution: "State Treasury"
+      produced: >-
+        An internal overview summarizing downgrade concerns and recommending
+        HOLD with continuing surveillance.
+      question: >-
+        What written analysis or authority reconciled the later settled purchase
+        with the identified recommendation?
 
 status_labels:
   established: "Directly documented or arithmetically derived from documented transactions"
   funded_mandate: "Cash funded to a manager account; underlying securities are a separate question"
+  authorization: "Permission or a ceiling; not evidence of a purchase, holding, or fully deployed amount"
+  mixed_measure: "A clearly labeled combination of unlike measures; not a holdings total"
   conditional: "An operational step appears in the record, but completion is not documented"
   unproduced: "Not identified in the reviewed production; not a claim of universal absence"
   reported: "Described by a participant or seller without independent confirmation"
@@ -225,7 +267,7 @@ timeline:
     description: "ATRS adopts Resolution 2025-22 authorizing up to $50M through a manager structure."
     status: "established"
     status_display: "established"
-    source_id: atrs_aon
+    source_id: atrs_resolution
   - id: apers_purchase
     date: "2025-10-15"
     date_display: "Oct. 15, 2025"
@@ -242,6 +284,14 @@ timeline:
     status: "funded mandate"
     status_display: "funded mandate"
     source_id: atrs_funding
+  - id: treasury_maturity
+    date: "2026-02-02"
+    date_display: "Feb. 2, 2026"
+    amount_display: "$5M"
+    description: "Treasury cash-flow records post a $5M final maturity, reducing the derived security-level floor from the June 2025 statement."
+    status: "established"
+    status_display: "established"
+    source_id: treasury_maturity
   - id: treasury_processing
     date: "2026-02-17"
     date_display: "Feb. 17, 2026"
@@ -282,9 +332,29 @@ routes:
 legislation:
   name: "Pension Investment Integrity Act"
   session: "2027 Arkansas legislative session"
+  stage: "Prefiling campaign proposal"
+  bill_number: "Not assigned"
+  sponsor_status: "No legislative sponsor announced"
+  status_verified: "2026-07-16"
   cfc_status: >-
     Selected by the Citizens First Congress as a short-term priority for the
     2027 legislative session.
+  cfc_url: "https://www.citizensfirst.org/"
+  cfc_process_url: "https://www.citizensfirst.org/process"
+  pre_acquisition_summary: >-
+    Before acquisition, covered pension systems would prepare a written credit
+    analysis, compare reasonably available alternatives, disclose liquidity and
+    transfer limits, and make a written pecuniary-factor fiduciary determination.
+  publication_summary: >-
+    The analysis and fiduciary determination would be posted publicly within 30 days.
+  full_summary: >-
+    Before acquisition, covered pension systems would prepare the analysis,
+    comparison, liquidity disclosure, and fiduciary determination; the analysis
+    and determination would be posted publicly within 30 days.
+  scope_note: >-
+    The proposal is prospective and issuer-neutral. It would apply to covered
+    Arkansas pension acquisitions of non-tradable sovereign debt and would not
+    direct a trustee vote or reach the separately governed State Treasury.
   act_498_url: "https://www.arkleg.state.ar.us/Acts/FTPDocument?ddBienniumSession=2023%2F2023R&file=498.pdf&path=%2FACTS%2F2023R%2FPublic%2F"
   provisions:
     - "A written credit analysis prepared by pension staff or an independent adviser before acquisition"
@@ -301,6 +371,7 @@ sources:
     locator: "June 2, 2025 Board packet, physical pages 149–150"
     record_url: "/documents/records/atrs-aon-memo/"
     asset_url: "/assets/documents/atrs-aon-memo-pages-149-150.pdf"
+    expected_pages: 2
   atrs_resolution:
     title: "ATRS Resolution 2025-22"
     agency: "ATRS"
@@ -308,6 +379,7 @@ sources:
     locator: "June 2, 2025 Board packet, Resolution 2025-22"
     record_url: "/documents/records/atrs-resolution/"
     asset_url: "/assets/documents/atrs-resolution-2025-22-pages-151-152.pdf"
+    expected_pages: 2
   atrs_funding:
     title: "ATRS Board Update—Liquidity"
     agency: "ATRS"
@@ -315,6 +387,7 @@ sources:
     locator: "Rod Graves email to Board Distribution List, 11:23 a.m. CST"
     record_url: "/documents/records/atrs-manager-funding/"
     asset_url: "/assets/documents/atrs-manager-funding-email-excerpt.pdf"
+    expected_pages: 1
   apers_authorization:
     title: "APERS Investment Finance Subcommittee signed minutes"
     agency: "APERS"
@@ -322,6 +395,15 @@ sources:
     locator: "Signed minutes, physical page 4"
     record_url: "/documents/records/apers-authorization/"
     asset_url: "/assets/documents/apers-authorization-minutes-page-4.pdf"
+    expected_pages: 1
+  apers_analysis_email:
+    title: "APERS chief investment officer FOIA-search email"
+    agency: "APERS"
+    date: "2026-02-13"
+    locator: "IB_FOIA_FINAL, physical page 3,081; duplicate at page 3,084"
+    record_url: "/documents/records/apers-analysis-email/"
+    asset_url: "/assets/documents/apers-analysis-email-page-3081-masked.pdf"
+    expected_pages: 1
   apers_purchase:
     title: "APERS $15 million purchase record"
     agency: "APERS"
@@ -329,6 +411,7 @@ sources:
     locator: "IB_FOIA_FINAL, physical page 6,925"
     record_url: "/documents/records/apers-purchase/"
     asset_url: "/assets/documents/apers-purchase-record-page-6925-masked.pdf"
+    expected_pages: 1
   treasury_hold:
     title: "Treasury internal credit overview"
     agency: "State Treasury"
@@ -336,6 +419,7 @@ sources:
     locator: "Two-page internal overview, conclusion on physical page 2"
     record_url: "/documents/records/treasury-hold-overview/"
     asset_url: "/assets/documents/treasury-internal-credit-overview.pdf"
+    expected_pages: 2
   treasury_holdings:
     title: "Treasury June 30, 2025 bondholder statement"
     agency: "State Treasury"
@@ -343,6 +427,15 @@ sources:
     locator: "Bondholder statement, physical page 1; account identifiers omitted from excerpt"
     record_url: "/documents/records/treasury-holdings/"
     asset_url: "/assets/documents/treasury-holdings-june-2025-cropped.pdf"
+    expected_pages: 1
+  treasury_maturity:
+    title: "Treasury final-maturity cash-flow record"
+    agency: "State Treasury"
+    date: "2026-02-02"
+    locator: "IA-Non-MBS Cash Flow workbook, Sheet1, row 14"
+    record_url: "/documents/records/treasury-maturity/"
+    asset_url: "/assets/documents/treasury-final-maturity-excerpt.pdf"
+    expected_pages: 1
   treasury_processing:
     title: "Treasury outgoing payment report"
     agency: "State Treasury"
@@ -350,6 +443,7 @@ sources:
     locator: "Outgoing Payments Report, physical page 1"
     record_url: "/documents/records/treasury-processing-payment/"
     asset_url: "/assets/documents/treasury-processing-payment-masked.pdf"
+    expected_pages: 1
   ashers_route:
     title: "DFA introduction to ASHERS"
     agency: "ASHERS / DFA"
