@@ -5,13 +5,13 @@ regressions:
     pattern: '(?:Treasury.{0,80}\$60\s*(?:M|million)|\$60\s*(?:M|million).{0,80}Treasury)'
     note: "Treasury's additional payment is conditional; the confirmed derived floor is lower."
   - id: statewide_115m_holdings
-    pattern: '(?:\$115\s*(?:M|million).{0,80}holdings|holdings.{0,80}\$115\s*(?:M|million))'
+    pattern: '(?:\$115\s*(?:M|million)[^.!?\n]{0,80}holdings|holdings[^.!?\n]{0,80}\$115\s*(?:M|million))'
     note: "The combined figure mixes confirmed securities and ATRS manager funding."
   - id: zero_analysis
     pattern: '(?:zero|no) (?:independent )?(?:credit )?analys(?:is|es)'
     note: "Describe the produced analytical record affirmatively and bound the unresolved question."
   - id: aon_empty
-    pattern: '(?:Aon.{0,80}(?:empty|blank|no body)|(?:empty|blank|no body).{0,80}Aon)'
+    pattern: '(?:Aon(?:''s)?(?: memo| pages?)?.{0,40}(?:was|were|is|are|appeared|appears).{0,20}(?:empty|blank|without (?:a )?body)|(?:empty|blank|without (?:a )?body).{0,40}Aon(?:''s)?(?: memo| pages?)?)'
     note: "Rendered page 149 contains substantive implementation and manager-selection advice."
   - id: atrs_full_deployment
     pattern: '(?:full|entire) \$50\s*(?:M|million).{0,80}(?:deployed|invested|purchased)'
@@ -27,7 +27,7 @@ regressions:
     note: "The eight scheduled stops span distinct offices and settings."
   - id: white_confirmed
     pattern: '\bWhite (?:meeting|encounter).{0,60}\b(?:confirmed|established)\b'
-    note: "The scheduled White encounter remains unconfirmed in the reviewed corpus."
+    note: "The schedule does not establish that the White encounter occurred."
   - id: lone_dissent
     pattern: '\b(?:lone|sole)\b.{0,30}\b(?:no|dissent)\b'
     note: "The produced recordings establish passage but not an individual vote tally."
@@ -44,7 +44,7 @@ regressions:
     pattern: 'Pulley.{0,80}(?:authored|wrote|prepared).{0,80}(?:October 2024|HOLD|overview)'
     note: "The internal Treasury overview is unattributed."
   - id: posting_mislabeled_preacquisition
-    pattern: '(?:before (?:a |any )?(?:covered )?(?:pension )?acquisition.{0,120}public (?:posting|disclosure)|public (?:posting|disclosure).{0,120}before (?:a |any )?(?:covered )?(?:pension )?acquisition)'
+    pattern: 'public (?:posting|disclosure)[^.!?\n]{0,80}before (?:a |any )?(?:covered )?(?:pension )?acquisition'
     note: "Analysis occurs before acquisition; publication follows within 30 days."
   - id: apers_board_range
     pattern: 'APERS.{0,80}Board-approved range|Board-approved range.{0,80}APERS'
@@ -54,7 +54,18 @@ regressions:
     note: "Petition attribution uses the canonical arpensions source code."
   - id: wrong_public_repository
     pattern: 'arpensions\.org/blob'
-    note: "The public repository is divestforARfuture/arpensions."
+    note: "Do not construct source links by appending repository paths to the campaign domain."
+  - id: former_campaign_identity
+    pattern: '(?:Divest for AR Future|Little Rock Peace for Palestine|\bLRPP\b)'
+    note: "Arkansans for Pension Integrity is the sole public campaign identity."
+  - id: internal_research_jargon
+    pattern: '(?:evidence corpus|PDF corpus|raw corpus|render gate|evidence baseline|search boundary|record boundary|evidence ledger|amount ledger|agency ledger)'
+    scope: rendered
+    note: "Public copy should speak directly to Arkansans, not describe an internal research system."
+  - id: public_status_jargon
+    pattern: '\b(?:unconfirmed|unproduced)\b'
+    scope: rendered
+    note: "Explain the limits of a claim in ordinary prose instead of publishing internal status labels."
   - id: treasury_target_unattributed
     pattern: '(?:Treasury.{0,80}(?:documented|established).{0,40}\$55\s*(?:M|million).{0,40}(?:target|authorization)|\$55\s*(?:M|million).{0,80}(?:Treasury|Huffman).{0,40}(?:target|authorization))'
     note: "The $55M target is seller-reported; the later statement establishes positions, not Huffman's instruction."

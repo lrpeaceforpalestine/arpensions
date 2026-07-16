@@ -5,7 +5,7 @@ Live site: <https://arpensions.org>
 ## Non-negotiable editorial rules
 
 - Lead with: “Public money deserves a public investment record.”
-- Treat `_data/investigation.yml` as the authoritative public source for amounts, evidence states, cutoffs, source links, and bounded descriptions.
+- Treat `_data/investigation.yml` as the authoritative internal source for recurring amounts, source links, and bounded factual descriptions.
 - Keep confirmed securities, manager funding, authorization ceilings, and processing-stage payments visually and verbally distinct.
 - Describe produced analytical material affirmatively, then identify the unresolved decision-record question.
 - Do not publish correction history, retired claims, internal audit commentary, or retrospective comparisons.
@@ -17,7 +17,7 @@ Live site: <https://arpensions.org>
 
 ## Brand and accessibility
 
-Preserve the pine, mint, jade, and banknote identity. The evidence ledger is the signature component. Maintain keyboard focus, dark mode, reduced-motion behavior, readable no-JavaScript fallbacks, accessible tables for visual evidence, and responsive layouts without horizontal overflow.
+Preserve the original pine, mint, jade, and banknote identity, page spacing, navigation treatment, and interactive visual language. Maintain keyboard focus, dark mode, reduced-motion behavior, readable no-JavaScript fallbacks, accessible tables for visual evidence, and responsive layouts without horizontal overflow.
 
 ### Brand reference
 
@@ -29,17 +29,17 @@ Preserve the pine, mint, jade, and banknote identity. The evidence ledger is the
 - Jade `#48A46D`: fills, charts, and large graphic accents; do not use it for ordinary text on white.
 - Jade deep `#1E7B47`: links and interactive text on light surfaces.
 - Jade bright `#5FBF8B`: links and focus accents on dark surfaces.
-- Campaign red `#B91C1C`: primary calls to action and alerts.
+- Campaign red `#B91C1C`: sparing emphasis and alerts; never turn the desktop Take Action navigation link into a red button.
 - Display type: League Spartan. Body type: Mulish. Data labels: IBM Plex Mono.
 - Logo assets use the `api-badge*` family under `assets/images/`.
 
-Brand primitives and semantic aliases live in `assets/css/main.css`; the evidence-led layer lives in `assets/css/evidence-led.css`. Keep the anti-FOUC colors in `_includes/head.html` and the theme values in `assets/js/theme-toggle.js` synchronized with those tokens. If the inline theme script changes, recompute its CSP hash.
+Brand primitives and semantic aliases live in `assets/css/main.css`; `assets/css/elegant.css` supplies the original editorial design layer. Keep the anti-FOUC colors in `_includes/head.html` and the theme values in `assets/js/theme-toggle.js` synchronized with those tokens. If the inline theme script changes, recompute its CSP hash.
 
 ## Public routes
 
-- `/` — principle, evidence ledger, audience pathways, and Integrity Act entry point.
+- `/` — campaign principle, core figures, audience pathways, and Integrity Act entry point.
 - `/the-issue/` — instrument, agency record, fiduciary principles, and proposed safeguards.
-- `/evidence/` — canonical findings, agency status, analytical record, open questions, events, and sources.
+- `/evidence/` — plain-language account, interactive figures, agency decisions, timeline, and key sources.
 - `/documents/` and `/documents/records/*/` — curated primary-record trail and exact locators.
 - `/legislators/` — Pension Investment Integrity Act policy brief.
 - `/take-action/` — Action Network petition, letter, meeting, volunteer, and sharing actions.
