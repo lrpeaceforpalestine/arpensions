@@ -1101,7 +1101,8 @@ html {
 @media (max-width: 1023px) {
   .evidence-toc-sidebar {
     display: block;
-    position: static;
+    position: sticky;
+    top: 3.5rem;
     z-index: 50;
     background: var(--color-bg-page);
     border-bottom: 1px solid var(--color-border);
@@ -1118,7 +1119,7 @@ html {
   }
 
   .evidence-toc-toggle {
-    display: none;
+    display: flex;
     align-items: center;
     gap: 0.625rem;
     width: 100%;
@@ -1169,26 +1170,13 @@ html {
   }
 
   .evidence-toc-list {
-    display: block;
+    display: none;
     list-style: none;
     padding: 0 0 0.75rem;
     margin: 0;
   }
 
-  .toc-js .evidence-toc-sidebar {
-    position: sticky;
-    top: 4.5rem;
-  }
-
-  .toc-js .evidence-toc-toggle {
-    display: flex;
-  }
-
-  .toc-js .evidence-toc-list {
-    display: none;
-  }
-
-  .toc-js .evidence-toc-list--open {
+  .evidence-toc-list--open {
     display: block;
   }
 
@@ -1625,13 +1613,146 @@ html {
   border-top-color: var(--border-default);
 }
 
+/* Primary-document pages use the original page bands and editorial rhythm. */
+.source-record-body {
+  padding-top: 2.5rem;
+  padding-bottom: 4rem;
+}
+
+.source-record-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0 0 1.75rem;
+  border-top: 1px solid var(--border-default);
+  border-bottom: 1px solid var(--border-default);
+}
+
+.source-record-details > div {
+  min-width: 0;
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid var(--border-default);
+}
+
+.source-record-details > div:nth-child(odd) {
+  border-right: 1px solid var(--border-default);
+}
+
+.source-record-details > div:nth-last-child(-n + 2) {
+  border-bottom: 0;
+}
+
+.source-record-details dt {
+  margin: 0 0 0.25rem;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.source-record-details dd {
+  margin: 0;
+  color: var(--text-primary);
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+  .source-record-details {
+    grid-template-columns: 1fr;
+  }
+  .source-record-details > div,
+  .source-record-details > div:nth-child(odd),
+  .source-record-details > div:nth-last-child(-n + 2) {
+    border-right: 0;
+    border-bottom: 1px solid var(--border-default);
+  }
+  .source-record-details > div:last-child {
+    border-bottom: 0;
+  }
+}
+
+/* Progressive enhancement: controls appear only when their scripts bind. */
+.copy-letter-btn {
+  display: none !important;
+}
+
+.copy-js .copy-letter-btn {
+  display: block !important;
+}
+
+.an-embed select:focus-visible,
+.an-embed input:focus-visible,
+.an-embed textarea:focus-visible,
+.an-embed button:focus-visible {
+  outline: 3px solid var(--link-color) !important;
+  outline-offset: 2px !important;
+}
+
+.petition-fallback {
+  margin-top: 1rem;
+  padding: 0.85rem 1rem;
+  border-left: 3px solid var(--link-color);
+  background: var(--bg-secondary);
+  font-size: 0.9rem;
+}
+
+/* If JavaScript is unavailable, keep navigation and the Evidence page TOC usable. */
+@media (max-width: 768px) {
+  html:not(.nav-js) .nav-toggle {
+    display: none;
+  }
+
+  html:not(.nav-js) .site-nav .container {
+    flex-wrap: wrap;
+  }
+
+  html:not(.nav-js) .nav-links {
+    position: static;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 0.2rem;
+    margin: 0;
+    padding: 0.35rem 0 0.65rem;
+    overflow-x: auto;
+    background: transparent;
+  }
+
+  html:not(.nav-js) .nav-links a {
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 1023px) {
+  html:not(.toc-js) .evidence-toc-toggle {
+    display: none;
+  }
+
+  html:not(.toc-js) .evidence-toc-list {
+    display: block;
+  }
+
+  html.toc-js .evidence-toc-list {
+    display: none;
+  }
+
+  html.toc-js .evidence-toc-list.evidence-toc-list--open {
+    display: block;
+  }
+}
+
 /* ============================================================
    Imagery v1 — starter surfaces
    See _includes/hero.html, footer.html, stats-bar.html;
    _layouts/page.html; index.md.
    ============================================================ */
 
-/* (1) Footer — editorial 1,227-record stamp */
+/* (1) Footer — campaign statement band */
 .footer-record-band {
   text-align: center;
   margin: 2.5rem auto 0.5rem;

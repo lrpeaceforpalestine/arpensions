@@ -1,8 +1,6 @@
 # Historical fragment identifiers retained so published deep links continue to resolve.
 "/about/":
-  - our-mission
   - our-approach
-  - what-were-asking-for
 
 "/documents/":
   - about-these-documents
@@ -102,15 +100,9 @@
 
 "/key-figures/":
   - the-central-figures
-  - dennis-milligan
-  - jason-brady
   - the-bond-issuers-representatives
-  - lawrence-berman
   - bradley-young
   - agency-decision-makers
-  - mark-white
-  - amy-fecher
-  - danny-knight
   - steve-pulley
   - supporting-roles
   - larry-walther
@@ -129,11 +121,9 @@
   - the-authorization-gap
 
 "/legislators/":
-  - key-facts
   - the-fiduciary-concern
   - the-financial-profile-of-these-bonds
   - the-exclusive-agency-provision
-  - the-pension-investment-integrity-act
   - the-five-provisions
   - the-committee-pathway
   - why-pension-boards-need-this-standard
@@ -174,4 +164,3 @@
   - whats-happening-in-arkansas
   - the-fiduciary-problem
   - the-fiduciary-baseline
-  - what-were-asking-for

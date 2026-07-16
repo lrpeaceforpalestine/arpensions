@@ -2,18 +2,10 @@
   Privacy-respecting social share links (no tracking scripts).
   Uses simple URL-based sharing — no JavaScript widgets.
 {% endcomment %}
-{% assign share_title = include.title | default: page.title %}
-{% if include.url %}{% assign share_url = include.url | absolute_url %}{% else %}{% assign share_url = page.url | absolute_url %}{% endif %}
-{% capture default_share_text %}{{ share_title }}: {{ share_url }}{% endcapture %}
-{% assign share_text = include.text | default: default_share_text %}
 <div class="social-share" aria-label="Share this page">
   <span class="share-label">Share:</span>
-  <a href="mailto:?subject={{ share_title | uri_escape }}&body={{ share_text | strip | uri_escape }}" aria-label="Share via email" class="share-link">
+  <a href="mailto:?subject={{ page.title | uri_escape }}&body={{ page.url | absolute_url | uri_escape }}" aria-label="Share via email" class="share-link">
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
     Email
   </a>
-  <a href="sms:?&amp;body={{ share_text | strip | uri_escape }}" aria-label="Share by text message" class="share-link">Text</a>
-  <a href="https://www.facebook.com/sharer/sharer.php?u={{ share_url | uri_escape }}" aria-label="Share on Facebook" class="share-link">Facebook</a>
-  <a href="https://bsky.app/intent/compose?text={{ share_text | strip | uri_escape }}" aria-label="Share on Bluesky" class="share-link">Bluesky</a>
-  <button type="button" class="share-link share-copy" data-share-url="{{ share_url }}" hidden>Copy link</button>
 </div>
