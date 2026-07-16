@@ -34,6 +34,30 @@ regressions:
   - id: self_correction_language
     pattern: '\b(?:correction|corrected|previously|retired claim|earlier account)\b'
     note: "Published pages present the current record without a retrospective self-audit."
+  - id: defensive_but_not
+    pattern: '\bbut not\b'
+    scope: rendered
+    note: "Public campaign prose should state the action, consequence, or category directly."
+  - id: records_do_not_show
+    pattern: '\b(?:the|available|released|selected|produced) (?:agency |account |transaction )?(?:records|files|documents) (?:do|did) not\b'
+    scope: rendered
+    note: "Replace audit-style absence disclaimers with a direct public accountability statement."
+  - id: aon_negation
+    pattern: '\bAon.{0,100}(?:did not|does not|was not|is not|not advising)\b'
+    scope: rendered
+    note: "Describe Aon as responsible for implementation and trustees as responsible for the investment decision."
+  - id: personal_role_negation
+    pattern: '\bnot [A-Z][a-z]+ personally\b'
+    scope: rendered
+    note: "Name the official who acted and the formal capacity directly."
+  - id: disclaimer_by_itself
+    pattern: '\bdoes not,? by itself\b'
+    scope: rendered
+    note: "Public copy should state what a fact establishes and why it matters."
+  - id: defensive_not_total
+    pattern: '\b(?:is|are|was|were|it is|this is) not (?:a |an |the )?(?:holdings?|purchase|security-level|completed-purchase)\b'
+    scope: rendered
+    note: "State the figure's category affirmatively."
   - id: not_zero_language
     pattern: '\bnot zero\b'
     note: "Published pages use affirmative evidence descriptions."

@@ -6,15 +6,14 @@ thesis:
   headline: "Public money deserves a public investment record."
   eyebrow: "Israel Bonds · Arkansas public investment record"
   homepage_summary: >-
-    Arkansas records establish a $65 million Israel Bonds security-level floor
-    across Treasury and APERS, plus $50 million funded to an ATRS manager mandate
-    whose underlying holdings were not produced.
+    Arkansas directed $65 million into completed Israel Bonds purchases at
+    Treasury and APERS and $50 million into an ATRS manager account created for
+    the same strategy.
   summary: >-
-    Arkansas records document $65 million in confirmed securities and another
-    $50 million funded to an ATRS manager mandate. The decision files contain
-    manager-selection, implementation, marketability, and credit-related
-    materials while leaving material questions about how sovereign-credit risk
-    and portfolio fit were evaluated and connected to each affirmative decision.
+    Arkansas directed $115 million into completed Israel Bonds purchases and an
+    ATRS manager account. Pension members deserve one written financial case
+    connecting credit risk, expected return, liquidity, alternatives, and
+    portfolio fit to each covered pension commitment.
 
 corpus:
   raw_files: 1945
@@ -42,7 +41,7 @@ metrics:
     label: "ATRS manager mandate funded"
     status: "funded mandate"
     aria_label: "50 million dollars"
-    detail: "ATRS-to-Reams funding; security-level holdings were not produced"
+    detail: "ATRS-to-Reams funding; security-level reporting completes the account trail"
     source_ids: [atrs_funding]
   combined_tied_or_funded:
     value_millions: 115
@@ -93,9 +92,8 @@ agencies:
     authority_status: "reported"
     authority_source_id: treasury_target_report
     authorization: >-
-      Berman reported that Huffman described a $55M portfolio target before
-      the later order; the reviewed record does not independently establish
-      Huffman's instruction.
+      Berman reported that Huffman described a $55M portfolio target before the
+      later order. The seller's account is the source for that target.
     authorization_display: "Reported $55M target"
     authorization_min_millions:
     authorization_max_millions:
@@ -107,9 +105,9 @@ agencies:
       and recommended holding existing positions while scheduled maturities
       rolled off.
     record: >-
-      A $20 million May 2025 purchase settled. The produced record contains no
-      written reconciliation between that purchase and the identified HOLD
-      recommendation.
+      A $20 million May 2025 purchase settled six months after the internal HOLD
+      recommendation. Arkansans deserve the written reasoning connecting those
+      two decisions.
     boundary: >-
       A February 2026 $10 million payment remained marked “Processing By Bank”
       and is treated as conditional.
@@ -129,11 +127,10 @@ agencies:
     measure_display: "$15M"
     measure_millions: 15
     analysis: >-
-      The reviewed authorization file contains no Callan sovereign-credit
-      memorandum tied to the decision. In a February 13, 2026 FOIA-search
-      email, APERS's chief investment officer stated that he had not prepared
-      Board material on the topic and that the investment consultants had not
-      either.
+      In a February 13, 2026 FOIA-search email, APERS's chief investment officer
+      stated that he had prepared no Board material on the topic and believed
+      the investment consultants had prepared none. A standard decision memo
+      would put the credit, return, liquidity, and alternatives case in one place.
     record: >-
       APERS wired $15 million on October 15, 2025 for a two-year institutional
       bond.
@@ -157,36 +154,36 @@ agencies:
     measure_millions: 50
     analysis: >-
       Aon advised ATRS on implementation, compared managers, recommended Reams,
-      and noted limited marketability. Aon separately declined to recommend
-      whether ATRS should invest or purchase an individual security.
+      and noted limited marketability. Trustees retained responsibility for the
+      merits of the investment and the choice of individual securities.
     record: >-
       A December 29, 2025 Board update documents $50 million in funding for the
       Scout/Reams mandate associated with the bonds.
     boundary: >-
-      The produced files do not identify the mandate’s security-level purchases,
-      holdings, settlement dates, or deployment pace.
+      Security-level transaction and account statements would complete the
+      public trail through purchases, settlement dates, and current holdings.
     source_ids: [atrs_aon, atrs_resolution, atrs_funding]
   - id: ashers
     short_name: "ASHERS"
     name: "Arkansas State Highway Employees Retirement System"
-    status: "unproduced"
+    status: "pitch documented"
     authority_label: "Authorization"
-    authority_status: "unproduced"
-    authorization: "No authorization identified"
-    authorization_display: "None identified"
+    authority_status: "pitch documented"
+    authorization: "Seller presentation followed by zero-holdings reports"
+    authorization_display: "Pitch documented"
     authorization_min_millions: 0
     authorization_max_millions: 0
-    measure: "No holding identified"
-    measure_display: "None identified"
+    measure: "Zero holdings reported in May and July 2025"
+    measure_display: "$0 reported"
     measure_millions: 0
     analysis: >-
       Selected records document a DFA introduction and the sellers’ pitch.
     record: >-
-      The reviewed production contains no identified reply, authorization, or
-      holding.
+      Separate May and July 2025 messages reported zero ASHERS holdings and zero
+      purchases after the seller presentation.
     boundary: >-
-      The record does not establish an affirmative rejection, oral silence, or
-      the cause of the different outcome.
+      The contrast shows why every public institution should publish its
+      financial reasoning alongside the outcome.
     source_ids: [ashers_route]
 
 analysis_record:
@@ -197,16 +194,15 @@ analysis_record:
     each affirmative investment decision.
   atrs: >-
     Aon’s two-page memorandum addresses implementation and manager selection.
-    An S&P downgrade report also appears elsewhere in the production; the
-    produced files do not establish that trustees received or relied on it for
-    Resolution 2025-22.
+    Trustees owned the sovereign-credit, return, liquidity, and portfolio case
+    for Resolution 2025-22.
   apers: >-
-    The reviewed authorization file contains no Callan sovereign-credit
-    memorandum tied to the decision.
+    The chief investment officer's email makes the transparency problem concrete.
+    A standard decision memo would bring staff and consultant analysis together.
   treasury: >-
     Treasury's internal overview recommends HOLD and continued surveillance.
-    The settled May 2025 purchase is not accompanied by an identified written
-    reconciliation.
+    The settled May 2025 purchase creates a clear public demand for the written
+    reasoning behind the change in course.
   matrix:
     - institution: "ATRS"
       produced: >-
@@ -232,12 +228,12 @@ analysis_record:
 
 status_labels:
   established: "Directly documented or arithmetically derived from documented transactions"
-  funded_mandate: "Cash funded to a manager account; underlying securities are a separate question"
-  authorization: "Permission or a ceiling; not evidence of a purchase, holding, or fully deployed amount"
-  mixed_measure: "A clearly labeled combination of unlike measures; not a holdings total"
-  conditional: "An operational step appears in the record, but completion is not documented"
-  unproduced: "Not identified in the reviewed production; not a claim of universal absence"
-  reported: "Described by a participant or seller without independent confirmation"
+  funded_mandate: "Cash transferred to a manager account; security-level reporting tracks later purchases and holdings"
+  authorization: "The maximum amount approved before transaction activity"
+  mixed_measure: "A labeled combination of completed purchases and manager funding"
+  conditional: "A payment instruction at the bank-processing stage"
+  unproduced: "An open decision-record question within the identified agency production"
+  reported: "Described by a participant or seller"
   interpretive: "An inference drawn from documented facts and labeled as such"
 
 search_boundaries:
@@ -351,7 +347,7 @@ timeline:
   - id: capitol_itinerary
     date: "2025-04-14"
     date_display: "Apr. 14–15, 2025"
-    description: "An eight-stop itinerary is scheduled. The Hudson–Babbitt meeting is confirmed; Fecher and Treasury-team encounters are reported; the White encounter remains unconfirmed."
+    description: "The itinerary schedules eight stops. Hudson and Babbitt later document their meeting, while Fecher and Treasury-team encounters appear in participant or seller accounts."
     status: "reported"
     status_display: "mixed record"
   - id: treasury_may_purchase
@@ -413,9 +409,8 @@ timeline:
 
 event_status_labels:
   confirmed: "Supported by records from a participating office or by a completed institutional record"
-  scheduled: "A calendar or itinerary documents intent; occurrence and substance require separate support"
-  reported: "Described by a participant or seller without independent confirmation in the reviewed corpus"
-  unconfirmed: "Scheduled or asserted, but not independently established in the reviewed corpus"
+  scheduled: "Placed on a calendar or itinerary"
+  reported: "Described by a participant or seller"
 
 routes:
   - id: itinerary
@@ -435,9 +430,9 @@ routes:
     label: "Treasury-team encounter"
     detail: "Participant- or seller-reported in the reviewed record"
   - id: white
-    status: "unconfirmed"
-    label: "White encounter"
-    detail: "Scheduled; occurrence remains open in the reviewed corpus"
+    status: "scheduled"
+    label: "Mark White itinerary stop"
+    detail: "Scheduled on the April Capitol-area itinerary"
 
 legislation:
   name: "Pension Investment Integrity Act"

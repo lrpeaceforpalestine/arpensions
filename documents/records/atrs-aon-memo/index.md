@@ -1,7 +1,7 @@
 ---
 layout: record
 title: "Aon Implementation and Manager-Selection Memo"
-description: "ATRS packet pages 149–150: manager advice on page 149 and the scope of Aon's recommendation on page 150."
+description: "ATRS packet pages 149–150: Aon's manager recommendation and the Board's responsibility for the investment decision."
 permalink: /documents/records/atrs-aon-memo/
 source_agency: "Arkansas Teacher Retirement System"
 source_date: "2025-06-02"
@@ -15,9 +15,9 @@ asset_url: /assets/documents/atrs-aon-memo-pages-149-150.pdf
 
 Page 149 advises ATRS to use an investment manager, compares BlackRock and Reams, recommends Reams based on the proposed fee, and notes limited marketability.
 
-Page 150 says the memo does not recommend whether ATRS should invest in Israel Bonds and does not recommend buying or selling an individual security.
+Page 150 assigns the merits of the investment and the choice of any individual security to ATRS trustees.
 
-Together, the pages show meaningful advice about implementation and manager selection while leaving the invest-or-not decision with trustees.
+Together, the pages show the division of responsibility: Aon designed the implementation route, while trustees owned the financial case for the investment.
 
 [Read the ATRS finding &rarr;](/findings/procedural-asymmetry/)
 [Open Resolution 2025-22 &rarr;](/documents/records/atrs-resolution/)

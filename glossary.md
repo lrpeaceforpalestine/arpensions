@@ -9,7 +9,7 @@ permalink: /glossary/
 
 Israel Bonds are debt issued by the State of Israel and sold through a specialized broker-dealer. Buying a bond means lending money to the issuer in exchange for interest and repayment at maturity.
 
-The Arkansas transactions discussed on this site involve bonds that do not trade on a secondary market. That feature is central to the pension-governance question.
+The Arkansas transactions discussed on this site involve bonds with no secondary market. That feature is central to the pension-governance question.
 
 ## Why the financial terms matter
 
@@ -34,10 +34,10 @@ The Arkansas transactions discussed on this site involve bonds that do not trade
 | Term | Meaning on this site |
 |---|---|
 | **Completed purchase** | A transaction supported by a completed security or cash-flow record. |
-| **Authorization ceiling** | The maximum amount a board allowed. It does not mean the full amount was spent. |
+| **Authorization ceiling** | The maximum amount a board allowed; transaction records establish how much money later moved. |
 | **Manager account** | An account controlled by an outside investment manager under an agreed mandate. |
-| **Manager funding** | Money moved into that account. It does not identify every security later bought or held. |
-| **Payment in process** | A payment instruction that the bank record did not yet show as completed. |
+| **Manager funding** | Money moved into that account; security-level statements document the manager's later purchases and holdings. |
+| **Payment in process** | A payment instruction carrying a bank-processing status at the date of the report. |
 
 </div>
 
@@ -47,11 +47,11 @@ That is why **$65 million**, **$50 million**, and **$10 million** are shown sepa
 - **$50 million** is ATRS funding to the Reams manager account.
 - **$10 million** is a later Treasury payment the bank report still showed as processing.
 
-Adding the first two produces **$115 million across completed purchases and manager funding**. It should not be described as a single holdings total.
+The first two add up to **$115 million across completed purchases and manager funding**.
 
 ## Pension-governance terms
 
-**Fiduciary duty** is the legal obligation to act for pension members and beneficiaries rather than for an outside interest.
+**Fiduciary duty** is the legal obligation to put pension members and beneficiaries first.
 
 **Pecuniary factors** are financial considerations expected to have a material effect on risk or return. Arkansas Act 498 of 2023 requires covered pension decisions to rest on those factors.
 
@@ -63,6 +63,6 @@ Adding the first two produces **$115 million across completed purchases and mana
 
 ## The practical question
 
-Non-tradable sovereign debt may or may not be appropriate for a particular pension portfolio. The public should be able to see how trustees answered the financial questions before committing members' money.
+Non-tradable sovereign debt belongs in a pension portfolio only when trustees can show how the credit, return, liquidity, and portfolio case serves members.
 
 [See how Arkansas agencies handled the decisions &rarr;](/evidence/)

@@ -8,7 +8,7 @@ breadcrumb: "Key Findings"
 
 The Arkansas story sits inside a national network of public financial officers, political advocacy, issuer outreach, and state-to-state promotion.
 
-## What the records show
+## How the network operated
 
 State Financial Officers Foundation material in Arkansas agency files includes:
 
@@ -20,11 +20,11 @@ State Financial Officers Foundation material in Arkansas agency files includes:
 
 These records show a network through which examples, contacts, policy messages, and promotional material moved.
 
-## What the network does not prove
+## Where financial responsibility remained
 
-The documents do not show that SFOF directed an Arkansas pension allocation or determined a trustee's vote. They also do not establish the terms of a sponsorship payment or a continuing financial relationship.
+SFOF supplied political infrastructure for examples, contacts, speeches, and state-to-state promotion. Arkansas pension trustees still carried the fiduciary responsibility for the money committed here.
 
-Political context is part of the story, especially when public officials celebrated the investments as expressions of support for Israel. But it is not a substitute for agency-specific financial evidence.
+That division makes the public investment case even more important: advocacy may open the door, while pension members are owed a decision grounded in risk, return, liquidity, and portfolio fit.
 
 ## Why a written investment case matters
 

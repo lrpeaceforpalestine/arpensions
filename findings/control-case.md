@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "The ASHERS Comparison"
-description: "ASHERS received an Israel Bonds presentation through DFA, while later agency messages reported no holding or purchase."
+description: "DFA opened the door to an Israel Bonds presentation; ASHERS later reported zero holdings and zero purchases."
 permalink: /findings/control-case/
 breadcrumb: "Key Findings"
 ---
@@ -16,15 +16,11 @@ That establishes a documented sales approach through DFA.
 
 ## What happened afterward
 
-An ASHERS message dated May 15 said the system did not hold Israel Bonds. Another message dated July 14 said it had not purchased them.
-
-The available messages do not show a Board authorization or later purchase. They also do not record an affirmative rejection or explain why ASHERS's path differed from ATRS and APERS.
-
-The reason could involve portfolio needs, timing, governance, recipient interest, or other communications. The documents do not choose among those explanations.
+An ASHERS message dated May 15 reported zero Israel Bonds holdings. Another message dated July 14 reported zero purchases. At both public checkpoints, the investment count remained zero.
 
 ## Why the comparison matters
 
-The same investment proposal can reach public institutions and produce different outcomes. A consistent written process would make each institution's financial reasoning visible rather than forcing members to infer it from the outcome.
+The same investment proposal reached several public institutions and produced different outcomes. A consistent written process would give members each institution's financial reasoning alongside the outcome.
 
 [Browse the primary documents &rarr;](/documents/)
 [Read the Integrity Act brief &rarr;](/legislators/)

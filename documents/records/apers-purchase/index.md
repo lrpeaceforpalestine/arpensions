@@ -15,7 +15,7 @@ asset_url: /assets/documents/apers-purchase-record-page-6925-masked.pdf
 
 The page shows a **$15 million purchase** dated October 15, 2025. It identifies the seller's wire-purchase account and a two-year institutional bond.
 
-The amount is $10 million below the minimum named in the May 15 motion. The selected minutes and transaction record do not explain whether APERS treated the purchase as a first stage, a final amount, or an implementation step requiring later Board action.
+The amount is $10 million below the minimum named in the May 15 motion. That difference gives APERS members another reason to demand a written implementation rationale tied to the completed transaction.
 
 [Read the signed authorization minutes &rarr;](/documents/records/apers-authorization/)
 [Read the APERS member explainer &rarr;](/public-employees/)

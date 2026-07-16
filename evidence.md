@@ -1,7 +1,7 @@
 ---
 layout: evidence
-title: "What the Public Record Shows"
-description: "A plain-language account of Arkansas's Israel Bonds decisions, the money involved, and the safeguards the Pension Investment Integrity Act would add."
+title: "How $115 Million Moved Through Arkansas"
+description: "The money, decisions, and public officials behind Arkansas's Israel Bonds strategy—and the safeguards pension members are demanding."
 permalink: /evidence/
 charts: true
 apexcharts: true
@@ -21,13 +21,13 @@ timeline_thread: true
 
 Arkansas put **at least {{ inv.metrics.confirmed_security_floor.display }} into completed Israel Bonds purchases**: {{ treasury.measure_display }} at the State Treasury and {{ apers.measure_display }} at APERS. ATRS separately moved **{{ atrs.measure_display }} into a manager account** created for an Israel Bonds strategy.
 
-Together, those decisions placed **{{ inv.metrics.combined_tied_or_funded.display }} of public money** into completed purchases or the dedicated ATRS account. Those are different kinds of transactions, so the site keeps them separate wherever the figures appear.
+Together, those decisions placed **{{ inv.metrics.combined_tied_or_funded.display }} of public money** into Israel Bonds purchases or the dedicated ATRS account: {{ inv.metrics.confirmed_security_floor.display }} in completed purchases plus {{ inv.metrics.atrs_manager_funding.display }} in manager funding.
 
-Treasury also initiated another {{ inv.metrics.treasury_conditional_payment.display }} payment. The bank report still showed it being processed, so it is not included in the {{ inv.metrics.confirmed_security_floor.display }} completed-purchase total.
+Treasury also initiated another {{ inv.metrics.treasury_conditional_payment.display }} payment. The February 17 report marked that instruction "Processing By Bank," placing it in a separate next stage of the story.
 
 <div class="callout" markdown="1">
 
-**Why it matters:** Teachers, public employees, retirees, and taxpayers should not have to take a major investment decision on faith. They should be able to see how credit risk, expected return, liquidity, and available alternatives were weighed before public money was committed.
+**Why it matters:** Teachers, public employees, retirees, and taxpayers deserve to see how credit risk, expected return, liquidity, and available alternatives were weighed before public money was committed.
 
 </div>
 
@@ -51,19 +51,19 @@ Treasury also initiated another {{ inv.metrics.treasury_conditional_payment.disp
     <div class="scrolly__step" data-step="1" data-stat="{{ atrs.measure_display }}" data-subtitle="moved into the ATRS manager account" data-color-class="viz-stat--accent">
       <div class="step__content">
         <h3>{{ atrs.measure_display }} in an ATRS manager account</h3>
-        <p>ATRS hired Reams Asset Management to carry out the strategy and later reported funding the account. The released account documents do not list the individual bonds Reams bought or held.</p>
+        <p>ATRS hired Reams Asset Management to carry out the strategy and later funded the account. ATRS's public account of the money currently ends at the transfer to Reams.</p>
       </div>
     </div>
     <div class="scrolly__step" data-step="2" data-stat="{{ inv.metrics.combined_tied_or_funded.display }}" data-subtitle="across completed purchases and manager funding" data-color-class="viz-stat--accent">
       <div class="step__content">
         <h3>{{ inv.metrics.combined_tied_or_funded.display }} across two kinds of transactions</h3>
-        <p>This combined figure is useful for understanding the scale of the decisions. It is not a claim that all {{ inv.metrics.combined_tied_or_funded.display }} appears as individual bonds on agency statements.</p>
+        <p>This is the campaign's scale figure: {{ inv.metrics.confirmed_security_floor.display }} in completed purchases plus {{ inv.metrics.atrs_manager_funding.display }} placed under Reams management.</p>
       </div>
     </div>
     <div class="scrolly__step" data-step="3" data-stat="{{ inv.metrics.treasury_conditional_payment.display }}" data-subtitle="Treasury payment still moving through the bank" data-color-class="viz-stat--danger">
       <div class="step__content">
         <h3>A later {{ inv.metrics.treasury_conditional_payment.display }} Treasury payment</h3>
-        <p>The payment report showed the bank still processing this transaction. It belongs in the story, but not in the completed-purchase total unless a completed settlement is documented.</p>
+        <p>The payment report placed this transaction at the bank-processing stage, alongside the separately documented completed purchases.</p>
       </div>
     </div>
   </div>
@@ -91,7 +91,7 @@ The chart keeps completed purchases, manager-account funding, and a payment stil
 |---|---:|---|
 | State Treasury purchases | **{{ treasury.measure_display }}** | A security-level total derived from completed transaction records after a later maturity. |
 | APERS purchase | **{{ apers.measure_display }}** | A completed two-year institutional bond purchase dated October 15, 2025. |
-| ATRS manager account | **{{ atrs.measure_display }}** | Money funded to the Reams account for the strategy; the account records released by ATRS do not list its individual bonds. |
+| ATRS manager account | **{{ atrs.measure_display }}** | Money transferred to Reams for the strategy; security-by-security public reporting remains due to ATRS members. |
 | Later Treasury payment | **$10M** | The payment report showed the transaction still being processed by the bank. |
 
 </div>
@@ -104,7 +104,7 @@ The chart keeps completed purchases, manager-account funding, and a payment stil
 
 Treasury held Israel Bonds before the 2025 pension decisions. Its records support a {{ treasury.measure_display }} completed-purchase total after accounting for a February 2026 maturity. A separate {{ inv.transaction_figures.treasury_may_settled.display }} purchase settled in May 2025.
 
-An internal Treasury credit overview had already summarized sovereign-rating downgrades and recommended holding the existing positions while maturities rolled off. The later purchase records do not include a written explanation connecting the new purchase to that recommendation.
+An internal Treasury credit overview had already summarized sovereign-rating downgrades and recommended holding the existing positions while maturities rolled off. Six months later, Treasury settled {{ inv.transaction_figures.treasury_may_settled.display }} in new positions. Arkansans deserve the written reasoning behind that change in course.
 
 [Read the Treasury credit overview]({{ inv.sources.treasury_hold.record_url }}) and [Treasury transaction documents]({{ inv.sources.treasury_holdings.record_url }}).
 
@@ -112,7 +112,7 @@ An internal Treasury credit overview had already summarized sovereign-rating dow
 
 The APERS Investment Finance Subcommittee authorized a **$25&ndash;$50 million range** on May 15, 2025. APERS later bought **{{ apers.measure_display }}** on October 15&mdash;{{ inv.transaction_figures.apers_below_minimum_difference.display }} below the minimum named in the motion.
 
-In response to the records request, APERS's chief investment officer wrote that he had not prepared material for the Board on the investment and believed its consultants had not prepared any either. That leaves a straightforward governance question: what written financial work supported the authorization and the later purchase?
+A February 2026 email from APERS's chief investment officer makes the transparency problem concrete. Members received a motion, operational correspondence, and a transaction record, leaving them to reconstruct the investment case.
 
 [Read the signed APERS minutes]({{ inv.sources.apers_authorization.record_url }}), [the staff email]({{ inv.sources.apers_analysis_email.record_url }}), and [the purchase record]({{ inv.sources.apers_purchase.record_url }}).
 
@@ -120,24 +120,24 @@ In response to the records request, APERS's chief investment officer wrote that 
 
 ATRS authorized {{ atrs.authorization_display | replace: 'Up to', 'up to' }} on June 2, 2025, hired Reams Asset Management, and reported funding the Reams account with **{{ atrs.measure_display }}** in December.
 
-Aon's two-page memo did real work: it compared implementation options, recommended Reams, and warned that Israel Bonds have limited marketability. Aon also drew a clear line around its role. It did not advise trustees whether ATRS should make the investment or which individual bond to buy.
+Aon's two-page memo compared implementation options, recommended Reams, and warned that Israel Bonds have limited marketability. Aon owned the implementation work; trustees owned the investment decision.
 
-The public can therefore see how ATRS chose a manager. The remaining question is how trustees weighed the sovereign-credit case, expected return, liquidity, and fit with the wider portfolio before approving the strategy.
+ATRS members deserve the Board's sovereign-credit case, expected-return comparison, liquidity judgment, and explanation of how the strategy fit the wider portfolio.
 
 [Read Aon's two-page memo]({{ inv.sources.atrs_aon.record_url }}), [the ATRS resolution]({{ inv.sources.atrs_resolution.record_url }}), and [the manager-funding notice]({{ inv.sources.atrs_funding.record_url }}).
 
 ---
 
-## What the financial record shows
+## The case for a decision memo {#what-the-financial-record-shows}
 
-The documents are not silent. They include a Treasury credit overview, Aon's implementation advice, manager comparisons, a warning about limited marketability, an S&amp;P downgrade report in ATRS files, authorization records, purchase records, and manager-funding records.
+The public trail includes a Treasury credit overview, Aon's implementation advice, manager comparisons, a warning about limited marketability, an S&amp;P downgrade report in ATRS files, authorization records, purchase records, and manager-funding records.
 
-What they do not provide in one place is the basic decision memo the public should expect: a written comparison of credit risk, expected return, liquidity, and reasonable alternatives tied to each pension board's decision to proceed.
+A decision memo would connect those pieces in one place: credit risk, expected return, liquidity, reasonable alternatives, and the reason each pension board chose to proceed.
 
 That distinction matters because Israel Bonds cannot be sold on a secondary market. A pension fund that buys one generally holds it to maturity. When an investment cannot be readily sold, trustees should show how they priced that loss of flexibility and why the expected return justified it.
 
 <div class="pull-quote">
-  <p>The issue is not whether a board may ever buy a sovereign bond. The issue is whether Arkansans can see the financial case before retirement money is committed.</p>
+  <p>Every covered sovereign-debt purchase should come with a public financial case.</p>
 </div>
 
 ---
@@ -146,7 +146,7 @@ That distinction matters because Israel Bonds cannot be sold on a secondary mark
 
 ## How the decisions unfolded
 
-<p class="decision-window-sub">This chart places the April 2025 outreach, the agency decisions, and the later purchases or funding on one timeline. It shows sequence. The source documents should be read before drawing conclusions about why any official acted.</p>
+<p class="decision-window-sub">This chart follows the April 2025 outreach through the agency decisions and the later purchases or manager funding.</p>
 
 <div class="decision-window-container">
   <div id="decision-window-chart" aria-label="Interactive timeline showing the April 2025 outreach followed by a May Treasury purchase, the May 15 APERS authorization and October 15 purchase, and the June 2 ATRS authorization and December 29 manager funding" role="img"></div>
@@ -176,7 +176,7 @@ That distinction matters because Israel Bonds cannot be sold on a secondary mark
   <li class="timeline-event" data-aos="fade-left">
     <time>April 14&ndash;15</time>
     <h3>Eight stops appear on a Capitol-area itinerary</h3>
-    <p>The itinerary lists meetings or introductions across pension, executive, legislative, Treasury, and cabinet offices. Other records show that at least one meeting occurred and describe two additional encounters.</p>
+    <p>The itinerary scheduled eight stops across pension, executive, legislative, Treasury, and cabinet offices. DFA records confirm the Hudson&ndash;Babbitt meeting, while seller correspondence recounts encounters with APERS and Treasury personnel.</p>
   </li>
   <li class="timeline-event timeline-event--highlight" data-aos="fade-left">
     <time>May 2025</time>
@@ -216,8 +216,8 @@ That distinction matters because Israel Bonds cannot be sold on a secondary mark
   </li>
   <li class="timeline-event" data-aos="fade-left">
     <time>February 17</time>
-    <h3>A later {{ inv.metrics.treasury_conditional_payment.display }} payment is still processing</h3>
-    <p>Treasury's outgoing-payment report shows the instruction moving through the bank.</p>
+    <h3>Treasury instructs another {{ inv.metrics.treasury_conditional_payment.display }}</h3>
+    <p>Treasury's outgoing-payment report marks the instruction "Processing By Bank."</p>
   </li>
   <li class="timeline-event timeline-event--highlight" data-aos="fade-left">
     <time>June 27</time>
@@ -250,7 +250,7 @@ The document library publishes the records most useful for understanding the dec
 
 ## What the Integrity Act would do
 
-The Pension Investment Integrity Act is a process bill. It would leave every investment outcome with the pension board. Before a covered purchase of non-tradable sovereign debt, it would require:
+The Pension Investment Integrity Act creates a public financial process while keeping every investment outcome with the pension board. Before a covered purchase of non-tradable sovereign debt, it would require:
 
 1. A written credit analysis prepared by pension staff or an independent adviser.
 2. A comparison of risk, expected return, and liquidity against reasonable fixed-income alternatives.

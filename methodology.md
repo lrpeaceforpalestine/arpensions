@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "How We Work"
-description: "How Arkansans for Pension Integrity reviews public records, verifies claims, handles missing material, and prepares documents for publication."
+description: "How Arkansans for Pension Integrity verifies the money, decisions, and public roles behind the campaign."
 permalink: /methodology/
 ---
 
@@ -17,11 +17,11 @@ Agency files stay in their original form. Published excerpts are linked back to 
 
 <span class="section-label">Review</span>
 
-## We read the page, not just the text layer
+## We read the complete file
 
 Many government PDFs are scans, image-only pages, spreadsheets converted to PDF, or compiled files with unreliable text extraction. A computer search can miss a page that is fully readable on screen.
 
-We therefore use text search to find likely locations, then open and inspect the rendered pages. Pages that appear empty in extracted text receive visual review before we describe them as blank or lacking substantive content. The ATRS Aon memo on Board packet pages 149&ndash;150 is a good example: the rendered pages contain substantive advice that a text-only workflow can fail to represent accurately.
+We combine text search with visual review of the rendered pages, attachments, spreadsheets, and surrounding context. Every central claim receives a human-readable source and exact locator.
 
 <span class="section-label">Verification</span>
 
@@ -37,7 +37,7 @@ For each central claim, we record:
 
 Signed minutes and completed transaction records carry more weight than a proposal, itinerary, sales report, or authorization ceiling. We use the strongest available record and describe the document for what it is.
 
-## We keep unlike dollar figures separate
+## We organize the money by decision stage
 
 The site distinguishes among:
 
@@ -48,21 +48,21 @@ The site distinguishes among:
 
 That is why the homepage shows {{ site.data.investigation.metrics.confirmed_security_floor.display }} in completed purchases separately from {{ site.data.investigation.metrics.atrs_manager_funding.display }} in ATRS manager funding and the later {{ site.data.investigation.metrics.treasury_conditional_payment.display }} Treasury payment.
 
-<span class="section-label">Missing material</span>
+<span class="section-label">Accountability</span>
 
-## We say what the released files do—and do not—show
+## We test the public decision trail
 
-When a page says that a document was not included, it refers to the files supplied for a particular public-records request and time period. It does not mean the document could not exist elsewhere, that no oral discussion occurred, or that every possible custodian was searched.
+For every major pension decision, we look for the same public trail: the proposal, the financial analysis, the vote, the transaction, and the later account of what the money bought.
 
-That distinction is especially important when discussing financial analysis. The agency files contain meaningful implementation, credit, marketability, and manager-selection material. The public question is whether members can see a decision-specific written comparison of credit, return, liquidity, and alternatives tied to the board's choice.
+The Arkansas files contain meaningful implementation, credit, marketability, and manager-selection material. A decision-specific memo should connect those pieces to credit risk, expected return, liquidity, reasonable alternatives, and the board's final choice.
 
 <span class="section-label">Publication</span>
 
 ## We protect private and operational information
 
-Before publishing an excerpt, we check it for bank account numbers, personal contact information, security credentials, and other details that do not belong on a public campaign site. If Arkansans for Pension Integrity applies masking, the document page identifies it.
+Before publishing an excerpt, we mask bank account numbers, personal contact information, security credentials, and other private or operational details. Each document page identifies any campaign-applied masking.
 
-We do not change the words, dates, amounts, votes, or other substantive fields in an excerpt.
+Published excerpts preserve the original words, dates, amounts, votes, and other substantive fields.
 
 ## We make the sources easy to check
 

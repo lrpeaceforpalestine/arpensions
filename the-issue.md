@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "The Issue — Public Money, Private Reasoning"
-description: "Arkansas committed public money to Israel Bonds without giving pension members one clear, written account of the financial case."
+title: "The Issue — Public Money, Public Accountability"
+description: "Arkansas directed $115 million into Israel Bonds purchases and an ATRS manager account. Pension members deserve the financial case behind those decisions."
 permalink: /the-issue/
 d3sankey: true
 ---
@@ -19,7 +19,7 @@ d3sankey: true
 
 Arkansas agencies put **{{ inv.metrics.confirmed_security_floor.display }} into completed Israel Bonds purchases** and moved another **{{ inv.metrics.atrs_manager_funding.display }} into an ATRS manager account** created for the same strategy. That is {{ inv.metrics.combined_tied_or_funded.display }} across completed purchases and manager funding.
 
-The public record shows pieces of the financial discussion. It does not give pension members one clear, written explanation of how trustees weighed sovereign-credit risk, expected return, limited marketability, and reasonable alternatives before approving the strategy.
+Pension members were left to piece together the financial case from motions, consultant pages, operational emails, and transaction records. A commitment this large should arrive with one usable written explanation of the credit risk, expected return, limited marketability, and reasonable alternatives.
 
 That is the issue Arkansans for Pension Integrity is working to fix.
 
@@ -35,9 +35,9 @@ That is the issue Arkansans for Pension Integrity is working to fix.
 
 ## What makes Israel Bonds different?
 
-Israel Bonds are sovereign debt issued by the State of Israel and sold directly through a specialized broker-dealer. The Arkansas investments at issue are not traded on a secondary market. A pension plan generally cannot sell them before maturity if conditions change or a better opportunity appears.
+Israel Bonds are sovereign debt issued by the State of Israel and sold directly through a specialized broker-dealer. The Arkansas investments at issue have no secondary market, so a pension plan generally holds them until maturity even when conditions change or a better opportunity appears.
 
-That does not make the bonds automatically prudent or imprudent. It makes the financial homework especially important.
+That loss of flexibility makes credit, return, liquidity, and portfolio fit central to the decision.
 
 A sound decision should answer four ordinary questions:
 
@@ -46,7 +46,7 @@ A sound decision should answer four ordinary questions:
 3. **Liquidity:** What does the plan give up by holding an investment that cannot be readily sold?
 4. **Portfolio fit:** Why does this particular commitment serve the fund's overall strategy and the interests of its members?
 
-The agency files address parts of those questions, but not in a single decision memo tied to each pension board's vote.
+A decision memo would answer all four questions in one place and connect them to each pension board's vote.
 
 ---
 
@@ -58,15 +58,15 @@ The agency files address parts of those questions, but not in a single decision 
 
 | Agency | Public money involved | What happened |
 |---|---:|---|
-| **State Treasury** | **{{ treasury.measure_display }}** | Completed purchases after accounting for a later maturity. Treasury is not a pension system and would not be covered by the proposed Integrity Act. |
+| **State Treasury** | **{{ treasury.measure_display }}** | Completed purchases after accounting for a later maturity. Treasury operates outside the pension systems covered by the proposed Integrity Act. |
 | **APERS** | **{{ apers.measure_display }} purchased** | Its Investment Finance Subcommittee authorized a $25&ndash;$50 million range; APERS later bought a two-year bond for {{ apers.measure_display }}. |
 | **ATRS** | **{{ atrs.measure_display }} funded** | ATRS authorized {{ atrs.authorization_display | replace: 'Up to', 'up to' }}, hired Reams, and later moved {{ atrs.measure_display }} into the manager account. |
 
 </div>
 
-Treasury also initiated another **{{ inv.metrics.treasury_conditional_payment.display }} payment**. The bank report still showed the payment being processed, so it is not part of the {{ inv.metrics.confirmed_security_floor.display }} completed-purchase figure.
+Treasury also initiated another **{{ inv.metrics.treasury_conditional_payment.display }} payment**. The February 17 bank report placed that instruction in a separate processing stage alongside the {{ inv.metrics.confirmed_security_floor.display }} in completed purchases.
 
-The combined pension authorization ceiling was **{{ inv.metrics.pension_authorization_ceiling.display }}**. A ceiling tells us how much a board allowed; it is not the same thing as a purchase or a current holding.
+Together, ATRS and APERS authorized **{{ inv.metrics.pension_authorization_ceiling.display }}**. The money that later moved was {{ apers.measure_display }} in an APERS purchase and {{ atrs.measure_display }} into the ATRS manager account.
 
 ---
 
@@ -76,15 +76,15 @@ The combined pension authorization ceiling was **{{ inv.metrics.pension_authoriz
 
 ### Treasury: a hold recommendation, followed by another purchase
 
-An internal Treasury overview dated October 8, 2024 summarized rating-agency downgrades and recommended holding the existing positions while scheduled maturities rolled off. Treasury later settled a new {{ inv.transaction_figures.treasury_may_settled.display }} purchase in May 2025. The released transaction files do not include a written explanation of how the later purchase fit with the earlier recommendation.
+An internal Treasury overview dated October 8, 2024 summarized rating-agency downgrades and recommended holding the existing positions while scheduled maturities rolled off. Treasury settled a new {{ inv.transaction_figures.treasury_may_settled.display }} purchase in May 2025. The public trail jumps from a hold recommendation to a new purchase; Arkansans deserve the written reasoning that connected them.
 
-### APERS: an authorization without Board material from staff or Callan
+### APERS: a $25&ndash;$50 million authorization and a $15 million purchase
 
-APERS authorized a $25&ndash;$50 million range in May 2025 and later bought {{ apers.measure_display }}. When the agency searched for responsive material, its chief investment officer wrote that he had prepared nothing for the Board on the topic and believed APERS's consultants had not either.
+APERS authorized a $25&ndash;$50 million range in May 2025 and later bought {{ apers.measure_display }}. A February 2026 email from its chief investment officer makes the transparency problem concrete and underscores the need for a standard written decision memo.
 
-### ATRS: advice on how to proceed, not whether to proceed
+### ATRS: Aon chose the route; trustees chose the investment
 
-Aon's June 2 memo compared managers, recommended Reams, and discussed the bonds' limited marketability. Aon separately stated that it was not advising ATRS whether to make the investment or which bond to buy. The memo explains implementation. It does not supply the trustees' sovereign-credit and portfolio case for making the investment.
+Aon's June 2 memo compared managers, recommended Reams, and discussed the bonds' limited marketability. Its assignment centered on implementation and manager selection. Trustees retained responsibility for the sovereign-credit, return, liquidity, and portfolio case for the investment.
 
 [Read the full, plain-language account and source documents &rarr;](/evidence/)
 
@@ -120,11 +120,11 @@ Seller outreach, public-office coordination, board roles, and later agency actio
 | Auditor or proxy | APERS and ATRS | The Auditor held ex-officio board seats and used a proxy in board settings. |
 | Jason Brady | APERS proposal | Brady presented the proposal and moved for the APERS authorization. |
 | Agency decisions | Later transactions | Treasury and APERS completed purchases; ATRS later funded the Reams manager account. |
-| ASHERS introduction | ASHERS | The records show a pitch; no later authorization or purchase appears in the selected ASHERS records. |
+| ASHERS introduction | ASHERS | DFA opened the door to a seller presentation; ASHERS later reported zero holdings and zero purchases. |
 
 </details>
 
-<p class="influence-flow-note">Every line has the same weight. This is a map of documented contacts, roles, and later agency actions—not a claim that any one contact caused an investment decision.</p>
+<p class="influence-flow-note">The map traces the proposal through public offices, formal board roles, and later agency actions. Financial responsibility remained with each institution's decision-makers.</p>
 
 </div>
 
@@ -138,15 +138,15 @@ Seller outreach, public-office coordination, board roles, and later agency actio
 
 Arkansas pension trustees must act solely in the interest of members and beneficiaries. State law also requires investment evaluations to rest on pecuniary factors—factors expected to have a material effect on financial risk or return.
 
-Those duties are the right starting point. The problem is that the public cannot reliably see how they were applied to a covered sovereign-debt purchase.
+Those duties are the right starting point. The Integrity Act would turn them into a clear public procedure for covered sovereign-debt purchases.
 
 The surrounding record makes transparency especially important:
 
-**The investment was promoted through political channels.** Public officials celebrated Israel Bonds as an expression of support for Israel. The Auditor of State's office coordinated outreach, participated through board designees, and promoted the strategy publicly. Those facts are relevant context; they make a written financial case more necessary, not less.
+**The investment was promoted through political channels.** Public officials celebrated Israel Bonds as an expression of support for Israel. The Auditor of State's office coordinated outreach, participated through board designees, and promoted the strategy publicly. That convergence makes a written financial case essential.
 
-**The agencies took different paths.** APERS made a direct purchase. ATRS hired a manager. ASHERS received a pitch, but the available agency records show no later authorization or purchase. Different outcomes are possible when each institution uses its own process.
+**The agencies took different paths.** APERS made a direct purchase. ATRS hired a manager. ASHERS received the seller's presentation and later reported zero holdings and zero purchases. The contrast shows the value of a common written process.
 
-**The documents answer implementation questions better than the central merits question.** ATRS shows how a manager was chosen. APERS shows the motion and later purchase. Treasury shows both a credit warning and later transactions. Pension members still deserve a concise, decision-specific financial explanation.
+**The public trail is built from fragments.** ATRS shows how a manager was chosen. APERS shows the motion and later purchase. Treasury shows both a credit warning and later transactions. A decision memo would connect those fragments into a concise financial explanation.
 
 </div>
 
@@ -158,14 +158,13 @@ The surrounding record makes transparency especially important:
 
 The Integrity Act would establish the same basic process for any covered purchase of non-tradable sovereign debt, regardless of issuer. It would require pension staff or an independent adviser to put the financial case in writing, compare reasonable alternatives, explain liquidity limits, and connect the decision to members' financial interests.
 
-The proposal would not:
+The proposal is designed around five protections:
 
-- direct a pension plan's investment outcome;
-- single out a country, company, religion, or political cause;
-- govern the separately managed State Treasury; or
-- replace trustees' judgment with a legislative investment decision.
-
-It would make trustees' financial reasoning visible after a covered purchase, when pension members can evaluate it for themselves.
+- **Trustee authority:** pension boards keep the final investment decision.
+- **Issuer neutrality:** the same rule applies to every covered sovereign issuer.
+- **Prospective application:** the procedure governs future covered purchases.
+- **Pension scope:** the bill covers Arkansas pension systems under a common standard.
+- **Public accountability:** the financial analysis becomes public within 30 days after the purchase.
 
 </div>
 

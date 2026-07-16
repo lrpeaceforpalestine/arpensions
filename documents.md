@@ -21,7 +21,7 @@ permalink: /documents/
 
 These are the records most useful for understanding Arkansas's Israel Bonds decisions. Each page gives the agency, date, exact location, a plain-language explanation, and a link to the excerpt.
 
-Some agency files contain bank account numbers or operational details that should not be republished. When Arkansans for Pension Integrity applies masking, the document page says so. The underlying words, dates, amounts, and decision fields remain visible.
+Some agency files contain bank account numbers or operational details. Arkansans for Pension Integrity masks those fields, identifies the treatment on each document page, and keeps the words, dates, amounts, and decision fields visible.
 
 <div class="callout" markdown="1">
 
@@ -38,7 +38,7 @@ Some agency files contain bank account numbers or operational details that shoul
 <ul class="document-list">
   <li class="document-item">
     <a class="doc-title" href="{{ inv.sources.atrs_aon.record_url }}"><svg class="doc-icon" aria-hidden="true"><use href="#doc-icon"/></svg>Aon implementation and manager-selection memo</a>
-    <span class="doc-description">ATRS Board packet pages 149&ndash;150. Aon compares managers, recommends Reams, discusses limited marketability, and defines the boundary of its advice.</span>
+    <span class="doc-description">ATRS Board packet pages 149&ndash;150. Aon compares managers, recommends Reams, discusses limited marketability, and assigns the investment decision to trustees.</span>
     <span class="doc-source">June 2, 2025 · 2 pages</span>
   </li>
   <li class="document-item">
@@ -67,7 +67,7 @@ Some agency files contain bank account numbers or operational details that shoul
   </li>
   <li class="document-item">
     <a class="doc-title" href="{{ inv.sources.apers_analysis_email.record_url }}"><svg class="doc-icon" aria-hidden="true"><use href="#doc-icon"/></svg>APERS chief investment officer email</a>
-    <span class="doc-description">The officer's account of the Board material prepared by staff and consultants. Campaign-applied masking hides unrelated personal information.</span>
+    <span class="doc-description">The officer's February 2026 account of Board preparation for the decision. Campaign-applied masking hides unrelated personal information.</span>
     <span class="doc-source">February 13, 2026 · 1 page</span>
   </li>
   <li class="document-item">

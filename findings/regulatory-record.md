@@ -16,15 +16,15 @@ For a pension fund, that means the review should explain transfer restrictions, 
 
 ## The regulatory history
 
-Arkansas Securities Department records include an April 1986 suspension related to failure to designate a principal. The suspension was vacated in July 1986 after the issue was cured. It is historical—not a current disqualification.
+Arkansas Securities Department records include an April 1986 suspension related to failure to designate a principal. The suspension was vacated in July 1986 after the issue was cured. The episode belongs in the historical due-diligence file.
 
-FINRA's public BrokerCheck report contains other historical disclosures. Those records belong in due diligence, but their existence does not by itself make a current bond unsuitable or prove that a trustee violated a duty.
+FINRA's public BrokerCheck report contains additional historical disclosures for trustees and advisers to review alongside the current offering, execution terms, and available alternatives.
 
 [Open FINRA's public BrokerCheck report](https://files.brokercheck.finra.org/firm/firm_11148.pdf).
 
 ## The Arkansas legal question
 
-Arkansas Code § 24-2-618(e) addresses single-agent or exclusive-agency arrangements and calls for extraordinary care and caution. Whether buying through the sole U.S. distribution channel falls within that provision is a legal question the transaction records alone do not answer.
+Arkansas Code § 24-2-618(e) addresses single-agent or exclusive-agency arrangements and calls for extraordinary care and caution. The specialized U.S. distribution channel places that statutory question before pension counsel and trustees as part of a complete review.
 
 The financial questions are more direct: What alternatives existed? How was limited marketability valued? What did the execution channel cost? How did the expected return compare?
 

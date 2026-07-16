@@ -116,7 +116,7 @@ If you attend, listen for four things: credit risk, expected return, liquidity, 
 
 We need educators, public employees, retirees, and other Arkansans who can help with outreach, writing, event support, legislative visits, and public-records research.
 
-Email [info@arpensions.org](mailto:info@arpensions.org?subject=I%20want%20to%20volunteer&body=Name%3A%20%0ACity%3A%20%0AConnection%20to%20an%20Arkansas%20pension%20system%3A%20%0AI%27m%20interested%20in%3A%20) and tell us your city, connection to an Arkansas pension system, and how you would like to help. Please do not include account numbers or sensitive personal information; see our [privacy page](/privacy/).
+Email [info@arpensions.org](mailto:info@arpensions.org?subject=I%20want%20to%20volunteer&body=Name%3A%20%0ACity%3A%20%0AConnection%20to%20an%20Arkansas%20pension%20system%3A%20%0AI%27m%20interested%20in%3A%20) and tell us your city, connection to an Arkansas pension system, and how you would like to help. Please keep account numbers and sensitive personal information out of email; see our [privacy page](/privacy/).
 
 </section>
 </div>

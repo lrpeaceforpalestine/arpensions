@@ -33,7 +33,7 @@ body_class: integrity-brief-page
 
 > **Public money deserves a public investment record.**
 
-Arkansas records establish a **{{ inv.metrics.confirmed_security_floor.display }} security-level floor** across Treasury and APERS, plus **{{ inv.metrics.atrs_manager_funding.display }} funded to an ATRS manager mandate** whose underlying security holdings were not produced. The files contain manager-selection, implementation, marketability, and credit-related materials while leaving material questions about how sovereign-credit risk and portfolio fit were connected to each affirmative pension decision.
+Arkansas directed **{{ inv.metrics.confirmed_security_floor.display }} into completed Israel Bonds purchases** at Treasury and APERS and **{{ inv.metrics.atrs_manager_funding.display }} into an ATRS manager account** for the same strategy. Pension members deserve one decision-specific written case connecting credit risk, expected return, liquidity, alternatives, and portfolio fit to each pension commitment.
 
 ## The five safeguards
 
@@ -43,14 +43,14 @@ Arkansas records establish a **{{ inv.metrics.confirmed_security_floor.display }
 
 {{ inv.legislation.full_summary }}
 
-## What the proposal does—and does not do
+## Scope and design
 
 - It creates a consistent, reviewable decision record for covered pension acquisitions.
 - It is prospective and issuer-neutral.
 - It leaves the ultimate buy, hold, or sell decision with trustees.
 - It publishes the core decision record after acquisition while allowing only narrow, explained protection of legally confidential operational details.
-- It does not convert authorization or manager funding into holdings.
-- It does not reach the separately governed State Treasury.
+- It tracks authorization, manager funding, and completed purchases as distinct stages.
+- It focuses on Arkansas pension systems while the State Treasury continues under its existing framework.
 
 ## Legislative request
 

@@ -15,13 +15,13 @@ Citizens First Congress selected pension investment integrity as one of its shor
 
 ### February 17 — Treasury payment report shows another $10 million in process
 
-An outgoing-payment report shows a $10 million Treasury instruction marked as still processing by the bank. Arkansans for Pension Integrity does not include that amount in the $65 million completed-purchase total.
+An outgoing-payment report shows a $10 million Treasury instruction marked as still processing by the bank. The instruction appears as a separate processing-stage amount alongside $65 million in completed purchases.
 
 [Open the Treasury payment record &rarr;]({{ site.data.investigation.sources.treasury_processing.record_url }})
 
 ### February 13 — APERS describes the Board material prepared for the decision
 
-In an email produced by APERS, the chief investment officer wrote that he had not prepared material for the Board on the Israel Bonds investment and believed the system's consultants had not either. The email sharpens the case for a consistent written decision memo.
+The APERS chief investment officer's February 2026 email makes the transparency problem concrete and sharpens the case for a consistent written decision memo.
 
 [Open the APERS email &rarr;]({{ site.data.investigation.sources.apers_analysis_email.record_url }})
 
@@ -29,7 +29,7 @@ In an email produced by APERS, the chief investment officer wrote that he had no
 
 ### December 29 — ATRS reports $50 million funded to the Reams account
 
-An ATRS Board update reports that $50 million was moved into the manager account created for the Israel Bonds strategy. The available account documents do not list the individual securities held in the account.
+An ATRS Board update reports that $50 million was moved into the manager account created for the Israel Bonds strategy. ATRS's public account now needs the security-level purchases and current holdings that follow that transfer.
 
 [Open the ATRS funding notice &rarr;]({{ site.data.investigation.sources.atrs_funding.record_url }})
 
@@ -41,7 +41,7 @@ The transaction record identifies a $15 million two-year institutional bond purc
 
 ### June 2 — ATRS authorizes up to $50 million
 
-ATRS adopted Resolution 2025-22 and chose a manager-based structure. Aon's two-page packet memo compared implementation options, recommended Reams, and discussed limited marketability. Aon did not advise trustees whether to make the investment or which bond to buy.
+ATRS adopted Resolution 2025-22 and chose a manager-based structure. Aon's two-page packet memo compared implementation options, recommended Reams, and discussed limited marketability. Trustees carried the merits of the investment and the choice of any bond.
 
 [Read Aon's memo &rarr;]({{ site.data.investigation.sources.atrs_aon.record_url }})
 
@@ -59,7 +59,7 @@ Two Treasury positions totaling $20 million settled in May and later appeared on
 
 ### April 14–15 — Israel Bonds outreach reaches Arkansas offices
 
-An eight-stop itinerary lists pension, executive, legislative, Treasury, and cabinet offices or settings. A separate DFA introduction led to a documented presentation to ASHERS. The later agency actions differed: Treasury and APERS completed purchases, ATRS funded a manager account, and the available ASHERS records show no authorization or purchase.
+An eight-stop itinerary lists pension, executive, legislative, Treasury, and cabinet offices or settings. A separate DFA introduction led to a documented presentation to ASHERS. The later agency actions diverged: Treasury and APERS completed purchases, ATRS funded a manager account, and ASHERS reported zero holdings and zero purchases.
 
 [See the interactive route map &rarr;](/the-issue/#how-the-proposal-moved)
 

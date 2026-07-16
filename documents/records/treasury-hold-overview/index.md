@@ -15,9 +15,7 @@ asset_url: /assets/documents/treasury-internal-credit-overview.pdf
 
 The two-page document summarizes S&amp;P and Moody's rating actions, fiscal and security risks, and outlooks. Its conclusion recommends holding the existing positions, allowing scheduled amounts to roll off, and continuing credit monitoring.
 
-Treasury later settled new positions in May 2025. The released transaction files do not include a written explanation connecting that purchase to the October recommendation.
-
-The overview itself does not name an author, so the site attributes it to Treasury rather than to an individual employee.
+Treasury settled new positions six months later, in May 2025. The public trail needs the written reasoning that connected that purchase to the October hold recommendation.
 
 [Open the Treasury bondholder statement &rarr;](/documents/records/treasury-holdings/)
 [Read the full public explainer &rarr;](/evidence/)

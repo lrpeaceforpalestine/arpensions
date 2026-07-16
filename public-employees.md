@@ -16,7 +16,7 @@ charts: true
 
 On May 15, 2025, the APERS Investment Finance Subcommittee authorized an Israel Bonds purchase in a **$25&ndash;$50 million range**. On October 15, APERS bought a two-year institutional bond for **{{ apers.measure_display }}**.
 
-The completed purchase was **{{ inv.transaction_figures.apers_below_minimum_difference.display }} below the minimum named in the motion**. The signed minutes and transaction record do not explain how APERS treated that difference.
+The completed purchase was **{{ inv.transaction_figures.apers_below_minimum_difference.display }} below the minimum named in the motion**. APERS members deserve a written explanation of how the agency treated that difference.
 
 <div class="callout" markdown="1">
 
@@ -26,11 +26,7 @@ The completed purchase was **{{ inv.transaction_figures.apers_below_minimum_diff
 
 ## What APERS put before the Board
 
-APERS's chief investment officer later wrote that he had not prepared Board material on the investment and believed the system's consultants had not prepared any either.
-
-The available files show the authorization, operational follow-up, and the later purchase. They do not include a decision memo from APERS staff or Callan that brings together the sovereign-credit case, expected return, liquidity, and comparison with alternatives.
-
-That does not mean APERS did no work. It means members should not have to reconstruct the financial case from scattered records after the fact.
+A February 2026 email from APERS's chief investment officer makes the transparency problem concrete. Members are left to reconstruct the financial case from an authorization, operational follow-up, and the later purchase. A decision memo from APERS staff or Callan should bring the sovereign-credit case, expected return, liquidity, and alternatives together in one place.
 
 [Read the signed APERS minutes &rarr;]({{ inv.sources.apers_authorization.record_url }})
 

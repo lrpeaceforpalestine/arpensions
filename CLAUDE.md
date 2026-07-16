@@ -8,6 +8,7 @@ Live site: <https://arpensions.org>
 - Treat `_data/investigation.yml` as the authoritative internal source for recurring amounts, source links, and bounded factual descriptions.
 - Keep confirmed securities, manager funding, authorization ceilings, and processing-stage payments visually and verbally distinct.
 - Describe produced analytical material affirmatively, then identify the unresolved decision-record question.
+- Write public-facing copy as campaign prose, not audit notes: lead with action, consequence, and demand; avoid defensive constructions such as "but not," "the records do not show," exhaustive non-claims, or correction-style distinctions.
 - Do not publish correction history, retired claims, internal audit commentary, or retrospective comparisons.
 - Keep legal conclusions and causal claims bounded to the record.
 - Use Arkansans for Pension Integrity and `info@arpensions.org`; do not add an individual biography.

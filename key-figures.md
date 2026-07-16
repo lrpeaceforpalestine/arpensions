@@ -6,7 +6,7 @@ permalink: /key-figures/
 breadcrumb: "Key Figures"
 ---
 
-This page explains each person's documented role. It does not treat a job title, meeting, or relationship as proof that one person caused an independent board decision.
+These are the public officials, pension leaders, advisers, managers, and sellers at the center of Arkansas's Israel Bonds decisions.
 
 ---
 
@@ -20,7 +20,7 @@ This page explains each person's documented role. It does not treat a job title,
 
 Milligan served as State Treasurer when Arkansas's Treasury program involving Israel Bonds began. As Auditor, he holds an ex-officio ATRS board role and publicly promoted Israel Bonds. His office's records also show scheduling, correspondence, speech preparation, and other promotional activity.
 
-The pension-board record should distinguish Milligan's officeholder role from the actions of his designee. The signed APERS minutes identify Jason Brady—not Milligan personally—as the Auditor's proxy who presented and moved the authorization.
+Chief Deputy Auditor Jason Brady acted through Milligan's office as the Auditor's designee or proxy. The signed APERS minutes identify Brady as the official who presented the proposal and moved the authorization.
 
 [Read about the Auditor's office &rarr;](/findings/auditor-channel/)
 
@@ -50,7 +50,7 @@ Other records show Brady assisting with correspondence, scheduling, speech mater
 
 <p class="figure-subtitle">ATRS investment consultant</p>
 
-Aon compared implementation options, recommended Reams, and noted limited marketability. Its two-page memo also states that Aon was not advising whether ATRS should invest or which individual bond to buy.
+Aon owned the implementation work: it compared options, recommended Reams, and noted limited marketability. ATRS trustees owned the investment decision and the financial case for putting the strategy in the portfolio.
 
 [Read Aon's memo &rarr;]({{ site.data.investigation.sources.atrs_aon.record_url }})
 
@@ -62,7 +62,7 @@ Aon compared implementation options, recommended Reams, and noted limited market
 
 <p class="figure-subtitle">ATRS investment manager</p>
 
-ATRS selected Reams to carry out the Israel Bonds strategy through a separate manager account. A December 2025 Board update reports $50 million funded to that account. The released account records do not list the individual bonds later bought or held.
+ATRS selected Reams to carry out the Israel Bonds strategy through a separate manager account. A December 2025 Board update reports $50 million funded to that account. ATRS's public disclosure currently ends at the transfer to Reams, leaving members waiting for a security-by-security account.
 
 </div>
 
@@ -72,7 +72,7 @@ ATRS selected Reams to carry out the Israel Bonds strategy through a separate ma
 
 <p class="figure-subtitle">ATRS Executive Director</p>
 
-White led ATRS during the June 2025 authorization and later manager implementation. An April itinerary listed a proposed encounter involving White, but the itinerary itself does not establish attendance or substance.
+White led ATRS during the June 2025 authorization and later manager implementation. The April outreach itinerary scheduled an encounter with him as the proposal moved through Arkansas offices.
 
 </div>
 
@@ -102,7 +102,7 @@ Fecher led APERS during the 2025 authorization and later purchase. A seller repo
 
 <p class="figure-subtitle">APERS Chief Investment Officer</p>
 
-Borromeo handled investment operations for APERS. In a February 2026 email about the records search, he wrote that he had prepared no Board material on the Israel Bonds investment and believed the consultants had not either.
+Borromeo handled investment operations for APERS. His February 2026 email about the records search makes the need for a standard, decision-specific Board memo concrete.
 
 [Read the APERS email &rarr;]({{ site.data.investigation.sources.apers_analysis_email.record_url }})
 
@@ -114,7 +114,7 @@ Borromeo handled investment operations for APERS. In a February 2026 email about
 
 <p class="figure-subtitle">ATRS Board Chair in 2025</p>
 
-Knight raised concern about the procedure during the June 2 ATRS meeting. The campaign cites the concern as part of the Board discussion without using it to infer the views of every trustee.
+Knight raised concern about the procedure during the June 2 ATRS meeting, placing governance and process directly into the Board discussion.
 
 </div>
 
@@ -138,7 +138,7 @@ The company underwrites and sells Israel Bonds in the United States. Its represe
 
 <p class="figure-subtitle">Israel Bonds sales executive</p>
 
-Berman appears in correspondence, itinerary material, presentations, and follow-up messages involving Arkansas agencies. Seller-authored accounts are useful for understanding outreach and should be distinguished from completed agency records.
+Berman appears throughout the outreach trail: correspondence, itinerary material, presentations, and follow-up messages involving Arkansas agencies. His messages document the seller's strategy and claimed progress; signed agency records document the resulting public actions.
 
 </div>
 
@@ -158,7 +158,7 @@ Young participated in Arkansas outreach with Berman and appears on the April 202
 
 <p class="figure-subtitle">National network of public financial officers</p>
 
-Arkansas agency files show event participation, a 2020 seller sponsor listing, circulation of another state's purchase, speech preparation, and later offers to connect member states. The records establish network context, not direction of a particular pension vote.
+Arkansas agency files show SFOF serving as a national political and promotional network: event participation, a 2020 seller sponsor listing, circulation of another state's purchase, speech preparation, and later offers to connect member states. Pension trustees still carried the financial responsibility for Arkansas's decisions.
 
 [Read the network finding &rarr;](/findings/sfof-pipeline/)
 
