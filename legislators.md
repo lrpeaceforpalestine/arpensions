@@ -9,6 +9,9 @@ hero_band: pine
 ---
 
 {% assign inv = site.data.investigation %}
+{% assign treasury = inv.agencies | where: "id", "treasury" | first %}
+{% assign apers = inv.agencies | where: "id", "apers" | first %}
+{% assign atrs = inv.agencies | where: "id", "atrs" | first %}
 
 ## Executive summary
 
@@ -42,9 +45,9 @@ The safeguards are **issuer-neutral**. They apply to the asset characteristics a
 
 | Institution or measure | Current record | Evidentiary status |
 |---|---|---|
-| State Treasury | {{ inv.agencies[0].measure }} | {{ inv.agencies[0].status }} |
-| APERS | {{ inv.agencies[1].measure }} under {{ inv.agencies[1].authorization }} | {{ inv.agencies[1].status }} |
-| ATRS | {{ inv.agencies[2].measure }}; underlying holdings not identified | {{ inv.agencies[2].status }} |
+| State Treasury | {{ treasury.measure }} | {{ treasury.status }} |
+| APERS | {{ apers.measure }} under {{ apers.authorization }} | {{ apers.status }} |
+| ATRS | {{ atrs.measure }}; underlying holdings not identified | {{ atrs.status }} |
 | Additional Treasury payment | {{ inv.metrics.treasury_conditional_payment.display }} at processing stage | {{ inv.metrics.treasury_conditional_payment.status }} |
 | Pension authorization ceiling | {{ inv.metrics.pension_authorization_ceiling.display }} | Authorization, not holdings |
 

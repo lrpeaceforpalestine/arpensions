@@ -8,6 +8,9 @@ header_image_alt: "Arkansas State Capitol in Little Rock, rendered in pine and m
 ---
 
 {% assign inv = site.data.investigation %}
+{% assign treasury = inv.agencies | where: "id", "treasury" | first %}
+{% assign apers = inv.agencies | where: "id", "apers" | first %}
+{% assign atrs = inv.agencies | where: "id", "atrs" | first %}
 
 ## Our principle
 
@@ -31,7 +34,7 @@ Arkansans for Pension Integrity is a grassroots campaign using public records, f
 
 ## Current evidence in one paragraph
 
-Arkansas records establish a {{ inv.metrics.confirmed_security_floor.display }} security-level floor: Treasury's derived {{ inv.agencies[0].measure }} plus APERS's {{ inv.agencies[1].measure }}. ATRS separately documented {{ inv.agencies[2].measure }}. An additional Treasury {{ inv.metrics.treasury_conditional_payment.display }} payment remained at the processing stage. The produced files contain implementation, manager-selection, marketability, and credit-related materials while leaving material questions about how sovereign-credit risk and portfolio fit were connected to each affirmative investment decision.
+Arkansas records establish a {{ inv.metrics.confirmed_security_floor.display }} security-level floor: Treasury's derived {{ treasury.measure }} plus APERS's {{ apers.measure }}. ATRS separately documented {{ atrs.measure }}. An additional Treasury {{ inv.metrics.treasury_conditional_payment.display }} payment remained at the processing stage. The produced files contain implementation, manager-selection, marketability, and credit-related materials while leaving material questions about how sovereign-credit risk and portfolio fit were connected to each affirmative investment decision.
 
 ## Frequently asked questions
 
@@ -43,7 +46,7 @@ No. It combines {{ inv.metrics.confirmed_security_floor.display }} in confirmed 
 
 ### Is {{ inv.metrics.pension_authorization_ceiling.display }} the amount pension systems bought?
 
-No. It is the combined maximum of two authorizations. APERS's confirmed purchase is {{ inv.agencies[1].measure }}; ATRS documented manager funding, not security-level holdings.
+No. It is the combined maximum of two authorizations. APERS's confirmed purchase is {{ apers.measure }}; ATRS documented manager funding, not security-level holdings.
 
 ### What analytical material is in the record?
 

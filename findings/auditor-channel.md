@@ -7,6 +7,7 @@ breadcrumb: "Key Findings"
 ---
 
 {% assign inv = site.data.investigation %}
+{% assign apers = inv.agencies | where: "id", "apers" | first %}
 
 The Auditor of State does not manage ATRS or APERS assets and is not either system's investment staff. The office nevertheless appears in the record through formal board roles and through documented scheduling, presentation, correspondence, and promotional activity.
 
@@ -14,7 +15,7 @@ Those roles should be described separately.
 
 ## Formal governance roles
 
-The Auditor is an ex-officio ATRS trustee. ATRS records list Chief Deputy Auditor Jason Brady as Dennis Milligan's designee at Board proceedings. At APERS, signed minutes identify Brady as the Auditor's proxy on the Board and Investment Finance Subcommittee. In that formal capacity, Brady presented the proposal and made the May 15, 2025 motion authorizing **{{ inv.agencies[1].authorization_display }}**; the motion carried without dissent.
+The Auditor is an ex-officio ATRS trustee. ATRS records list Chief Deputy Auditor Jason Brady as Dennis Milligan's designee at Board proceedings. At APERS, signed minutes identify Brady as the Auditor's proxy on the Board and Investment Finance Subcommittee. In that formal capacity, Brady presented the proposal and made the May 15, 2025 motion authorizing **{{ apers.authorization_display }}**; the motion carried without dissent.
 
 This is more precise than treating the Auditor's office as an outsider to pension governance. The officeholder and proxy had formal seats in the decision setting, while asset management and investment analysis remained the responsibility of the systems and their advisers.
 

@@ -22,6 +22,7 @@ TEXT_SUFFIXES = {".md", ".html", ".yml", ".yaml", ".js", ".json", ".txt", ".css"
 SKIP_PARTS = {".git", ".qa", "_site", "_internal", "scripts", "vendor", "node_modules"}
 SKIP_FILES = {"README.md", "CLAUDE.md", "LICENSE", "Gemfile.lock"}
 CORE_AMOUNT = re.compile(r"\$(?:10|15|20|25|50|55|60|65|75|100|115|125)\s*(?:M\b|million\b)", re.I)
+POSITIONAL_AGENCY = re.compile(r"\b(?:inv|site\.data\.investigation)\.agencies\[\d+\]")
 
 
 class Audit:
@@ -78,6 +79,11 @@ def audit_core_amount_sources(audit: Audit, files: list[Path]) -> None:
             audit.fail(
                 f"{rel}:{line_for(text, match.start())}: hardcoded core amount {match.group(0)!r}; "
                 "render it from site.data.investigation"
+            )
+        for match in POSITIONAL_AGENCY.finditer(text):
+            audit.fail(
+                f"{rel}:{line_for(text, match.start())}: positional agency lookup {match.group(0)!r}; "
+                "select the canonical agency by id"
             )
 
 

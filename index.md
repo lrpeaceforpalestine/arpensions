@@ -5,6 +5,7 @@ description: "The current Arkansas public investment record, with confirmed secu
 ---
 
 {% assign inv = site.data.investigation %}
+{% assign apers = inv.agencies | where: "id", "apers" | first %}
 {% include hero.html %}
 
 {% include stats-bar.html %}
@@ -18,7 +19,7 @@ description: "The current Arkansas public investment record, with confirmed secu
     <div class="analysis-matrix breakout">
       <div class="analysis-matrix-row analysis-matrix-head"><strong>Institution</strong><span>What the file contains</span><span>What remains open</span></div>
       <div class="analysis-matrix-row"><strong>ATRS</strong><p>Aon implementation and manager-selection advice, a Reams recommendation, marketability language, and an S&amp;P downgrade report elsewhere in the production.</p><p>The produced vote file does not connect a developed sovereign-credit and portfolio-fit evaluation to the invest-or-not decision.</p></div>
-      <div class="analysis-matrix-row"><strong>APERS</strong><p>Authorization records, seller materials, operational correspondence, and the later {{ inv.agencies[1].measure }}.</p><p>The reviewed authorization file contains no Callan sovereign-credit memorandum tied to the decision.</p></div>
+      <div class="analysis-matrix-row"><strong>APERS</strong><p>Authorization records, seller materials, operational correspondence, and the later {{ apers.measure }}.</p><p>The reviewed authorization file contains no Callan sovereign-credit memorandum tied to the decision.</p></div>
       <div class="analysis-matrix-row"><strong>Treasury</strong><p>An internal credit overview recommending HOLD and continued surveillance.</p><p>The settled May 2025 purchase is not accompanied by an identified written reconciliation with that recommendation.</p></div>
     </div>
 

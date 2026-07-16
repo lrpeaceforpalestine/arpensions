@@ -9,6 +9,8 @@ hero_band: pine
 ---
 
 {% assign inv = site.data.investigation %}
+{% assign treasury = inv.agencies | where: "id", "treasury" | first %}
+{% assign apers = inv.agencies | where: "id", "apers" | first %}
 
 ## Campaign summary
 
@@ -18,7 +20,7 @@ The campaign supports the Pension Investment Integrity Act for the 2027 Arkansas
 
 ## Copy-ready current facts
 
-- **{{ inv.metrics.confirmed_security_floor.display }} is the confirmed security-level floor.** It combines a {{ inv.agencies[0].measure }} and an {{ inv.agencies[1].measure }}.
+- **{{ inv.metrics.confirmed_security_floor.display }} is the confirmed security-level floor.** It combines a {{ treasury.measure }} and an {{ apers.measure }}.
 - **{{ inv.metrics.atrs_manager_funding.display }} is ATRS manager funding.** ATRS documented that amount funded to the Reams mandate; the reviewed files do not identify the mandate's security-level holdings.
 - **{{ inv.metrics.combined_tied_or_funded.display }} combines different measures.** It means {{ inv.metrics.confirmed_security_floor.display }} in confirmed securities plus {{ inv.metrics.atrs_manager_funding.display }} in manager funding. It is not a holdings total.
 - **The additional Treasury {{ inv.metrics.treasury_conditional_payment.display }} is conditional.** The payment report was marked “Processing By Bank”; the production does not document settlement or resulting ownership.

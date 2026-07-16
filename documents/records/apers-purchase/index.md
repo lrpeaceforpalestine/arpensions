@@ -12,10 +12,11 @@ asset_url: /assets/documents/apers-purchase-record-page-6925-masked.pdf
 ---
 
 {% assign inv = site.data.investigation %}
+{% assign apers = inv.agencies | where: "id", "apers" | first %}
 
 ## What the record establishes
 
-The page shows a purchase of **{{ inv.agencies[1].measure_display }}** dated October 15, 2025, with a beneficiary descriptor for the seller's wire-purchase account and a two-year bond CUSIP.
+The page shows a purchase of **{{ apers.measure_display }}** dated October 15, 2025, with a beneficiary descriptor for the seller's wire-purchase account and a two-year bond CUSIP.
 
 The amount is below the motion's stated range. The selected files do not resolve whether the purchase was intended as a first stage, the final amount, or an implementation requiring later Board treatment.
 

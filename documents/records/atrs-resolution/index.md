@@ -12,10 +12,11 @@ asset_url: /assets/documents/atrs-resolution-2025-22-pages-151-152.pdf
 ---
 
 {% assign inv = site.data.investigation %}
+{% assign atrs = inv.agencies | where: "id", "atrs" | first %}
 
 ## What the resolution establishes
 
-The Board authorized **{{ inv.agencies[2].authorization_display | replace: 'Up to', 'up to' }}**, approved Scout Investments through its Reams Asset Management division as manager, permitted a range of implementation vehicles, and authorized staff to proceed if acceptable terms were reached.
+The Board authorized **{{ atrs.authorization_display | replace: 'Up to', 'up to' }}**, approved Scout Investments through its Reams Asset Management division as manager, permitted a range of implementation vehicles, and authorized staff to proceed if acceptable terms were reached.
 
 The resolution is an authorization. The separate December funding record documents cash transferred to the manager account. Neither document, standing alone, identifies the account's security-level holdings.
 

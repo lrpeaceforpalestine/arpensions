@@ -7,6 +7,9 @@ breadcrumb: "Key Figures"
 ---
 
 {% assign inv = site.data.investigation %}
+{% assign treasury = inv.agencies | where: "id", "treasury" | first %}
+{% assign apers = inv.agencies | where: "id", "apers" | first %}
+{% assign atrs = inv.agencies | where: "id", "atrs" | first %}
 
 This page describes roles shown in the public record. Appearance in a chronology or correspondence network does not establish control, motive, or decision causation.
 
@@ -18,7 +21,7 @@ This page describes roles shown in the public record. Appearance in a chronology
 
 ### Arkansas Teacher Retirement System
 
-ATRS authorized {{ inv.agencies[2].authorization_display | replace: 'Up to', 'up to' }}, selected Reams as manager, and documented {{ inv.agencies[2].measure_display }} in manager funding. Executive Director **Mark White** administered the proposal; **Aon Hewitt Investment Consulting** advised on implementation and manager selection; **Reams Asset Management** received the mandate. Security-level holdings were not identified in the reviewed production.
+ATRS authorized {{ atrs.authorization_display | replace: 'Up to', 'up to' }}, selected Reams as manager, and documented {{ atrs.measure_display }} in manager funding. Executive Director **Mark White** administered the proposal; **Aon Hewitt Investment Consulting** advised on implementation and manager selection; **Reams Asset Management** received the mandate. Security-level holdings were not identified in the reviewed production.
 
 </article>
 
@@ -26,7 +29,7 @@ ATRS authorized {{ inv.agencies[2].authorization_display | replace: 'Up to', 'up
 
 ### Arkansas Public Employees Retirement System
 
-APERS approved a {{ inv.agencies[1].authorization_display }} range and later recorded a {{ inv.agencies[1].measure_display }} purchase. Executive Director **Amy Fecher** and Chief Investment Officer **Carlos Borromeo** appear in the governance and implementation record. The reviewed authorization file contains no Callan sovereign-credit memorandum tied to the decision.
+APERS approved a {{ apers.authorization_display }} range and later recorded a {{ apers.measure_display }} purchase. Executive Director **Amy Fecher** and Chief Investment Officer **Carlos Borromeo** appear in the governance and implementation record. The reviewed authorization file contains no Callan sovereign-credit memorandum tied to the decision.
 
 </article>
 
@@ -34,7 +37,7 @@ APERS approved a {{ inv.agencies[1].authorization_display }} range and later rec
 
 ### Arkansas State Treasury
 
-Treasury records establish a security-level floor of {{ inv.agencies[0].measure_display }} after a documented maturity. Senior Investment Officer **Steve Pulley** authored the October 2024 internal overview recommending HOLD and surveillance. A later {{ inv.transaction_figures.treasury_may_settled.display }} purchase settled; the reviewed files contain no identified written reconciliation with the recommendation.
+Treasury records establish a security-level floor of {{ treasury.measure_display }} after a documented maturity. Senior Investment Officer **Steve Pulley** authored the October 2024 internal overview recommending HOLD and surveillance. A later {{ inv.transaction_figures.treasury_may_settled.display }} purchase settled; the reviewed files contain no identified written reconciliation with the recommendation.
 
 </article>
 

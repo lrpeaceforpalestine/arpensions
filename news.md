@@ -6,6 +6,8 @@ permalink: /news/
 ---
 
 {% assign inv = site.data.investigation %}
+{% assign apers = inv.agencies | where: "id", "apers" | first %}
+{% assign atrs = inv.agencies | where: "id", "atrs" | first %}
 
 Each entry is a standalone account of the record or campaign milestone known at that date.
 
@@ -33,7 +35,7 @@ Selected ASHERS records document a DFA introduction and the sellers' pitch. No r
 
 ### February 27 — APERS transaction and governance production
 
-The APERS production included meeting records and a large correspondence package. The reviewed file documents a {{ inv.agencies[1].measure_display }} purchase and signed minutes for a {{ inv.agencies[1].authorization_display }} authorization. [See APERS records.](/documents/#a-curated-source-trail)
+The APERS production included meeting records and a large correspondence package. The reviewed file documents a {{ apers.measure_display }} purchase and signed minutes for a {{ apers.authorization_display }} authorization. [See APERS records.](/documents/#a-curated-source-trail)
 
 ### February 19 — Treasury payment-stage production
 
@@ -47,15 +49,15 @@ An ATRS Board liquidity update documented {{ inv.metrics.atrs_manager_funding.di
 
 ### October 15 — APERS purchase documented
 
-APERS's transaction file documents a {{ inv.agencies[1].measure }}. The purchase is below the authorization motion's stated minimum; the operational and legal effect remains unresolved. [Read the privacy-reviewed record.](/documents/records/apers-purchase/)
+APERS's transaction file documents a {{ apers.measure }}. The purchase is below the authorization motion's stated minimum; the operational and legal effect remains unresolved. [Read the privacy-reviewed record.](/documents/records/apers-purchase/)
 
 ### June 2 — ATRS authorization adopted
 
-ATRS adopted Resolution 2025-22, authorizing **{{ inv.agencies[2].authorization_display | replace: 'Up to', 'up to' }}** and naming Reams as manager. Aon's packet memorandum provides implementation and manager-selection advice while expressly withholding an invest-or-not or individual-security recommendation. [Read pages 149–150.](/documents/records/atrs-aon-memo/)
+ATRS adopted Resolution 2025-22, authorizing **{{ atrs.authorization_display | replace: 'Up to', 'up to' }}** and naming Reams as manager. Aon's packet memorandum provides implementation and manager-selection advice while expressly withholding an invest-or-not or individual-security recommendation. [Read pages 149–150.](/documents/records/atrs-aon-memo/)
 
 ### May 15 — APERS committee authorization adopted
 
-Signed minutes document an APERS Investment Finance Subcommittee motion for **{{ inv.agencies[1].authorization_display }}**. Jason Brady presented and moved the proposal, Jim Hudson seconded it, and the motion carried without dissent. [Read the minutes.](/documents/records/apers-authorization/)
+Signed minutes document an APERS Investment Finance Subcommittee motion for **{{ apers.authorization_display }}**. Jason Brady presented and moved the proposal, Jim Hudson seconded it, and the motion carried without dissent. [Read the minutes.](/documents/records/apers-authorization/)
 
 ### Spring — Investigation launched
 

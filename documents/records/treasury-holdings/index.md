@@ -12,10 +12,11 @@ asset_url: /assets/documents/treasury-holdings-june-2025-cropped.pdf
 ---
 
 {% assign inv = site.data.investigation %}
+{% assign treasury = inv.agencies | where: "id", "treasury" | first %}
 
 ## What the statement establishes
 
-The dated statement lists seven positions with a total current value of **{{ inv.transaction_figures.treasury_june_statement.display }}**. A separately documented February 1, 2026 maturity reduces the derived confirmed Treasury floor to **{{ inv.agencies[0].measure }}**.
+The dated statement lists seven positions with a total current value of **{{ inv.transaction_figures.treasury_june_statement.display }}**. A separately documented February 1, 2026 maturity reduces the derived confirmed Treasury floor to **{{ treasury.measure }}**.
 
 The May 2025 positions shown in this statement are also supported by a [settled purchase confirmation](/assets/documents/sovereign-bond-purchase-confirmation-may2025.pdf).
 

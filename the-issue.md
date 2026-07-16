@@ -6,6 +6,8 @@ permalink: /the-issue/
 ---
 
 {% assign inv = site.data.investigation %}
+{% assign apers = inv.agencies | where: "id", "apers" | first %}
+{% assign atrs = inv.agencies | where: "id", "atrs" | first %}
 
 <div class="issue-page" markdown="1">
 
@@ -31,7 +33,7 @@ The question is not whether a public fund may ever own such an instrument. The q
 
 {% include exposure-chart.html %}
 
-The combined pension authorization ceiling is **{{ inv.metrics.pension_authorization_ceiling.display }}**: {{ inv.agencies[2].authorization_display }} at ATRS and {{ inv.agencies[1].authorization_display }} at APERS. Authorization describes legal or board permission. It does not establish the amount of securities purchased or held.
+The combined pension authorization ceiling is **{{ inv.metrics.pension_authorization_ceiling.display }}**: {{ atrs.authorization_display }} at ATRS and {{ apers.authorization_display }} at APERS. Authorization describes legal or board permission. It does not establish the amount of securities purchased or held.
 
 The current security-level floor is **{{ inv.metrics.confirmed_security_floor.display }}**. Another **{{ inv.metrics.atrs_manager_funding.display }}** was funded to the ATRS Reams mandate, whose security-level holdings were not included in the reviewed production. These measures can be discussed together only when their different meanings remain visible.
 
@@ -49,7 +51,7 @@ Aon’s June 2 memorandum advises ATRS to use an investment manager, compares Bl
 
 ### APERS
 
-The APERS record documents the May authorization, seller materials, implementation correspondence, and an October 15, 2025 purchase. The reviewed authorization file contains no Callan sovereign-credit memorandum tied to the decision. APERS’s documented {{ inv.agencies[1].measure }} is below the motion’s stated range, leaving the motion’s operational effect unresolved.
+The APERS record documents the May authorization, seller materials, implementation correspondence, and an October 15, 2025 purchase. The reviewed authorization file contains no Callan sovereign-credit memorandum tied to the decision. APERS’s documented {{ apers.measure }} is below the motion’s stated range, leaving the motion’s operational effect unresolved.
 
 [Read the authorization](/documents/records/apers-authorization/) and [purchase record](/documents/records/apers-purchase/).
 

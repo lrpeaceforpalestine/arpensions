@@ -7,14 +7,15 @@ breadcrumb: "Key Findings"
 ---
 
 {% assign inv = site.data.investigation %}
+{% assign atrs = inv.agencies | where: "id", "atrs" | first %}
 
 ATRS's public record distinguishes two events that should not be collapsed into one number: authorization and funding of a managed account on one hand, and the manager's security-level transactions on the other.
 
 ## Authorization and implementation
 
-Resolution 2025-22 authorized **{{ inv.agencies[2].authorization_display | replace: 'Up to', 'up to' }}** for an Israel Bonds-associated mandate and selected Reams as manager. The September 2025 management agreement and November amendment describe a separate-account structure, a private-placement target, and an acknowledgement of illiquidity.
+Resolution 2025-22 authorized **{{ atrs.authorization_display | replace: 'Up to', 'up to' }}** for an Israel Bonds-associated mandate and selected Reams as manager. The September 2025 management agreement and November amendment describe a separate-account structure, a private-placement target, and an acknowledgement of illiquidity.
 
-On December 29, 2025, an ATRS Board update documented **{{ inv.agencies[2].measure_display }} in funding to the Scout/Reams mandate**. This establishes that ATRS transferred the authorized capital to the manager account. It does not, by itself, identify which securities Reams acquired, in what amounts, or on what dates.
+On December 29, 2025, an ATRS Board update documented **{{ atrs.measure_display }} in funding to the Scout/Reams mandate**. This establishes that ATRS transferred the authorized capital to the manager account. It does not, by itself, identify which securities Reams acquired, in what amounts, or on what dates.
 
 [Read the ATRS funding record](/documents/records/atrs-manager-funding/).
 

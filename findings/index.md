@@ -6,6 +6,9 @@ permalink: /findings/
 breadcrumb: "Key Findings"
 ---
 
+{% assign inv = site.data.investigation %}
+{% assign atrs = inv.agencies | where: "id", "atrs" | first %}
+
 These findings connect the transaction record to the procedures Arkansas public fiduciaries used. Each page separates what the files establish from what remains unresolved.
 
 <div class="findings-grid" markdown="1">
@@ -22,7 +25,7 @@ Aon's page 149 memorandum gives substantive implementation and manager-selection
 
 ## [ATRS Mandate Funding and the Holdings Record](/findings/oversight-gap/)
 
-ATRS documented **{{ site.data.investigation.agencies[2].measure_display }} in funding to Reams**. The produced files do not identify its security-level purchases, holdings, settlement dates, or deployment pace.
+ATRS documented **{{ atrs.measure_display }} in funding to Reams**. The produced files do not identify its security-level purchases, holdings, settlement dates, or deployment pace.
 
 </article>
 

@@ -6,6 +6,8 @@ permalink: /glossary/
 ---
 
 {% assign inv = site.data.investigation %}
+{% assign treasury = inv.agencies | where: "id", "treasury" | first %}
+{% assign apers = inv.agencies | where: "id", "apers" | first %}
 
 ## Investment and transaction terms
 
@@ -46,7 +48,7 @@ permalink: /glossary/
 
 ## Current amount vocabulary
 
-- **{{ inv.metrics.confirmed_security_floor.display }} security-level floor:** Treasury {{ inv.agencies[0].measure }} plus APERS {{ inv.agencies[1].measure }}.
+- **{{ inv.metrics.confirmed_security_floor.display }} security-level floor:** Treasury {{ treasury.measure }} plus APERS {{ apers.measure }}.
 - **{{ inv.metrics.atrs_manager_funding.display }} funded mandate:** ATRS funding to Reams; underlying holdings unproduced.
 - **{{ inv.metrics.combined_tied_or_funded.display }} securities plus funded mandate:** a transparent combination of different measures, not holdings.
 - **{{ inv.metrics.pension_authorization_ceiling.display }} authorization ceiling:** ATRS plus APERS maximum authorizations, not holdings.

@@ -7,8 +7,9 @@ breadcrumb: "Key Findings"
 ---
 
 {% assign inv = site.data.investigation %}
+{% assign atrs = inv.agencies | where: "id", "atrs" | first %}
 
-ATRS authorized **{{ inv.agencies[2].authorization_display | replace: 'Up to', 'up to' }}** for an Israel Bonds-associated mandate on June 2, 2025. The Board packet contains substantive advice from Aon about implementation and manager selection. It does not contain an Aon recommendation on whether ATRS should invest in the asset class or buy a particular security.
+ATRS authorized **{{ atrs.authorization_display | replace: 'Up to', 'up to' }}** for an Israel Bonds-associated mandate on June 2, 2025. The Board packet contains substantive advice from Aon about implementation and manager selection. It does not contain an Aon recommendation on whether ATRS should invest in the asset class or buy a particular security.
 
 That division is visible across the two rendered pages of Aon's memorandum.
 

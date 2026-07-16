@@ -7,6 +7,8 @@ evidence_toc: true
 ---
 
 {% assign inv = site.data.investigation %}
+{% assign apers = inv.agencies | where: "id", "apers" | first %}
+{% assign atrs = inv.agencies | where: "id", "atrs" | first %}
 
 <div class="evidence-page" markdown="1">
 
@@ -16,7 +18,7 @@ evidence_toc: true
 
 {% include exposure-chart.html %}
 
-The **{{ inv.metrics.pension_authorization_ceiling.display }} pension authorization ceiling** is a separate measure: {{ inv.agencies[2].authorization_display }} at ATRS and {{ inv.agencies[1].authorization_display }} at APERS. The ceiling should be used to describe board authority, not holdings or cash already deployed.
+The **{{ inv.metrics.pension_authorization_ceiling.display }} pension authorization ceiling** is a separate measure: {{ atrs.authorization_display }} at ATRS and {{ apers.authorization_display }} at APERS. The ceiling should be used to describe board authority, not holdings or cash already deployed.
 
 ## Agency-by-agency investment status {#agency-by-agency}
 
@@ -37,7 +39,7 @@ The **{{ inv.metrics.pension_authorization_ceiling.display }} pension authorizat
 <div class="analysis-matrix">
   <div class="analysis-matrix-row analysis-matrix-head"><strong>Institution</strong><span>Produced analytical material</span><span>Decision-record question</span></div>
   <div class="analysis-matrix-row"><strong>ATRS</strong><p>Aon implementation and manager comparison; Reams recommendation; marketability language; S&amp;P downgrade report elsewhere in the production.</p><p>How did trustees connect sovereign-credit and portfolio-fit evaluation to the invest-or-not decision, and what securities did Reams later acquire?</p></div>
-  <div class="analysis-matrix-row"><strong>APERS</strong><p>Authorization record, seller materials, operational correspondence, and the October purchase record.</p><p>What consultant or staff analysis supported the authorization, and how should the {{ inv.agencies[1].measure }} be understood against the stated authorization range?</p></div>
+  <div class="analysis-matrix-row"><strong>APERS</strong><p>Authorization record, seller materials, operational correspondence, and the October purchase record.</p><p>What consultant or staff analysis supported the authorization, and how should the {{ apers.measure }} be understood against the stated authorization range?</p></div>
   <div class="analysis-matrix-row"><strong>Treasury</strong><p>Internal overview summarizing downgrade concerns and recommending HOLD with continuing surveillance.</p><p>What written analysis or authority reconciled the later settled purchase with the identified recommendation?</p></div>
 </div>
 
@@ -56,7 +58,7 @@ The October 8, 2024 internal overview recommends holding the existing positions,
 - Reams monthly valuations, transaction reports, CUSIP-level holdings, and deployment dates after ATRS funded the mandate.
 - Any additional ATRS sovereign-credit or portfolio-fit work presented to trustees, including evidence of how the S&amp;P downgrade report was used.
 - Any Callan or APERS staff sovereign-credit memorandum tied to the May 2025 authorization.
-- APERS records clarifying whether the {{ inv.agencies[1].measure_display }} purchase was a first stage, a final amount, or an implementation requiring further board treatment.
+- APERS records clarifying whether the {{ apers.measure_display }} purchase was a first stage, a final amount, or an implementation requiring further board treatment.
 - Treasury records showing whether the February 2026 payment settled and produced a beneficial holding.
 - Any Treasury writing that superseded or reconciled the October 2024 HOLD recommendation.
 - Meeting-specific evidence resolving which scheduled Capitol-tour stops occurred and who attended.

@@ -12,10 +12,11 @@ asset_url: /assets/documents/apers-authorization-minutes-page-4.pdf
 ---
 
 {% assign inv = site.data.investigation %}
+{% assign apers = inv.agencies | where: "id", "apers" | first %}
 
 ## What the minutes establish
 
-The signed minutes identify Jason Brady introducing the proposal and making a motion to authorize APERS staff to invest **{{ inv.agencies[1].authorization_display }}**. Jim Hudson seconded the motion, which carried without dissent.
+The signed minutes identify Jason Brady introducing the proposal and making a motion to authorize APERS staff to invest **{{ apers.authorization_display }}**. Jim Hudson seconded the motion, which carried without dissent.
 
 The minutes are evidence of the stated authorization range. They are not evidence that the maximum was purchased.
 
