@@ -167,6 +167,12 @@ def audit_accessibility_contracts(audit: Audit) -> None:
     if "source=widget" in take_action or take_action.count("source=arpensions") < 2:
         audit.fail("conversion: Action Network attribution must consistently use source=arpensions")
 
+    privacy = (ROOT / "privacy.md").read_text(encoding="utf-8")
+    if "districtfinder.youraedi.com" not in privacy or "not to this website" not in privacy:
+        audit.fail("privacy: the external address-based District Finder needs a clear data boundary")
+    if "Arkansas Legislature's external District Finder" not in take_action or "does not receive it" not in take_action:
+        audit.fail("privacy: Take Action must identify the District Finder and the campaign data boundary")
+
     nav_js = (ROOT / "assets" / "js" / "nav.js").read_text(encoding="utf-8")
     if "nav-js" not in nav_js or "e.key === 'Tab'" not in nav_js or ".inert" not in nav_js:
         audit.fail("accessibility: mobile navigation lacks progressive enhancement or focus containment")

@@ -25,6 +25,8 @@ Messages sent to `info@arpensions.org` contain the information you choose to inc
 
 The site is published through GitHub Pages and loads limited presentation resources such as fonts and stylesheets from their named providers. External links take you to sites with their own privacy practices. The Action Network script is loaded only on the Take Action page.
 
+The [Arkansas Legislature](https://www.arkleg.state.ar.us/) links visitors to the external [District Finder](https://districtfinder.youraedi.com/). An address entered in that service goes to the District Finder, not to this website or Arkansans for Pension Integrity.
+
 ## Your choices
 
 For a question about campaign-held contact information, an update request, or a deletion request, email [info@arpensions.org](mailto:info@arpensions.org?subject=Privacy%20request) with the subject **Privacy request**. Include enough information for the campaign to identify the relevant submission without sending sensitive identification.

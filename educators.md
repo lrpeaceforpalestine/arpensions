@@ -46,7 +46,7 @@ The production also contains an S&P downgrade report elsewhere. The files do not
 ## What educators can do
 
 1. **Read the primary pages.** Start with the [Aon memorandum](/documents/records/atrs-aon-memo/) and [ATRS funding record](/documents/records/atrs-manager-funding/).
-2. **Ask your legislators to support the Integrity Act.** [Find your state senator and representative](https://districtfinder.youraedi.com/) and use the fund-specific letter below.
+2. **Ask your legislators to support the Integrity Act.** Use the [Arkansas Legislature's external District Finder](https://districtfinder.youraedi.com/) and the fund-specific letter below. The address you enter goes to that service; the campaign does not receive it.
 3. **Follow ATRS meetings.** Check the [ATRS calendar](https://www.artrs.gov/calendar) and ask how manager funding, underlying holdings, credit risk, and liquidity are reported to trustees and members.
 
 <div class="letter-template letter-template--compact" markdown="1">
