@@ -1,106 +1,95 @@
 ---
 layout: page
-title: "About — Our Investigation, Approach, and Frequently Asked Questions"
-description: "Public records. Arkansas law. Fiduciary accountability. That's the whole campaign."
+title: "About Arkansans for Pension Integrity"
+description: "An organization-led Arkansas campaign for public investment records, fiduciary process, and issuer-neutral pension safeguards."
 permalink: /about/
 header_image: /assets/images/about-highsmith-capitol-duotone-wide.jpg
-header_image_alt: "Arkansas State Capitol, Little Rock — Carol M. Highsmith, Library of Congress (public domain), rendered as a pine-and-mint duotone."
+header_image_alt: "Arkansas State Capitol in Little Rock, rendered in pine and mint tones."
+mobile_cta_label: "Volunteer with the campaign"
+mobile_cta_url: "/take-action/#volunteer"
 ---
 
-## Our mission
+{% assign inv = site.data.investigation %}
+{% assign treasury = inv.agencies | where: "id", "treasury" | first %}
+{% assign apers = inv.agencies | where: "id", "apers" | first %}
+{% assign atrs = inv.agencies | where: "id", "atrs" | first %}
 
-Arkansans for Pension Integrity (API) is a grassroots campaign using public records and Arkansas law to hold pension decision-makers accountable to the fiduciary standards they are required to follow. When investment decisions bypass independent analysis and override internal staff recommendations, pension beneficiaries deserve answers.
+## Our principle
+
+> **Public money deserves a public investment record.**
+
+Arkansans for Pension Integrity is a grassroots campaign using public records, financial analysis, and Arkansas law to make public pension decisions easier to examine. The campaign is organization-led and can be reached at [info@arpensions.org](mailto:info@arpensions.org).
+
+Arkansans for Pension Integrity continues campaign work begun under the name **Divest for AR Future**. The current legislative program is the issuer-neutral Pension Investment Integrity Act, which governs decision procedure rather than directing an investment outcome.
+
+## What we do
 
 <div class="approach-pillars" markdown="1">
 
-## Our approach
+**Review public records.** The current research baseline covers {{ inv.corpus.raw_files_display }} source files and {{ inv.corpus.pdf_pages_display }} PDF pages. We preserve agency productions, render every PDF page, and publish selected privacy-reviewed anchors with exact locators.
 
-We believe the strongest advocacy is built on evidence, not rhetoric. Our campaign rests on three pillars:
+**Separate evidence states.** Authorizations, manager funding, payments in process, settled purchases, and holdings are different facts. The site labels them separately and treats absence findings as bounded to a defined production.
 
-**Public records research.** We have filed four rounds of Freedom of Information Act requests — 12 requests across four rounds to eight state entities. Six are public pension systems: ATRS, APERS, ASHERS, ASPRS, AJRS, and LOPFI. Two are non-pension state offices included for the conduit and origin chain documented in the records: the State Treasury and the Auditor of State. We have analyzed more than 1,200 public records. All six pension systems have now responded. The sixth, AJRS (the Arkansas Judicial Retirement System), was sent a FOIA request on May 8, 2026, acknowledged same-day by APERS Staff Attorney Richmond Giles — the single attorney handling FOIA correspondence for both systems — and confirmed no responsive records in May 2026; AJRS commingles its investments with APERS under Act 1242. ASHERS (Arkansas State Highway Employees' Retirement System) delivered five documents in Round 3, revealing that the bond issuer's sales leadership pitched ASHERS through the same April 2025 tour but ASHERS declined to invest. ASPRS (Arkansas State Police Retirement System) confirmed no responsive documents — its assets are commingled with APERS under Act 1242 of 2009. LOPFI (Local Police and Fire Retirement System) confirmed no responsive records and no current holdings of the bonds under investigation (April 9, 2026); LOPFI manages its own investments independently with approximately $3.15 billion under management. Every claim we make is sourced from these documents and other public information. FOIA requests are a fundamental right under Arkansas law, and we exercise that right to ensure Arkansans can see how their pension dollars are being managed.
+**Advance issuer-neutral procedure.** {{ inv.legislation.full_summary }} It would not prescribe an investment outcome.
 
-**Fiduciary-first framing.** We lead with financial analysis and legal standards, not political arguments. Arkansas law requires that pension investments be made based solely on "pecuniary factors" — financial merit. That's the standard we hold decision-makers to. Our questions are straightforward: Was an independent credit analysis performed? Were internal staff recommendations followed? Does the investment process meet the prudent-investor standard? These are the questions the law requires pension fiduciaries to answer.
-
-**Coalition building.** Pension accountability isn't a partisan issue — it matters to every Arkansan whose retirement depends on sound investment decisions. We work to build a broad coalition of educators, public employees, retirees, and concerned taxpayers across the state. When 140,000 ATRS members and tens of thousands of APERS members have a shared interest in how their retirement savings are managed, the campaign for pension integrity becomes a shared cause.
+**Build public participation.** Educators, public employees, retirees, legislators, journalists, and other Arkansans should be able to see and discuss the financial record governing public retirement money.
 
 </div>
 
-<div class="issue-demands" markdown="1">
+## Organizational accountability
 
-## What we're asking for
+Research, publication, legislative advocacy, and public contact are conducted under the organization name **Arkansans for Pension Integrity**. The site's factual account is tied to cited public records; interpretive claims and unresolved questions are labeled. A participant's politics, office, or organizational relationship is context, not a substitute for evidence of authority or causation.
 
-Our asks are narrow, legislative, and rooted in existing Arkansas law:
+To challenge a locator, submit an alternate reading, request an accessible record, or provide a source, email [info@arpensions.org](mailto:info@arpensions.org?subject=Source%20or%20editorial%20question). Include the page, claim, and supporting record when possible. The site presents the strongest verified account supported by the current evidence model.
 
-1. **Pension integrity legislation** — Support the **Pension Investment Integrity Act** for the 2027 Arkansas legislative session, requiring independent credit analysis, consultant independence, liquidity risk disclosure, and documented financial rationale before pension boards commit members' retirement funds to non-tradable sovereign debt. [Read the full policy brief →](/legislators/)
-2. **Disclosure** — Publish the financial analysis that justifies these investments, comparing risk, return, and liquidity against comparable alternatives. [See the financial profile →](/glossary/)
-3. **Process review** — Document and explain how recent authorizations complied with Arkansas's pecuniary-only standard under Act 498 of 2023 and the established manager-driven investment process.
+Petition and contact-data practices are described in the [privacy notice](/privacy/).
 
-</div>
+## Campaign structure and coalition relationship
 
-<div class="faq-section" markdown="1">
+**Public responsibility.** Research, editorial decisions, legislative advocacy, and responses from this site are issued under the Arkansans for Pension Integrity name through its co-chair structure and organization-level contact. The campaign is not a pension system, broker-dealer, investment adviser, or government office.
+
+**Coalition route.** Little Rock Peace for Palestine, a Citizens First Congress member organization, brought the Pension Investment Integrity Act into the coalition process with Arkansans for Pension Integrity leading the campaign work. {{ inv.legislation.cfc_status }} Priority status does not make Citizens First Congress responsible for this website's research or wording.
+
+**Publication independence.** The site carries no advertising or paid placements. Claims are accepted, revised, or rejected according to the cited record and stated evidence boundaries, not a participant's office, affiliation, or political relationship.
+
+**Name and strategy.** Divest for AR Future began the campaign work. Arkansans for Pension Integrity names the current organization and its issuer-neutral legislative program: a reviewable fiduciary procedure rather than a direction to buy, hold, sell, or divest from a particular security.
+
+## Current evidence in one paragraph
+
+Arkansas records establish a {{ inv.metrics.confirmed_security_floor.display }} security-level floor: Treasury's derived {{ treasury.measure }} plus APERS's {{ apers.measure }}. ATRS separately documented {{ atrs.measure }}. An additional Treasury {{ inv.metrics.treasury_conditional_payment.display }} payment remained at the processing stage. The produced files contain implementation, manager-selection, marketability, and credit-related materials while leaving material questions about how sovereign-credit risk and portfolio fit were connected to each affirmative investment decision.
 
 ## Frequently asked questions
 
-<div class="faq-item" markdown="1">
+<div class="faq-section" markdown="1">
 
-**Isn't this about politics?**
+### Is {{ inv.metrics.combined_tied_or_funded.display }} a holdings total?
 
-No. This is about fiduciary duty and financial risk. Arkansas law requires that pension investments be made based on "pecuniary factors" — financial merit. Neither pension board produced an independent credit analysis before authorizing these purchases. The ATRS Board Chair dissented, warning the process departed from standard practice. Public officials celebrated the investment as a political statement rather than a financial one. And the State Treasurer's own senior investment staff had already flagged the credit risk in late 2024 — context the pension boards had every reason to weigh. There are legitimate questions about whether the law's fiduciary standard was met. We're asking those questions.
+No. It combines {{ inv.metrics.confirmed_security_floor.display }} in confirmed securities with {{ inv.metrics.atrs_manager_funding.display }} funded to an ATRS manager account. The underlying ATRS security holdings were not identified in the reviewed production.
 
-</div>
+### Is {{ inv.metrics.pension_authorization_ceiling.display }} the amount pension systems bought?
 
-<div class="faq-item" markdown="1">
+No. It is the combined maximum of two authorizations. APERS's confirmed purchase is {{ apers.measure }}; ATRS documented manager funding, not security-level holdings.
 
-**What investment are we investigating?**
+### What analytical material is in the record?
 
-Our investigation focuses on non-marketable foreign sovereign debt — bonds issued by a foreign government that cannot be sold on any secondary market. Unlike most bonds, pension funds that purchase these instruments are locked in until maturity, unable to exit the position if conditions change. All three major credit rating agencies (Moody's, S&P, and Fitch) have downgraded the issuing country's credit since 2024. For a detailed financial profile, see our [glossary](/glossary/). For the full fiduciary analysis, see our [issue explainer](/the-issue/).
+Aon provided substantive implementation and manager-selection advice to ATRS; Treasury produced a substantive internal credit overview; other materials address marketability and rating developments. The open question is how sovereign-credit risk and portfolio fit were evaluated and connected to each affirmative decision.
 
-</div>
+### Is the campaign asking pension funds to divest?
 
-<div class="faq-item" markdown="1">
+No. The legislative proposal requires a procedure and a public record. It does not direct a board to buy, hold, or sell a particular security.
 
-**Why does this matter for my pension?**
+### Are political relationships part of the investigation?
 
-Even though the sovereign bond allocations are a small percentage of each fund's total assets, the process concerns are significant. If investment decisions can be made through political channels — bypassing independent analysis and overriding internal staff recommendations — what stops it from happening again with a larger amount or a different investment? The fiduciary standards exist to protect your retirement from exactly this kind of decision-making.
+Yes, when documented. They provide context for access, advocacy, and information routes. The site does not treat chronology or political association as proof of investment causation.
 
-</div>
+### Can I review the source material?
 
-<div class="faq-item" markdown="1">
-
-**Are you calling for a boycott?**
-
-No. We are not asking pension boards to buy or sell any specific investment. We are asking the Arkansas legislature to require independent credit analysis before pension funds commit to non-tradable sovereign debt. The Pension Investment Integrity Act would establish the same documented due diligence standard for sovereign debt that already applies to other investment classes.
-
-</div>
-
-<div class="faq-item" markdown="1">
-
-**Is it legal to file FOIA requests and question state investment decisions?**
-
-Absolutely. Freedom of Information Act requests are a fundamental right under Arkansas law (Ark. Code § 25-19-101 et seq.). Asking elected officials and appointed trustees to account for their investment decisions is exactly what pension oversight laws are designed to enable. There is nothing unusual or adversarial about pension beneficiaries asking how their money is being managed.
-
-</div>
-
-<div class="faq-item" markdown="1">
-
-**How is this campaign funded?**
-
-Arkansans for Pension Integrity operates on a shoestring budget through small donations. We have no institutional funding and no paid staff. This is a volunteer-driven campaign.
-
-</div>
-
-<div class="faq-item" markdown="1">
-
-**How can I help?**
-
-[Take action today](/take-action/) — sign on in support, contact your legislators about the Pension Investment Integrity Act, attend a board meeting, or volunteer with the campaign.
-
-</div>
+Yes. Start with the [selected documents](/documents/), [evidence page](/evidence/), and [methodology](/methodology/). Contact [info@arpensions.org](mailto:info@arpensions.org?subject=Source%20question) for a locator or accessibility request.
 
 </div>
 
 ## Contact
 
-**Email:** [info@arpensions.org](mailto:info@arpensions.org)
-
-<p class="campaign-attribution">Arkansans for Pension Integrity (API) is a grassroots Arkansas campaign for pension integrity and fiduciary accountability.</p>
+**Arkansans for Pension Integrity**<br>
+[info@arpensions.org](mailto:info@arpensions.org)<br>
+[arpensions.org](https://arpensions.org)

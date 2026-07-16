@@ -11,13 +11,17 @@
 
       <nav class="footer-nav" aria-label="Footer site links">
         <a href="{{ '/evidence/' | relative_url }}">Evidence</a>
+        <a href="{{ '/findings/' | relative_url }}">Key Findings</a>
+        <a href="{{ '/key-figures/' | relative_url }}">Key Figures</a>
         <a href="{{ '/documents/' | relative_url }}">Documents</a>
         <a href="{{ '/the-issue/' | relative_url }}">The Issue</a>
+        <a href="{{ '/legislators/' | relative_url }}">Integrity Act</a>
         <a href="{{ '/take-action/' | relative_url }}">Take Action</a>
         <a href="{{ '/about/' | relative_url }}">About</a>
         <a href="{{ '/methodology/' | relative_url }}">Methodology</a>
         <a href="{{ '/glossary/' | relative_url }}">Glossary</a>
         <a href="{{ '/news/' | relative_url }}">Updates</a>
+        <a href="{{ '/privacy/' | relative_url }}">Privacy</a>
       </nav>
 
       <div class="footer-meta">
@@ -27,12 +31,11 @@
       </div>
     </div>
 
-    <!-- Editorial record stamp: 1,227 records obtained / 12 anchors cited.
-         The number, eyebrow and context all live inside the SVG; the img alt
-         text is the readable equivalent for assistive technology. -->
-    <div class="footer-record-band">
-      <img src="{{ '/assets/images/footer-1227-ticks.svg' | relative_url }}"
-           alt="1,227 public records obtained through Arkansas FOIA. 12 anchor documents cited across these pages.">
+    {% assign inv = site.data.investigation %}
+    <div class="footer-evidence-stamp" aria-label="Research baseline">
+      <span>PDF render gate</span>
+      <strong>{{ inv.corpus.pdf_pages_display }} PDF pages</strong>
+      <span>{{ inv.corpus.render_jobs_complete }}/{{ inv.corpus.render_jobs_total }} render jobs · completed {{ inv.review_completed | date: "%B %-d, %Y" }}</span>
     </div>
 
     <hr class="footer-rule" aria-hidden="true">

@@ -1101,8 +1101,7 @@ html {
 @media (max-width: 1023px) {
   .evidence-toc-sidebar {
     display: block;
-    position: sticky;
-    top: 3.5rem;
+    position: static;
     z-index: 50;
     background: var(--color-bg-page);
     border-bottom: 1px solid var(--color-border);
@@ -1119,7 +1118,7 @@ html {
   }
 
   .evidence-toc-toggle {
-    display: flex;
+    display: none;
     align-items: center;
     gap: 0.625rem;
     width: 100%;
@@ -1170,13 +1169,26 @@ html {
   }
 
   .evidence-toc-list {
-    display: none;
+    display: block;
     list-style: none;
     padding: 0 0 0.75rem;
     margin: 0;
   }
 
-  .evidence-toc-list--open {
+  .toc-js .evidence-toc-sidebar {
+    position: sticky;
+    top: 4.5rem;
+  }
+
+  .toc-js .evidence-toc-toggle {
+    display: flex;
+  }
+
+  .toc-js .evidence-toc-list {
+    display: none;
+  }
+
+  .toc-js .evidence-toc-list--open {
     display: block;
   }
 

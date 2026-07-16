@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<article class="source-record-page">
+  <header class="source-record-header">
+    <div class="container container-prose">
+      <p class="source-record-kicker">Selected primary record</p>
+      <h1>{{ page.title }}</h1>
+      <p class="source-record-deck">{{ page.description }}</p>
+      <dl class="source-record-details">
+        <div><dt>Agency</dt><dd>{{ page.source_agency }}</dd></div>
+        <div><dt>Record date</dt><dd><time datetime="{{ page.source_date }}">{{ page.source_date | date: "%B %-d, %Y" }}</time></dd></div>
+        <div><dt>Source file</dt><dd>{{ page.source_file }}</dd></div>
+        <div><dt>Locator</dt><dd>{{ page.source_locator }}</dd></div>
+        <div><dt>Publication treatment</dt><dd>{{ page.publication_treatment }}</dd></div>
+      </dl>
+      {% if page.asset_url %}<p><a class="btn btn-primary" href="{{ page.asset_url | relative_url }}">Open privacy-reviewed excerpt (PDF)</a></p>{% endif %}
+    </div>
+  </header>
+  <div class="container container-prose source-record-body">
+    {{ content }}
+  </div>
+</article>

@@ -1,0 +1,13 @@
+{% assign source = site.data.investigation.sources[include.source_id] %}
+{% if source %}
+<div class="record-citation">
+  <span class="record-citation__title">{{ source.title }}</span>
+  <span class="record-citation__locator">{{ source.agency }} · {{ source.date | date: "%B %-d, %Y" }} · {{ source.locator }}</span>
+  {% if source.record_url %}
+  <a href="{{ source.record_url | relative_url }}">View record</a>
+  {% else %}
+  {% capture request_subject %}Source request: {{ source.title }}{% endcapture %}
+  <a href="mailto:info@arpensions.org?subject={{ request_subject | url_encode }}">Request record</a>
+  {% endif %}
+</div>
+{% endif %}

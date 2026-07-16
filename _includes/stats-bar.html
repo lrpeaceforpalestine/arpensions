@@ -1,17 +1,21 @@
-<section class="stats-bar" aria-label="Key statistics">
+{% assign inv = site.data.investigation %}
+<section class="stats-bar" aria-label="Evidence status summary">
   <div class="container">
     <div class="stats-grid">
       <div class="stat">
-        <span class="stat-number" aria-label="$100 million" data-countup="100" data-countup-prefix="$" data-countup-suffix="M" data-countup-duration="1.5">$100M</span>
-        <span class="stat-label">Authorized pension fund exposure with no independent credit analysis required by law</span>
+        <span class="evidence-status evidence-status--established">established</span>
+        <span class="stat-number" aria-label="{{ inv.metrics.confirmed_security_floor.aria_label }}">{{ inv.metrics.confirmed_security_floor.display }}</span>
+        <span class="stat-label">{{ inv.metrics.confirmed_security_floor.detail }}</span>
       </div>
       <div class="stat">
-        <span class="stat-number" aria-label="3" data-countup="3" data-countup-duration="0.8">3</span>
-        <span class="stat-label">Major credit agencies (S&amp;P, Moody&rsquo;s, Fitch) downgraded the issuing country&rsquo;s sovereign rating since 2024</span>
+        <span class="evidence-status evidence-status--funded">funded mandate</span>
+        <span class="stat-number" aria-label="{{ inv.metrics.atrs_manager_funding.aria_label }}">{{ inv.metrics.atrs_manager_funding.display }}</span>
+        <span class="stat-label">{{ inv.metrics.atrs_manager_funding.detail }}</span>
       </div>
       <div class="stat">
-        <span class="stat-number" aria-label="0" data-countup="0" data-countup-duration="0.8">0</span>
-        <span class="stat-label">Independent credit analyses found in more than 1,200 FOIA documents</span>
+        <span class="evidence-status evidence-status--conditional">conditional</span>
+        <span class="stat-number" aria-label="{{ inv.metrics.treasury_conditional_payment.aria_label }}">{{ inv.metrics.treasury_conditional_payment.display }}</span>
+        <span class="stat-label">{{ inv.metrics.treasury_conditional_payment.detail }}</span>
       </div>
     </div>
   </div>

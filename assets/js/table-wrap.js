@@ -5,7 +5,7 @@
   function wrapTables() {
     var tables = document.querySelectorAll('.page-content table');
     tables.forEach(function (table) {
-      if (table.parentNode.classList.contains('table-scroll-wrapper')) return;
+      if (table.closest('.table-scroll, .table-scroll-wrapper')) return;
       var wrapper = document.createElement('div');
       wrapper.className = 'table-scroll-wrapper';
       table.parentNode.insertBefore(wrapper, table);

@@ -1,69 +1,71 @@
 ---
 layout: page
-title: "Our Methods — How We Conducted This Investigation"
-description: "1,227 documents. Six pension systems covered by Act 498. Four FOIA rounds (the fourth, to AJRS, returned a null result). Here's exactly how we did it."
+title: "Methodology — Render-Aware Public-Records Review"
+description: "How Arkansans for Pension Integrity reviews source files, rendered PDF pages, transaction states, and bounded absence findings."
 permalink: /methodology/
+breadcrumb: "Methodology"
+mobile_cta_label: "Question a finding"
+mobile_cta_url: "mailto:info@arpensions.org?subject=Methodology%20or%20source%20question"
 ---
 
-Transparency about our own methods is as important as the transparency we demand from pension fund managers. Here's exactly how this investigation was conducted.
+{% assign inv = site.data.investigation %}
 
-<span class="section-label">Data collection</span>
+## Research baseline
 
-## Public Records Requests
+The current investigation baseline covers **{{ inv.corpus.raw_files_display }} raw files** and **{{ inv.corpus.pdf_pages_display }} PDF pages**. All {{ inv.corpus.render_jobs_total }} PDF render jobs are complete. The transaction-record cutoff used for the site's amount ledger is {{ inv.record_cutoff | date: "%B %-d, %Y" }}; the PDF render gate was completed {{ inv.review_completed | date: "%B %-d, %Y" }}.
 
-We filed <span class="font-mono">12</span> Freedom of Information Act (FOIA) requests across <span class="font-mono">4</span> rounds to <span class="font-mono">8</span> Arkansas state entities: the State Treasury, the Arkansas Teacher Retirement System (ATRS), the Arkansas Public Employees' Retirement System (APERS), the Auditor of State's office, the Arkansas State Highway Employees' Retirement System (ASHERS), the Arkansas State Police Retirement System (ASPRS), the Local Police and Fire Retirement System (LOPFI), and the Arkansas Judicial Retirement System (AJRS).
+## Source preservation
 
-Our requests targeted investment decision records, board meeting materials, correspondence with bond issuers, credit analyses, and internal memoranda related to the sovereign bond purchases under investigation.
+Agency productions are retained as received. File hashes, paths, page counts, duplicates, variants, and extraction outputs are tracked separately. Publication excerpts are derivative copies; privacy masking never changes the preserved source.
 
-<span class="section-label">Processing pipeline</span>
+## Text and visual review
 
-## Document Processing
+PDF text extraction is a locator aid, not a substitute for seeing the page. The review process combines:
 
-We received <span class="font-mono">1,227</span> documents totaling over <span class="font-mono">4.5</span> gigabytes across four rounds of FOIA requests — three of which produced documents; the fourth, to AJRS, returned a null result. Round 1 (August–October 2025) produced 957 documents from four agencies. Round 2 (February–March 2026) added 265 documents from four agencies (Treasury: 118; APERS: 16; ATRS: 7; Auditor: 124). Round 3 (March 2026) added 5 documents from ASHERS; ASPRS confirmed no responsive records; LOPFI confirmed no responsive records and no current holdings of the bonds under investigation (April 9, 2026). Round 4 (May 2026) added a FOIA request to AJRS — acknowledged May 8, 2026 by Richmond Giles, APERS Staff Attorney, with production deadline extended to May 15, 2026. AJRS — identified May 8, 2026 as the sixth pension system covered by Act 498, and commingled with APERS under Act 1242 — confirmed no responsive records (May 15 and May 18, 2026). All six pension systems have now responded. Every document was:
+1. file inventory, hashing, and duplicate or variant reconciliation;
+2. native text extraction and OCR where useful;
+3. full-page rendering at readable resolution;
+4. visual inspection of pages classified as blank, empty, image-only, low-text, or relevant to an absence finding;
+5. comparison of cited page numbers with the rendered original; and
+6. propagation of supported facts and boundaries into the site's evidence model.
 
-1. **Cataloged** with metadata including source agency, date, document type, and FOIA request number
-2. **Processed** using optical character recognition (OCR) where necessary to make scanned documents searchable
-3. **Deduplicated** to identify and flag documents received from multiple agencies
-4. **Cross-referenced** to connect people, organizations, dollar amounts, and events across documents from different agencies
+This method is essential for pages whose substantive content is carried as vectors, images, overlays, or other elements ordinary extraction does not recover.
 
-<span class="section-label">Verification system</span>
+## Transaction states
 
-## Fact Registry
+The site distinguishes authorization, manager funding, payment processing, settlement, and security ownership. One state does not automatically prove the next.
 
-Every factual claim in our evidence materials traces back to a specific source document, page number, and verbatim quote. We maintain a structured database of verified facts extracted from the source documents — not summaries or interpretations, but direct extractions with full citations.
+- A board authorization is a ceiling or permission.
+- Manager funding documents cash transferred to an investment account.
+- A payment marked processing documents an operational step.
+- Settlement evidence documents a completed transaction.
+- A holdings statement documents a position as of its stated date.
 
-<div class="key-finding" markdown="1">
+Amounts on the site are assigned to these states in [`_data/investigation.yml`](https://github.com/divestforARfuture/arpensions/blob/main/_data/investigation.yml), the canonical public evidence model.
 
-**Two-hop citation chain:** Source Document → Fact Registry → Published Finding. Every factual claim traces back to a specific source document, page number, and verbatim quote. No AI-generated analysis is used as source material.
+## Bounded absence findings
 
-</div>
+Each principal absence finding identifies its searched corpus, record type, custodian, date range, and method. “Not identified in the reviewed production” does not mean a record never existed, an oral discussion never occurred, or no responsive material exists elsewhere.
 
-<span class="section-label">Standards</span>
+Audio transcripts and OCR are treated as search indices. A no-match result is reported as no identified topic match, not proof of exhaustive silence.
 
-## What We Don't Do
+The principal absence findings publish those dimensions in a **Search boundary** box so readers can see the exact corpus, record types, method, result, and limiting statement beside the claim.
 
-<div class="approach-pillars" markdown="1">
+## Evidence labels
 
-**We do not speculate beyond what the documents show.** Our findings state what the record contains and what it lacks — not what officials were thinking or what might have happened off the record.
+| Label | Use |
+|---|---|
+{% for status in inv.status_labels %}| **{{ status[0] | replace: '_', ' ' }}** | {{ status[1] }} |
+{% endfor %}
 
-**We do not use AI-generated analysis as source material.** All factual claims trace to human-readable government documents through a verified citation chain.
+## Privacy and publication
 
-**We do not cherry-pick.** We acknowledge gaps in the documentary record and identify them explicitly. Where agencies have provided exculpatory or contextualizing information, we include it.
+Before an excerpt is hosted, it is checked for account data, transaction and user identifiers, direct contact information, signatures where unnecessary, and operational details. Campaign masks are disclosed on the record page. Page crops preserve enough context to verify the finding while omitting unrelated sensitive material.
 
-</div>
+## Interpretation
 
-<span class="section-label">Caveats</span>
+The project separates chronology from causation, organizational context from investment authority, and legal questions from adjudicated conclusions. Political advocacy and institutional relationships are reported when documented; claims about motive, control, statutory application, or investment merit are made only when the record supports them and are otherwise labeled interpretive or unresolved.
 
-## Limitations
+## Reproduce or question a finding
 
-<div class="callout" markdown="1">
-
-**Important:** Our evidence is limited to what agencies have provided through FOIA, and agencies may hold responsive documents that were not included in their responses. Where we identify gaps, we note them and file follow-up requests.
-
-</div>
-
-Some documents in Round 2 responses — including six sets of APERS board and committee meeting minutes, four Treasury custodial statements (1,561 pages combined), and two ATRS sign-in sheets — were received as scanned images that yielded no extractable text. These documents are prioritized for optical character recognition processing. Until they are recovered, findings from these meetings rely on board packets and other corroborating documents rather than official minutes.
-
-## Verify Our Work
-
-We encourage journalists, researchers, and officials to verify any claim we make. Our [evidence page](/evidence/) cites specific documents for each finding. Our [documents archive](/documents/) provides access to key source materials. For questions about specific claims or methodology, contact us at [info@arpensions.org](mailto:info@arpensions.org).
+Use the [selected document trail](/documents/) and exact locators on each record page. For a source question, alternate reading, or accessibility request, contact [info@arpensions.org](mailto:info@arpensions.org?subject=Methodology%20or%20source%20question).

@@ -1,0 +1,10 @@
+---
+layout: null
+permalink: /assets/data/current-facts.csv
+---
+measure,status,value,description,record_cutoff
+confirmed_security_floor,{{ site.data.investigation.metrics.confirmed_security_floor.status }},{{ site.data.investigation.metrics.confirmed_security_floor.display }},"{{ site.data.investigation.metrics.confirmed_security_floor.detail }}",{{ site.data.investigation.record_cutoff }}
+atrs_manager_funding,{{ site.data.investigation.metrics.atrs_manager_funding.status }},{{ site.data.investigation.metrics.atrs_manager_funding.display }},"{{ site.data.investigation.metrics.atrs_manager_funding.detail }}",{{ site.data.investigation.record_cutoff }}
+combined_tied_or_funded,{{ site.data.investigation.metrics.combined_tied_or_funded.status }},{{ site.data.investigation.metrics.combined_tied_or_funded.display }},"{{ site.data.investigation.metrics.combined_tied_or_funded.detail }}",{{ site.data.investigation.record_cutoff }}
+treasury_conditional_payment,{{ site.data.investigation.metrics.treasury_conditional_payment.status }},{{ site.data.investigation.metrics.treasury_conditional_payment.display }},"{{ site.data.investigation.metrics.treasury_conditional_payment.detail }}",{{ site.data.investigation.record_cutoff }}
+pension_authorization_ceiling,{{ site.data.investigation.metrics.pension_authorization_ceiling.status }},{{ site.data.investigation.metrics.pension_authorization_ceiling.display }},"{{ site.data.investigation.metrics.pension_authorization_ceiling.detail }}",{{ site.data.investigation.record_cutoff }}

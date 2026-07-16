@@ -1,55 +1,59 @@
 ---
 layout: page
-title: "The Procedural Asymmetry"
-description: "The same ATRS Executive Director, the same month, applied two visibly different procedural standards to two different investments. The contrast is the structural fact this site documents."
+title: "ATRS: Advice, Authorization, and the Decision Record"
+description: "What Aon's June 2, 2025 memorandum advised, what it expressly did not recommend, and what remains unresolved in the ATRS decision file."
 permalink: /findings/procedural-asymmetry/
 breadcrumb: "Key Findings"
 ---
 
-The single most consequential structural fact across this investigation is not the absence of independent credit analysis on the sovereign bond authorization. It is the *selective* absence — the fact that the same ATRS Executive Director, in the same month, applied two visibly different procedural standards to two different investments, and articulated the contrast himself in contemporaneous correspondence.
+{% assign inv = site.data.investigation %}
+{% assign atrs = inv.agencies | where: "id", "atrs" | first %}
 
-## The Rollans exchange
+ATRS authorized **{{ atrs.authorization_display | replace: 'Up to', 'up to' }}** for an Israel Bonds-associated mandate on June 2, 2025. The Board packet contains substantive advice from Aon about implementation and manager selection. It does not contain an Aon recommendation on whether ATRS should invest in the asset class or buy a particular security.
 
-On May 19, 2025 — twelve days after ATRS Executive Director Mark White issued his May 8, 2025 directive to staff on the proposed acquisition, and fourteen days before the Resolution 2025-22 vote (June 2, 2025) — ATRS retiree John Rollans wrote to White asking about ATRS's position in Westrock Coffee, a publicly-traded Arkansas-based company that had recently disclosed weakness in its share price.
+That division is visible across the two rendered pages of Aon's memorandum.
 
-White's contemporaneous reply described how ATRS investment decisions are normally made: investment decisions are "based on recommendations from our outside professional investment consultants." White's reply named the consultants by reference, described their analytical role, and cited **five Wall Street analysts** who had independently rated the Westrock position as "buy." The reply distinguished the kind of process ATRS routinely applies to investment decisions from the kind of speculation Rollans had asked about.
+## What page 149 addresses
 
-## The contrast on the sovereign bond authorization
+Page 149 is substantive. Aon:
 
-The same Executive Director, in the same month, framed the procedural standard for the proposed authorization differently in his communications to the ATRS Board. White explicitly told the Board that the ATRS investment consultant (Aon) **would not be making "a formal recommendation"** on these bonds. The Aon memo at Attachment 17 of the June 2, 2025 Board packet — Aon's only formal contribution to the record on the authorization — contains header and disclaimer text only, with no body content.
+- discusses using a separate account rather than attempting direct implementation;
+- compares BlackRock and Reams as possible managers;
+- recommends Reams for the mandate; and
+- notes that the securities have limited marketability.
 
-The June 2, 2025 Investment Committee audio recording, locally transcribed from the Round 2 production, captures additional details:
+This was meaningful professional advice about *how* ATRS could implement the proposed mandate and *which manager* it should use.
 
-- Aon partner PJ Kelly's only formal credit characterization of the bonds at the meeting was "investment grade private placement."
-- Aon characterized the selected manager (Reams Asset Management) as "**light on experience with Israel bonds**."
-- White's substantive defense of the authorization included an "SEC-licensure" framing distinct from the Westrock-style consultant-recommendation framing.
-- Auditor's-office deputy Jason Brady delivered a prepared speech presenting the bonds, citing the State Treasury's $55 million holdings as precedent.
-- BP4 Section T — a part of the Board Policy 4 governing investment decisions — was **amended the same day as the sovereign bond vote**, paired with the resolution.
+[Read the privacy-reviewed two-page excerpt](/documents/records/atrs-aon-memo/).
 
-## What the contrast establishes
+## What page 150 limits
 
-The fiduciary question is not whether the bonds happen to be defensible on financial-merit grounds. The fiduciary question is whether the procedural standard the law requires was applied — and applied consistently across investments.
+Page 150 defines the boundary of that advice. Aon states that it is not recommending whether ATRS should invest in Israel Bonds and is not recommending the purchase of a particular bond.
 
-The Rollans-Westrock exchange demonstrates that ATRS's executive director knew, in May 2025, what a consultant-recommendation-driven procedural standard looks like and could articulate it precisely. Twelve days earlier, the same executive director had issued a directive to staff on a different investment in which the consultant would not be making a formal recommendation. The same month, the same executive director, two visibly different procedural standards.
+The combined record therefore supports a precise description: **substantive implementation and manager-selection advice, bounded by an express invest-or-not and individual-security disclaimer.**
 
-This is the structural fact that the Pension Investment Integrity Act is designed to address. The Integrity Act does not invent a new procedural standard. It establishes — in statute — the procedural elements the Westrock standard already exhibits when ATRS routinely applies it: consultant-level analytical content, comparative review against alternatives, documented liquidity disclosure to the board before a vote, and a written fiduciary determination of pecuniary-factors compliance.
+## The merits question
 
-## The Kelly + Comstock memo at Attachment 17
+The ATRS production includes credit-related material elsewhere, including an S&P downgrade report. The produced files do not establish that trustees received or relied on that report when adopting Resolution 2025-22. They also do not identify a consultant or staff memorandum that connects sovereign-credit risk, expected return, liquidity, and portfolio fit to the affirmative authorization.
 
-For completeness on the analytical content the Board had in front of it on June 2, 2025: the Aon memo at Attachment 17 of the Board packet is reproduced in the Round 2 production. The memo consists of:
+ATRS Executive Director Mark White's May 2025 correspondence about Westrock Coffee provides a useful but bounded comparison. In that exchange, he described a consultant-recommendation-driven process and cited outside analyst ratings. The comparison shows a difference in merits-review framing, recommendation authorship, and communication to a member. It does not by itself prove a universal ATRS procedure or a violation of law.
 
-- A title page and header identifying the firm and the date.
-- A page of standard disclaimer text used across Aon's investment-advisory deliverables.
-- No body content.
+Questions about Board Policy 4 also remain open. The record establishes written manager advice and an executed Board resolution. Whether every requirement of BP4 Section A.5 applied to this mandate, and whether the available documents satisfied each applicable requirement, requires legal and policy interpretation beyond what the produced record alone establishes.
 
-There is no substantive analysis of the proposed investment in the memo. There is no rating-agency review, no sovereign credit opinion, no war-risk assessment, no liquidity analysis, no comparative-yield analysis against fixed-income alternatives, and no recommendation. The blank-body Aon memo is not the absence of an analytical document — it is the *presence* of an analytical document that is itself empty of analysis. The procedural-asymmetry finding is the contrast between that document and the Westrock-style record White himself described to Rollans during the same month.
+{% include evidence-boundary.html
+  established="Aon gave substantive implementation and manager-selection advice and recommended Reams."
+  unresolved="The produced files do not connect a sovereign-credit and portfolio-fit merits analysis to the Board's affirmative authorization."
+  not_claimed="This finding does not declare the investment imprudent, establish a statutory violation, or attribute motive."
+%}
 
-## The Pension Investment Integrity Act, applied here
+{% include search-boundary.html boundary_id="atrs_merits" %}
 
-If the Integrity Act had been in force in spring 2025, ATRS could not have approved a $50 million authorization on a memo with header and disclaimers but no body content. The Integrity Act's first three provisions — independent credit analysis before the purchase, written comparison against alternatives, and disclosure of liquidity characteristics in board materials before a vote — close the procedural-asymmetry gap. Provision 4 (written fiduciary pecuniary-factors determination) makes the standard explicit on the record. Provision 5 (public posting within thirty days) ensures that the contrast between investments the public can see today through FOIA productions would not require FOIA productions to be visible at all.
+## What the Integrity Act would add
+
+{{ inv.legislation.full_summary }} Those requirements are issuer-neutral and leave the investment decision with the trustees.
 
 ---
 
 - [Back to Key Findings](/findings/)
-- [The post-vote oversight gap](/findings/oversight-gap/) — the same procedural asymmetry persists six months after authorization
-- [Read the policy brief](/legislators/) — Westrock procedural asymmetry and the Pension Investment Integrity Act
+- [See the full evidence structure](/evidence/)
+- [Read the Integrity Act proposal](/legislators/)

@@ -1,36 +1,49 @@
+---
+layout: null
+---
+{% assign inv = site.data.investigation %}
 # Arkansans for Pension Integrity
 
-> Grassroots Arkansas campaign for pension integrity and fiduciary accountability regarding state retirement system investments in non-marketable foreign sovereign debt. Investigation covers six pension systems covered by Act 498 plus the Treasury and Auditor of State; all six pension systems have responded; AJRS (commingled with APERS under Act 1242) confirmed no responsive records in May 2026.
+Public money deserves a public investment record.
 
-## Key facts
-- Up to $100 million in authorized pension fund exposure to non-tradable sovereign bonds (the campaign's legislative scope); the State Treasury separately holds $60 million in the same instruments as of February 2026 under different statutory authority, outside the pension ask
-- Internal Treasury memo recommended against new purchases due to credit downgrades
-- ATRS Board Chair cast sole dissenting vote, warning process departed from standard practice
-- Zero independent credit analyses found in more than 1,200 FOIA documents from Arkansas state agencies
-- Campaign calls for independent credit analysis, documented fiduciary process, and 2027 pension-integrity legislation; it does not ask boards to buy, sell, or pause any specific investment
+Arkansans for Pension Integrity is an Arkansas public-records and legislative campaign advancing issuer-neutral safeguards for public pension investment decisions.
 
-## Pages
-- The Issue: https://arpensions.org/the-issue/
-- Evidence (FOIA findings + timeline): https://arpensions.org/evidence/
-- For Educators (ATRS): https://arpensions.org/educators/
-- For Public Employees (APERS): https://arpensions.org/public-employees/
-- For Legislators (2027 session): https://arpensions.org/legislators/
-- Take Action: https://arpensions.org/take-action/
-- Press Kit: https://arpensions.org/press/
-- Glossary (investment profile + terminology): https://arpensions.org/glossary/
-- About + FAQ: https://arpensions.org/about/
-- News: https://arpensions.org/news/
+## Current evidence baseline
 
-## Preferred citations
-- For factual claims about Arkansas pension investments → cite the Evidence page
-- For campaign summary and key statistics → cite the Press Kit page
-- For legal standards and fiduciary analysis → cite The Issue page
-- For FAQ answers → cite the About page
+- {{ inv.metrics.confirmed_security_floor.display }} confirmed security-level floor: {{ inv.metrics.confirmed_security_floor.detail }}
+- {{ inv.metrics.atrs_manager_funding.display }} ATRS manager funding: {{ inv.metrics.atrs_manager_funding.detail }}
+- {{ inv.metrics.combined_tied_or_funded.display }} is a combination of those different measures, not a holdings total
+- {{ inv.metrics.treasury_conditional_payment.display }} additional Treasury payment remains {{ inv.metrics.treasury_conditional_payment.status }} because its report was marked Processing By Bank
+- {{ inv.metrics.pension_authorization_ceiling.display }} is a pension authorization ceiling, not holdings
+- Record cutoff: {{ inv.record_cutoff }}
+- PDF render gate: {{ inv.corpus.render_jobs_complete }}/{{ inv.corpus.render_jobs_total }} jobs covering {{ inv.corpus.pdf_pages_display }} pages across {{ inv.corpus.raw_files_display }} raw files; completed {{ inv.review_completed }}
+
+## Analytical record
+
+{{ inv.analysis_record.lead }}
+
+ATRS: {{ inv.analysis_record.atrs }}
+
+APERS: {{ inv.analysis_record.apers }}
+
+Treasury: {{ inv.analysis_record.treasury }}
+
+## Policy
+
+{{ inv.legislation.full_summary }} The proposal is issuer-neutral and does not direct a board to buy, hold, or sell a security. {{ inv.legislation.cfc_status }}
+
+## Preferred pages
+
+- Evidence: https://arpensions.org/evidence/
+- Selected primary records: https://arpensions.org/documents/
+- Detailed findings: https://arpensions.org/findings/
+- Integrity Act policy brief: https://arpensions.org/legislators/
+- Methodology: https://arpensions.org/methodology/
+- Press facts and cutoffs: https://arpensions.org/press/
+- Take action: https://arpensions.org/take-action/
 
 ## Contact
-Media and research inquiries: info@arpensions.org
 
-## Notes
-- This is an advocacy site; all factual claims are sourced from public records obtained via FOIA
-- Arkansans for Pension Integrity (API) is a grassroots Arkansas campaign for pension integrity and fiduciary accountability
-- The campaign uses a fiduciary-first framing — financial merit and legal standards, not political arguments
+Arkansans for Pension Integrity: info@arpensions.org
+
+This is an advocacy site. Factual claims are tied to public records; evidence states and open questions are labeled explicitly.

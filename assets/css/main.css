@@ -508,11 +508,26 @@ hr {
   margin-block: 3rem;
 }
 
-/* === Table Overflow — Fallback for JS wrapper === */
+/* === Table Overflow — preserve the table accessibility tree === */
 .container-prose table {
+  width: 100%;
+  max-width: 100%;
+  table-layout: fixed;
+}
+
+body > header {
+  padding: 0;
+}
+
+.container-prose th,
+.container-prose td {
+  overflow-wrap: anywhere;
+}
+
+.table-scroll,
+.table-scroll-wrapper {
   max-width: 100%;
   overflow-x: auto;
-  display: block;
 }
 
 /* === Breakout classes — escape the prose column within the grid ===
@@ -626,6 +641,7 @@ hr {
 .nav-links > li {
   display: flex;
   align-items: center;
+  padding: 0;
 }
 
 .nav-links a {
@@ -689,12 +705,43 @@ hr {
 
 /* Mobile — full-screen overlay nav */
 @media (max-width: 768px) {
-  .nav-toggle {
+  .site-nav .container {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .nav-logo { order: 1; }
+  .nav-end { order: 2; margin-left: auto; }
+
+  .nav-links {
+    display: flex;
+    position: static;
+    flex: 1 0 100%;
+    order: 3;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.1rem 0.35rem;
+    margin: 0;
+    padding: 0.35rem 0 0;
+    background: transparent;
+  }
+
+  .nav-links a {
+    padding: 0.35rem 0.5rem;
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+  }
+
+  .nav-js .site-nav .container { flex-wrap: nowrap; gap: 1.5rem; }
+
+  .nav-js .nav-toggle {
     display: inline-flex;
     align-items: center;
   }
 
-  .nav-links {
+  .nav-js .nav-links {
     display: none;
     position: fixed;
     inset: 0;
@@ -709,12 +756,12 @@ hr {
     overflow-y: auto;
   }
 
-  .nav-links.nav-open {
+  .nav-js .nav-links.nav-open {
     display: flex;
   }
 
   @media (prefers-reduced-motion: no-preference) {
-    .nav-links.nav-open {
+    .nav-js .nav-links.nav-open {
       animation: navFadeIn 0.25s ease-out;
     }
   }
@@ -724,7 +771,7 @@ hr {
     to { opacity: 1; }
   }
 
-  .nav-links a {
+  .nav-js .nav-links a {
     font-family: var(--font-display);
     font-size: 1.5rem;
     font-weight: 500;
@@ -733,8 +780,8 @@ hr {
     padding: 0.5rem 0.75rem;
   }
 
-  .nav-links a:hover,
-  .nav-links a[aria-current="page"] {
+  .nav-js .nav-links a:hover,
+  .nav-js .nav-links a[aria-current="page"] {
     color: var(--api-jade-bright);
     border-bottom-color: var(--api-jade-bright);
   }
@@ -1407,6 +1454,7 @@ hr {
 }
 
 /* --- Responsive Tables --- */
+.table-scroll,
 .table-scroll-wrapper {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -1700,6 +1748,7 @@ blockquote footer {
   padding-top: 1rem;
   border-top: 1px solid var(--border-default);
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 0.75rem;
 }
@@ -2204,6 +2253,7 @@ blockquote footer {
 
 /* --- Copy to Clipboard Button --- */
 .copy-letter-btn {
+  display: none;
   position: absolute;
   top: 0.75rem;
   right: 0.75rem;
@@ -2221,6 +2271,8 @@ blockquote footer {
   line-height: 1;
   z-index: 1;
 }
+
+.copy-js .copy-letter-btn { display: inline-block; }
 
 .copy-letter-btn:hover {
   background: var(--accent-cta);
@@ -2544,9 +2596,25 @@ blockquote footer {
 }
 
 @media (max-width: 600px) {
-  .audience-nav-list {
-    justify-content: flex-start;
+  .audience-nav .container {
+    overflow-x: visible;
   }
+
+  .audience-nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .audience-nav-list a {
+    padding: 0.65rem 0.7rem;
+    text-align: center;
+    white-space: normal;
+  }
+}
+
+.nav-end .theme-toggle-btn {
+  margin: 0;
 }
 
 /* === Directional Page Flow === */
@@ -2581,7 +2649,7 @@ blockquote footer {
 }
 
 .theme-toggle-btn {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   width: 40px;
@@ -2593,6 +2661,10 @@ blockquote footer {
   color: var(--text-secondary);
   cursor: pointer;
   transition: color 0.15s, background-color 0.15s, border-color 0.15s;
+}
+
+.nav-js .theme-toggle-btn {
+  display: flex;
 }
 
 .theme-toggle-btn:hover {
@@ -3415,12 +3487,53 @@ html.theme-transition *::after {
 #can_embed_form input::placeholder {
   color: var(--text-muted);
 }
+
+/* Action Network replaces the country selector with a custom control and
+   writes page-relative coordinates onto the transparent native select.
+   Anchor that hit target to its own responsive wrapper so it cannot widen
+   a narrow viewport after the embed initializes. */
+#can_embed_form .js-country_drop_wrap,
+#can_embed_form .js-country_drop_wrap .relative {
+  display: block !important;
+  width: 100%;
+  max-width: 100%;
+}
+
+#can_embed_form .js-country_drop_wrap .relative {
+  position: relative !important;
+}
+
+#can_embed_form #form-country {
+  top: 0 !important;
+  right: auto !important;
+  left: 0 !important;
+  max-width: 100% !important;
+}
+
+#can_embed_form .js-country_drop_wrap .can_select,
+#can_embed_form .js-country_drop_wrap .can_selectInner {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
 #can_embed_form input:focus,
 #can_embed_form select:focus,
 #can_embed_form textarea:focus {
   outline: none;
   border-color: var(--accent);
   box-shadow: 0 0 0 2px var(--accent);
+}
+
+/* The Action Network country control visually replaces a transparent native
+   select. Carry the native select's focus state onto the visible control. */
+#can_embed_form #form-country:focus + .can_select .can_selectInner,
+#can_embed_form #form-country:focus-visible + .can_select .can_selectInner,
+#can_embed_form .js-country_drop_wrap:focus-within .can_selectInner,
+#can_embed_form .can_select.can_selectFocus .can_selectInner {
+  border-color: var(--accent) !important;
+  outline: 3px solid var(--accent) !important;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--bg-primary) !important;
 }
 /* Submit — matches .btn-primary (brand CTA) */
 #can_embed_form input[type="submit"],

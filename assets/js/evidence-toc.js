@@ -4,6 +4,8 @@
 (function () {
   'use strict';
 
+  document.documentElement.classList.add('toc-js');
+
   var sidebar = document.querySelector('.evidence-toc-sidebar');
   if (!sidebar) return;
 

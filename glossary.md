@@ -1,47 +1,56 @@
 ---
 layout: page
-title: "Glossary — The Investment Under Investigation"
-description: "The financial profile of the investment under investigation — and why we describe it by its characteristics, not its name."
+title: "Glossary — Reading the Public Investment Record"
+description: "Plain-language definitions for authorizations, manager funding, holdings, transaction states, marketability, and evidence labels."
 permalink: /glossary/
 ---
 
-## What investment are we investigating?
+{% assign inv = site.data.investigation %}
+{% assign treasury = inv.agencies | where: "id", "treasury" | first %}
+{% assign apers = inv.agencies | where: "id", "apers" | first %}
 
-Our FOIA investigation examines a specific class of **non-marketable foreign sovereign debt** purchased by Arkansas state agencies. These are direct loans to a foreign government, sold exclusively through a for-profit broker-dealer registered with FINRA (CRD# 11148).
+## Investment and transaction terms
 
-The public records we obtained — more than 1,200 documents from Arkansas state agencies — identify the specific instrument. We use financial terminology throughout this site because this is a financial question, not a political one. The documents speak for themselves.
+**Authorization ceiling.** The maximum amount a board permits under a motion or resolution. It is not evidence that the amount was purchased, funded, or held.
 
-## Financial profile
+**Manager mandate.** An account or assignment under which an external investment manager may implement a strategy within agreed guidelines.
 
-This instrument has characteristics that distinguish it from standard fixed-income investments available to pension funds:
+**Manager funding.** Cash transferred into a manager account. It establishes funding of the mandate, not the account's underlying security holdings.
 
-**No secondary market.** These bonds cannot be sold or traded before maturity. A pension fund that purchases them is locked in — unable to exit the position if conditions change, if better opportunities arise, or if the fund needs liquidity. This is stated in the bond prospectus itself.
+**Purchase.** A transaction for a specified security and amount. A purchase record should be distinguished from an order or payment instruction that remains in process.
 
-**Declining credit quality.** All three major rating agencies — Moody's, S&P, and Fitch — have downgraded the issuing country's sovereign credit rating since 2024, citing economic instability and heightened security risks. As of early 2026, the Moody's rating stands at Baa1 — one notch above the threshold where many institutional investment policies would prohibit new purchases.
+**Settlement.** Completion of the transaction's cash-and-security exchange.
 
-**Sold by a broker-dealer with regulatory accommodations.** The bonds are sold exclusively by a for-profit New York corporation (FINRA CRD# 11148). In 2000, FINRA's predecessor granted this broker-dealer special accommodations regarding customer suitability requirements, acknowledging that its customer base is defined by affinity rather than financial criteria. The broker-dealer has four FINRA disclosure events on its record — three public enforcement actions plus a non-public 2014 control-affiliate disclosure.
+**Holdings statement.** A record of securities owned as of a stated date. It is a dated snapshot, not necessarily a complete transaction history.
 
-**Not available on any exchange.** Unlike U.S. Treasury securities, corporate bonds, or sovereign debt from most other countries, these bonds are not listed on any exchange and cannot be purchased through standard institutional trading platforms.
+**Processing-stage payment.** A payment instruction whose record does not show completed bank processing or resulting ownership. The site's additional Treasury {{ inv.metrics.treasury_conditional_payment.display }} is in this category.
 
-## Why we use financial terminology
+## Security and portfolio terms
 
-We describe the investment by its financial characteristics — non-marketable, non-tradable, foreign sovereign debt — because the fiduciary questions are financial questions. Was an independent credit analysis performed? Were internal staff recommendations followed? Does the investment meet the prudent-investor standard? None of these questions require naming the issuer.
+**Israel Bonds.** Securities issued by the State of Israel and offered in the United States through Development Corporation for Israel. The campaign names the instrument while applying issuer-neutral standards to the public fiduciary process.
 
-When officials named the issuer in their own public statements — and framed the investment in political rather than financial terms — those statements appear as verbatim quotes throughout our evidence, attributed to the public record. The contrast between the campaign's financial language and the officials' political language is the point.
+**Sovereign debt.** Debt issued by a national government.
 
-## Terminology used on this site
+**Limited marketability.** Constraints on ordinary resale or exit. Aon's ATRS memorandum uses this concept, and the campaign treats the transfer and secondary-market terms as information trustees should receive in plain language.
 
-| Term on this site | Meaning |
-|-------------------|---------|
-| Non-marketable foreign sovereign debt | Bonds issued by a foreign government that cannot be traded on any secondary market |
-| Non-tradable sovereign bonds | Same as above, in more accessible language |
-| The bond issuer | The foreign government that issues the debt |
-| The broker-dealer (FINRA CRD# 11148) | The for-profit corporation that sells the bonds exclusively |
-| The issuer's sales representatives | Employees of the broker-dealer who marketed the bonds to Arkansas agencies |
-| Pension Investment Integrity Act | Proposed issuer-neutral Arkansas legislation requiring independent analysis before pension boards commit to non-tradable sovereign debt |
+**Credit risk.** The risk that an issuer's financial capacity or willingness to meet its obligations changes.
 
-## Verify for yourself
+**Portfolio fit.** How an investment's expected risk, return, duration, liquidity, currency exposure, concentration, and role compare with the rest of a portfolio and available alternatives.
 
-The FOIA documents on our [documents archive](/documents/) identify the specific instrument in the agencies' own words. Our [evidence page](/evidence/) presents what those documents show. The [key figures page](/key-figures/) profiles the individuals and organizations discovered across the public record.
+**Pecuniary factor.** Under Arkansas's Act 498 framework, a factor expected to have a material financial effect on risk or return.
 
-For the specific instrument name and issuer identification, [browse the source documents directly](/documents/).
+## Evidence labels
+
+| Label | Meaning |
+|---|---|
+{% for status in inv.status_labels %}| **{{ status[0] | replace: '_', ' ' }}** | {{ status[1] }} |
+{% endfor %}
+
+## Current amount vocabulary
+
+- **{{ inv.metrics.confirmed_security_floor.display }} security-level floor:** Treasury {{ treasury.measure }} plus APERS {{ apers.measure }}.
+- **{{ inv.metrics.atrs_manager_funding.display }} funded mandate:** ATRS funding to Reams; underlying holdings unproduced.
+- **{{ inv.metrics.combined_tied_or_funded.display }} securities plus funded mandate:** a transparent combination of different measures, not holdings.
+- **{{ inv.metrics.pension_authorization_ceiling.display }} authorization ceiling:** ATRS plus APERS maximum authorizations, not holdings.
+
+[See the ledger in context](/evidence/) · [Review selected records](/documents/)

@@ -2,9 +2,17 @@
 // (the prior click-outside-to-close handler was dropped when the nav switched
 // to a full-viewport overlay — clicking outside the menu = clicking the menu)
 (function() {
+  document.documentElement.classList.add('nav-js');
   var toggle = document.querySelector('.nav-toggle');
   var menu = document.getElementById('nav-menu');
   var nav = document.querySelector('.site-nav');
+  var background = [
+    document.querySelector('main'),
+    document.querySelector('.site-footer'),
+    document.querySelector('.mobile-cta-bar'),
+    document.querySelector('.nav-logo'),
+    document.querySelector('.theme-toggle-btn')
+  ].filter(Boolean);
 
   if (!toggle || !menu || !nav) return;
 
@@ -12,6 +20,7 @@
     toggle.setAttribute('aria-expanded', 'false');
     menu.classList.remove('nav-open');
     document.body.style.overflow = '';
+    background.forEach(function (element) { element.inert = false; });
   }
 
   function openMenu() {
@@ -19,6 +28,7 @@
     menu.classList.add('nav-open');
     // Lock background scroll while the full-screen overlay is open
     document.body.style.overflow = 'hidden';
+    background.forEach(function (element) { element.inert = true; });
     var firstItem = menu.querySelector('a');
     if (firstItem) firstItem.focus();
   }
@@ -40,6 +50,21 @@
     if (e.key === 'Escape' && isOpen()) {
       closeMenu();
       toggle.focus();
+      return;
+    }
+
+    if (e.key === 'Tab' && isOpen()) {
+      var links = Array.prototype.slice.call(menu.querySelectorAll('a[href]'));
+      var focusable = links.concat(toggle);
+      var first = focusable[0];
+      var last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
     }
   });
 
@@ -49,6 +74,13 @@
       closeMenu();
     }
   });
+
+  var desktop = window.matchMedia('(min-width: 769px)');
+  function closeAtDesktop(event) {
+    if (event.matches && isOpen()) closeMenu();
+  }
+  if (desktop.addEventListener) desktop.addEventListener('change', closeAtDesktop);
+  else desktop.addListener(closeAtDesktop);
 })();
 
 // Scroll-triggered nav shadow — adds .is-scrolled when the page has scrolled
