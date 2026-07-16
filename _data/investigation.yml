@@ -1,0 +1,358 @@
+updated_at: "2026-07-16"
+record_cutoff: "2026-02-27"
+review_completed: "2026-07-16"
+
+thesis:
+  headline: "Public money deserves a public investment record."
+  summary: >-
+    Arkansas records document $65 million in confirmed securities and another
+    $50 million funded to an ATRS manager mandate. The decision files contain
+    manager-selection, implementation, marketability, and credit-related
+    materials while leaving material questions about how sovereign-credit risk
+    and portfolio fit were evaluated and connected to each affirmative decision.
+
+corpus:
+  raw_files: 1945
+  raw_files_display: "1,945"
+  pdf_pages: 36636
+  pdf_pages_display: "36,636"
+  render_jobs_complete: 31
+  render_jobs_total: 31
+  summary: >-
+    The current research baseline reflects a render-aware review of 36,636 PDF
+    pages across a 1,945-file raw corpus, completed July 16, 2026.
+
+metrics:
+  confirmed_security_floor:
+    value_millions: 65
+    display: "$65M"
+    label: "Confirmed security-level floor"
+    status: "established"
+    detail: "Treasury $50M derived floor + APERS $15M confirmed purchase"
+    source_ids: [treasury_holdings, apers_purchase]
+  atrs_manager_funding:
+    value_millions: 50
+    display: "$50M"
+    label: "ATRS manager mandate funded"
+    status: "funded mandate"
+    detail: "ATRS-to-Reams funding; security-level holdings were not produced"
+    source_ids: [atrs_funding]
+  combined_tied_or_funded:
+    value_millions: 115
+    display: "$115M"
+    label: "Securities plus funded mandate"
+    status: "mixed measure"
+    detail: "$65M in confirmed securities plus $50M in manager funding"
+    source_ids: [treasury_holdings, apers_purchase, atrs_funding]
+  treasury_conditional_payment:
+    value_millions: 10
+    display: "+$10M"
+    label: "Treasury payment at processing stage"
+    status: "conditional"
+    detail: "Would raise the security-level floor to $75M if settlement is documented"
+    source_ids: [treasury_processing]
+  pension_authorization_ceiling:
+    value_millions: 100
+    display: "Up to $100M"
+    label: "Combined pension authorization ceiling"
+    status: "authorization"
+    detail: "ATRS up to $50M + APERS up to $50M; not a holdings total"
+    source_ids: [atrs_resolution, apers_authorization]
+
+transaction_figures:
+  treasury_may_settled:
+    value_millions: 20
+    display: "$20M"
+  treasury_june_statement:
+    value_millions: 55
+    display: "$55M"
+  treasury_february_maturity:
+    value_millions: 5
+    display: "$5M"
+  apers_below_minimum_difference:
+    value_millions: 10
+    display: "$10M"
+
+agencies:
+  - id: treasury
+    short_name: "State Treasury"
+    name: "Arkansas State Treasury"
+    status: "established"
+    authorization: "Portfolio target documented at $55M in 2025"
+    authorization_display: "$55M portfolio target"
+    authorization_min_millions:
+    authorization_max_millions:
+    measure: "$50M derived security-level floor"
+    measure_display: "$50M"
+    measure_millions: 50
+    analysis: >-
+      An October 8, 2024 internal overview summarized rating-agency downgrades
+      and recommended holding existing positions while scheduled maturities
+      rolled off.
+    record: >-
+      A $20 million May 2025 purchase settled. The produced record contains no
+      written reconciliation between that purchase and the identified HOLD
+      recommendation.
+    boundary: >-
+      A February 2026 $10 million payment remained marked “Processing By Bank”
+      and is treated as conditional.
+    source_ids: [treasury_hold, treasury_holdings, treasury_processing]
+  - id: apers
+    short_name: "APERS"
+    name: "Arkansas Public Employees Retirement System"
+    status: "established"
+    authorization: "$25M–$50M stated authorization"
+    authorization_display: "$25M–$50M"
+    authorization_min_millions: 25
+    authorization_max_millions: 50
+    measure: "$15M confirmed security purchase"
+    measure_display: "$15M"
+    measure_millions: 15
+    analysis: >-
+      The reviewed authorization file contains no Callan sovereign-credit
+      memorandum tied to the decision.
+    record: >-
+      APERS wired $15 million on October 15, 2025 for a two-year institutional
+      bond.
+    boundary: >-
+      The purchase is $10 million below the motion’s stated minimum. The
+      operational or legal effect of that discrepancy remains unresolved.
+    source_ids: [apers_authorization, apers_purchase]
+  - id: atrs
+    short_name: "ATRS"
+    name: "Arkansas Teacher Retirement System"
+    status: "funded mandate"
+    authorization: "Up to $50M authorized"
+    authorization_display: "Up to $50M"
+    authorization_min_millions: 0
+    authorization_max_millions: 50
+    measure: "$50M Reams mandate funded"
+    measure_display: "$50M"
+    measure_millions: 50
+    analysis: >-
+      Aon advised ATRS on implementation, compared managers, recommended Reams,
+      and noted limited marketability. Aon separately declined to recommend
+      whether ATRS should invest or purchase an individual security.
+    record: >-
+      A December 29, 2025 Board update documents $50 million in funding for the
+      Scout/Reams mandate associated with the bonds.
+    boundary: >-
+      The produced files do not identify the mandate’s security-level purchases,
+      holdings, settlement dates, or deployment pace.
+    source_ids: [atrs_aon, atrs_resolution, atrs_funding]
+  - id: ashers
+    short_name: "ASHERS"
+    name: "Arkansas State Highway Employees Retirement System"
+    status: "unproduced"
+    authorization: "No authorization identified"
+    authorization_display: "None identified"
+    authorization_min_millions: 0
+    authorization_max_millions: 0
+    measure: "No holding identified"
+    measure_display: "None identified"
+    measure_millions: 0
+    analysis: >-
+      Selected records document a DFA introduction and the sellers’ pitch.
+    record: >-
+      The reviewed production contains no identified reply, authorization, or
+      holding.
+    boundary: >-
+      The record does not establish an affirmative rejection, oral silence, or
+      the cause of the different outcome.
+    source_ids: [ashers_route]
+
+analysis_record:
+  lead: >-
+    The files contain manager-selection, implementation, marketability, and
+    credit-related materials. They leave material questions about how
+    sovereign-credit risk and portfolio fit were evaluated and connected to
+    each affirmative investment decision.
+  atrs: >-
+    Aon’s two-page memorandum addresses implementation and manager selection.
+    An S&P downgrade report also appears elsewhere in the production; the
+    produced files do not establish that trustees received or relied on it for
+    Resolution 2025-22.
+  apers: >-
+    The reviewed authorization file contains no Callan sovereign-credit
+    memorandum tied to the decision.
+  treasury: >-
+    Treasury’s internal overview recommends HOLD and continued surveillance.
+    The settled May 2025 purchase is not accompanied by an identified written
+    reconciliation.
+
+status_labels:
+  established: "Directly documented or arithmetically derived from documented transactions"
+  funded_mandate: "Cash funded to a manager account; underlying securities are a separate question"
+  conditional: "An operational step appears in the record, but completion is not documented"
+  unproduced: "Not identified in the reviewed production; not a claim of universal absence"
+  reported: "Described by a participant or seller without independent confirmation"
+  interpretive: "An inference drawn from documented facts and labeled as such"
+
+timeline:
+  - id: treasury_hold
+    date: "2024-10-08"
+    date_display: "Oct. 8, 2024"
+    description: "Treasury internal overview recommends HOLD, scheduled roll-off, and continued surveillance."
+    status: "established"
+    status_display: "established"
+    source_id: treasury_hold
+  - id: capitol_itinerary
+    date: "2025-04-14"
+    date_display: "Apr. 14–15, 2025"
+    description: "An eight-stop itinerary is scheduled. The Hudson–Babbitt meeting is confirmed; Fecher and Treasury-team encounters are reported; the White encounter remains unconfirmed."
+    status: "reported"
+    status_display: "mixed record"
+  - id: treasury_may_purchase
+    date: "2025-05-01"
+    date_display: "May 2025"
+    amount_display: "$20M"
+    description: "$20M in two Treasury positions settles and appears in a later $55M statement before a documented $5M maturity."
+    status: "established"
+    status_display: "established"
+    source_id: treasury_holdings
+  - id: apers_authorization
+    date: "2025-05-15"
+    date_display: "May 15, 2025"
+    amount_display: "$25M–$50M"
+    description: "APERS Investment Finance Subcommittee authorizes a stated $25M–$50M range."
+    status: "established"
+    status_display: "established"
+    source_id: apers_authorization
+  - id: atrs_authorization
+    date: "2025-06-02"
+    date_display: "June 2, 2025"
+    amount_display: "Up to $50M"
+    description: "ATRS adopts Resolution 2025-22 authorizing up to $50M through a manager structure."
+    status: "established"
+    status_display: "established"
+    source_id: atrs_aon
+  - id: apers_purchase
+    date: "2025-10-15"
+    date_display: "Oct. 15, 2025"
+    amount_display: "$15M"
+    description: "APERS wires $15M for a two-year institutional bond."
+    status: "established"
+    status_display: "established"
+    source_id: apers_purchase
+  - id: atrs_funding
+    date: "2025-12-29"
+    date_display: "Dec. 29, 2025"
+    amount_display: "$50M"
+    description: "ATRS reports $50M in funding for the Scout/Reams mandate associated with the bonds."
+    status: "funded mandate"
+    status_display: "funded mandate"
+    source_id: atrs_funding
+  - id: treasury_processing
+    date: "2026-02-17"
+    date_display: "Feb. 17, 2026"
+    amount_display: "+$10M"
+    description: "Treasury report shows a $10M payment instruction marked ‘Processing By Bank.’"
+    status: "conditional"
+    status_display: "conditional"
+    source_id: treasury_processing
+
+event_status_labels:
+  confirmed: "Supported by records from a participating office or by a completed institutional record"
+  scheduled: "A calendar or itinerary documents intent; occurrence and substance require separate support"
+  reported: "Described by a participant or seller without independent confirmation in the reviewed corpus"
+  unconfirmed: "Scheduled or asserted, but not independently established in the reviewed corpus"
+
+routes:
+  - id: itinerary
+    status: "scheduled"
+    label: "Eight-stop itinerary"
+    detail: "Distinct pension, executive, legislative, Treasury, and cabinet venues"
+  - id: hudson_babbitt
+    status: "confirmed"
+    label: "Hudson–Babbitt encounter"
+    detail: "Supported by records from the participating office"
+  - id: fecher
+    status: "reported"
+    label: "Fecher encounter"
+    detail: "Participant- or seller-reported in the reviewed record"
+  - id: treasury_team
+    status: "reported"
+    label: "Treasury-team encounter"
+    detail: "Participant- or seller-reported in the reviewed record"
+  - id: white
+    status: "unconfirmed"
+    label: "White encounter"
+    detail: "Scheduled; occurrence remains open in the reviewed corpus"
+
+legislation:
+  name: "Pension Investment Integrity Act"
+  session: "2027 Arkansas legislative session"
+  cfc_status: >-
+    Selected by the Citizens First Congress as a short-term priority for the
+    2027 legislative session.
+  act_498_url: "https://www.arkleg.state.ar.us/Acts/FTPDocument?ddBienniumSession=2023%2F2023R&file=498.pdf&path=%2FACTS%2F2023R%2FPublic%2F"
+  provisions:
+    - "A written credit analysis prepared by pension staff or an independent adviser before acquisition"
+    - "A written comparison of risk, return, and liquidity against reasonably available fixed-income alternatives"
+    - "A plain-language disclosure of transfer restrictions and the absence of a secondary market"
+    - "A written fiduciary determination connecting the decision to material financial risk and return"
+    - "Public posting of the analysis and determination within 30 days"
+
+sources:
+  atrs_aon:
+    title: "Aon implementation and manager-selection memorandum"
+    agency: "ATRS"
+    date: "2025-06-02"
+    locator: "June 2, 2025 Board packet, physical pages 149–150"
+    record_url: "/documents/records/atrs-aon-memo/"
+    asset_url: "/assets/documents/atrs-aon-memo-pages-149-150.pdf"
+  atrs_resolution:
+    title: "ATRS Resolution 2025-22"
+    agency: "ATRS"
+    date: "2025-06-02"
+    locator: "June 2, 2025 Board packet, Resolution 2025-22"
+    record_url: "/documents/records/atrs-resolution/"
+    asset_url: "/assets/documents/atrs-resolution-2025-22-pages-151-152.pdf"
+  atrs_funding:
+    title: "ATRS Board Update—Liquidity"
+    agency: "ATRS"
+    date: "2025-12-29"
+    locator: "Rod Graves email to Board Distribution List, 11:23 a.m. CST"
+    record_url: "/documents/records/atrs-manager-funding/"
+    asset_url: "/assets/documents/atrs-manager-funding-email-excerpt.pdf"
+  apers_authorization:
+    title: "APERS Investment Finance Subcommittee signed minutes"
+    agency: "APERS"
+    date: "2025-05-15"
+    locator: "Signed minutes, physical page 4"
+    record_url: "/documents/records/apers-authorization/"
+    asset_url: "/assets/documents/apers-authorization-minutes-page-4.pdf"
+  apers_purchase:
+    title: "APERS $15 million purchase record"
+    agency: "APERS"
+    date: "2025-10-15"
+    locator: "IB_FOIA_FINAL, physical page 6,925"
+    record_url: "/documents/records/apers-purchase/"
+    asset_url: "/assets/documents/apers-purchase-record-page-6925-masked.pdf"
+  treasury_hold:
+    title: "Treasury internal credit overview"
+    agency: "State Treasury"
+    date: "2024-10-08"
+    locator: "Two-page internal overview, conclusion on physical page 2"
+    record_url: "/documents/records/treasury-hold-overview/"
+    asset_url: "/assets/documents/treasury-internal-credit-overview.pdf"
+  treasury_holdings:
+    title: "Treasury June 30, 2025 bondholder statement"
+    agency: "State Treasury"
+    date: "2025-06-30"
+    locator: "Bondholder statement, physical page 1; account identifiers omitted from excerpt"
+    record_url: "/documents/records/treasury-holdings/"
+    asset_url: "/assets/documents/treasury-holdings-june-2025-cropped.pdf"
+  treasury_processing:
+    title: "Treasury outgoing payment report"
+    agency: "State Treasury"
+    date: "2026-02-17"
+    locator: "Outgoing Payments Report, physical page 1"
+    record_url: "/documents/records/treasury-processing-payment/"
+    asset_url: "/assets/documents/treasury-processing-payment-masked.pdf"
+  ashers_route:
+    title: "DFA introduction to ASHERS"
+    agency: "ASHERS / DFA"
+    date: "2025-04-16"
+    locator: "Andy Babbitt email to Robyn Smith and seller reply"
+    record_url: "/findings/control-case/"
