@@ -15,7 +15,7 @@ asset_url: /assets/documents/apers-analysis-email-page-3081-masked.pdf
 
 During APERS's search for responsive records, Chief Investment Officer Carlos Borromeo wrote, **“I did not prepare anything for the Board on this topic,”** and said he was certain the investment consultants had not prepared material either.
 
-Borromeo's statement makes the transparency problem concrete: members received no decision memo connecting the authorization and purchase to credit, return, liquidity, and alternatives.
+Borromeo's statement makes the transparency problem concrete. The public-facing trail is a motion, operational correspondence, and a transaction record; a decision-focused memo would connect them to credit, return, liquidity, and alternatives.
 
 [Read the APERS member explainer &rarr;](/public-employees/)
 

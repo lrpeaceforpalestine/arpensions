@@ -184,7 +184,7 @@ agencies:
     boundary: >-
       The contrast shows why every public institution should publish its
       financial reasoning alongside the outcome.
-    source_ids: [ashers_route]
+    source_ids: [ashers_route, ashers_no_holding, ashers_no_purchase]
 
 analysis_record:
   lead: >-
