@@ -195,6 +195,8 @@ def audit_source_contracts(audit: Audit) -> None:
     default = (ROOT / "_layouts" / "default.html").read_text(encoding="utf-8")
     nav = (ROOT / "_includes" / "nav.html").read_text(encoding="utf-8")
     head = (ROOT / "_includes" / "head.html").read_text(encoding="utf-8")
+    stats_bar = (ROOT / "_includes" / "stats-bar.html").read_text(encoding="utf-8")
+    llms = (ROOT / "llms.txt").read_text(encoding="utf-8")
     css = "\n".join(path.read_text(encoding="utf-8") for path in (ROOT / "assets" / "css").glob("*.css"))
     js = "\n".join(path.read_text(encoding="utf-8") for path in (ROOT / "assets" / "js").rglob("*.js"))
 
@@ -206,10 +208,20 @@ def audit_source_contracts(audit: Audit) -> None:
         audit.fail("accessibility: CSS lacks visible keyboard-focus rules")
     if "@media (max-width: 768px)" not in css or ".nav-toggle" not in css:
         audit.fail("responsive: mobile navigation styles are missing")
-    if "html:not(.nav-js) .nav-links" not in css:
-        audit.fail("accessibility: mobile navigation has no no-JavaScript fallback")
+    if ".nav-js .nav-toggle" not in css or ".nav-js .nav-links" not in css:
+        audit.fail("accessibility: mobile navigation must only collapse after JavaScript enhancement")
     if "nav-js" not in js or "e.key === 'Tab'" not in js or ".inert" not in js:
         audit.fail("accessibility: mobile navigation lacks progressive enhancement or focus containment")
+    if re.search(r"\.container-prose\s+table\s*\{[^}]*display\s*:\s*block", css, re.DOTALL):
+        audit.fail("accessibility: prose tables must retain their native table display semantics")
+    for selector in (
+        "#can_embed_form .js-country_drop_wrap",
+        "#can_embed_form #form-country",
+        ".can_select.can_selectFocus",
+        ":focus-within .can_selectInner",
+    ):
+        if selector not in css:
+            audit.fail(f"accessibility: Action Network country selector is missing {selector}")
     if "Avenir Next" not in css or "League Spartan" not in css or "family=League+Spartan" not in head:
         audit.fail("brand: the original Avenir/League Spartan type system is not intact")
     take_action_link = re.search(r'<a[^>]+href="\{\{ \'/take-action/\'[^>]+>(?:\s*)Take Action', nav)
@@ -221,6 +233,28 @@ def audit_source_contracts(audit: Audit) -> None:
     for endpoint in (ROOT / "assets" / "data" / "investigation.json", ROOT / "assets" / "data" / "current-facts.csv"):
         if endpoint.exists():
             audit.fail(f"editorial: internal research data must not be published at {endpoint.relative_to(ROOT)}")
+
+    for metric_id in (
+        "confirmed_security_floor",
+        "atrs_manager_funding",
+        "treasury_conditional_payment",
+    ):
+        if metric_id not in stats_bar:
+            audit.fail(f"canonical: stats bar is not sourced from {metric_id}")
+    if "site.data.investigation" not in stats_bar:
+        audit.fail("canonical: stats bar must read from the investigation data model")
+    if re.search(r">\s*\+?\$(?:65|50|10)M\s*<", stats_bar):
+        audit.fail("canonical: stats bar contains a hardcoded headline amount")
+
+    for route in (
+        "https://arpensions.org/",
+        "https://arpensions.org/methodology/",
+        "https://arpensions.org/news/",
+        "https://arpensions.org/glossary/",
+        "https://arpensions.org/key-figures/",
+    ):
+        if route not in llms:
+            audit.fail(f"discovery: llms.txt is missing {route}")
 
     evidence = (ROOT / "evidence.md").read_text(encoding="utf-8")
     issue = (ROOT / "the-issue.md").read_text(encoding="utf-8")
@@ -313,6 +347,7 @@ def audit_html(audit: Audit, site: Path, data: dict) -> None:
 
     soup_cache: dict[Path, BeautifulSoup] = {}
     id_cache: dict[Path, set[str]] = {}
+    jsonld_cache: dict[Path, list[dict]] = {}
     for path in pages:
         raw = path.read_text(encoding="utf-8")
         soup = BeautifulSoup(raw, "html.parser")
@@ -354,11 +389,15 @@ def audit_html(audit: Audit, site: Path, data: dict) -> None:
             if not str(labeled.get("aria-label", "")).strip():
                 audit.fail(f"{path.relative_to(site)}: empty aria-label")
 
+        jsonld_objects: list[dict] = []
         for script in soup.find_all("script", attrs={"type": "application/ld+json"}):
             try:
-                json.loads(html.unescape(script.string or ""))
+                parsed = json.loads(html.unescape(script.string or ""))
+                if isinstance(parsed, dict):
+                    jsonld_objects.append(parsed)
             except json.JSONDecodeError as exc:
                 audit.fail(f"{path.relative_to(site)}: invalid JSON-LD: {exc}")
+        jsonld_cache[path] = jsonld_objects
 
     audit_public_contract(audit, site, id_cache)
 
@@ -408,6 +447,33 @@ def audit_html(audit: Audit, site: Path, data: dict) -> None:
     take_action = next((a for a in homepage.select(".nav-links a") if a.get_text(" ", strip=True) == "Take Action"), None)
     if not take_action or any(name in take_action.get("class", []) for name in ("btn-primary", "nav-cta", "cta")):
         audit.fail("homepage: Take Action must be an ordinary navigation link")
+    for attribute, value in (("property", "og:image:alt"), ("name", "twitter:image:alt")):
+        tag = homepage.find("meta", attrs={attribute: value})
+        if not tag or not str(tag.get("content", "")).strip():
+            audit.fail(f"homepage: missing {value} metadata")
+    homepage_jsonld = jsonld_cache[site / "index.html"]
+    organization = next(
+        (
+            item
+            for item in homepage_jsonld
+            if item.get("@id") == "https://arpensions.org/#organization"
+            and item.get("@type") in {"Organization", "NGO"}
+        ),
+        None,
+    )
+    website = next(
+        (
+            item
+            for item in homepage_jsonld
+            if item.get("@id") == "https://arpensions.org/#website"
+            and item.get("@type") == "WebSite"
+        ),
+        None,
+    )
+    if organization is None:
+        audit.fail("homepage: Organization JSON-LD is missing")
+    if website is None:
+        audit.fail("homepage: WebSite JSON-LD is missing")
     home_raw = (site / "index.html").read_text(encoding="utf-8")
     for metric_id in ("confirmed_security_floor", "atrs_manager_funding", "treasury_conditional_payment"):
         display = data["metrics"][metric_id]["display"]

@@ -106,6 +106,9 @@ html[data-theme="dark"] .about-section{background:#074750}
 
 {% if page.unlisted %}<meta name="robots" content="noindex, nofollow">{% endif %}
 {% seo %}
+{% assign social_image_alt = page.image_alt | default: "Arkansans for Pension Integrity campaign graphic: Public money deserves a public investment record." %}
+<meta property="og:image:alt" content="{{ social_image_alt | escape }}">
+<meta name="twitter:image:alt" content="{{ social_image_alt | escape }}">
 {% include jsonld.html %}
 
 <!-- Fonts -->

@@ -1,7 +1,7 @@
 ---
 layout: record
 title: "APERS Chief Investment Officer Email"
-description: "The APERS chief investment officer describes the Board material prepared by staff and consultants for the Israel Bonds decision."
+description: "The APERS chief investment officer states that he prepared no Board material for the Israel Bonds decision and believed the consultants had prepared none."
 permalink: /documents/records/apers-analysis-email/
 source_agency: "Arkansas Public Employees Retirement System"
 source_date: "2026-02-13"
