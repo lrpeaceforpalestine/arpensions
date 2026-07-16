@@ -1,0 +1,32 @@
+# Exact publication artifacts reviewed for page count, visual treatment, and masking.
+sources:
+  atrs_aon:
+    pages: 2
+    sha256: 45e6065eada38fb73e1da53d2d9189347c5514318d312dd20a05e7662da11c04
+  atrs_resolution:
+    pages: 2
+    sha256: b5e05a67b7a793c5772c88c35c580c6340c7dad17475af205e085a8d89ef4f00
+  atrs_funding:
+    pages: 1
+    sha256: 86e0bab0ab0179a2374fc5f43b9714a720f397d5de5f5580a322912c0d123beb
+  apers_authorization:
+    pages: 1
+    sha256: 1ac6aadd74181bd0c84d62d491bd2327f91c210a98340acc15ecb6fbc5e621d7
+  apers_analysis_email:
+    pages: 1
+    sha256: a60e046af0454cc34be576821f7c0e2f8147f2568f8152e19b30ed94d3715aa9
+  apers_purchase:
+    pages: 1
+    sha256: f4762e74cb53424330a43030723f02fc11fea61f30940227edb68c3b02cbd68c
+  treasury_hold:
+    pages: 2
+    sha256: 98ebedd1aac64704925392968b62ff1d42238fca44eff9fefa6625994130c675
+  treasury_holdings:
+    pages: 1
+    sha256: c4e80d9eb4e22024796ce31d7f8d8c48c12ae812bc9d9a795ad312ef34076e6b
+  treasury_maturity:
+    pages: 1
+    sha256: 82670d9dfa1044621bdf0037abde78c0c6e097cae6a4893e9b1130e0e5fe9b26
+  treasury_processing:
+    pages: 1
+    sha256: 3e483ad555ee88f51f3843e531d2790971fb6b0e9117784341bbf5ed2031e3ae

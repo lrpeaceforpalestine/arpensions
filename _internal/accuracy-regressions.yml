@@ -37,3 +37,21 @@ regressions:
   - id: not_zero_language
     pattern: '\bnot zero\b'
     note: "Published pages use affirmative evidence descriptions."
+  - id: not_blank_language
+    pattern: '\bnot characterized as (?:blank|empty)\b'
+    note: "Published pages describe the rendered memorandum affirmatively."
+  - id: pulley_hold_authorship
+    pattern: 'Pulley.{0,80}(?:authored|wrote|prepared).{0,80}(?:October 2024|HOLD|overview)'
+    note: "The internal Treasury overview is unattributed."
+  - id: posting_mislabeled_preacquisition
+    pattern: '(?:before (?:a |any )?(?:covered )?(?:pension )?acquisition.{0,120}public (?:posting|disclosure)|public (?:posting|disclosure).{0,120}before (?:a |any )?(?:covered )?(?:pension )?acquisition)'
+    note: "Analysis occurs before acquisition; publication follows within 30 days."
+  - id: apers_board_range
+    pattern: 'APERS.{0,80}Board-approved range|Board-approved range.{0,80}APERS'
+    note: "Use the documented IFSC authorization and bound later Board treatment."
+  - id: action_network_source_drift
+    pattern: 'source=widget'
+    note: "Petition attribution uses the canonical arpensions source code."
+  - id: wrong_public_repository
+    pattern: 'arpensions\.org/blob'
+    note: "The public repository is divestforARfuture/arpensions."
