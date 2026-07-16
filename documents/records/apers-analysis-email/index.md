@@ -1,7 +1,7 @@
 ---
 layout: record
 title: "APERS Chief Investment Officer Email"
-description: "The APERS chief investment officer states that he prepared no Board material for the Israel Bonds decision and believed the consultants had prepared none."
+description: "The APERS chief investment officer's February 2026 account of Board preparation for the Israel Bonds decision."
 permalink: /documents/records/apers-analysis-email/
 source_agency: "Arkansas Public Employees Retirement System"
 source_date: "2026-02-13"
@@ -15,7 +15,7 @@ asset_url: /assets/documents/apers-analysis-email-page-3081-masked.pdf
 
 During APERS's search for responsive records, Chief Investment Officer Carlos Borromeo wrote, **“I did not prepare anything for the Board on this topic,”** and said he was certain the investment consultants had not prepared material either.
 
-This is Borromeo's account of the Board material prepared by staff and consultants. It does not describe every conversation that may have occurred or material held outside the search.
+Borromeo's statement makes the transparency problem concrete. The public-facing trail is a motion, operational correspondence, and a transaction record; a decision-focused memo would connect them to credit, return, liquidity, and alternatives.
 
 [Read the APERS member explainer &rarr;](/public-employees/)
 

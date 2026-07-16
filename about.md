@@ -23,7 +23,7 @@ Teachers, state employees, retirees, and taxpayers should be able to see the fin
 
 **Make complicated decisions understandable.** We turn minutes, financial memoranda, transaction records, and Arkansas law into plain-language explanations that pension members can use.
 
-**Advance practical safeguards.** The Pension Investment Integrity Act would require a written financial analysis for covered purchases of non-tradable sovereign debt. It is issuer-neutral and leaves the final investment decision with pension trustees.
+**Advance practical safeguards.** The Pension Investment Integrity Act would require a written financial analysis for covered purchases of non-tradable sovereign debt. The same rule would apply across issuers, and pension trustees would keep the final investment decision.
 
 **Organize the people whose money is at stake.** We help educators, public employees, retirees, legislators, and other Arkansans ask informed questions and advocate for better pension governance.
 
@@ -49,23 +49,23 @@ Teachers, state employees, retirees, and taxpayers should be able to see the fin
 
 **What prompted this campaign?**
 
-Arkansas agencies committed {{ site.data.investigation.metrics.combined_tied_or_funded.display }} to completed Israel Bonds purchases or an ATRS manager account created for the same strategy. The available documents show implementation advice, authorization records, and later transactions, but they do not give pension members one clear financial case tied to each board's decision. That gap is exactly what the Integrity Act addresses.
+Arkansas agencies directed {{ site.data.investigation.metrics.combined_tied_or_funded.display }} into completed Israel Bonds purchases and an ATRS manager account created for the same strategy. Pension members were left to reconstruct the financial case from implementation advice, authorization records, emails, and later transactions. The Integrity Act turns those fragments into one usable public decision record.
 
 </div>
 
 <div class="faq-item" markdown="1">
 
-**Would the Integrity Act tell pension boards what to buy or sell?**
+**Who makes the final investment decision?**
 
-No. Trustees would retain their investment authority. The proposal would require them to document the financial work behind a covered decision and make that work public after the purchase.
+Pension trustees retain their full investment authority. The proposal adds a written financial analysis and public posting after a covered purchase.
 
 </div>
 
 <div class="faq-item" markdown="1">
 
-**Does the proposal single out Israel?**
+**How broadly would the proposal apply?**
 
-No. The same requirements would apply to any covered purchase of non-tradable sovereign debt, regardless of the issuer. The Arkansas Israel Bonds decisions show why the safeguard is needed; the law would establish a general rule.
+The same requirements would apply to every covered purchase of non-tradable sovereign debt, regardless of issuer. The Arkansas Israel Bonds decisions show why this statewide rule is needed.
 
 </div>
 

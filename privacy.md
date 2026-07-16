@@ -10,7 +10,7 @@ hide_mobile_cta: true
 
 ## The short version
 
-Arkansans for Pension Integrity collects contact information only when you choose to provide it through the petition or by contacting the campaign. The public research pages do not contain a campaign-operated analytics tracker.
+Arkansans for Pension Integrity collects contact information only when you choose to provide it through the petition or by contacting the campaign. The campaign operates the public research pages with no analytics tracker.
 
 ## Petition submissions
 
@@ -20,7 +20,7 @@ Action Network may collect technical and form data under its own [privacy policy
 
 ## Email and source questions
 
-Messages sent to `info@arpensions.org` contain the information you choose to include and are used to respond to the message, maintain campaign correspondence, or complete the action you requested. Do not email account numbers, government identification, or other sensitive personal records.
+Messages sent to `info@arpensions.org` contain the information you choose to include and are used to respond to the message, maintain campaign correspondence, or complete the action you requested. Please keep account numbers, government identification, and other sensitive personal records out of email.
 
 ## External services and links
 

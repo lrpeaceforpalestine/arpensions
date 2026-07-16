@@ -16,7 +16,7 @@ charts: true
 
 The Arkansas Teacher Retirement System authorized **{{ atrs.authorization_display | replace: 'Up to', 'up to' }}** for an Israel Bonds strategy on June 2, 2025. ATRS then hired Reams Asset Management and reported moving **{{ atrs.measure_display }}** into the Reams account in December.
 
-That funding notice tells members how much money entered the manager account. The account records released by ATRS do not list the individual bonds Reams bought, their settlement dates, or the account's later holdings.
+That funding notice tells members how much money entered the manager account. ATRS's public reporting currently ends at the transfer to Reams; educators deserve the individual purchases, settlement dates, and current holdings that complete the picture.
 
 <div class="callout" markdown="1">
 
@@ -28,7 +28,7 @@ That funding notice tells members how much money entered the manager account. Th
 
 Aon's two-page memo in the June 2 Board packet is an important part of the story.
 
-It compared BlackRock and Reams, recommended Reams, discussed how the strategy could be implemented, and noted the bonds' limited marketability. In a separate statement on the next page, Aon made clear that it was not telling trustees whether ATRS should make the investment or which individual bond to buy.
+It compared BlackRock and Reams, recommended Reams, discussed how the strategy could be implemented, and noted the bonds' limited marketability. The next page assigns the merits of the investment and the choice of any individual bond to ATRS trustees.
 
 In other words, Aon advised ATRS on **how to carry out the strategy**. Trustees still owed members a clear financial explanation of **why the strategy belonged in the portfolio**.
 
@@ -50,7 +50,7 @@ These are ordinary pension-governance questions. Asking them is part of protecti
   <canvas id="atrs-funded-gauge" data-ratio="84" data-label="ATRS funded ratio" aria-label="ATRS funded ratio gauge showing approximately 84 percent, based on the fiscal year 2025 annual report" role="img"></canvas>
 </div>
 
-ATRS reported roughly **$23.7 billion in net assets** and an overall funded ratio of about **84%** for fiscal year 2025. The Israel Bonds account is a small share of that total. But good governance is not reserved for the largest line item. A consistent written process protects members across the whole portfolio.
+ATRS reported roughly **$23.7 billion in net assets** and an overall funded ratio of about **84%** for fiscal year 2025. The Israel Bonds account is a small share of that total, and a consistent written process protects members across the whole portfolio.
 
 ## What the Integrity Act would change
 
@@ -62,10 +62,10 @@ Before a covered purchase of non-tradable sovereign debt, the Pension Investment
 4. a written finding that the decision serves members' financial interests; and
 5. public posting within 30 days after the purchase.
 
-The law would not choose investments for ATRS. It would require ATRS to show members the financial work behind the choice.
+ATRS trustees would keep the investment decision. Members would gain the financial work behind the choice.
 
 ## A message you can send
 
-> I am an Arkansas educator and an ATRS member. Please support the Pension Investment Integrity Act in the 2027 session. ATRS moved $50 million into a manager account for an Israel Bonds strategy, but members still need a clear, decision-specific account of the credit, return, liquidity, and alternatives analysis behind the commitment. The Integrity Act would create an issuer-neutral written process while leaving investment decisions with the trustees.
+> I am an Arkansas educator and an ATRS member. Please support the Pension Investment Integrity Act in the 2027 session. ATRS moved $50 million into a manager account for an Israel Bonds strategy. Members deserve a clear, decision-specific account of the credit, return, liquidity, and alternatives analysis behind that commitment. The Integrity Act would create an issuer-neutral written process while trustees keep the investment decision.
 
 [Contact your legislators &rarr;](/take-action/) or [read the ATRS source documents &rarr;](/documents/).

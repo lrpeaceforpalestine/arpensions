@@ -17,9 +17,9 @@ hero_band: pine
 
 Arkansas pension boards need a clear, consistent process for covered purchases of non-tradable sovereign debt.
 
-ATRS authorized {{ atrs.authorization_display | replace: 'Up to', 'up to' }} and later moved {{ atrs.measure_display }} into a manager account for an Israel Bonds strategy. APERS authorized a $25&ndash;$50 million range and later completed a {{ apers.measure_display }} purchase. The available files show implementation advice, signed motions, operational correspondence, and later transactions. They do not give members one decision-specific written comparison of credit risk, expected return, liquidity, and reasonable alternatives for each board's choice.
+ATRS authorized {{ atrs.authorization_display | replace: 'Up to', 'up to' }} and later moved {{ atrs.measure_display }} into a manager account for an Israel Bonds strategy. APERS authorized a $25&ndash;$50 million range and later completed a {{ apers.measure_display }} purchase. Pension members are currently left to reconstruct the financial case from implementation advice, signed motions, operational correspondence, and transaction records.
 
-The **Pension Investment Integrity Act** would fill that procedural gap. It is prospective, issuer-neutral, and limited to covered pension purchases. It would not direct a trustee vote or govern the separately managed State Treasury.
+The **Pension Investment Integrity Act** would create the missing public procedure. It is prospective, issuer-neutral, focused on covered pension purchases, and built around trustee authority.
 
 Citizens First Congress selected pension investment integrity as a short-term priority for the 2027 legislative session on June 27, 2026.
 
@@ -30,12 +30,12 @@ Citizens First Congress selected pension investment integrity as a short-term pr
 | Fact | Current public account |
 |---|---|
 | **Completed purchases** | {{ inv.metrics.confirmed_security_floor.display }} total: {{ treasury.measure_display }} at Treasury and {{ apers.measure_display }} at APERS. |
-| **ATRS manager funding** | {{ atrs.measure_display }} moved to the Reams account created for the strategy. The released account documents do not list individual bonds. |
+| **ATRS manager funding** | {{ atrs.measure_display }} moved to the Reams account created for the strategy; ATRS members are waiting for security-level public reporting. |
 | **Combined scale** | {{ inv.metrics.combined_tied_or_funded.display }} across completed purchases and manager funding—two different transaction types. |
-| **Later Treasury payment** | {{ inv.metrics.treasury_conditional_payment.display }} shown as still processing by the bank; excluded from the completed total. |
-| **Pension authorization ceiling** | {{ inv.metrics.pension_authorization_ceiling.display }} combined: ATRS up to $50M and APERS up to $50M. A ceiling is not a holdings figure. |
-| **ATRS advice** | Aon compared implementation options, recommended Reams, and noted limited marketability. Aon did not advise whether ATRS should invest or which bond to buy. |
-| **APERS Board material** | The chief investment officer wrote that he prepared no Board material on the topic and believed the consultants had not either. |
+| **Later Treasury payment** | {{ inv.metrics.treasury_conditional_payment.display }} shown at the bank-processing stage, separate from completed purchases. |
+| **Pension authorization ceiling** | {{ inv.metrics.pension_authorization_ceiling.display }} combined: ATRS up to $50M and APERS up to $50M; later activity appears in the rows above. |
+| **ATRS advice** | Aon compared implementation options, recommended Reams, and noted limited marketability. Trustees carried the investment decision. |
+| **APERS decision memo** | The chief investment officer's February 2026 email reinforces the need for a standard written financial case. |
 | **Treasury credit record** | An October 2024 internal overview recommended holding existing positions; a later {{ inv.transaction_figures.treasury_may_settled.display }} purchase settled in May 2025. |
 
 </div>
@@ -58,25 +58,25 @@ Before a covered acquisition, the proposal would require pension staff or an ind
 4. **A fiduciary determination** connecting the decision to members' financial interests and the portfolio as a whole.
 5. **Public posting after the purchase** within 30 days, with a written reason for any lawful redaction.
 
-## Scope and guardrails
+## Scope and design
 
 The proposal would apply to covered acquisitions by Arkansas pension benefit plans, including ATRS, APERS, ASHERS, ASPRS, AJRS, and LOPFI.
 
-It would not:
+The bill uses a focused design:
 
-- prescribe an investment outcome;
-- name or disfavor a particular issuer;
-- substitute the legislature's judgment for a trustee vote;
-- apply retroactively to past transactions; or
-- extend to the separately governed State Treasury.
+- **Covered plans:** Arkansas pension benefit plans, including ATRS, APERS, ASHERS, ASPRS, AJRS, and LOPFI.
+- **Prospective rule:** future covered acquisitions follow the same procedure.
+- **Issuer neutrality:** every covered sovereign issuer receives the same treatment.
+- **Trustee authority:** pension boards keep the final investment decision.
+- **Existing Treasury structure:** the separately governed State Treasury continues under its current framework.
 
 ## Why the Arkansas transactions make the case
 
-**ATRS shows an implementation-versus-merits gap.** Aon helped choose the manager and structure the account. Its own scope statement left the invest-or-not decision with trustees. The Integrity Act would require the trustees' financial case to be written down.
+**ATRS shows the division between implementation and investment judgment.** Aon helped choose the manager and structure the account. Trustees owned the merits decision. The Integrity Act would require their financial case to be written down.
 
 **APERS shows why a decision memo matters.** The signed motion authorized a $25&ndash;$50 million range; the later purchase was {{ apers.measure_display }}. A concise memo would explain both the investment case and how the completed amount fit the authorization.
 
-**Treasury shows the value of reconciling advice and action.** Treasury's internal overview recommended holding while maturities rolled off, followed months later by a new purchase. Treasury sits outside the bill, but the sequence illustrates why public financial reasoning matters.
+**Treasury shows the value of reconciling advice and action.** Treasury's internal overview recommended holding while maturities rolled off, followed months later by a new purchase. That sequence illustrates why public financial reasoning matters across government.
 
 ## Suggested questions for agencies
 

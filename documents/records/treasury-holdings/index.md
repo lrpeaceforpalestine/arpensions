@@ -17,7 +17,7 @@ The June 30 statement lists seven positions with a total current value of **$55 
 
 The May 2025 positions are also supported by a [settled purchase confirmation](/assets/documents/sovereign-bond-purchase-confirmation-may2025.pdf).
 
-A later $10 million payment was still shown as processing by the bank and is therefore kept outside the completed-purchase total.
+A later $10 million payment carried a bank-processing status and appears separately as the next stage of Treasury activity.
 
 [Open the maturity record &rarr;](/documents/records/treasury-maturity/)
 [Open the payment report &rarr;](/documents/records/treasury-processing-payment/)

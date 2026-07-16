@@ -15,7 +15,7 @@ asset_url: /assets/documents/treasury-processing-payment-masked.pdf
 
 The outgoing-payment report shows a **$10 million** instruction for an Israel Jubilee bond with the status **“Processing By Bank.”**
 
-The files released with the report do not include a completed bank status, seller acceptance, book-entry registration, or a later statement showing the bond as a holding. The site therefore discusses the payment separately and does not include it in the $65 million completed-purchase total.
+As of this report, the transaction stood at the bank-processing stage. It appears as a separate $10 million instruction alongside the $65 million in completed purchases established by transaction and cash-flow records.
 
 [Open the Treasury bondholder statement &rarr;](/documents/records/treasury-holdings/)
 [Read the public explainer &rarr;](/evidence/)

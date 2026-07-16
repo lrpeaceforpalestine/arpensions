@@ -14,7 +14,7 @@ The dollar figures tell only part of the story. These six findings explain how t
 
 ## [What Aon Advised ATRS](/findings/procedural-asymmetry/)
 
-Aon helped ATRS choose an implementation structure and recommended Reams. It did not advise trustees whether to make the investment or which bond to buy. The distinction separates manager selection from the Board's financial case for the strategy.
+Aon built the implementation route and recommended Reams. ATRS trustees owned the investment decision and the financial case for the strategy.
 
 </article>
 
@@ -22,7 +22,7 @@ Aon helped ATRS choose an implementation structure and recommended Reams. It did
 
 ## [What ATRS's $50 Million Funding Means](/findings/oversight-gap/)
 
-ATRS reported moving $50 million into the Reams manager account. The released account records do not list the individual bonds, settlement dates, or later holdings, so manager funding should not be described as a security-level total.
+ATRS moved $50 million into the Reams manager account. The public trail ends at that transfer, leaving members waiting for security-level purchases, settlement dates, and current holdings.
 
 </article>
 
@@ -38,7 +38,7 @@ The Auditor holds a formal ATRS board role, and Chief Deputy Auditor Jason Brady
 
 ## [The ASHERS Comparison](/findings/control-case/)
 
-DFA introduced Israel Bonds representatives to ASHERS, which received a sales presentation. Later agency messages said ASHERS had no holding or purchase. The available records do not say why its path differed from ATRS and APERS.
+DFA introduced Israel Bonds representatives to ASHERS, which received the sales presentation. At two later checkpoints, ASHERS reported zero holdings and zero purchases—a sharp contrast with ATRS and APERS.
 
 </article>
 
@@ -46,7 +46,7 @@ DFA introduced Israel Bonds representatives to ASHERS, which received a sales pr
 
 ## [The National Political Network](/findings/sfof-pipeline/)
 
-State Financial Officers Foundation records show event participation, a seller sponsor listing, circulation of another state's purchase, speech preparation, and later offers to connect member states. That context matters without proving that the network dictated a pension vote.
+State Financial Officers Foundation records show the political infrastructure around the strategy: event participation, a seller sponsor listing, circulation of another state's purchase, speech preparation, and offers to connect member states.
 
 </article>
 

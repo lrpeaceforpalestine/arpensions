@@ -2885,6 +2885,7 @@ html.theme-transition *::after {
 .timeline-wrapper {
   position: relative;
   margin: 2rem 0;
+  overflow-x: clip;
 }
 
 .timeline-wrapper::before {
@@ -3178,6 +3179,10 @@ html.theme-transition *::after {
 }
 
 
+.print-only {
+  display: none;
+}
+
 /* ==========================================================================
    PRINT STYLES — Clean output for letter templates, evidence summaries
    ========================================================================== */
@@ -3320,6 +3325,94 @@ html.theme-transition *::after {
     margin-top: 2rem;
     font-size: 0.8em;
     color: #999;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  /* The downloadable legislative brief is designed to remain one physical
+     page when printed from its public HTML route. */
+  body.integrity-brief-page {
+    font-size: 9.5pt;
+    line-height: 1.25;
+  }
+
+  body.integrity-brief-page .page-header-band,
+  body.integrity-brief-page .brief-download,
+  body.integrity-brief-page .print-instruction {
+    display: none !important;
+  }
+
+  body.integrity-brief-page .page-content,
+  body.integrity-brief-page .page-content > .container-prose {
+    padding: 0;
+    font-size: 9.5pt;
+    line-height: 1.25;
+  }
+
+  body.integrity-brief-page .container-prose {
+    max-width: none;
+  }
+
+  body.integrity-brief-page .print-one-page {
+    margin: 0;
+  }
+
+  body.integrity-brief-page .print-brief-heading {
+    margin: 0 0 0.08in;
+    padding: 0 0 0.07in;
+    border-bottom: 2px solid #1E7B47;
+  }
+
+  body.integrity-brief-page .print-brief-title {
+    margin: 0 0 0.02in;
+    font-family: var(--font-display);
+    font-size: 20pt;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  body.integrity-brief-page .print-one-page h2 {
+    margin: 0.08in 0 0.035in;
+    font-family: var(--font-display);
+    font-size: 12pt;
+    font-weight: 700;
+    line-height: 1.08;
+  }
+
+  body.integrity-brief-page .print-one-page p,
+  body.integrity-brief-page .print-one-page blockquote,
+  body.integrity-brief-page .print-one-page ol,
+  body.integrity-brief-page .print-one-page ul {
+    margin-top: 0;
+    margin-bottom: 0.035in;
+  }
+
+  body.integrity-brief-page .print-one-page ol,
+  body.integrity-brief-page .print-one-page ul {
+    padding-left: 0.22in;
+  }
+
+  body.integrity-brief-page .print-one-page li {
+    margin-bottom: 0.015in;
+  }
+
+  body.integrity-brief-page .print-one-page blockquote {
+    padding: 0.055in 0.1in;
+    border-left: 3px solid #1E7B47;
+  }
+
+  body.integrity-brief-page .print-one-page blockquote p {
+    margin: 0;
+    font-size: 11pt;
+    font-weight: 700;
+  }
+
+  body.integrity-brief-page .print-one-page a::after,
+  body.integrity-brief-page::after {
+    content: none !important;
+    display: none !important;
   }
 }
 

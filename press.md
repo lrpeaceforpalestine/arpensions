@@ -30,10 +30,10 @@ The campaign can be reached at [info@arpensions.org](mailto:info@arpensions.org)
 | Figure | Meaning |
 |---:|---|
 | **{{ inv.metrics.confirmed_security_floor.display }}** | Completed security purchases: {{ treasury.measure_display }} at Treasury plus {{ apers.measure_display }} at APERS. |
-| **{{ atrs.measure_display }}** | Money funded to the ATRS Reams manager account for the strategy. This is manager funding, not a published list of individual holdings. |
-| **{{ inv.metrics.combined_tied_or_funded.display }}** | Completed purchases plus ATRS manager funding. Use only with both transaction types stated. |
-| **{{ inv.metrics.treasury_conditional_payment.display }}** | A later Treasury payment shown as still processing by the bank. It is not included in the completed total. |
-| **{{ inv.metrics.pension_authorization_ceiling.display }}** | Combined pension authorization ceiling: ATRS up to $50M and APERS up to $50M. It is not a purchase or holdings total. |
+| **{{ atrs.measure_display }}** | Money transferred to the ATRS Reams manager account for the strategy; security-level reporting is the next public step. |
+| **{{ inv.metrics.combined_tied_or_funded.display }}** | {{ inv.metrics.confirmed_security_floor.display }} in completed purchases plus {{ inv.metrics.atrs_manager_funding.display }} in ATRS manager funding. |
+| **{{ inv.metrics.treasury_conditional_payment.display }}** | A later Treasury payment shown at the bank-processing stage. |
+| **{{ inv.metrics.pension_authorization_ceiling.display }}** | Combined pension authority: ATRS up to $50M and APERS up to $50M; later transactions establish how much money moved. |
 
 </div>
 
@@ -51,15 +51,15 @@ The campaign can be reached at [info@arpensions.org](mailto:info@arpensions.org)
 - The Investment Finance Subcommittee authorized a **$25&ndash;$50 million range** on May 15, 2025.
 - APERS completed a **{{ apers.measure_display }} two-year bond purchase** on October 15, 2025.
 - The purchase was **{{ inv.transaction_figures.apers_below_minimum_difference.display }} below the motion's stated minimum**.
-- APERS's chief investment officer wrote that he prepared no Board material on the topic and believed the consultants had not either.
+- APERS's chief investment officer's February 2026 email makes the need for a standard decision memo concrete.
 
 ### ATRS
 
 - ATRS authorized **{{ atrs.authorization_display | replace: 'Up to', 'up to' }}** through Resolution 2025-22 on June 2, 2025.
 - Aon compared implementation options, recommended Reams, and noted limited marketability.
-- Aon separately stated that it was not advising whether ATRS should invest or which bond to buy.
+- Aon's assignment centered on implementation and manager selection; trustees carried the investment decision.
 - ATRS reported **{{ atrs.measure_display }} funded to the Reams account** on December 29, 2025.
-- The account records released by ATRS do not list individual security purchases or holdings.
+- ATRS's public account currently ends at the transfer to Reams, with security-level reporting still due to members.
 
 ## Short timeline
 
@@ -78,11 +78,11 @@ The campaign can be reached at [info@arpensions.org](mailto:info@arpensions.org)
 
 **Completed purchase:** A transaction supported by a completed security or cash-flow record.
 
-**Manager funding:** Money moved into an investment manager's account. It does not, by itself, identify every security held in that account.
+**Manager funding:** Money transferred to an investment manager's account. Security-level statements document what the manager later buys and holds.
 
-**Authorization ceiling:** The maximum amount a board allowed. It is not proof that the full amount was spent.
+**Authorization ceiling:** The maximum amount a board allowed. Transaction records establish how much was later spent.
 
-**Non-tradable sovereign debt:** Debt issued by a national government that does not trade on a secondary market and is generally held to maturity.
+**Non-tradable sovereign debt:** Debt issued by a national government without a secondary market, generally committing the holder through maturity.
 
 **Pension Investment Integrity Act:** A prospective, issuer-neutral proposal for covered pension acquisitions. It leaves investment outcomes with trustees and requires them to publish the financial work behind the decision.
 

@@ -49,7 +49,7 @@
     { source: 'itinerary', target: 'treasury', desc: 'Treasury personnel were listed on the itinerary; a seller report later described the encounter.' },
     { source: 'itinerary', target: 'apers', desc: 'APERS leadership was listed among the itinerary stops.' },
     { source: 'itinerary', target: 'atrs', desc: 'ATRS leadership was listed among the itinerary stops.' },
-    { source: 'ashers-intro', target: 'ashers', desc: 'ASHERS received the pitch; its available agency records show no later authorization or purchase.' },
+    { source: 'ashers-intro', target: 'ashers', desc: 'ASHERS received the pitch and later reported zero holdings and zero purchases.' },
     { source: 'brady', target: 'apers', desc: 'As the Auditor’s proxy, Brady presented and moved the APERS authorization.' },
     { source: 'brady', target: 'atrs', desc: 'Brady also appeared as the Auditor’s designee at ATRS.' },
     { source: 'treasury', target: 'treasury-action', desc: 'Treasury records support $50 million in completed purchases after a later maturity.' },

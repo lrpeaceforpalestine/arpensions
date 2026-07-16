@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="{{ '/assets/css/d3-animations.css' | relative_url }}">
   {% endif %}
 </head>
-<body>
+<body{% if page.body_class %} class="{{ page.body_class | escape }}"{% endif %}>
   <a href="#main-content" class="skip-link">Skip to main content</a>
   <header>
     {% include nav.html %}

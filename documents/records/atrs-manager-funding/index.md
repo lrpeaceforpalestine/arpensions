@@ -15,7 +15,7 @@ asset_url: /assets/documents/atrs-manager-funding-email-excerpt.pdf
 
 The Board update says December payments included **$50 million** for the Scout/Reams Israel Bonds mandate. That documents money transferred to the manager account.
 
-The notice does not list an individual bond purchase, settlement date, or account holding. Those details would require security-level transaction or account records.
+This notice marks the transfer to Reams. Security-level transaction and account statements would complete the public trail through individual purchases, settlement dates, and current holdings.
 
 [Read what the $50 million figure means &rarr;](/findings/oversight-gap/)
 [Open the ATRS resolution &rarr;](/documents/records/atrs-resolution/)
