@@ -8,7 +8,7 @@ Public-facing Jekyll site for [arpensions.org](https://arpensions.org), an Arkan
 - `_includes/` and `_layouts/` preserve the campaign's original banknote-inspired visual system.
 - `assets/js/` contains the interactive charts, scrollytelling, timelines, and route graphic.
 - `documents/records/` contains plain-language pages for privacy-reviewed source excerpts.
-- `scripts/` contains local publication and accuracy checks.
+- `scripts/` contains automated site and public-asset checks.
 - `assets/documents/` preserves selected source excerpts and longstanding public document URLs.
 
 Do not edit generated `_site` output. Run the repository checks before publishing.

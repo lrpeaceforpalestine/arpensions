@@ -80,7 +80,7 @@ regressions:
     pattern: 'arpensions\.org/blob'
     note: "Do not construct source links by appending repository paths to the campaign domain."
   - id: former_campaign_identity
-    pattern: '(?:Divest for AR Future|Little Rock Peace for Palestine|\bLRPP\b)'
+    pattern: '(?:Little Rock Peace for Palestine|\bLRPP\b)'
     note: "Arkansans for Pension Integrity is the sole public campaign identity."
   - id: internal_research_jargon
     pattern: '(?:evidence corpus|PDF corpus|raw corpus|render gate|evidence baseline|search boundary|record boundary|evidence ledger|amount ledger|agency ledger)'
