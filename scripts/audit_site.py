@@ -32,7 +32,7 @@ SOURCE_SKIP_PARTS = {
     "scripts",
     "vendor",
 }
-SOURCE_SKIP_FILES = {"README.md", "CLAUDE.md", "LICENSE", "Gemfile.lock"}
+SOURCE_SKIP_FILES = {"README.md", "LICENSE", "Gemfile.lock"}
 
 
 class Audit:

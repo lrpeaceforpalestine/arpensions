@@ -44,7 +44,6 @@ defaults:
 exclude:
   - _internal
   - README.md
-  - CLAUDE.md
   - LICENSE
   - CNAME
   - Gemfile
